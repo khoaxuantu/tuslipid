@@ -1,9 +1,27 @@
 @use 'general/var';
 @use 'general/grid';
 @use 'general/container';
+@use 'general/decorate';
+@use 'components/image';
+@use 'components/text';
+@use 'components/line';
+
+*
+{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+}
 
 body {
     background-image: url(var.$background-url);
     background-size: cover;
+    // background-repeat: no-repeat;
     font-family: var.$body-font;
+}
+
+.header-grp {
+    padding: 2.25rem;
+    text-align: center;
 }

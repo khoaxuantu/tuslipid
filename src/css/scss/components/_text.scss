@@ -1,0 +1,13 @@
+@use '../general/var';
+
+.menu-name-txt {
+    padding: 0.5rem;
+    font-size: 24px;
+    font-family: var.$header-font;
+}
+
+.menu-description-txt {
+    margin-top: 1rem;
+    font-size: 14px;
+    font-family: var.$body-font;
+}
