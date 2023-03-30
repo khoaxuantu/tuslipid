@@ -58,7 +58,6 @@
 .container {
   width: 80%;
   height: 80%;
-  margin: auto;
   margin-left: auto;
   margin-right: auto;
   background-color: white;
@@ -76,11 +75,6 @@
     height: 600px;
   }
 }
-@media (max-width: 320px) {
-  .avatar {
-    width: 100px;
-  }
-}
 img {
   max-width: 100%;
   height: auto;
@@ -90,12 +84,9 @@ img {
   border-radius: 50%;
 }
 
-@media (min-width: 568px) {
-  .menu-name-txt {
-    font-size: 24px;
-  }
-  .menu-description-txt {
-    font-size: 14px !important;
+@media (max-width: 320px) {
+  .avatar {
+    width: 100px;
   }
 }
 .menu-name-txt {
@@ -110,10 +101,12 @@ img {
   font-family: "Courier Prime", monospace;
 }
 
-@media (max-width: 576px) {
-  hr {
-    margin-left: 10% !important;
-    margin-right: 10% !important;
+@media (min-width: 568px) {
+  .menu-name-txt {
+    font-size: 24px;
+  }
+  .menu-description-txt {
+    font-size: 14px;
   }
 }
 hr {
@@ -123,6 +116,12 @@ hr {
   margin: 2rem 10rem 0 10rem;
 }
 
+@media (max-width: 576px) {
+  hr {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
 * {
   margin: 0;
   padding: 0;

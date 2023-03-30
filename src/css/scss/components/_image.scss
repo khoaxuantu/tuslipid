@@ -1,9 +1,3 @@
-@media (max-width: 320px) {
-    .avatar {
-        width: 100px;
-    }
-}
-
 img {
     max-width: 100%;
     height: auto;
@@ -11,4 +5,10 @@ img {
 
 .avatar {
     border-radius: 50%;
+}
+
+@media (max-width: 320px) {
+    .avatar {
+        width: 100px;
+    }
 }
