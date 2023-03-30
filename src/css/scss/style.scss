@@ -1,6 +1,9 @@
 @use 'general/var';
+@use 'general/grid';
+@use 'general/container';
 
 body {
     background-image: url(var.$background-url);
     background-size: cover;
+    font-family: var.$body-font;
 }
