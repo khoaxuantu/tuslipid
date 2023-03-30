@@ -90,18 +90,32 @@ img {
   border-radius: 50%;
 }
 
+@media (min-width: 568px) {
+  .menu-name-txt {
+    font-size: 24px;
+  }
+  .menu-description-txt {
+    font-size: 14px !important;
+  }
+}
 .menu-name-txt {
   padding: 0.5rem;
-  font-size: 24px;
+  font-size: 20px;
   font-family: "Montserrat", sans-serif;
 }
 
 .menu-description-txt {
   margin-top: 1rem;
-  font-size: 14px;
+  font-size: 12px;
   font-family: "Courier Prime", monospace;
 }
 
+@media (max-width: 576px) {
+  hr {
+    margin-left: 10% !important;
+    margin-right: 10% !important;
+  }
+}
 hr {
   background: linear-gradient(to right, #fff, #000, #fff);
   height: 1px;

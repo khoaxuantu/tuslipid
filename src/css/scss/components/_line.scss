@@ -1,3 +1,10 @@
+@media (max-width: 576px) {
+    hr {
+        margin-left: 10% !important;
+        margin-right: 10% !important;
+    }
+}
+
 hr {
     background: linear-gradient(to right, #fff, #000, #fff);
     height: 1px;
