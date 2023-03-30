@@ -1,22 +1,25 @@
 @use "decorate";
 
 .container {
-    width: 80%;
-    height: 80%;
     margin-left: auto;
     margin-right: auto;
     background-color: white;
     @include decorate.rounded;
 }
 
+.content-wrapper {
+    width: 80%;
+    height: 80%;
+}
+
 @media (min-width: 576px) {
-    .container {
+    .content-wrapper {
         height: 58.6%;
     }
 }
 
 @media (min-width: 768px) {
-    .container {
+    .content-wrapper {
         width: 720px;
         height: 600px;
     }
