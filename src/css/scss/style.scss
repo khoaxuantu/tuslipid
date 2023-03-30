@@ -1,0 +1,6 @@
+@use 'general/var';
+
+body {
+    background-image: url(var.$background-url);
+    background-size: cover;
+}
