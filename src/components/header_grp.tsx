@@ -8,9 +8,9 @@ function MenuHeaderGrp (props: IMenuHeaderGrpProps) {
     <div className='header-grp'>
         <img className='avatar' src="tuslipid.jpg" 
             alt="Tuslipid's avatar" height={128} width={128} />
-        <div className="menu-name-txt"><b>Xuan Khoa Tu Nguyen</b></div>
+        <div className="header-txt"><b>Xuan Khoa Tu Nguyen</b></div>
         <hr />
-        <div className="menu-description-txt">IATP-ME/CS @ NTUST</div>
+        <div className="description-txt">IATP-ME/CS @ NTUST</div>
         <hr />
     </div>
   );

@@ -56,21 +56,24 @@
 }
 
 .container {
-  width: 80%;
-  height: 80%;
   margin-left: auto;
   margin-right: auto;
   background-color: white;
   border-radius: 5px;
 }
 
+.content-wrapper {
+  width: 80%;
+  height: 80%;
+}
+
 @media (min-width: 576px) {
-  .container {
+  .content-wrapper {
     height: 58.6%;
   }
 }
 @media (min-width: 768px) {
-  .container {
+  .content-wrapper {
     width: 720px;
     height: 600px;
   }
@@ -89,23 +92,23 @@ img {
     width: 100px;
   }
 }
-.menu-name-txt {
+.header-txt {
   padding: 0.5rem;
   font-size: 20px;
   font-family: "Montserrat", sans-serif;
 }
 
-.menu-description-txt {
+.description-txt {
   margin-top: 1rem;
   font-size: 12px;
   font-family: "Courier Prime", monospace;
 }
 
 @media (min-width: 568px) {
-  .menu-name-txt {
+  .header-txt {
     font-size: 24px;
   }
-  .menu-description-txt {
+  .description-txt {
     font-size: 14px;
   }
 }

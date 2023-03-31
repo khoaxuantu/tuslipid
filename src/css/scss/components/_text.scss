@@ -1,22 +1,22 @@
 @use '../general/var';
 
-.menu-name-txt {
+.header-txt {
     padding: 0.5rem;
     font-size: 20px;
     font-family: var.$header-font;
 }
 
-.menu-description-txt {
+.description-txt {
     margin-top: 1rem;
     font-size: 12px;
     font-family: var.$body-font;
 }
 
 @media (min-width: 568px) {
-    .menu-name-txt {
+    .header-txt {
         font-size: 24px;
     }
-    .menu-description-txt {
+    .description-txt {
         font-size: 14px;
     }
 }
