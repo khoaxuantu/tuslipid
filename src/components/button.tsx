@@ -7,7 +7,8 @@ import { IconType } from 'react-icons/lib';
 
 interface IButtonProps {
     url: string,
-    icon: IconType
+    icon?: IconType,
+    content?: string
 }
 
 const iconList: IButtonProps[] = [
@@ -37,22 +38,37 @@ const iconList: IButtonProps[] = [
     }
 ];
 
-function Button(props: IButtonProps) {
-    return (
-        <a href={props.url} className='btn btn-square'>
-            <props.icon className='icon' size={"2rem"} color='#000' />
-        </a>
-    );
+function MenuButton(props: IButtonProps) {
+    if (props.icon !== undefined) {
+        return (
+            <a href={props.url} className='btn btn-square'>
+                <props.icon className='icon' size={"2rem"} color='#000' />
+            </a>
+        );
+    }
+    else {
+        return (<a href={props.url} className='btn btn-rect'>{props.content}</a>);
+    }
 }
 
 function SocialMediaBtnGroup() {
     return (
         <div className='btn-grp social-media-grp'>
             {iconList.map((btnProp) => {
-                return <Button url={btnProp.url} icon={btnProp.icon} />;
+                return <MenuButton url={btnProp.url} icon={btnProp.icon} />;
             })}
         </div>
     );
 }
 
 export default SocialMediaBtnGroup;
+
+export function NavBtnGroup() {
+    return (
+        <div className='btn-grp nav-btn-grp'>
+            <MenuButton url='/' content='About'/>
+            <MenuButton url='/' content='Works'/>
+            <MenuButton url='/' content='Projects' />
+        </div>
+    );
+}
