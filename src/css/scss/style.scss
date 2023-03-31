@@ -5,6 +5,7 @@
 @use 'components/image';
 @use 'components/text';
 @use 'components/line';
+@use 'components/button';
 
 *
 {
@@ -24,4 +25,9 @@ body {
 .header-grp {
     padding: 2.25rem;
     text-align: center;
+}
+
+.social-media-grp {
+    height: 4rem;
+    margin-top: 2.25rem;
 }

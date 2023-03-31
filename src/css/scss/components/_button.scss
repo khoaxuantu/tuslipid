@@ -1,0 +1,38 @@
+@use '../general/decorate';
+@use '../general/var';
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid var.$gray;
+    opacity: .8;
+    @include decorate.rounded;
+
+    &:hover {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border: none;
+        opacity: 1;
+    }
+}
+
+.btn-square {
+    aspect-ratio: 1/1;
+    width: 4rem;
+}
+
+.btn-rect {
+    aspect-ratio: 2/1;
+    width: 6.25rem;
+}
+
+.btn-grp {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    a {
+        margin: 0 0.625rem 0 0.625rem;
+    }
+}
