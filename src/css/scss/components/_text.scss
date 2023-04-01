@@ -13,8 +13,11 @@
 }
 
 .copyright-txt {
+    position: absolute;
+    width: 100%;
+    bottom: 1rem;
     text-align: center;
-    margin-top: 1.875rem;
+    padding: 0 0.5rem 0 0.5rem;
     font-size: 10px;
     font-family: var.$header-font;
 
@@ -24,7 +27,7 @@
     }
 }
 
-@media (min-width: 568px) {
+@media (min-width: 576px) {
     .header-txt {
         font-size: 24px;
     }

@@ -23,21 +23,31 @@ body {
 }
 
 .header-grp {
-    padding: 2.25rem;
+    padding: 5%;
     text-align: center;
 }
 
 .social-media-grp {
-    height: 4rem;
-    margin-top: 2.25rem;
+    margin-top: 7.5%;
 }
 
 .nav-btn-grp {
-    height: 3.125rem;
-    margin-top: 2.75rem;
+    margin-top: 10%;
     
     a {
         text-decoration: none;
         color: #000;
+    }
+}
+
+@media (min-width: 576px) {
+    .header-grp {
+        padding: 5%;
+    }
+    .social-media-grp {
+        margin-top: 5%;
+    }
+    .nav-btn-grp {
+        margin-top: 5%;
     }
 }
