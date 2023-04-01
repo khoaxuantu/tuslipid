@@ -6,6 +6,7 @@ import { FaCodepen } from "react-icons/fa";
 import { IconType } from 'react-icons/lib';
 
 interface IButtonProps {
+    id?: string,
     url: string,
     icon?: IconType,
     content?: string
@@ -13,26 +14,32 @@ interface IButtonProps {
 
 const iconList: IButtonProps[] = [
     {
+        id: "mail",
         url: "mailto:tungxk2908@gmail.com",
         icon: CgMail
     },
     {
+        id: "linkedin",
         url: "https://www.linkedin.com/in/xuan-khoa-tu-nguyen-1a8927204/",
         icon: BsLinkedin
     },
     {
+        id: "github",
         url: "https://github.com/khoaxuantu",
         icon: BsGithub
     },
     {
+        id: "facebook",
         url: "https://www.facebook.com/xuankhoatu.nguyen/",
         icon: ImFacebook2
     },
     {
+        id: "discord",
         url: "https://discordapp.com/users/623530338869837825",
         icon: BsDiscord
     },
     {
+        id: "codepen",
         url: "https://codepen.io/khoaxuantu",
         icon: FaCodepen
     }
@@ -41,8 +48,8 @@ const iconList: IButtonProps[] = [
 function MenuButton(props: IButtonProps) {
     if (props.icon !== undefined) {
         return (
-            <a href={props.url} className='btn btn-square'>
-                <props.icon className='icon' size={"2rem"} color='#000' />
+            <a id={props.id} className='btn btn-square' href={props.url} key={props.id}>
+                <props.icon className='icon' size={"1.5rem"} color='#000' />
             </a>
         );
     }
@@ -55,7 +62,7 @@ function SocialMediaBtnGroup() {
     return (
         <div className='btn-grp social-media-grp'>
             {iconList.map((btnProp) => {
-                return <MenuButton url={btnProp.url} icon={btnProp.icon} />;
+                return <MenuButton url={btnProp.url} icon={btnProp.icon} key={btnProp.id} id={btnProp.id} />;
             })}
         </div>
     );
