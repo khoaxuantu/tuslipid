@@ -268,7 +268,7 @@ hr {
 }
 
 body {
-  background-image: url("../background.jpg");
+  background-image: url("../../public/background.jpg");
   background-size: cover;
   font-family: "Courier Prime", monospace;
 }
