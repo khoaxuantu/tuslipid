@@ -12,7 +12,7 @@
         aspect-ratio: 1/1;
         background-color: var.$navbar-bg-color;
         border: none;
-        z-index: 1000;
+        cursor: pointer;
 
         &::after {
             content: '';
@@ -29,19 +29,32 @@
 
 .navbar-wrap {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 0;
+    left: 0;
+    z-index: 3;
 }
 
 .navbar-menu {
+    @include decorate.rounded;
     background-color: var.$navbar-bg-color;
     width: 100%;
     display: none;
-    li a {
-        font-size: 14px;
-        text-decoration: none;
-        color: white;
-    }
+
+    li {
+        padding: 0.5rem;
+        cursor: pointer;
+
+        a {
+            font-size: 14px;
+            text-decoration: none;
+            color: white;
+        }
+
+        &:hover {
+            background-color: var.$gray;
+            opacity: 0.6;
+        }
+    } 
 }
 
 @media screen and (min-width: 768px) {
@@ -49,6 +62,9 @@
         position: fixed;
         top: 25px;
         left: 25px;
-        max-width: 150px;
+    }
+    
+    .navbar-menu {
+        width: 150px;
     }
 }

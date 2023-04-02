@@ -28,7 +28,8 @@ export function NavBtnGroup() {
                 return <Btn.DefaultButton 
                     url={btnProp.url}
                     content={btnProp.content}
-                    classname='btn btn-rect' />
+                    classname='btn btn-rect'
+                    key={btnProp.content} />
             })}
         </div>
     );

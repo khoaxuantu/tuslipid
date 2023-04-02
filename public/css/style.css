@@ -210,7 +210,7 @@ hr {
   aspect-ratio: 1/1;
   background-color: #383838;
   border: none;
-  z-index: 1000;
+  cursor: pointer;
 }
 .navbar button::after {
   content: "";
@@ -225,19 +225,29 @@ hr {
 
 .navbar-wrap {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 0;
+  left: 0;
+  z-index: 3;
 }
 
 .navbar-menu {
+  border-radius: 5px;
   background-color: #383838;
   width: 100%;
   display: none;
+}
+.navbar-menu li {
+  padding: 0.5rem;
+  cursor: pointer;
 }
 .navbar-menu li a {
   font-size: 14px;
   text-decoration: none;
   color: white;
+}
+.navbar-menu li:hover {
+  background-color: #8c8c8c;
+  opacity: 0.6;
 }
 
 @media screen and (min-width: 768px) {
@@ -245,7 +255,9 @@ hr {
     position: fixed;
     top: 25px;
     left: 25px;
-    max-width: 150px;
+  }
+  .navbar-menu {
+    width: 150px;
   }
 }
 * {
