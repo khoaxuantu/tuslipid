@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as Btn from '../lib/factory/buttonBase';
-import { socialMediaInfoList, navBtnInfoList } from '../general_info';
+import { socialMediaInfoList, navBtnInfoList } from '../lib/general_info';
 
 
 function SocialMediaBtnGroup() {

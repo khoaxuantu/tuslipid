@@ -1,4 +1,4 @@
-import { IconButtonProps, DefaultButtonProps } from "./lib/factory/buttonBase";
+import { IconButtonProps, DefaultButtonProps } from "./factory/buttonBase";
 import { CgMail } from 'react-icons/cg';
 import { BsLinkedin, BsGithub, BsDiscord } from 'react-icons/bs';
 import { ImFacebook2 } from "react-icons/im";
