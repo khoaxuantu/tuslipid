@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
 
-$background-url: "../../public/background.jpg";
-$avatar-url: "../../public/tuslipid.jpg";
+$background-url: "../background.jpg";
+$avatar-url: "tuslipid.jpg";
 $header-font: 'Montserrat', sans-serif;
 $body-font: 'Courier Prime', monospace;
 $radius: 5px;
 $gray: #8c8c8c;
 $light-gray: #cbcbcb;
 $default-atag-color: #0d6efd;
+$navbar-bg-color: #383838;
+$navbar-stick-color: #191717;

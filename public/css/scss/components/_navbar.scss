@@ -1,0 +1,54 @@
+@use '../general/var';
+@use '../general/decorate';
+
+
+.navbar {
+    @include decorate.rounded;
+    background-color: var.$navbar-bg-color;
+
+    button {
+        @include decorate.rounded;
+        width: 45px;
+        aspect-ratio: 1/1;
+        background-color: var.$navbar-bg-color;
+        border: none;
+        z-index: 1000;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 66.67%;
+            height: 0.5rem;
+            background-color: var.$navbar-stick-color;
+            box-shadow: 0 10px 0 var.$navbar-stick-color, 0 20px var.$navbar-stick-color;
+            left: 18%;
+            top: 18%;
+        }
+    }
+}
+
+.navbar-wrap {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.navbar-menu {
+    background-color: var.$navbar-bg-color;
+    width: 100%;
+    display: none;
+    li a {
+        font-size: 14px;
+        text-decoration: none;
+        color: white;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .navbar-wrap {
+        position: fixed;
+        top: 25px;
+        left: 25px;
+        max-width: 150px;
+    }
+}

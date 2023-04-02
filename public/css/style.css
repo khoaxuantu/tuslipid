@@ -200,6 +200,54 @@ hr {
     font-size: 16px;
   }
 }
+.navbar {
+  border-radius: 5px;
+  background-color: #383838;
+}
+.navbar button {
+  border-radius: 5px;
+  width: 45px;
+  aspect-ratio: 1/1;
+  background-color: #383838;
+  border: none;
+  z-index: 1000;
+}
+.navbar button::after {
+  content: "";
+  position: absolute;
+  width: 66.67%;
+  height: 0.5rem;
+  background-color: #191717;
+  box-shadow: 0 10px 0 #191717, 0 20px #191717;
+  left: 18%;
+  top: 18%;
+}
+
+.navbar-wrap {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.navbar-menu {
+  background-color: #383838;
+  width: 100%;
+  display: none;
+}
+.navbar-menu li a {
+  font-size: 14px;
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-wrap {
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    max-width: 150px;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -208,7 +256,7 @@ hr {
 }
 
 body {
-  background-image: url("../../public/background.jpg");
+  background-image: url("../background.jpg");
   background-size: cover;
   font-family: "Courier Prime", monospace;
 }
