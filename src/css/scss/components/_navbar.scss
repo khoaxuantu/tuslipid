@@ -1,10 +1,11 @@
 @use '../general/var';
 @use '../general/decorate';
+@use '../general/animation';
 
 
 .navbar {
     @include decorate.rounded;
-    background-color: var.$navbar-bg-color;
+    width: 100%;
 
     button {
         @include decorate.rounded;
@@ -13,6 +14,7 @@
         background-color: var.$navbar-bg-color;
         border: none;
         cursor: pointer;
+        position: relative;
 
         &::after {
             content: '';
@@ -28,10 +30,10 @@
 }
 
 .navbar-wrap {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 3;
+    z-index: 1;
 }
 
 .navbar-menu {
@@ -57,14 +59,23 @@
     } 
 }
 
+.menu-animation {
+    animation-name: fadeInDown;
+    animation-duration: 300ms;
+}
+
 @media screen and (min-width: 768px) {
     .navbar-wrap {
-        position: fixed;
         top: 25px;
         left: 25px;
+        max-width: 150px;
     }
     
     .navbar-menu {
         width: 150px;
+    }
+
+    .menu-animation {
+        animation-name: fadeInUp;
     }
 }

@@ -1,88 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
-.col-1 {
-  width: 8.33%;
-}
-
-.col-2 {
-  width: 16.66%;
-}
-
-.col-3 {
-  width: 25%;
-}
-
-.col-4 {
-  width: 33.33%;
-}
-
-.col-5 {
-  width: 41.66%;
-}
-
-.col-6 {
-  width: 50%;
-}
-
-.col-7 {
-  width: 58.33%;
-}
-
-.col-8 {
-  width: 66.66%;
-}
-
-.col-9 {
-  width: 75%;
-}
-
-.col-10 {
-  width: 83.33%;
-}
-
-.col-11 {
-  width: 91.66%;
-}
-
-.col-12 {
-  width: 100%;
-}
-
-.center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  background-color: white;
-  border-radius: 5px;
-}
-
-.content-wrapper {
-  width: 80%;
-  height: 600px;
-}
-
-@media (min-width: 376px) {
-  .content-wrapper {
-    height: 80%;
-  }
-}
-@media screen and (min-width: 376px) and (max-height: 992px) {
-  .content-wrapper {
-    height: 600px;
-  }
-}
-@media (min-width: 768px) {
-  .content-wrapper {
-    width: 720px;
-    height: 600px;
-  }
-}
 img {
   max-width: 100%;
   height: auto;
@@ -144,6 +61,13 @@ hr {
     margin-right: 10%;
   }
 }
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .btn {
   display: flex;
   justify-content: center;
@@ -200,9 +124,29 @@ hr {
     font-size: 16px;
   }
 }
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 5%, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes fadeInDown {
+  from {
+    transform: translate3d(0, -5%, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
 .navbar {
   border-radius: 5px;
-  background-color: #383838;
+  width: 100%;
 }
 .navbar button {
   border-radius: 5px;
@@ -211,6 +155,7 @@ hr {
   background-color: #383838;
   border: none;
   cursor: pointer;
+  position: relative;
 }
 .navbar button::after {
   content: "";
@@ -224,10 +169,10 @@ hr {
 }
 
 .navbar-wrap {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: 3;
+  z-index: 1;
 }
 
 .navbar-menu {
@@ -250,14 +195,98 @@ hr {
   opacity: 0.6;
 }
 
+.menu-animation {
+  animation-name: fadeInDown;
+  animation-duration: 300ms;
+}
+
 @media screen and (min-width: 768px) {
   .navbar-wrap {
-    position: fixed;
     top: 25px;
     left: 25px;
+    max-width: 150px;
   }
   .navbar-menu {
     width: 150px;
+  }
+  .menu-animation {
+    animation-name: fadeInUp;
+  }
+}
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.content-wrapper {
+  width: 80%;
+  height: 600px;
+}
+
+@media (min-width: 376px) {
+  .content-wrapper {
+    height: 80%;
+  }
+}
+@media screen and (min-width: 376px) and (max-height: 992px) {
+  .content-wrapper {
+    height: 600px;
+  }
+}
+@media (min-width: 768px) {
+  .content-wrapper {
+    width: 720px;
+    height: 600px;
   }
 }
 * {

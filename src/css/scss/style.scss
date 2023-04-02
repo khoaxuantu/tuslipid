@@ -1,12 +1,13 @@
-@use 'general/var';
-@use 'general/grid';
-@use 'general/container';
-@use 'general/decorate';
 @use 'components/image';
 @use 'components/text';
 @use 'components/line';
 @use 'components/button';
 @use 'components/navbar';
+@use 'general/var';
+@use 'general/grid';
+@use 'general/container';
+@use 'general/decorate';
+@use 'general/animation';
 
 *
 {

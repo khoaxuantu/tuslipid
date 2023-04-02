@@ -10,6 +10,8 @@ function Navbar() {
         navbar.style.display = 'block';
     }
 
+    // Close navbar event handler, when you click everywhere except the opening navbar,
+    // the navber should be closed
     document.addEventListener('click', e => {
         const target = e.target as HTMLInputElement;
         if (target.className !== 'navbar-trigger' &&
@@ -24,7 +26,7 @@ function Navbar() {
     return (
         <nav className="navbar navbar-wrap">
             <button type="button" className="navbar-trigger" onClick={openNav}></button>
-            <ul className="navbar-menu">
+            <ul className="navbar-menu menu-animation">
                 <li key="Home">
                     <DefaultButton url="/" content="Home" />
                 </li>
