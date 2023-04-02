@@ -3,7 +3,7 @@ import MenuHeaderGrp from "./header_grp";
 import SocialMediaBtnGroup, { NavBtnGroup } from "./button";
 import Copyright from "./copyright";
 
-function Wrapper() {
+function SiteBuilder() {
     return (
         <div className="container content-wrapper center">
             <MenuHeaderGrp />
@@ -14,4 +14,4 @@ function Wrapper() {
     );
 }
 
-export default Wrapper;
+export default SiteBuilder;

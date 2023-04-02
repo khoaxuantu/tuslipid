@@ -3,16 +3,10 @@ import { CgMail } from 'react-icons/cg';
 import { BsLinkedin, BsGithub, BsDiscord } from 'react-icons/bs';
 import { ImFacebook2 } from "react-icons/im";
 import { FaCodepen } from "react-icons/fa";
-import { IconType } from 'react-icons/lib';
+import * as Btn from '../lib/factory/buttonBase';
 
-interface IButtonProps {
-    id?: string,
-    url: string,
-    icon?: IconType,
-    content?: string
-}
 
-const iconList: IButtonProps[] = [
+const socialMediaInfoList: Btn.IconButtonProps[] = [
     {
         id: "mail",
         url: "mailto:tungxk2908@gmail.com",
@@ -45,24 +39,32 @@ const iconList: IButtonProps[] = [
     }
 ];
 
-function MenuButton(props: IButtonProps) {
-    if (props.icon !== undefined) {
-        return (
-            <a id={props.id} className='btn btn-square' href={props.url} key={props.id}>
-                <props.icon className='icon' size={"1.5rem"} color='#000' />
-            </a>
-        );
+const NavInfoList: Btn.DefaultButtonProps[] = [
+    {
+        url: "/",
+        content: "About"
+    },
+    {
+        url: "/",
+        content: "Projects"
+    },
+    {
+        url: "/",
+        content: "Blogs"
     }
-    else {
-        return (<a href={props.url} className='btn btn-rect'>{props.content}</a>);
-    }
-}
+];
+
 
 function SocialMediaBtnGroup() {
     return (
         <div className='btn-grp social-media-grp'>
-            {iconList.map((btnProp) => {
-                return <MenuButton url={btnProp.url} icon={btnProp.icon} key={btnProp.id} id={btnProp.id} />;
+            {socialMediaInfoList.map((btnProp) => {
+                return <Btn.IconButton 
+                    url={btnProp.url} 
+                    icon={btnProp.icon} 
+                    key={btnProp.id} 
+                    id={btnProp.id}
+                    classname='btn btn-square' />;
             })}
         </div>
     );
@@ -70,12 +72,16 @@ function SocialMediaBtnGroup() {
 
 export default SocialMediaBtnGroup;
 
+
 export function NavBtnGroup() {
     return (
         <div className='btn-grp nav-btn-grp'>
-            <MenuButton url='/' content='About'/>
-            <MenuButton url='/' content='Works'/>
-            <MenuButton url='/' content='Projects' />
+            {NavInfoList.map(btnProp => {
+                return <Btn.DefaultButton 
+                    url={btnProp.url}
+                    content={btnProp.content}
+                    classname='btn btn-rect' />
+            })}
         </div>
     );
 }

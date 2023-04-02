@@ -1,10 +1,10 @@
 import React from 'react';
-import Wrapper from './components/wrapper';
+import SiteBuilder from './components/site';
 
 function App() {
   return (
     <div className="App">
-      <Wrapper />
+      <SiteBuilder />
     </div>
   );
 }
