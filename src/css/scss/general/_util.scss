@@ -18,19 +18,44 @@ $directions: (
 @each $key, $direction in $directions {
     @each $id, $factor in $factors {
         .m#{$key}-#{$id} {
-            margin-#{$direction}: $spacer * $factor !important;
+            margin-#{$direction}: calc($spacer/2) * $factor !important;
         }
         .p#{$key}-#{$id} {
-            padding-#{$direction}: $spacer * $factor !important;
+            padding-#{$direction}: calc($spacer/2) * $factor !important;
         }
     }
 }
 
 @each $id, $factor in $factors {
     .m-#{$id} {
-        margin: $spacer * $factor !important;
+        margin: calc($spacer/2) * $factor !important;
     }
     .p-#{$id} {
-        padding: $spacer * $factor !important;
+        padding: calc($spacer/2) * $factor !important;
+    }
+}
+
+
+@media screen and (min-width: 576px) {
+    @each $key, $direction in $directions {
+        @each $id, $factor in $factors {
+            .m#{$key}-#{$id} {
+                margin-#{$direction}: $spacer * $factor !important;
+            }
+            .p#{$key}-#{$id} {
+                padding-#{$direction}: $spacer * $factor !important;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 576px) {
+    @each $id, $factor in $factors {
+        .m-#{$id} {
+            margin: $spacer * $factor !important;
+        }
+        .p-#{$id} {
+            padding: $spacer * $factor !important;
+        }
     }
 }
