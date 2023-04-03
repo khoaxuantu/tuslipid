@@ -7,25 +7,31 @@
     @include decorate.rounded;
 }
 
-.content-wrapper {
+.menu-wrapper {
     width: 80%;
-    height: 600px;
+    height: 550px;
+}
+
+.page-wrapper {
+    width: 80%;
+    height: 800px;
+    margin-top: 4rem;
 }
 
 @media (min-width: 376px) {
-    .content-wrapper {
+    .menu-wrapper {
         height: 80%;
     }
 }
 
 @media screen and (min-width: 376px) and (max-height: 992px) {
-    .content-wrapper {
+    .menu-wrapper {
         height: 600px;
     }
 }
 
 @media (min-width: 768px) {
-    .content-wrapper {
+    .menu-wrapper {
         width: 720px;
         height: 600px;
     }

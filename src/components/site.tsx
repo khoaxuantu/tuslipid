@@ -1,21 +1,50 @@
 import React from "react";
-import MenuHeaderGrp from "./header_grp";
+import { Outlet } from "react-router-dom";
+import * as Header from "./header_grp";
 import SocialMediaBtnGroup, { NavBtnGroup } from "./button";
 import Copyright from "./copyright";
 import Navbar from "./navbar";
 
-function SiteBuilder() {
+export function Layout() {
     return (
         <>
             <Navbar />
-            <div className="container content-wrapper center">
-                <MenuHeaderGrp />
-                <SocialMediaBtnGroup />
-                <NavBtnGroup />
-                <Copyright />
-            </div>
+            <Outlet />
         </>
     );
 }
 
-export default SiteBuilder;
+export function MenuBuilder() {
+    return (
+        <div className="container menu-wrapper center">
+            <Header.MenuHeaderGrp />
+            <SocialMediaBtnGroup />
+            <NavBtnGroup />
+            <Copyright />
+        </div>
+    );
+}
+
+export function AboutPage() {
+    return (
+        <div className="container page-wrapper">
+            <Header.AboutHeaderGrp />
+        </div>
+    );
+}
+
+export function ProjectsPage() {
+    return (
+        <div className="container page-wrapper">
+            
+        </div>
+    );
+}
+
+export function BlogPage() {
+    return (
+        <div className="container page-wrapper">
+            
+        </div>
+    );
+}

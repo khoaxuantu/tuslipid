@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { IconType } from "react-icons/lib";
 
 
@@ -20,14 +21,14 @@ export interface IconButtonProps extends IBaseButtonProps {
 
 
 export function DefaultButton(props: DefaultButtonProps) {
-    return (<a href={props.url} className={props.classname}>{props.content}</a>);
+    return (<Link to={props.url} className={props.classname}>{props.content}</Link>);
 }
 
 
 export function IconButton(props: IconButtonProps) {
     return (
-        <a id={props.id} className={props.classname} href={props.url} key={props.id}>
+        <Link id={props.id} className={props.classname} to={props.url} target="_blank" key={props.id}>
             <props.icon className='icon' size={"1.5rem"} color='#000' />
-        </a>
+        </Link>
     );
 }
