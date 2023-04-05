@@ -18,8 +18,11 @@ function AboutIntro() {
                         and attempted to develop further in this major. 
                     </p>
                     <p className="mt-2">
-                        Currently, I am seeking a full-time opportunity in the software engineering-related field 
-                        to contribute all the knowledge that I have earned.
+                        Currently, I am focusing on fullstack web development
+                        and cloud services; and seeking a full-time position 
+                        in backend or frontend. But if there is any opportunity
+                        in other software-related fields (such as game, mobile, system,
+                        etc...), I would love to challenge myself as well.
                     </p>
                 </div>
                 <div className="col-5 flex-image">
