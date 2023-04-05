@@ -1,5 +1,6 @@
 @use "decorate";
 @use "var";
+@use "animation";
 
 @mixin box($theme: white) {
     @include decorate.rounded($offset: 5px);
@@ -14,11 +15,13 @@
 }
 
 .menu-wrapper {
+    @include animation.animation(fadeIn, 500ms);
     width: 80%;
     height: 550px;
 }
 
 .page-wrapper {
+    @include animation.animation(fadeInUp, 500ms);
     width: 80%;
     height: auto;
     margin-top: 4rem;

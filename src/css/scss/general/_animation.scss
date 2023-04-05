@@ -1,3 +1,17 @@
+@mixin animation($animation, $time) {
+    animation-name: $animation;
+    animation-duration: $time;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 @keyframes fadeInUp {
     from {
         transform: translate3d(0, 5%, 0);
@@ -19,3 +33,4 @@
         opacity: 1;
     }
 }
+

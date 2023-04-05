@@ -63,8 +63,7 @@
 }
 
 .menu-animation {
-    animation-name: fadeInDown;
-    animation-duration: 300ms;
+    @include animation.animation(fadeInDown, 300ms);
 }
 
 @media screen and (min-width: 768px) {
