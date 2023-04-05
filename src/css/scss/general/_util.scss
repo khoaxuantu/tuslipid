@@ -18,44 +18,44 @@ $directions: (
 @each $key, $direction in $directions {
     @each $id, $factor in $factors {
         .m#{$key}-#{$id} {
-            margin-#{$direction}: calc($spacer/2) * $factor !important;
+            margin-#{$direction}: calc($spacer) * $factor !important;
         }
         .p#{$key}-#{$id} {
-            padding-#{$direction}: calc($spacer/2) * $factor !important;
+            padding-#{$direction}: calc($spacer) * $factor !important;
         }
     }
 }
 
 @each $id, $factor in $factors {
     .m-#{$id} {
-        margin: calc($spacer/2) * $factor !important;
+        margin: calc($spacer) * $factor !important;
     }
     .p-#{$id} {
-        padding: calc($spacer/2) * $factor !important;
+        padding: calc($spacer) * $factor !important;
     }
 }
 
 
-@media screen and (min-width: 576px) {
-    @each $key, $direction in $directions {
-        @each $id, $factor in $factors {
-            .m#{$key}-#{$id} {
-                margin-#{$direction}: $spacer * $factor !important;
-            }
-            .p#{$key}-#{$id} {
-                padding-#{$direction}: $spacer * $factor !important;
-            }
-        }
-    }
-}
+// @media screen and (min-width: 576px) {
+//     @each $key, $direction in $directions {
+//         @each $id, $factor in $factors {
+//             .m#{$key}-#{$id} {
+//                 margin-#{$direction}: $spacer * $factor !important;
+//             }
+//             .p#{$key}-#{$id} {
+//                 padding-#{$direction}: $spacer * $factor !important;
+//             }
+//         }
+//     }
+// }
 
-@media screen and (min-width: 576px) {
-    @each $id, $factor in $factors {
-        .m-#{$id} {
-            margin: $spacer * $factor !important;
-        }
-        .p-#{$id} {
-            padding: $spacer * $factor !important;
-        }
-    }
-}
+// @media screen and (min-width: 576px) {
+//     @each $id, $factor in $factors {
+//         .m-#{$id} {
+//             margin: $spacer * $factor !important;
+//         }
+//         .p-#{$id} {
+//             padding: $spacer * $factor !important;
+//         }
+//     }
+// }

@@ -1,7 +1,12 @@
 @use "var";
 
-@mixin rounded {
-    border-radius: var.$radius;
+%flex-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin rounded($offset: 0px) {
+    border-radius: var.$radius + $offset;
 }
 
 .center {

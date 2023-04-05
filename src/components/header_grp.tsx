@@ -26,7 +26,7 @@ export function AboutHeaderGrp () {
         <b>Xuan Khoa Tu Nguyen | 阮春科秀 | Tu | Nguyễn Xuân Khoa Tú</b>
       </div>
       <div className="description-txt mt-3">
-        ~ Whatever you call me in these names ~
+        ~ You can call me by any name ~
       </div>
       <div className='description-txt mt-3'>
         <a href="/">Contact</a> | {" "}

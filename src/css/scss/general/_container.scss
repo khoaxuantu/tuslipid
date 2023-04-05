@@ -1,4 +1,10 @@
 @use "decorate";
+@use "var";
+
+@mixin box($theme: white) {
+    @include decorate.rounded($offset: 5px);
+    background-color: $theme;
+}
 
 .container {
     margin-left: auto;
@@ -16,6 +22,10 @@
     width: 80%;
     height: auto;
     margin-top: 4rem;
+}
+
+.lightgray-box {
+    @include box($theme: var.$light-gray);
 }
 
 @media (min-width: 376px) {
