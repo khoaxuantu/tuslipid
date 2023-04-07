@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
-.btn, .btn-skill .icon, .flex-image {
+.btn, .icon, .flex-image {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,6 +20,13 @@ img {
 
 .avatar {
   border-radius: 50%;
+}
+
+.icon {
+  width: 33.33%;
+}
+.icon img {
+  max-width: 32px;
 }
 
 .flex-image {
@@ -118,12 +125,6 @@ hr {
   font-size: 10px !important;
   color: black;
   transition: scale 150ms ease-out;
-}
-.btn-skill .icon {
-  width: 33.33%;
-}
-.btn-skill .icon img {
-  max-width: 32px;
 }
 .btn-skill #name {
   width: 66.66%;

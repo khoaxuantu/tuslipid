@@ -9,6 +9,15 @@ img {
     border-radius: 50%;
 }
 
+.icon {
+    @extend %flex-center;
+    width: 33.33%;
+    
+    img {
+        max-width: 32px;
+    }
+}
+
 .flex-image {
     @extend %flex-center;
     justify-content: center;

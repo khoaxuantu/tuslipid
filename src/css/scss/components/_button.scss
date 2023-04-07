@@ -46,14 +46,6 @@
     font-size: 10px !important;
     color: black;
     transition: scale 150ms ease-out;
-    
-    .icon {
-        @extend %flex-center;
-        width: 33.33%;
-        img {
-            max-width: 32px;
-        }
-    }
 
     #name {
         width: 66.66%;
