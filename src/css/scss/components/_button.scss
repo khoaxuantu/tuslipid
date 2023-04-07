@@ -1,10 +1,13 @@
 @use '../general/decorate';
 @use '../general/var';
 
+@mixin shapeBtn($ratio: 1, $width: auto) {
+    aspect-ratio: $ratio;
+    width: $width;
+}
+
 .btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %flex-center;
     background-color: #fff;
     box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
     border: 1px solid var.$light-gray;
@@ -19,13 +22,11 @@
 }
 
 .btn-square {
-    aspect-ratio: 1/1;
-    width: 2rem;
+    @include shapeBtn($width: 2rem);
 }
 
 .btn-rect {
-    aspect-ratio: 2/1;
-    width: 4.6875rem;
+    @include shapeBtn(2, 4.6875rem)
 }
 
 .btn-grp {
@@ -40,13 +41,34 @@
     }
 }
 
+.btn-skill {
+    @include shapeBtn(1, 3rem);
+    font-size: 10px !important;
+    color: black;
+    transition: scale 150ms ease-out;
+    
+    .icon {
+        @extend %flex-center;
+        width: 33.33%;
+        img {
+            max-width: 32px;
+        }
+    }
+
+    #name {
+        width: 66.66%;
+        text-align: center;
+        display: none;
+    }
+
+    &:hover {
+        scale: 1.1;
+    }
+}
+
 @media (min-width: 320px) {
     .btn-square {
         width: 3rem;
-    }
-
-    .btn-rect {
-        width: 4.6875rem;
     }
 }
 
@@ -54,14 +76,23 @@
     .btn-square {
         width: 4rem;
     }
-
+    
     .btn-rect {
         width: 6.25rem;
     }
-
+    
     .btn-grp {
         a {
             font-size: 16px;
+        }
+    }
+    
+    .btn-skill {
+        @include shapeBtn(3, 150px);
+        font-size: 12px !important;
+
+        #name {
+            display: block;
         }
     }
 }

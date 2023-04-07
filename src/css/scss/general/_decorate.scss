@@ -3,6 +3,7 @@
 %flex-center {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 @mixin rounded($offset: 0px) {

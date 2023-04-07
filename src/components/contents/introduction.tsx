@@ -1,3 +1,6 @@
+import { SkillBtnGroup } from "../button";
+
+
 function AboutIntro() {
     return (
         <section className="mb-3">
@@ -29,11 +32,12 @@ function AboutIntro() {
                     <img src="https://media.giphy.com/media/j0HjChGV0J44KrrlGv/giphy.gif" alt="typing cat" width={300} />
                 </div>
             </div>
-            <div className="row ms-2 mt-2">
+            <div className="row ms-2 mt-3">
                 <h4>
                     I love learning and trying new things, here are some tools that I have used
                 </h4>
             </div>
+            <SkillBtnGroup />
         </section>
     );
 }

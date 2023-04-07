@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
-.flex-image {
+.btn, .btn-skill .icon, .flex-image {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .center {
@@ -78,9 +79,6 @@ hr {
   }
 }
 .btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: #fff;
   box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
   border: 1px solid #cbcbcb;
@@ -94,12 +92,12 @@ hr {
 }
 
 .btn-square {
-  aspect-ratio: 1/1;
+  aspect-ratio: 1;
   width: 2rem;
 }
 
 .btn-rect {
-  aspect-ratio: 2/1;
+  aspect-ratio: 2;
   width: 4.6875rem;
 }
 
@@ -114,12 +112,31 @@ hr {
   font-size: 14px;
 }
 
+.btn-skill {
+  aspect-ratio: 1;
+  width: 3rem;
+  font-size: 10px !important;
+  color: black;
+  transition: scale 150ms ease-out;
+}
+.btn-skill .icon {
+  width: 33.33%;
+}
+.btn-skill .icon img {
+  max-width: 32px;
+}
+.btn-skill #name {
+  width: 66.66%;
+  text-align: center;
+  display: none;
+}
+.btn-skill:hover {
+  scale: 1.1;
+}
+
 @media (min-width: 320px) {
   .btn-square {
     width: 3rem;
-  }
-  .btn-rect {
-    width: 4.6875rem;
   }
 }
 @media (min-width: 576px) {
@@ -131,6 +148,14 @@ hr {
   }
   .btn-grp a {
     font-size: 16px;
+  }
+  .btn-skill {
+    aspect-ratio: 3;
+    width: 150px;
+    font-size: 12px !important;
+  }
+  .btn-skill #name {
+    display: block;
   }
 }
 @keyframes fadeIn {
@@ -288,14 +313,14 @@ hr {
 
 .menu-wrapper {
   animation-name: fadeIn;
-  animation-duration: 500ms;
+  animation-duration: 1s;
   width: 80%;
   height: 550px;
 }
 
 .page-wrapper {
   animation-name: fadeInUp;
-  animation-duration: 500ms;
+  animation-duration: 1.5s;
   width: 80%;
   height: auto;
   margin-top: 4rem;
