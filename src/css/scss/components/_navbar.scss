@@ -1,14 +1,14 @@
 @use '../general/var';
-@use '../general/decorate';
+@use '../general/util';
 @use '../general/animation';
 
 
 .navbar {
-    @include decorate.rounded;
+    @include util.rounded;
     width: 100%;
 
     button {
-        @include decorate.rounded;
+        @include util.rounded;
         width: 45px;
         aspect-ratio: 1/1;
         background-color: var.$navbar-bg-color;
@@ -37,7 +37,7 @@
 }
 
 .navbar-menu {
-    @include decorate.rounded;
+    @include util.rounded;
     background-color: var.$navbar-bg-color;
     width: 100%;
     display: none;

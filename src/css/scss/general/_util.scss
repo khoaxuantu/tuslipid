@@ -1,3 +1,5 @@
+@use "var";
+
 /* Bootstrap-like spacing */
 $spacer: 1rem;
 $factors: (
@@ -14,6 +16,7 @@ $directions: (
     "s": "left",
     "e": "right",
 );
+
 
 @each $key, $direction in $directions {
     @each $id, $factor in $factors {
@@ -35,6 +38,26 @@ $directions: (
     }
 }
 
+%flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin rounded($offset: 0px) {
+    border-radius: var.$radius + $offset;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.d-flex {
+    display: flex !important;
+}
 
 // @media screen and (min-width: 576px) {
 //     @each $key, $direction in $directions {

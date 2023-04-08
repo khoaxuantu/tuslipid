@@ -1,9 +1,9 @@
-@use "decorate";
+@use "util";
 @use "var";
 @use "animation";
 
 @mixin box($theme: white) {
-    @include decorate.rounded($offset: 5px);
+    @include util.rounded($offset: 5px);
     background-color: $theme;
 }
 
@@ -11,7 +11,7 @@
     margin-left: auto;
     margin-right: auto;
     background-color: white;
-    @include decorate.rounded;
+    @include util.rounded;
 }
 
 .menu-wrapper {
