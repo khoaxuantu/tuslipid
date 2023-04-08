@@ -15,13 +15,11 @@
 }
 
 .menu-wrapper {
-    @include animation.animation(fadeIn, 1s);
     width: 80%;
     height: 550px;
 }
 
 .page-wrapper {
-    @include animation.animation(fadeInUp, 1.5s);
     width: 80%;
     height: auto;
     margin-top: 4rem;

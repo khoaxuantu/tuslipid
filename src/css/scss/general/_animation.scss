@@ -34,3 +34,19 @@
     }
 }
 
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.transition-menu {
+    @include animation(fadeIn, 1s);
+}
+
+.transition-page {
+    @include animation(fadeInUp, 1.5s);
+}

@@ -187,6 +187,24 @@ hr {
     opacity: 1;
   }
 }
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.transition-menu {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+}
+
+.transition-page {
+  animation-name: fadeInUp;
+  animation-duration: 1.5s;
+}
+
 .navbar {
   border-radius: 5px;
   width: 100%;
@@ -313,15 +331,11 @@ hr {
 }
 
 .menu-wrapper {
-  animation-name: fadeIn;
-  animation-duration: 1s;
   width: 80%;
   height: 550px;
 }
 
 .page-wrapper {
-  animation-name: fadeInUp;
-  animation-duration: 1.5s;
   width: 80%;
   height: auto;
   margin-top: 4rem;
