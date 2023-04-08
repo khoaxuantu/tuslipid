@@ -574,6 +574,9 @@ hr {
     border-bottom: none;
     border-left: 2px solid #8c8c8c;
   }
+  .tab-content {
+    height: 250px;
+  }
 }
 .row {
   display: flex;
