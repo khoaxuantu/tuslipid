@@ -21,7 +21,7 @@ function TabList() {
     }
 
     return (
-        <div className="p-2 row">
+        <div className="p-2 row works-grp">
             <div className="col-3 tab-list">
                 {
                     worksInfoList.map(tabProps => {

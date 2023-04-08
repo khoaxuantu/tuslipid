@@ -73,6 +73,7 @@
         background-color: var.$light-gray;
         border-left: none;
         border-bottom: 2px solid var.$gray;
+        font-weight: bold;
     }
 }
 
@@ -85,6 +86,10 @@
     cursor: pointer;
     font-family: var.$header-font;
     text-align: start;
+
+    &:hover {
+        font-weight: bold;
+    }
 }
 
 .tab-content {

@@ -521,6 +521,7 @@ hr {
   background-color: #cbcbcb;
   border-left: none;
   border-bottom: 2px solid #8c8c8c;
+  font-weight: bold;
 }
 
 .vertical-tab {
@@ -532,6 +533,9 @@ hr {
   cursor: pointer;
   font-family: "Montserrat", sans-serif;
   text-align: start;
+}
+.vertical-tab:hover {
+  font-weight: bold;
 }
 
 .tab-content {
@@ -679,6 +683,10 @@ ul {
   list-style-type: none;
 }
 
+section {
+  padding-bottom: 50px;
+}
+
 .header-grp {
   padding: 5%;
   text-align: center;
@@ -707,6 +715,18 @@ ul {
   }
   .nav-btn-grp {
     margin-top: 5%;
+  }
+}
+@media screen and (min-width: 996px) {
+  .works-grp {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .works-grp {
+    margin-left: 150px;
+    margin-right: 150px;
   }
 }
 
