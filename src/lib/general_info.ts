@@ -4,6 +4,7 @@ import { BsLinkedin, BsGithub, BsDiscord } from 'react-icons/bs';
 import { ImFacebook2 } from "react-icons/im";
 import { FaCodepen } from "react-icons/fa";
 import svgs from "./factory/iconBase";
+import { ITabProps } from "./factory/tabBase";
 
 
 export const socialMediaInfoList: IconButtonProps[] = [
@@ -141,3 +142,38 @@ export const skillInfoList: IconButtonProps[] = [
         icon: svgs.TypeScript
     }
 ];
+
+export const worksInfoList: ITabProps[] = [
+    {
+        id: "1",
+        name: "Pegatron",
+        content: {
+            title: "Data Engineer Intern @ Pegatron",
+            time_space: "02/2022 - 06/2022 | Taipei, Taiwan",
+            description: [
+                `Participated in the Shop Floor Information System (SFIS) development team, 
+                which processes the data to integrate it with Pegatron's manufacturing process 
+                among 7 global and 2 local factories.`,
+                `Learned how to track and update the data flow, manage and develop 
+                databases via Oracle Database.`,
+                `Contributed to the transformation and loading process in the ETL
+                 by retrieving the data into >30 forms.`
+            ]
+        }
+    },
+    {
+        id: "2",
+        name: "Techman Robot Inc.",
+        content: {
+            title: "Robotic Automation Egineering Trainee @ Techman",
+            time_space: "06/2020 - 08/2020 | Taoyuan, Taiwan",
+            description: [
+                `Got training in practical robotic processing and functioning.
+                 (Robotic arm, AI, IoT, Computer vision)`,
+                `Developed the TM robotic automation project and presented the project
+                  at the 2020 Taipei Industrial Automation Exhibition.`,
+                `Won the First Prize in the Projects competition held by the company.`
+            ]
+        }
+    }
+]

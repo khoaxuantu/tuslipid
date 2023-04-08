@@ -44,6 +44,11 @@ $directions: (
     justify-content: center;
 }
 
+@mixin flex-wrap($wrap: wrap) {
+    display: flex;
+    flex-wrap: $wrap;
+}
+
 @mixin rounded($offset: 0px) {
     border-radius: var.$radius + $offset;
 }
@@ -58,27 +63,3 @@ $directions: (
 .d-flex {
     display: flex !important;
 }
-
-// @media screen and (min-width: 576px) {
-//     @each $key, $direction in $directions {
-//         @each $id, $factor in $factors {
-//             .m#{$key}-#{$id} {
-//                 margin-#{$direction}: $spacer * $factor !important;
-//             }
-//             .p#{$key}-#{$id} {
-//                 padding-#{$direction}: $spacer * $factor !important;
-//             }
-//         }
-//     }
-// }
-
-// @media screen and (min-width: 576px) {
-//     @each $id, $factor in $factors {
-//         .m-#{$id} {
-//             margin: $spacer * $factor !important;
-//         }
-//         .p-#{$id} {
-//             padding: $spacer * $factor !important;
-//         }
-//     }
-// }

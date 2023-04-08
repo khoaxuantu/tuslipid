@@ -23,7 +23,7 @@ export default SocialMediaBtnGroup;
 
 export function NavBtnGroup() {
     return (
-        <div className='btn-grp nav-btn-grp'>
+        <div className='btn-grp nav-btn-grp mb-3'>
             {Info.navBtnInfoList.map(btnProp => {
                 return <Btn.DefaultButton 
                     url={btnProp.url}

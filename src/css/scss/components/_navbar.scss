@@ -66,6 +66,45 @@
     @include animation.animation(fadeInDown, 300ms);
 }
 
+.tab-list {
+    @include util.flex-wrap(nowrap);
+
+    .is-current {
+        background-color: var.$light-gray;
+        border-left: none;
+        border-bottom: 2px solid var.$gray;
+    }
+}
+
+.vertical-tab {
+    height: 50px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid var.$light-gray;
+    background-color: white;
+    cursor: pointer;
+    font-family: var.$header-font;
+    text-align: start;
+}
+
+.tab-content {
+    height: 400px;
+
+    .content {
+        display: none;
+    }
+
+    .is-current {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 320px) {
+    .tab-content {
+        height: 320px;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .navbar-wrap {
         top: 25px;
@@ -79,5 +118,21 @@
 
     .menu-animation {
         animation-name: fadeInUp;
+    }
+
+    .vertical-tab {
+        height: 50px;
+        width: 100%;
+        border: none;
+        border-left: 2px solid var.$light-gray;
+    }
+
+    .tab-list {
+        display: block;
+
+        .is-current {
+            border-bottom: none;
+            border-left: 2px solid var.$gray;
+        }
     }
 }

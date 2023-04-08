@@ -38,6 +38,7 @@ export function AboutPage() {
             className="container page-wrapper transition-page">
             <Header.AboutHeaderGrp />
             <Content.AboutContent />
+            <Copyright />
         </m.div>
     );
 }

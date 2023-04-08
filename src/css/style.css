@@ -379,11 +379,6 @@ hr {
   scale: 1.1;
 }
 
-.tab-list {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 @media (min-width: 320px) {
   .btn-square {
     width: 3rem;
@@ -454,6 +449,11 @@ hr {
   animation-duration: 1.5s;
 }
 
+.transition-work-content {
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+}
+
 .navbar {
   border-radius: 5px;
   width: 100%;
@@ -513,6 +513,42 @@ hr {
   animation-duration: 300ms;
 }
 
+.tab-list {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.tab-list .is-current {
+  background-color: #cbcbcb;
+  border-left: none;
+  border-bottom: 2px solid #8c8c8c;
+}
+
+.vertical-tab {
+  height: 50px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #cbcbcb;
+  background-color: white;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  text-align: start;
+}
+
+.tab-content {
+  height: 400px;
+}
+.tab-content .content {
+  display: none;
+}
+.tab-content .is-current {
+  display: block;
+}
+
+@media screen and (min-width: 320px) {
+  .tab-content {
+    height: 320px;
+  }
+}
 @media screen and (min-width: 768px) {
   .navbar-wrap {
     top: 25px;
@@ -524,6 +560,19 @@ hr {
   }
   .menu-animation {
     animation-name: fadeInUp;
+  }
+  .vertical-tab {
+    height: 50px;
+    width: 100%;
+    border: none;
+    border-left: 2px solid #cbcbcb;
+  }
+  .tab-list {
+    display: block;
+  }
+  .tab-list .is-current {
+    border-bottom: none;
+    border-left: 2px solid #8c8c8c;
   }
 }
 .row {

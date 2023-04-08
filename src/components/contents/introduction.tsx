@@ -3,7 +3,7 @@ import { SkillBtnGroup } from "../button";
 
 function AboutIntro() {
     return (
-        <section className="mb-3">
+        <section className="mb-5">
             <div className="header-txt">
                 <b>Get to know me</b>
             </div>
