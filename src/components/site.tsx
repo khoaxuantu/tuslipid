@@ -58,8 +58,15 @@ export function ProjectsPage() {
 
 export function BlogPage() {
     return (
-        <div className="container page-wrapper">
-            
-        </div>
+        <m.div 
+            transition={{ duration: 1}}
+            exit={{ opacity: 0 }}
+            className="container page-wrapper transition-page">
+            <Header.BlogsPageHeaderGrp />
+            <div className="m-5 description-txt" style={{textAlign: "center"}}>
+                Nothing yet lol ~~ This section will be updated soon.
+            </div>
+            <Copyright copyright_class="page-copyright pb-3" />
+        </m.div>
     );
 }

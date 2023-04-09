@@ -46,3 +46,13 @@ export function ProjectsPageHeaderGrp() {
     </div>
   );
 }
+
+export function BlogsPageHeaderGrp() {
+  return (
+    <div className='header-grp'>
+      <div className='header-txt'>
+        <b>Blogs</b>
+      </div>
+    </div>
+  );
+}
