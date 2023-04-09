@@ -3,6 +3,7 @@
 @use 'components/line';
 @use 'components/button';
 @use 'components/navbar';
+@use 'components/card';
 @use 'general/var';
 @use 'general/grid';
 @use 'general/container';
@@ -81,11 +82,15 @@ section {
         margin-left: 100px;
         margin-right: 100px;
     }
+
 }
 
 @media screen and (min-width: 1200px) {
     .works-grp {
         margin-left: 150px;
         margin-right: 150px;
+    }
+    .proj-tool-list {
+        flex-wrap: nowrap;
     }
 }

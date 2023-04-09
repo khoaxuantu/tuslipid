@@ -1,6 +1,6 @@
 import AboutIntro from "./contents/introduction";
 import Works from "./contents/works";
-import { AboutProject } from "./contents/projects";
+import { AboutProject, ProjectsList } from "./contents/projects";
 
 export function AboutContent() {
     return (
@@ -8,6 +8,14 @@ export function AboutContent() {
             <AboutIntro />
             <Works />
             <AboutProject />
+        </div>
+    );
+}
+
+export function ProjectsContent() {
+    return (
+        <div className="project-wrapper">
+            <ProjectsList />
         </div>
     );
 }

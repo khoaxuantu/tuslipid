@@ -261,6 +261,7 @@
 img {
   max-width: 100%;
   height: auto;
+  object-fit: fill;
 }
 
 .avatar {
@@ -274,6 +275,17 @@ img {
   max-width: 32px;
 }
 
+.proj-image {
+  border-radius: inherit;
+  justify-content: center;
+  align-items: center;
+}
+.proj-image img {
+  border-radius: inherit;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
 .flex-image {
   justify-content: center;
 }
@@ -281,6 +293,15 @@ img {
 @media (max-width: 320px) {
   .avatar {
     width: 100px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .proj-image {
+    border-radius: 5px;
+  }
+  .proj-image img {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
   }
 }
 .menu-copyright, .page-copyright {
@@ -305,15 +326,6 @@ a {
 .description-txt {
   font-size: 12px;
   font-family: "Courier Prime", monospace;
-}
-
-.copyright-txt {
-  position: relative;
-  width: 100%;
-  text-align: center;
-  padding: 0 0.5rem 0 0.5rem;
-  font-size: 10px;
-  font-family: "Montserrat", sans-serif;
 }
 
 @media (min-width: 576px) {
@@ -590,6 +602,49 @@ hr {
     height: 250px;
   }
 }
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.card > * {
+  display: inherit;
+  width: 100%;
+}
+
+.card-proj {
+  border-radius: 15px;
+  aspect-ratio: 2;
+  border: 1px solid #cbcbcb;
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.25);
+  transition: scale 250ms ease-in-out;
+}
+.card-proj:hover {
+  scale: 1.2;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.proj-description {
+  flex-direction: column;
+}
+
+.proj-tool-list {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 12px;
+}
+
+.proj-href {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .card-proj {
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
+  }
+}
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -653,6 +708,14 @@ hr {
   height: auto;
   margin-top: 4rem;
   margin-bottom: 4rem;
+}
+
+.project-wrapper {
+  width: 80%;
+  max-width: 600px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .lightgray-box {
@@ -748,6 +811,9 @@ section {
   .works-grp {
     margin-left: 150px;
     margin-right: 150px;
+  }
+  .proj-tool-list {
+    flex-wrap: nowrap;
   }
 }
 

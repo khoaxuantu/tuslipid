@@ -3,6 +3,7 @@
 img {
     max-width: 100%;
     height: auto;
+    object-fit: fill;
 }
 
 .avatar {
@@ -18,6 +19,18 @@ img {
     }
 }
 
+.proj-image {
+    border-radius: inherit;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        border-radius: inherit;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
+
 .flex-image {
     @extend %flex-center;
     justify-content: center;
@@ -26,5 +39,15 @@ img {
 @media (max-width: 320px) {
     .avatar {
         width: 100px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .proj-image {
+        border-radius: 5px;
+        img {
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
     }
 }

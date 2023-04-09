@@ -1,3 +1,10 @@
+/**
+ * @param reqMedia An media object got from require.context()
+ * 
+ * @method get() Return an object of media path
+ * 
+ * @return object {media's name: file path}
+ */
 class ImportMedia {
     private reqMedia: __WebpackModuleApi.RequireContext;
 

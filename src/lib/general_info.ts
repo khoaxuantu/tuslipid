@@ -3,8 +3,10 @@ import { CgMail } from 'react-icons/cg';
 import { BsLinkedin, BsGithub, BsDiscord } from 'react-icons/bs';
 import { ImFacebook2 } from "react-icons/im";
 import { FaCodepen } from "react-icons/fa";
-import svgs from "./factory/iconBase";
 import { ITabProps } from "./factory/tabBase";
+import { IProjCardProps } from "./factory/cardBase";
+import svgs from "./factory/iconBase";
+import { imgs } from "./factory/cardBase";
 
 
 export const socialMediaInfoList: IconButtonProps[] = [
@@ -107,7 +109,7 @@ export const skillInfoList: IconButtonProps[] = [
         icon: svgs.JavaScript
     },
     {
-        name: "Oracle",
+        name: "Oracle DB",
         url: "https://www.oracle.com/database/",
         icon: svgs.Oracle
     },
@@ -181,4 +183,75 @@ export const worksInfoList: ITabProps[] = [
             ]
         }
     }
-]
+];
+
+export const projInfoDict: {[id: string]: IProjCardProps} = {
+    '0': {
+        id: "0",
+        content_section: "Projects",
+        title: "Algorithm Visualizer",
+        description: [
+            `A web application that visualizes algorithms from code 
+            (initially provides sorting algorithms demonstration).`
+        ],
+        tools: ["HTML/CSS/JavaScript", "Bootstrap", "Flask", "Heroku"],
+        demoURL: "https://algovisual.xuankhoatu.com/",
+        githubURL: "https://github.com/khoaxuantu/Algorithms-Visualizer",
+        imageURL: imgs.Algovisual
+    },
+    '1': {
+        id: "1",
+        content_section: "Projects",
+        title: "CS50 Finance Replication",
+        description: [
+            `A web-app replication of CS50 finance's mock stock-trading website 
+            (finance.cs50.net), which initially comes from a problem set in CS50X. 
+            It has been extended with some additional features and 
+            different database.`
+        ],
+        tools: ["Flask", "Bootstrap", "SQLite", "Firestore", "GCP"],
+        demoURL: "https://ﬁnancerep.xuankhoatu.com/",
+        githubURL: "https://github.com/khoaxuantu/finance-rep",
+        imageURL: imgs.Financerep
+    },
+    '2': {
+        id: "2",
+        content_section: "Projects",
+        title: "Knapsack Solvers Analysis",
+        description: [
+            `An analysis of the performance in solving typical knapsack problems 
+            by the Simplex Algorithm and the Harmony Search Algorithm, 
+            as the Advanced Algorithms coursework project.`
+        ],
+        tools: ["Python", "Or-tools"],
+        githubURL: "https://github.com/khoaxuantu/Solving-Knapsacks-in-LinearProg-vs-HarmonySearch",
+        imageURL: imgs.Knapsack
+    },
+    '3': {
+        id: "3",
+        content_section: "Projects",
+        title: "E-commerce Auction",
+        description: [
+            `An eBay-like e-commerce auction site that will allow users to post 
+            auction listings, place bids on listings,
+            comment on those listings, and add listings to a ”watchlist”.`
+        ],
+        tools: ["Django", "Bootstrap", "PostgreSQL"],
+        githubURL: "https://github.com/khoaxuantu/E-commerce_auction_site",
+        imageURL: imgs.Auction
+    },
+    '4': {
+        id: "0",
+        content_section: "Projects",
+        title: "Lottery Draw Robotic Application",
+        description: [
+            `Participated in a group project to develop the robotic arm 
+            application project in the lottery drawing.`,
+            `My responsibility is to set up Eye-in-hand Vision and 
+            3D Vision via a camera attached to the robotic arm to detect
+            the prize's patterns and the area for the gift box container.`
+        ],
+        tools: ["Robotic automation algorithm design"],
+        imageURL: imgs.Tm
+    }
+};

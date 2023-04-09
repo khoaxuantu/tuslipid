@@ -24,16 +24,6 @@ a {
     font-family: var.$body-font;
 }
 
-.copyright-txt {
-    position: relative;
-    width: 100%;
-    // bottom: 1rem;
-    text-align: center;
-    padding: 0 0.5rem 0 0.5rem;
-    font-size: 10px;
-    font-family: var.$header-font;
-}
-
 @media (min-width: 576px) {
     .header-txt {
         font-size: 24px;

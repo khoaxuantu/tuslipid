@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import Card from "../../lib/factory/cardBase";
+import { projInfoDict } from "../../lib/general_info";
 
 export function AboutProject() {
     return (
@@ -12,5 +14,15 @@ export function AboutProject() {
                 <Link to="/projects">Projects</Link>
             </div>
         </section>
+    );
+}
+
+export function ProjectsList() {
+    return (
+        <>
+            {Object.keys(projInfoDict).map(key => {
+                return <Card key={key} {...projInfoDict[key]} />;
+            })}
+        </>
     );
 }
