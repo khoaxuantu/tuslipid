@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Are You Serious
+- Font Author: Copyright 2004 The RU Serius Project Authors (https://github.com/googlefonts/are-you-serious)
+- Font Source: http://fonts.gstatic.com/s/areyouserious/v10/ll8kK2GVSSr-PtjQ5nONVcNn4306hT9nCGRayg.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
