@@ -19,7 +19,9 @@
 body {
     background-image: url(var.$background-url);
     background-size: cover;
-    // background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
     font-family: var.$body-font;
 }
 
@@ -52,6 +54,17 @@ section {
         text-decoration: none;
         color: #000;
     }
+}
+
+.menu-copyright {
+    @extend %copyright-txt;
+    position: absolute;
+    bottom: 1rem;
+}
+
+.page-copyright {
+    @extend %copyright-txt;
+    position: relative;
 }
 
 @media (min-width: 576px) {

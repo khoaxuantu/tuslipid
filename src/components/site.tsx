@@ -25,7 +25,7 @@ export function MenuBuilder() {
             <Header.MenuHeaderGrp />
             <SocialMediaBtnGroup />
             <NavBtnGroup />
-            <Copyright />
+            <Copyright copyright_class="menu-copyright" />
         </m.div>
     );
 }
@@ -38,16 +38,21 @@ export function AboutPage() {
             className="container page-wrapper transition-page">
             <Header.AboutHeaderGrp />
             <Content.AboutContent />
-            <Copyright />
+            <Copyright copyright_class="page-copyright pb-3" />
         </m.div>
     );
 }
 
 export function ProjectsPage() {
     return (
-        <div className="container page-wrapper transition-page">
-            
-        </div>
+        <m.div
+            transition={{ duration: 1}}
+            exit={{ opacity: 0 }} 
+            className="container page-wrapper transition-page">
+            <Header.ProjectsPageHeaderGrp />
+            <Content.ProjectsContent />
+            <Copyright copyright_class="page-copyright pb-3" />
+        </m.div>
     );
 }
 
