@@ -107,6 +107,11 @@ export const skillInfoList: IconButtonProps[] = [
         icon: svgs.JavaScript
     },
     {
+        name: "Oracle",
+        url: "https://www.oracle.com/database/",
+        icon: svgs.Oracle
+    },
+    {
         name: "PostgreSQL",
         url: "https://www.postgresql.org/",
         icon: svgs["PostgreSQL-Light"]
