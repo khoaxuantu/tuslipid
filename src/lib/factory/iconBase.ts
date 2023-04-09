@@ -1,3 +1,6 @@
+import ImportMedia from "./importMedia";
+
+
 /**
  * Use require.context so that Webpack will resolve the svgs when building
  * instead of `import`
@@ -8,12 +11,6 @@
  * return {svg's name: file}
  */
 const reqSvgs = require.context('../../../public/images/icons', true, /\.svg$/); 
-const svgs = reqSvgs
-    .keys()
-    .reduce((images: any, path: string) => {
-        const key = path.substring(path.lastIndexOf('/')+1,path.lastIndexOf('.'));
-        images[key] = reqSvgs(path);
-        return images;
-      }, {});
+const svgs = new ImportMedia(reqSvgs).get();
 
 export default svgs;
