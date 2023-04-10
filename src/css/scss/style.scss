@@ -40,8 +40,7 @@ section {
 }
 
 .content-grp {
-    padding-left: 5%;
-    padding-right: 5%;
+    @include util.center-block(5%, "padding");
 }
 
 .social-media-grp {
@@ -79,18 +78,23 @@ section {
 
 @media screen and (min-width: 996px) {
     .works-grp {
-        margin-left: 100px;
-        margin-right: 100px;
+        @include util.center-block(100px);
     }
-
 }
 
 @media screen and (min-width: 1200px) {
     .works-grp {
-        margin-left: 150px;
-        margin-right: 150px;
+        @include util.center-block(150px);
     }
+    
     .proj-tool-list {
         flex-wrap: nowrap;
+    }
+
+    .content-grp {
+        @include util.center-block();
+        max-width: 900px;
+        padding-left: 0;
+        padding-right: 0;
     }
 }

@@ -53,6 +53,11 @@ $directions: (
     border-radius: var.$radius + $offset;
 }
 
+@mixin center-block($m: auto, $mode: "margin") {
+    #{$mode}-left: $m;
+    #{$mode}-right: $m;
+}
+
 .center {
     position: absolute;
     top: 50%;

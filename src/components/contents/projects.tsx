@@ -5,9 +5,9 @@ import { projInfoDict } from "../../lib/general_info";
 export function AboutProject() {
     return (
         <section className="mb-5">
-            <div className="header-txt">
-                <b>What I have built</b>
-            </div>
+            <h3 className="header-txt">
+                What I have built
+            </h3>
             <div className="description-txt p-2">
                 Let's check out some projects that I've done
                 ------{"> "}

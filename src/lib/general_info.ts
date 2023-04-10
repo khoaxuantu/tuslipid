@@ -217,6 +217,20 @@ export const projInfoDict: {[id: string]: IProjCardProps} = {
     '2': {
         id: "2",
         content_section: "Projects",
+        title: "E-commerce Auction",
+        description: [
+            `An eBay-like e-commerce auction site that will allow users to post 
+            auction listings, place bids on listings,
+            comment on those listings, and add listings to a ”watchlist”.`
+        ],
+        tools: ["Django", "Bootstrap", "PostgreSQL"],
+        demoURL: "https://youtu.be/dC6IBfkbZs8",
+        githubURL: "https://github.com/khoaxuantu/E-commerce_auction_site",
+        imageURL: imgs.Auction
+    },
+    '3': {
+        id: "3",
+        content_section: "Projects",
         title: "Knapsack Solvers Analysis",
         description: [
             `An analysis of the performance in solving typical knapsack problems 
@@ -226,19 +240,6 @@ export const projInfoDict: {[id: string]: IProjCardProps} = {
         tools: ["Python", "Or-tools"],
         githubURL: "https://github.com/khoaxuantu/Solving-Knapsacks-in-LinearProg-vs-HarmonySearch",
         imageURL: imgs.Knapsack
-    },
-    '3': {
-        id: "3",
-        content_section: "Projects",
-        title: "E-commerce Auction",
-        description: [
-            `An eBay-like e-commerce auction site that will allow users to post 
-            auction listings, place bids on listings,
-            comment on those listings, and add listings to a ”watchlist”.`
-        ],
-        tools: ["Django", "Bootstrap", "PostgreSQL"],
-        githubURL: "https://github.com/khoaxuantu/E-commerce_auction_site",
-        imageURL: imgs.Auction
     },
     '4': {
         id: "0",

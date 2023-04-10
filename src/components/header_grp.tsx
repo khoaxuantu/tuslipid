@@ -29,7 +29,7 @@ export function AboutHeaderGrp () {
         ~ You can call me by any name ~
       </div>
       <div className='description-txt mt-3'>
-        <a href="/">Contact</a> | {" "}
+        <a href="/">Menu</a> | {" "}
         <a href="https://drive.google.com/file/d/1UdFJgT35HysZGTpfk86I3E8Mcg2vrfv3/view?usp=share_link" target='_blank' rel="noreferrer">Resume</a>
       </div>
       <hr></hr>
