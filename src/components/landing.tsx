@@ -8,7 +8,7 @@ export default function Landing() {
                 title="Tuslipid"
                 description="Personal website @ Xuan Khoa Tu Nguyen"
                 name="Xuan Khoa Tu Nguyen"
-                type="article" 
+                type="website" 
                 url="https://xuankhoatu.com"
             />
         </>
