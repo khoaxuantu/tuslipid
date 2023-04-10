@@ -17,7 +17,7 @@ function AboutIntro() {
                         <p className="mt-2">
                             I initially chose Mechanical Engineering as my main major, 
                             but with enthusiasm for programming and intelligent systems, 
-                            since my Sophomore, I have started self-studying Computer Science
+                            since my Sophomore year in late 2020, I have started self-studying Computer Science
                             simultaneously with advice from my seniors and professors 
                             and attempted to develop further in this major. 
                         </p>

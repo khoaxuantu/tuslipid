@@ -43,6 +43,10 @@ export function ProjectsPageHeaderGrp() {
       <div className='header-txt'>
         <b>Projects</b>
       </div>
+      <div className='description-txt mt-2'>
+        I just have studied in Information Technology for two and a half years, {" "}
+        but luckily have some fun works done.
+      </div>
     </div>
   );
 }
