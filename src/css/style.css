@@ -606,6 +606,7 @@ hr {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  background-color: white;
 }
 .card > * {
   display: inherit;
@@ -618,10 +619,12 @@ hr {
   border: 1px solid #cbcbcb;
   box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.25);
   transition: scale 250ms ease-in-out;
+  z-index: 2;
 }
 .card-proj:hover {
   scale: 1.2;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: 3;
 }
 
 .proj-description {

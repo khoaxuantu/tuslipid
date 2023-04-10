@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import * as Site from './components/site';
 import { AnimatePresence } from 'framer-motion';
+import ScrollToTop from './components/scrollToTop';
 
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
 
   return (
     <AnimatePresence mode='wait'>
+      <ScrollToTop />
       <Routes location={location} key={location.pathname}>
         <Route path='/' element={<Site.Layout />}>
           <Route index element={<Site.MenuBuilder />} />

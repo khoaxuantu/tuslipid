@@ -11,12 +11,12 @@ function AboutIntro() {
                 <div className="row">
                     <div className="col-7 description-txt lightgray-box p-2">
                         <p className="">
-                            I am a new-grad student who just have graduated from the 
+                            I am a new-grad student who just had graduated from the 
                             International Advanced Technology Program (IATP) at NTUST. 
                         </p>
                         <p className="mt-2">
-                            I initially chose Mechanical Engineering as my major, 
-                            but with enthusiasm for programming and intelligent systems, 
+                            I initially chose Mechanical Engineering as my major. 
+                            Still, with enthusiasm for programming and intelligent systems, 
                             since my Sophomore year in late 2020, I have started self-studying Computer Science
                             simultaneously with advice from my seniors and professors 
                             and attempted to develop further in this major. 
