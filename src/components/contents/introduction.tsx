@@ -15,7 +15,7 @@ function AboutIntro() {
                             International Advanced Technology Program (IATP) at NTUST. 
                         </p>
                         <p className="mt-2">
-                            I initially chose Mechanical Engineering as my main major, 
+                            I initially chose Mechanical Engineering as my major, 
                             but with enthusiasm for programming and intelligent systems, 
                             since my Sophomore year in late 2020, I have started self-studying Computer Science
                             simultaneously with advice from my seniors and professors 
