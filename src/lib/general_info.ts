@@ -59,6 +59,16 @@ export const navBtnInfoList: DefaultButtonProps[] = [
 
 export const skillInfoList: IconButtonProps[] = [
     {
+        name: "AutoCAD",
+        url: "https://www.autodesk.com/products/autocad/overview",
+        icon: svgs.AutoCAD
+    },
+    {
+        name: "Bootstrap",
+        url: "https://getbootstrap.com/",
+        icon: svgs.Bootstrap
+    },
+    {
         name: "C",
         url: "https://cppreference.com/",
         icon: svgs.C
@@ -254,5 +264,16 @@ export const projInfoDict: {[id: string]: IProjCardProps} = {
         ],
         tools: ["Robotic automation algorithm design"],
         imageURL: imgs.Tm
+    },
+    '5': {
+        id: "5",
+        content_section: "Projects",
+        title: "Gripper Base System Sketch",
+        description:[
+            `A graphical sketch of robotic arm gripper base system,
+            as a manual graphic coursework in Mechanical Graphic course.`
+        ],
+        tools: ["AutoCAD"],
+        imageURL: imgs.AutoCAD
     }
 };
