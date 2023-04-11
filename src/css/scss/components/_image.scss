@@ -6,8 +6,17 @@ img {
     object-fit: fill;
 }
 
+.avatar-grp {
+    border: none;
+    background-color: white;
+}
+
 .avatar {
+    @include util.center-block();
     border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    transition: src 500ms;
 }
 
 .icon {

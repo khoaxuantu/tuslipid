@@ -258,14 +258,28 @@
   display: flex !important;
 }
 
+.is-current {
+  display: block !important;
+}
+
 img {
   max-width: 100%;
   height: auto;
   object-fit: fill;
 }
 
+.avatar-grp {
+  border: none;
+  background-color: white;
+}
+
 .avatar {
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  transition: src 500ms;
 }
 
 .icon {
@@ -469,7 +483,7 @@ hr {
   animation-duration: 1.5s;
 }
 
-.transition-work-content {
+.is-current {
   animation-name: fadeIn;
   animation-duration: 0.5s;
 }
@@ -563,9 +577,6 @@ hr {
 }
 .tab-content .content {
   display: none;
-}
-.tab-content .is-current {
-  display: block;
 }
 
 @media screen and (min-width: 320px) {

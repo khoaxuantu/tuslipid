@@ -40,7 +40,7 @@ function TabList() {
                         let isCurrent = tabProps.id === curId ? "is-current " : "";
                         return <TabContent
                             key={tabProps.id}
-                            className={isCurrent+"content transition-work-content"}
+                            className={isCurrent+"content"}
                             {...tabProps} />;
                     })
                 }

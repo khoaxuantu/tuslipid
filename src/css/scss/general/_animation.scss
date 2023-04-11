@@ -51,6 +51,6 @@
     @include animation(fadeInUp, 1.5s);
 }
 
-.transition-work-content {
+.is-current {
     @include animation(fadeIn, 0.5s);
 }
