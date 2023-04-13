@@ -17,7 +17,10 @@ export interface IProjCardProps extends ICardProps {
 }
 
 export interface IBlogCardProps extends ICardProps {
-
+    id: number | string,
+    title: string,
+    brief_description: string,
+    url?: string
 }
 
 
