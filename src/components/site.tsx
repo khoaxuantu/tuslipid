@@ -8,7 +8,6 @@ import Copyright from "./copyright";
 import Navbar from "./navbar";
 import Blogs from "./contents/blogs";
 
-
 export function Layout() {
     return (
         <>
@@ -65,6 +64,7 @@ export function BlogPage() {
             exit={{ opacity: 0 }}
             className="container page-wrapper transition-page">
             <Header.BlogsPageHeaderGrp />
+            {/* <Blogs /> */}
             <div className="m-5 description-txt" style={{textAlign: "center"}}>
                 Nothing yet lol ~~ This section will be updated soon.
             </div>
