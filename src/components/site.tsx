@@ -6,6 +6,8 @@ import * as Content from "./content_grp";
 import SocialMediaBtnGroup, { NavBtnGroup } from "./button";
 import Copyright from "./copyright";
 import Navbar from "./navbar";
+import Blogs from "./contents/blogs";
+
 
 export function Layout() {
     return (
