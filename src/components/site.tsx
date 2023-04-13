@@ -64,7 +64,7 @@ export function BlogPage() {
             exit={{ opacity: 0 }}
             className="container page-wrapper transition-page">
             <Header.BlogsPageHeaderGrp />
-            <Blogs />
+            {/* <Blogs /> */}
             <div className="m-5 description-txt" style={{textAlign: "center"}}>
                 Nothing yet lol ~~ This section will be updated soon.
             </div>
