@@ -24,7 +24,7 @@ export interface IBlogCardProps extends ICardProps {
 }
 
 
-const reqImgs = require.context('../../../public/images/projects', true, /\.jpg$|\.svg$/);
+const reqImgs = require.context('../../../public/images/projects', true, /\.jpg$|\.svg$|\.webp$/);
 export const imgs = new ImportMedia(reqImgs).get();
 
 function ProjectCard(props: IProjCardProps) {

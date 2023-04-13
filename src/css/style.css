@@ -300,6 +300,11 @@ img {
   border-bottom-right-radius: 0;
 }
 
+.edu-image {
+  width: 16.66%;
+  min-width: 48px;
+}
+
 .flex-image {
   justify-content: center;
 }
@@ -760,7 +765,7 @@ hr {
 }
 
 body {
-  background-image: url("../../public/background.jpg");
+  background-image: url("../../public/background.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -796,6 +801,10 @@ section {
 .nav-btn-grp a {
   text-decoration: none;
   color: #000;
+}
+
+.edu-content-grp {
+  width: 83.33%;
 }
 
 .menu-copyright {

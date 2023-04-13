@@ -5,7 +5,7 @@ export interface IMenuHeaderGrpProps {
 }
 
 export function MenuHeaderGrp (props: IMenuHeaderGrpProps) {
-  const avaURLs : string[] = ["tuslipid_real.jpg", "tuslipid.jpg"];
+  const avaURLs : string[] = ["tuslipid_real.webp", "tuslipid.webp"];
   const [avaIndex, setAvaIndex] = useState(0);
 
   function avaHandler(e: MouseEvent) {
@@ -59,7 +59,7 @@ export function ProjectsPageHeaderGrp() {
         <b>Projects</b>
       </div>
       <div className='description-txt mt-2'>
-        I just have studied in Information Technology for two and a half years, {" "}
+        I just have studied Information Technology for two and a half years, {" "}
         but luckily have some fun works done.
       </div>
     </div>
