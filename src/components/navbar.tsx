@@ -25,7 +25,7 @@ function Navbar() {
 
     return (
         <nav className="navbar navbar-wrap">
-            <button type="button" className="navbar-trigger" onClick={openNav}></button>
+            <button type="button" className="navbar-trigger" onClick={openNav} aria-label="navbar"></button>
             <ul className="navbar-menu menu-animation">
                 <li key="Home">
                     <DefaultButton url="/" content="Home" />

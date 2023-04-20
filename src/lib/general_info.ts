@@ -252,7 +252,31 @@ export const projInfoDict: {[id: string]: IProjCardProps} = {
         imageURL: imgs.Knapsack
     },
     '4': {
-        id: "0",
+        id: "4",
+        content_section: "Projects",
+        title: "Wiki Encyclopedia",
+        description: [
+            `A Wikipedia-like online encyclopedia that will allow users search 
+            for an encyclopedia entry, create new entries and edit an existing entry.`
+        ],
+        tools: ["Django", "Bootstrap"],
+        githubURL: "https://github.com/khoaxuantu/wiki_encyclopedia",
+        imageURL: imgs.Wiki
+    },
+    '5': {
+        id: "5",
+        content_section: "Projects",
+        title: "Calendar on Terminal",
+        description: [
+            `A small project of calendar queried on terminal, as a midterm project 
+            when I first took the C programming course in 2020.`
+        ],
+        tools: ["C"],
+        githubURL: "https://github.com/khoaxuantu/Calendar_demo",
+        imageURL: imgs.Calendar
+    },
+    '6': {
+        id: "6",
         content_section: "Projects",
         title: "Lottery Draw Robotic Application",
         description: [
@@ -265,8 +289,8 @@ export const projInfoDict: {[id: string]: IProjCardProps} = {
         tools: ["Robotic automation algorithm design"],
         imageURL: imgs.Tm
     },
-    '5': {
-        id: "5",
+    '7': {
+        id: "7",
         content_section: "Projects",
         title: "Gripper Base System Sketch",
         description:[

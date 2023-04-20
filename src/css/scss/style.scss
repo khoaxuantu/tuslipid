@@ -71,12 +71,19 @@ section {
     position: relative;
 }
 
+.proj-github-ref {
+    display: none;
+}
+
 @media (min-width: 576px) {
     .social-media-grp {
         margin-top: 5%;
     }
     .nav-btn-grp {
         margin-top: 5%;
+    }
+    .proj-github-ref {
+        display: block;
     }
 }
 

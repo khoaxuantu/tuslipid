@@ -41,7 +41,8 @@ export function IconButton(props: IconButtonProps) {
     }
 
     return (
-        <Link id={props.id} className={props.classname} to={props.url} target="_blank" key={props.id}>
+        <Link id={props.id} className={props.classname} to={props.url} target="_blank" key={props.id}
+            aria-label={"Button with icon " + props.id}>
             {Icon}
         </Link>
     );
