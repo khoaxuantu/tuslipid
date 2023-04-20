@@ -327,7 +327,7 @@ img {
   width: 100%;
   text-align: center;
   padding: 0 0.5rem 0 0.5rem;
-  font-size: 10px;
+  font-size: 12px;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -816,12 +816,19 @@ section {
   position: relative;
 }
 
+.proj-github-ref {
+  display: none;
+}
+
 @media (min-width: 576px) {
   .social-media-grp {
     margin-top: 5%;
   }
   .nav-btn-grp {
     margin-top: 5%;
+  }
+  .proj-github-ref {
+    display: block;
   }
 }
 @media screen and (min-width: 996px) {
