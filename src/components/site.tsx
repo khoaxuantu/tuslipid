@@ -1,6 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import { motion as m} from "framer-motion";
+import { isMobileOnly, isTablet } from "react-device-detect";
 import * as Header from "./header_grp";
 import * as Content from "./content_grp";
 import SocialMediaBtnGroup, { NavBtnGroup } from "./button";
@@ -18,11 +19,31 @@ export function Layout() {
 }
 
 export function MenuBuilder() {
+    // Handle orientation
+    let mql = window.matchMedia("(orientation: portrait)");
+    let orientation = "center";
+
+    if (isMobileOnly) {
+        console.log("Add even listener");
+        if (!mql.matches) orientation = "mobile-landscape";
+        mql.addEventListener("change", function(m) {
+            const container = document.getElementsByClassName("container")[0] as HTMLElement;
+            if (m.matches) {
+                container.classList.remove("mobile-landscape");
+                container.classList.add("center");
+            }
+            else {
+                container.classList.remove("center");
+                container.classList.add("mobile-landscape");
+            }
+        })
+    }
+
     return (
         <m.div
             transition={{ duration: 1 }}
             exit={{ opacity: 0 }}
-            className="container menu-wrapper center transition-menu">
+            className={`container menu-wrapper ${orientation} transition-menu`}>
             <Header.MenuHeaderGrp />
             <SocialMediaBtnGroup />
             <NavBtnGroup />

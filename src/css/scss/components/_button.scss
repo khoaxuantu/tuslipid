@@ -34,10 +34,11 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
+    row-gap: 0.5rem;
 
     a {
         margin: 0 0.625rem 0 0.625rem;
-        font-size: 14px;
+        font-size: 12px;
     }
 }
 

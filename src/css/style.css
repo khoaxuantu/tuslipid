@@ -396,10 +396,11 @@ hr {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
+  row-gap: 0.5rem;
 }
 .btn-grp a {
   margin: 0 0.625rem 0 0.625rem;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .btn-skill {
@@ -720,6 +721,12 @@ hr {
 .menu-wrapper {
   width: 80%;
   height: 550px;
+}
+
+.mobile-landscape {
+  position: relative;
+  margin-top: 10%;
+  margin-bottom: 10%;
 }
 
 .page-wrapper {
