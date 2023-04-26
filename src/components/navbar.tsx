@@ -3,11 +3,11 @@ import { navBtnInfoList } from "../lib/general_info";
 
 
 function Navbar() {
-    function openNav() {
+    function navHandler(navBtnDisplay: string, navBarDisplay: string): void {
         const navbtn = document.getElementsByClassName('navbar-trigger')[0] as HTMLElement;
-        navbtn.style.display = 'none';
+        navbtn.style.display = navBtnDisplay;
         const navbar = document.getElementsByClassName('navbar-menu')[0] as HTMLElement;
-        navbar.style.display = 'block';
+        navbar.style.display = navBarDisplay;
     }
 
     // Close navbar event handler, when you click everywhere except the opening navbar,
@@ -16,16 +16,13 @@ function Navbar() {
         const target = e.target as HTMLInputElement;
         if (target.className !== 'navbar-trigger' &&
             target.className !== 'navbar-menu') {
-            const navbtn = document.getElementsByClassName('navbar-trigger')[0] as HTMLElement;
-            navbtn.style.display = 'block';
-            const navbar = document.getElementsByClassName('navbar-menu')[0] as HTMLElement;
-            navbar.style.display = 'none';
+            navHandler('block', 'none');
         }
     });
 
     return (
         <nav className="navbar navbar-wrap">
-            <button type="button" className="navbar-trigger" onClick={openNav} aria-label="navbar"></button>
+            <button type="button" className="navbar-trigger" onClick={() => navHandler('none', 'block')} aria-label="navbar"></button>
             <ul className="navbar-menu menu-animation">
                 <li key="Home">
                     <DefaultButton url="/" content="Home" />
@@ -39,6 +36,9 @@ function Navbar() {
                         </li>
                     );
                 })}
+                <li key="Projects">
+                    <DefaultButton url="/projects" content="Projects"/>
+                </li>
             </ul>
         </nav>
     );
