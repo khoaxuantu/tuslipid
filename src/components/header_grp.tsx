@@ -1,10 +1,9 @@
 import { useState, MouseEvent } from 'react';
 import { Link } from 'react-router-dom';
+import { blogInfoDict } from "../lib/general_info";
 
-export interface IMenuHeaderGrpProps {
-}
 
-export function MenuHeaderGrp (props: IMenuHeaderGrpProps) {
+export function MenuHeaderGrp () {
   const avaURLs : string[] = ["tuslipid_real.webp", "tuslipid.webp"];
   const [avaIndex, setAvaIndex] = useState(0);
 
@@ -45,7 +44,8 @@ export function AboutHeaderGrp () {
       </div>
       <div className='description-txt mt-3'>
         <Link to="/">Menu</Link> | {" "}
-        <a href="https://drive.google.com/file/d/1UdFJgT35HysZGTpfk86I3E8Mcg2vrfv3/view?usp=share_link" target='_blank' rel="noreferrer">Resume</a>
+        <a href="https://drive.google.com/file/d/1UdFJgT35HysZGTpfk86I3E8Mcg2vrfv3/view?usp=share_link" target='_blank' rel="noreferrer">Resume</a> | {" "}
+        <a href="https://drive.google.com/file/d/1XxdNzIyDktPseomnn0HszhgMyfEW8TtV/view?usp=share_link" target='_blank' rel='noreferrer'>CV</a>
       </div>
       <hr></hr>
     </div>
@@ -71,6 +71,19 @@ export function BlogsPageHeaderGrp() {
     <div className='header-grp'>
       <div className='header-txt'>
         <b>Blogs</b>
+      </div>
+      <div className='description-txt mt-2'>
+        ~ Some notes, some ideas, some opinions ~
+      </div>
+    </div>
+  );
+}
+
+export function SingleBlogPageHeaderGrp(props: {id: string}) {
+  return (
+    <div className='header-grp'>
+      <div className='header-txt'>
+        <b>{blogInfoDict[props.id].title}</b>
       </div>
     </div>
   );

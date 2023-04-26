@@ -34,10 +34,11 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
+    row-gap: 0.5rem;
 
     a {
         margin: 0 0.625rem 0 0.625rem;
-        font-size: 14px;
+        font-size: 12px;
     }
 }
 
@@ -55,9 +56,35 @@
 
     &:hover {
         scale: 1.1;
+        text-decoration: none;
     }
 }
 
+.read-more-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    cursor: pointer;
+    height: 20%;
+
+    a {
+        @extend %flex-center;
+        @include util.rounded(10px);
+        background-color: var.$light-gray;
+        color: black;
+        width: 16.67%;
+        min-width: 120px;
+        height: 100%;
+        min-height: 30px;
+        transition: all 300ms ease-in-out;
+
+        &:hover {
+            background-color: var.$gray;
+            color: white;
+            text-decoration: none;
+        }
+    }
+}
 
 @media (min-width: 320px) {
     .btn-square {
@@ -87,5 +114,10 @@
         #name {
             display: block;
         }
+    }
+
+    .read-more-btn {
+        justify-content: flex-end;
+        padding-right: 1.5rem;
     }
 }

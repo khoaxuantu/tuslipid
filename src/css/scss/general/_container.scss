@@ -7,6 +7,13 @@
     background-color: $theme;
 }
 
+@mixin content-wrapper($width, $maxWidth, $marginTop) {
+    width: $width;
+    max-width: $maxWidth;
+    margin-top: $marginTop;
+    @include util.center-block();
+}
+
 .container {
     @include util.center-block();
     background-color: white;
@@ -17,6 +24,11 @@
     width: 80%;
     height: 550px;
 }
+.mobile-landscape {
+    position: relative;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
 
 .page-wrapper {
     width: 80%;
@@ -26,10 +38,15 @@
 }
 
 .project-wrapper {
-    width: 80%;
-    max-width: 600px;
-    margin-top: 50px;
-    @include util.center-block();
+    @include content-wrapper(80%, 600px, 50px);
+}
+
+.blog-wrapper {
+    @include content-wrapper(90%, 900px, 50px)
+}
+
+.single-blog-wrapper {
+    @include content-wrapper(80%, 900px, 50px);
 }
 
 .lightgray-box {

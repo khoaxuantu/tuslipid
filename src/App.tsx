@@ -16,7 +16,10 @@ function App() {
           <Route index element={<Site.MenuBuilder />} />
           <Route path='about' element={<Site.AboutPage />} />
           <Route path='projects' element={<Site.ProjectsPage />} />
-          <Route path='blogs' element={<Site.BlogPage />} />
+          <Route path='blogs' element={<Site.BlogsLayout />}>
+            <Route index element={<Site.BlogsPage />} />
+            <Route path=':blogId' element={<Site.SingleBlogPage />} />
+          </Route>
         </Route>
       </Routes>
     </AnimatePresence>

@@ -1,0 +1,36 @@
+%markdown-theme {
+    * {
+        margin: revert;
+        padding: revert;
+        list-style-type: revert;
+    }
+
+    code, pre {
+        border-radius: 5px;
+        background-color: #f6f8fa;
+        color: inherit;
+    }
+    
+    code {
+        padding: 1px 5px;
+    }
+    
+    pre {
+        border: 1px solid #CCCCCC;
+        line-height: 1.25em;
+        overflow: auto;
+        padding: 6px 10px;
+    }
+
+    blockquote {
+        margin: 0;
+        border-left: 5px solid #7a7a7a;
+        font-style: italic;
+        padding: 1.33em;
+        text-align: left;
+    }
+}
+
+.single-blog-wrapper {
+    @extend %markdown-theme;
+}

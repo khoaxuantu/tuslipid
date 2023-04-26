@@ -43,6 +43,16 @@
     margin-top: auto;
 }
 
+.card-blog {
+    @include util.rounded(10);
+    border: 1px solid var.$light-gray;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
+    aspect-ratio: 4;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+
 @media screen and (min-width: 768px) {
     .card-proj {
         box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);

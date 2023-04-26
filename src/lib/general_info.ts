@@ -4,7 +4,7 @@ import { BsLinkedin, BsGithub, BsDiscord } from 'react-icons/bs';
 import { ImFacebook2 } from "react-icons/im";
 import { FaCodepen } from "react-icons/fa";
 import { ITabProps } from "./factory/tabBase";
-import { IProjCardProps } from "./factory/cardBase";
+import { IProjCardProps, IBlogCardProps } from "./factory/cardBase";
 import svgs from "./factory/iconBase";
 import { imgs } from "./factory/cardBase";
 
@@ -48,12 +48,12 @@ export const navBtnInfoList: DefaultButtonProps[] = [
         content: "About"
     },
     {
-        url: "/projects",
-        content: "Projects"
-    },
-    {
         url: "/blogs",
         content: "Blogs"
+    },
+    {
+        url: "/",
+        content: "Guestbook"
     }
 ];
 
@@ -301,3 +301,19 @@ export const projInfoDict: {[id: string]: IProjCardProps} = {
         imageURL: imgs.AutoCAD
     }
 };
+
+export const blogInfoDict: {[id: string]: IBlogCardProps} = {
+    "great_ytb_channels_1": {
+        content_section: "Blogs",
+        id: "great_ytb_channels_1",
+        title: "Great Youtube Channels (Part 1)",
+        brief_description: `I watch youtube a lot, and I make a list of youtube channels
+            I have watched that you may find interesting.`,
+        url: "/great_ytb_channels_1",
+        file: "great_ytb_channels_1.md"
+    }
+};
+
+export const blogInfoList: {dictKey: string, date: string}[] = [
+    {dictKey: "great_ytb_channels_1", date: "Apr 26 2023 22:35:23 GMT+0800"},
+];

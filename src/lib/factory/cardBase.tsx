@@ -1,6 +1,7 @@
 import ImportMedia from "./importMedia"
 import { BsGithub } from "react-icons/bs"
 import { FiExternalLink } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 interface ICardProps {
     id: number | string,
@@ -17,10 +18,9 @@ export interface IProjCardProps extends ICardProps {
 }
 
 export interface IBlogCardProps extends ICardProps {
-    id: number | string,
-    title: string,
     brief_description: string,
-    url?: string
+    url: string,
+    file: string,
 }
 
 
@@ -75,9 +75,15 @@ function ProjectCard(props: IProjCardProps) {
     );
 }
 
-function BlogsCard(props: ICardProps) {
+function BlogsCard(props: IBlogCardProps) {
     return (
-        <div></div>
+        <div className="card card-blog mb-5 fade-in-left">
+            <h3 className="header-txt m-2">{props.title}</h3>
+            <div className="description-txt m-2 p-2">{props.brief_description}</div>
+            <div className="read-more-btn mb-4">
+                <Link className="description-txt" to={"/blogs" + props.url}>Read more -{">"}</Link>
+            </div>
+        </div>
     );
 }
 
@@ -86,13 +92,13 @@ function BlogsCard(props: ICardProps) {
  * @param props Project Card Interface | Blog Card Interface
  * @returns Card JSX Element
  */
-function Card(props: any) {
+function Card(props: IProjCardProps | IBlogCardProps) {
     let card;
     if (props.content_section === "Projects") {
-        card = <ProjectCard {...props}/>
+        card = <ProjectCard {...props as IProjCardProps}/>
     }
     else if (props.content_section === "Blogs") {
-        card = <BlogsCard {...props} />
+        card = <BlogsCard {...props as IBlogCardProps} />
     }
 
     return (
