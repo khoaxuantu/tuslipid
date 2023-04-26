@@ -241,7 +241,7 @@
   padding: 3rem !important;
 }
 
-.btn, .icon, .flex-image {
+.btn, .read-more-btn a, .icon, .flex-image {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -419,6 +419,28 @@ hr {
   scale: 1.1;
 }
 
+.read-more-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  cursor: pointer;
+  height: 20%;
+}
+.read-more-btn a {
+  border-radius: 15px;
+  background-color: #cbcbcb;
+  color: black;
+  width: 16.67%;
+  min-width: 120px;
+  height: 100%;
+  min-height: 30px;
+  transition: all 300ms ease-in-out;
+}
+.read-more-btn a:hover {
+  background-color: #8c8c8c;
+  color: white;
+}
+
 @media (min-width: 320px) {
   .btn-square {
     width: 3rem;
@@ -441,6 +463,10 @@ hr {
   }
   .btn-skill #name {
     display: block;
+  }
+  .read-more-btn {
+    justify-content: flex-end;
+    padding-right: 1.5rem;
   }
 }
 @keyframes fadeIn {
@@ -660,6 +686,15 @@ hr {
   margin-top: auto;
 }
 
+.card-blog {
+  border-radius: 15px;
+  border: 1px solid #cbcbcb;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
+  aspect-ratio: 4;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
 @media screen and (min-width: 768px) {
   .card-proj {
     box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
@@ -739,6 +774,22 @@ hr {
 .project-wrapper {
   width: 80%;
   max-width: 600px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blog-wrapper {
+  width: 90%;
+  max-width: 900px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.single-blog-wrapper {
+  width: 80%;
+  max-width: 900px;
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
