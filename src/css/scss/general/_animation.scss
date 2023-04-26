@@ -34,6 +34,17 @@
     }
 }
 
+@keyframes fadeInLeft {
+    from {
+        transform: translate3d(-5%, 0, 0);
+        opacity: 0;
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
 @keyframes fadeOut {
     from {
         opacity: 1;
@@ -53,4 +64,8 @@
 
 .is-current {
     @include animation(fadeIn, 0.5s);
+}
+
+.fade-in-left {
+    @include animation(fadeInLeft, 1s);
 }

@@ -335,6 +335,9 @@ a {
   text-decoration: none;
   color: #0d6efd;
 }
+a:hover {
+  text-decoration: underline;
+}
 
 .header-txt {
   padding: 0.5rem;
@@ -417,6 +420,7 @@ hr {
 }
 .btn-skill:hover {
   scale: 1.1;
+  text-decoration: none;
 }
 
 .read-more-btn {
@@ -439,6 +443,7 @@ hr {
 .read-more-btn a:hover {
   background-color: #8c8c8c;
   color: white;
+  text-decoration: none;
 }
 
 @media (min-width: 320px) {
@@ -497,6 +502,16 @@ hr {
     opacity: 1;
   }
 }
+@keyframes fadeInLeft {
+  from {
+    transform: translate3d(-5%, 0, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
 @keyframes fadeOut {
   from {
     opacity: 1;
@@ -518,6 +533,11 @@ hr {
 .is-current {
   animation-name: fadeIn;
   animation-duration: 0.5s;
+}
+
+.fade-in-left {
+  animation-name: fadeInLeft;
+  animation-duration: 1s;
 }
 
 .navbar {
