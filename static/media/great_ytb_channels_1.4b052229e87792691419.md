@@ -57,12 +57,11 @@ genres such as general science, entertainment, etc...
 - [Exponent](https://www.youtube.com/@tryexponent)
 - [freeCodeCamp.org](https://www.youtube.com/@freecodecamp)
 - [Firebase](https://www.youtube.com/@firebase) if you learn Firebase
-- [Google Cloud](https://www.youtube.com/@googlecloud) & [Google Cloud Tech](https://www.youtube.com/@googlecloudtech) 
+- [Google Cloud](https://www.youtube.com/@googlecloud) & [Google Cloud Tech](https://www.youtube.com/@googlecloudtech) if you learn GCP
 - [Google Developers](https://www.youtube.com/@GoogleDevelopers)
 - [High-Performance Programming](https://www.youtube.com/@HighPerformanceProgramming)
 - [Life at Google](https://www.youtube.com/@LifeatGoogle)
 - [Prisma](https://www.youtube.com/@PrismaData) if you lean Prisma
-if you learn GCP
 - [Simplilearn](https://www.youtube.com/@SimplilearnOfficial)
 
 
