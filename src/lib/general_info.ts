@@ -308,12 +308,22 @@ export const blogInfoDict: {[id: string]: IBlogCardProps} = {
         id: "great_ytb_channels_1",
         title: "Great Youtube Channels (Part 1)",
         brief_description: `I watch youtube a lot, and I make a list of youtube channels
-            I have watched that you may find interesting.`,
+            I have watched that you may find interesting. Here is part 1 of my list...`,
         url: "/great_ytb_channels_1",
         file: "great_ytb_channels_1.md"
-    }
+    },
+    "great_ytb_channels_2": {
+        content_section: "Blogs",
+        id: "great_ytb_channels_2",
+        title: "Great Youtube Channels (Part 2)",
+        brief_description: `I watch youtube a lot, and I make a list of youtube channels
+            I have watched that you may find interesting. Here is part 2 of my list...`,
+        url: "/great_ytb_channels_2",
+        file: "great_ytb_channels_2.md"
+    },
 };
 
 export const blogInfoList: {dictKey: string, date: string}[] = [
     {dictKey: "great_ytb_channels_1", date: "Apr 26 2023 22:35:23 GMT+0800"},
+    {dictKey: "great_ytb_channels_2", date: "Apr 27 2023 13:30:59 GMT+0800"},
 ];

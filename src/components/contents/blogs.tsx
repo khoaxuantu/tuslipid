@@ -59,7 +59,8 @@ export function BlogsList(props: {blogInfoList: { dictKey: string; date: string;
 export function SingleBlog(props: {id: string}) {
     const blogInfo = blogInfoDict[props.id];
     const [text, setText] = useState('');
-
+    const mdWrapper = document.getElementsByClassName("single-blog-wrapper")[0];
+    
     useEffect(() => {
         import(`../../markdown/${blogInfo.file}`)
             .then(res => {
@@ -69,8 +70,20 @@ export function SingleBlog(props: {id: string}) {
                 .catch(err => console.log(err));
             })
             .catch(err => console.log(err));
-    })
-
+        }, [])
+    
+    /**
+     * Due to the delay of ReactMarkdown's render, an useEffect is needed
+     * to detect the change of the blogWrapper
+     * 
+     * If the blogWrapper's childNodes is not empty, set its height back to auto
+     * (initially the height is constant pixels)
+     */
+    useEffect(() => {
+        const blogWrapper = document.getElementsByClassName("single-blog-wrapper")[0] as HTMLElement;
+        if (blogWrapper.childNodes.length !== 0) blogWrapper.style.height = "auto";
+    }, [mdWrapper]);
+    
     return (
         <>
             <ReactMarkdown

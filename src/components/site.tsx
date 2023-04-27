@@ -20,7 +20,7 @@ export function Layout() {
 export function BlogsLayout() {
     return (
         <m.div
-            transition={{ duration: 1}}
+            transition={{ duration: 0.8}}
             exit={{ opacity: 0 }}
             className="container page-wrapper transition-page">
             <Outlet />
@@ -51,7 +51,7 @@ export function MenuBuilder() {
 
     return (
         <m.div
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.8 }}
             exit={{ opacity: 0 }}
             className={`container menu-wrapper ${orientation} transition-menu`}>
             <Header.MenuHeaderGrp />
@@ -65,7 +65,7 @@ export function MenuBuilder() {
 export function AboutPage() {
     return (
         <m.div
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.8 }}
             exit={{ opacity: 0 }}
             className="container page-wrapper transition-page">
             <Header.AboutHeaderGrp />
@@ -78,7 +78,7 @@ export function AboutPage() {
 export function ProjectsPage() {
     return (
         <m.div
-            transition={{ duration: 1}}
+            transition={{ duration: 0.8 }}
             exit={{ opacity: 0 }} 
             className="container page-wrapper transition-page">
             <Header.ProjectsPageHeaderGrp />
@@ -93,9 +93,9 @@ export function BlogsPage() {
         <>
             <Header.BlogsPageHeaderGrp />
             <Content.BlogsContent />
-            <div className="m-5 description-txt" style={{textAlign: "center"}}>
+            {/* <div className="m-5 description-txt" style={{textAlign: "center"}}>
                 Nothing yet lol ~~ This section will be updated soon.
-            </div>
+            </div> */}
         </>
     );
 }

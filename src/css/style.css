@@ -535,7 +535,7 @@ hr {
   animation-duration: 0.5s;
 }
 
-.fade-in-left {
+.transition-blog > * {
   animation-name: fadeInLeft;
   animation-duration: 1s;
 }
@@ -813,6 +813,7 @@ hr {
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
+  height: 1000px;
 }
 
 .lightgray-box {
