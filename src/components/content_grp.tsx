@@ -43,7 +43,7 @@ export function BlogsContent() {
 
 export function SingleBlogContent(props: {id: string}) {
     return (
-        <article className="single-blog-wrapper fade-in-left">
+        <article className="single-blog-wrapper transition-blog">
             <Blogs.SingleBlog id={props.id} />
         </article>
     );

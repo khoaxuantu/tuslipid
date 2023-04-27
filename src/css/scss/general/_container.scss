@@ -47,6 +47,7 @@
 
 .single-blog-wrapper {
     @include content-wrapper(80%, 900px, 50px);
+    height: 1000px;
 }
 
 .lightgray-box {

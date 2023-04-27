@@ -10,7 +10,7 @@ This topic will be divided into 2 parts
 - Part 1 is our current standing and contains only channels about
 information technology. Because I’m focusing on IT, these channels
 are the majority of my list.
-- Part 2 is in the next part, which contains channels about other
+- Part 2 is in the next blog, which contains channels about other
 genres such as general science, entertainment, etc...
 
 # Some guys are coding...
@@ -19,8 +19,10 @@ genres such as general science, entertainment, etc...
 - [Anson the Developer](https://www.youtube.com/@ansonthedev)
 - [Ashleynguci](https://www.youtube.com/@Ashleynguci) | Cute channel :)
 - [Ben Awad](https://www.youtube.com/@bawad)
+- [Ben Eater](https://www.youtube.com/@BenEater)
 - [Chris Chang](https://www.youtube.com/@ChrisChangSWE)
 - [Clément Mihailescu](https://www.youtube.com/@clem)
+- [Code Monkey](https://www.youtube.com/@CodeMonkeyUnity)
 - [Colin Galen](https://www.youtube.com/@ColinGalen)
 - [DesignCourse](https://www.youtube.com/@DesignCourse) | UX/UI buddies may love it ~
 - [Darian Sampare](https://www.youtube.com/@DarianSampare)
@@ -35,15 +37,18 @@ genres such as general science, entertainment, etc...
 - [Marko](https://www.youtube.com/@withmarko)
 - [Matthew Ventures](https://www.youtube.com/@matthewventures)
 - [NeetCode](https://www.youtube.com/@NeetCode)
+- [Normalized Nerd](https://www.youtube.com/@NormalizedNerd)
+- [polylog](https://www.youtube.com/@polylog7346)
 - [PedroTech](https://www.youtube.com/@PedroTechnologies)
 - [PIRATE KING](https://www.youtube.com/@PIRATEKINGDOM)
+- [Sebastian Lague](https://www.youtube.com/@SebastianLague)
 - [Servet Gulnaroglu](https://www.youtube.com/@ServetGulnaroglu)
 - [Stefan Mischook](https://www.youtube.com/@StefanMischook)
 - [Tech With Tim](https://www.youtube.com/@TechWithTim)
 - [TechWorld with Nana](https://www.youtube.com/@TechWorldwithNana)
 - [The Coding Train](https://www.youtube.com/@TheCodingTrain)
 - [Tina Huang](https://www.youtube.com/@TinaHuang1)
-- [Unreal Sensei](https://www.youtube.com/@UnrealSensei) | Unreal Engine buddies may love it
+- [Unreal Sensei](https://www.youtube.com/@UnrealSensei) | Unreal Engine buddies may love it ~
 - [Web Dev Simplified](https://www.youtube.com/@WebDevSimplified)
 - [Web Dev Cody](https://www.youtube.com/@WebDevCody)
 - [William Lin](https://www.youtube.com/@tmwilliamlin168)
@@ -58,17 +63,20 @@ genres such as general science, entertainment, etc...
 - [freeCodeCamp.org](https://www.youtube.com/@freecodecamp)
 - [Firebase](https://www.youtube.com/@firebase) if you learn Firebase
 - [Google Cloud](https://www.youtube.com/@googlecloud) & [Google Cloud Tech](https://www.youtube.com/@googlecloudtech) 
+if you learn GCP
 - [Google Developers](https://www.youtube.com/@GoogleDevelopers)
 - [High-Performance Programming](https://www.youtube.com/@HighPerformanceProgramming)
 - [Life at Google](https://www.youtube.com/@LifeatGoogle)
 - [Prisma](https://www.youtube.com/@PrismaData) if you lean Prisma
-if you learn GCP
+- [Reducible](https://www.youtube.com/@Reducible)
 - [Simplilearn](https://www.youtube.com/@SimplilearnOfficial)
 
 
-## Meme
+## Memes
 - [Fireship](https://www.youtube.com/@SimplilearnOfficial)
 - [Joma Tech](https://www.youtube.com/@jomaoppa)
 - [Mr. P Solver](https://www.youtube.com/@MrPSolver)
 - [Nicholas T.](https://www.youtube.com/@nicholast)
 - [Virbox](https://www.youtube.com/@Virbox)
+
+> To be continued...

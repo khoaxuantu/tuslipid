@@ -66,6 +66,8 @@
     @include animation(fadeIn, 0.5s);
 }
 
-.fade-in-left {
-    @include animation(fadeInLeft, 1s);
+.transition-blog {
+    &>*{
+        @include animation(fadeInLeft, 1s);
+    }
 }
