@@ -551,7 +551,7 @@ hr {
   background-color: #383838;
   border: none;
   cursor: pointer;
-  position: relative;
+  position: absolute;
 }
 .navbar button::after {
   content: "";
@@ -785,7 +785,7 @@ hr {
 }
 
 .page-wrapper {
-  width: 80%;
+  width: 100%;
   height: auto;
   margin-top: 4rem;
   margin-bottom: 4rem;
@@ -821,6 +821,11 @@ hr {
   background-color: #cbcbcb;
 }
 
+@media screen and (min-width: 321px) {
+  .page-wrapper {
+    width: 80%;
+  }
+}
 @media (min-width: 376px) {
   .menu-wrapper {
     height: 80%;
@@ -889,6 +894,7 @@ section {
 .menu-copyright {
   position: absolute;
   bottom: 1rem;
+  display: none;
 }
 
 .page-copyright {
@@ -899,6 +905,11 @@ section {
   display: none;
 }
 
+@media screen and (min-width: 376px) {
+  .menu-copyright {
+    display: block;
+  }
+}
 @media (min-width: 576px) {
   .social-media-grp {
     margin-top: 5%;

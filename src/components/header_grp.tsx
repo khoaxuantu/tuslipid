@@ -75,6 +75,7 @@ export function BlogsPageHeaderGrp() {
       <div className='description-txt mt-2'>
         Some notes, some ideas, some opinions
       </div>
+      <hr />
     </div>
   );
 }

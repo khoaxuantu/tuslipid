@@ -71,3 +71,7 @@
         @include animation(fadeInLeft, 1s);
     }
 }
+
+.fade-in-left {
+    @include animation(fadeInLeft, 0.5s);
+}

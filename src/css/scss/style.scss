@@ -64,6 +64,7 @@ section {
     @extend %copyright-txt;
     position: absolute;
     bottom: 1rem;
+    display: none;
 }
 
 .page-copyright {
@@ -73,6 +74,12 @@ section {
 
 .proj-github-ref {
     display: none;
+}
+
+@media screen and (min-width: 376px) {
+    .menu-copyright {
+        display: block;
+    }
 }
 
 @media (min-width: 576px) {
