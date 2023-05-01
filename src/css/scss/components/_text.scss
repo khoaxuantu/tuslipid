@@ -28,11 +28,20 @@ a {
     font-family: var.$body-font;
 }
 
+.oauth-txt {
+    font-family: var.$header-font;
+    font-size: 12px;
+    color: white;
+}
+
 @media (min-width: 576px) {
     .header-txt {
         font-size: 24px;
     }
     .description-txt {
+        font-size: 14px;
+    }
+    .oauth-txt {
         font-size: 14px;
     }
 }

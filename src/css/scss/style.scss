@@ -47,6 +47,12 @@ section {
     margin-top: 7.5%;
 }
 
+.oauth-grp {
+    div {
+        @extend %flex-center;
+    }
+}
+
 .nav-btn-grp {
     margin-top: 10%;
     

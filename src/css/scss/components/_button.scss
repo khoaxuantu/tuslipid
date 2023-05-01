@@ -60,6 +60,18 @@
     }
 }
 
+.btn-oauth-box {
+    width: 100%;
+}
+
+.btn-oauth {
+    @include shapeBtn(6, 80%);
+    @include util.rounded(20);
+    background-color: black;
+    cursor: pointer;
+    box-shadow: none;
+}
+
 .read-more-btn {
     display: flex;
     justify-content: center;
@@ -119,5 +131,11 @@
     .read-more-btn {
         justify-content: flex-end;
         padding-right: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .btn-oauth {
+        aspect-ratio: 5;
     }
 }
