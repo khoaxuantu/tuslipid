@@ -1,9 +1,9 @@
-import React from 'react';
+import { lazy } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import * as Site from './components/site';
 import { AnimatePresence } from 'framer-motion';
 import ScrollToTop from './components/scrollToTop';
-import Oauth from './components/oauth';
+const Oauth = lazy(() => import('./components/oauth'));
 
 
 function App() {

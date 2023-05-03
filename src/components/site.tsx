@@ -1,13 +1,14 @@
-import React from "react";
+import { Suspense, lazy } from "react";
 import { Outlet, useParams } from "react-router-dom";
 import { motion as m} from "framer-motion";
 import { isMobileOnly } from "react-device-detect";
 import * as Header from "./header_grp";
 import * as Content from "./content_grp";
 import SocialMediaBtnGroup, { NavBtnGroup } from "./button";
-import GuestbookBody from "./guestbook/page";
 import Copyright from "./copyright";
 import Navbar from "./navbar";
+
+const GuestbookBody = lazy(() => import("./guestbook/page"))
 
 export function Layout() {
     return (
@@ -119,8 +120,11 @@ export function GuestbookPage() {
             transition={{ duration: 0.8 }}
             exit={{ opacity: 0 }} 
             className="container page-wrapper transition-page">
-            <Header.GuestbookHeader />
-            <GuestbookBody />
+            <Suspense>
+                <Header.GuestbookHeader />
+                <GuestbookBody />
+            </Suspense>
+            <Copyright copyright_class="page-copyright pb-3" />
         </m.div>
     );
 }

@@ -1,9 +1,26 @@
 import AboutIntro from "./contents/introduction";
 import Works from "./contents/works";
 import Education from "./contents/edu";
-import * as Blogs from "./contents/blogs";
+// import * as Blogs from "./contents/blogs";
 import { AboutProject, ProjectsList } from "./contents/projects";
 import { blogInfoList } from "../lib/general_info";
+import { lazy } from "react";
+
+// const AboutIntro = lazy(() => import("./contents/introduction"));
+// const Works = lazy(() => import("./contents/works"));
+// const Education = lazy(() => import("./contents/edu"));
+// const AboutProject = lazy(() => import("./contents/projects").then(module => {
+//     return {default: module.AboutProject};
+// }))
+// const ProjectsList = lazy(() => import("./contents/projects").then(module => {
+//     return {default: module.ProjectsList};
+// }))
+const BlogsList = lazy(() => import("./contents/blogs").then(module => {
+    return {default: module.BlogsList};
+}))
+const SingleBlog = lazy(() => import("./contents/blogs").then(module => {
+    return {default: module.SingleBlog};
+}))
 
 export function AboutContent() {
     return (
@@ -36,7 +53,7 @@ export function BlogsContent() {
 
     return (
         <div className="blog-wrapper">
-            <Blogs.BlogsList blogInfoList={blogInfoList} />
+            <BlogsList blogInfoList={blogInfoList} />
         </div>
     );
 }
@@ -44,7 +61,7 @@ export function BlogsContent() {
 export function SingleBlogContent(props: {id: string}) {
     return (
         <article className="single-blog-wrapper transition-blog">
-            <Blogs.SingleBlog id={props.id} />
+            <SingleBlog id={props.id} />
         </article>
     );
 }
