@@ -4,6 +4,7 @@
 @use 'components/button';
 @use 'components/navbar';
 @use 'components/card';
+@use 'components/form';
 @use 'general/var';
 @use 'general/grid';
 @use 'general/container';
@@ -48,8 +49,13 @@ section {
 }
 
 .oauth-grp {
+
     div {
         @extend %flex-center;
+    }
+
+    button {
+        font-family: var.$header-font;
     }
 }
 

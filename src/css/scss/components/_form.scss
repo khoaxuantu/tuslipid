@@ -1,0 +1,26 @@
+@use '../general/var';
+@use '../general/util';
+
+.guestbook-form {
+    width: 100%;
+    row-gap: 5px;
+
+    input {
+        @include util.rounded;
+        background-color: var.$light-gray;
+        border: none;
+        opacity: 0.6;
+    }
+
+    button {
+        @include util.rounded;
+        opacity: 1;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 1;
+            border: 1px solid black;
+        }
+    }
+}

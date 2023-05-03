@@ -353,7 +353,6 @@ a:hover {
 .oauth-txt {
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
-  color: white;
 }
 
 @media (min-width: 576px) {
@@ -396,11 +395,13 @@ hr {
 .btn-square {
   aspect-ratio: 1;
   width: 2rem;
+  cursor: pointer;
 }
 
 .btn-rect {
   aspect-ratio: 2;
   width: 4.6875rem;
+  cursor: pointer;
 }
 
 .btn-grp {
@@ -418,6 +419,7 @@ hr {
 .btn-skill {
   aspect-ratio: 1;
   width: 3rem;
+  cursor: pointer;
   font-size: 10px !important;
   color: black;
   transition: scale 150ms ease-out;
@@ -439,9 +441,19 @@ hr {
 .btn-oauth {
   aspect-ratio: 6;
   width: 80%;
-  border-radius: 25px;
-  background-color: black;
   cursor: pointer;
+  border-radius: 25px;
+}
+
+.btn-oauth-github {
+  background-color: black;
+  box-shadow: none;
+}
+.btn-oauth-github .oauth-txt {
+  color: white;
+}
+
+.btn-oauth-google {
   box-shadow: none;
 }
 
@@ -449,7 +461,6 @@ hr {
   display: flex;
   justify-content: center;
   margin-top: auto;
-  cursor: pointer;
   height: 20%;
 }
 .read-more-btn a {
@@ -486,6 +497,7 @@ hr {
   .btn-skill {
     aspect-ratio: 3;
     width: 150px;
+    cursor: pointer;
     font-size: 12px !important;
   }
   .btn-skill #name {
@@ -752,6 +764,27 @@ hr {
     box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
   }
 }
+.guestbook-form {
+  width: 100%;
+  row-gap: 5px;
+}
+.guestbook-form input {
+  border-radius: 5px;
+  background-color: #cbcbcb;
+  border: none;
+  opacity: 0.6;
+}
+.guestbook-form button {
+  border-radius: 5px;
+  opacity: 1;
+  border: none;
+  cursor: pointer;
+}
+.guestbook-form button:hover {
+  opacity: 1;
+  border: 1px solid black;
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -909,6 +942,10 @@ section {
 
 .social-media-grp {
   margin-top: 7.5%;
+}
+
+.oauth-grp button {
+  font-family: "Montserrat", sans-serif;
 }
 
 .nav-btn-grp {
