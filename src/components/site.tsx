@@ -5,6 +5,7 @@ import { isMobileOnly } from "react-device-detect";
 import * as Header from "./header_grp";
 import * as Content from "./content_grp";
 import SocialMediaBtnGroup, { NavBtnGroup } from "./button";
+import GuestbookBody from "./guestbook/page";
 import Copyright from "./copyright";
 import Navbar from "./navbar";
 
@@ -109,5 +110,17 @@ export function SingleBlogPage() {
             <hr></hr>
             <Content.SingleBlogContent id={blogId as string} />
         </>
+    );
+}
+
+export function GuestbookPage() {
+    return(
+        <m.div
+            transition={{ duration: 0.8 }}
+            exit={{ opacity: 0 }} 
+            className="container page-wrapper transition-page">
+            <Header.GuestbookHeader />
+            <GuestbookBody />
+        </m.div>
     );
 }

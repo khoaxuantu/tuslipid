@@ -16,7 +16,8 @@ export interface DefaultButtonProps extends IBaseButtonProps {
 
 export interface IconButtonProps extends IBaseButtonProps {
     icon: IconType | string,
-    name?: string
+    name?: string,
+    onClick?: any
 };
 
 
@@ -45,5 +46,16 @@ export function IconButton(props: IconButtonProps) {
             aria-label={"Button with icon " + props.id}>
             {Icon}
         </Link>
+    );
+}
+
+export function LoginButton(props: IconButtonProps) {
+    return (
+        <button 
+            className={`btn btn-oauth ${props.classname} ps-3 pe-3 pt-1 pb-1`} 
+            onClick={props.onClick}>
+            <props.icon size={20} color="white" className="me-3" />
+            <span className="oauth-txt">{"Sign in with "+props.name}</span>
+        </button>
     );
 }
