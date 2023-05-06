@@ -776,12 +776,10 @@ hr {
 }
 .guestbook-form button {
   border-radius: 5px;
-  opacity: 1;
   border: none;
   cursor: pointer;
 }
 .guestbook-form button:hover {
-  opacity: 1;
   border: 1px solid black;
 }
 

@@ -14,12 +14,10 @@
 
     button {
         @include util.rounded;
-        opacity: 1;
         border: none;
         cursor: pointer;
 
         &:hover {
-            opacity: 1;
             border: 1px solid black;
         }
     }
