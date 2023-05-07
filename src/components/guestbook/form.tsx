@@ -61,15 +61,17 @@ function GuestbookForm() {
         }
     }, []);
     
-    async function submitHandler() {        
+    async function submitHandler(e: any) {        
         const data = JSON.parse(localStorage.getItem("data") as any);
         const input = document.getElementById("your-message") as HTMLFormElement;
         if (input.value.length === 0) {
             alert("Your message cannot be empty");
+            e.preventDefault();
             return;
         }
         if (input.value.length > 512) {
             alert("Too long! Won't read -_-");
+            e.preventDefault();
             return;
         }
 
@@ -77,7 +79,6 @@ function GuestbookForm() {
             name: data.name,
             message: input.value
         }
-        console.log(JSON.stringify(newMessage));
 
         await fetch(`${REACT_APP_BACKEND_DOMAIN}/guestbook/add`, {
             method: "POST",
@@ -86,14 +87,14 @@ function GuestbookForm() {
             },
             body: JSON.stringify(newMessage),
         })
-        .then(res => res.json())
-        .then(data => console.log(data));
+        // .then(res => res.json())
+        // .then(data => console.log(data));
     }
 
     return (
         <>
             <p className="mb-2">
-                Signed in as {" "} 
+                Sign in as {" "} 
                 <b>{username !== null ? username : User}</b> {" "}
                 via <b>{capitalFirstLetter(localStorage.getItem("third-party") as string)}</b>
             </p>

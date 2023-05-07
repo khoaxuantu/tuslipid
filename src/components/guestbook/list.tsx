@@ -12,7 +12,6 @@ function GuestbookList({maxGuests} : {maxGuests: number}) {
     const [hasMore, setHasMore] = useState(true);
     const [msgs, setMsgs] : [any, any] = useState([]);
 
-    console.log(msgs);
     useEffect(() => {
 
         const fetchMsgs = async (startId: number) => {

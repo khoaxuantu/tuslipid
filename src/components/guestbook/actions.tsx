@@ -32,8 +32,6 @@ export function SignIn() {
     let navigate = useNavigate();
     const loginWithGoogle = useGoogleLogin({
         onSuccess: async ({code}) => {
-            console.log(code);
-
             if (localStorage.getItem("accessToken") === null) {
                 await fetch(`${REACT_APP_BACKEND_DOMAIN}/oauth/google/access_token?code=` + code, {
                     method: "GET"
@@ -45,7 +43,6 @@ export function SignIn() {
                         localStorage.setItem("third-party", "google");
                         return navigate("/guestbook");
                     }
-                    console.log(data);
                 });
             }
         },
