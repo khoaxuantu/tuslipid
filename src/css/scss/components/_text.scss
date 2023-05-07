@@ -28,7 +28,7 @@ a {
     font-family: var.$body-font;
 }
 
-.oauth-txt {
+.oauth-txt, .guestbook-txt {
     font-family: var.$header-font;
     font-size: 12px;
 }
@@ -40,7 +40,7 @@ a {
     .description-txt {
         font-size: 14px;
     }
-    .oauth-txt {
+    .oauth-txt, .guestbook-txt {
         font-size: 14px;
     }
 }

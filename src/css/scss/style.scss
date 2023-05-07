@@ -49,6 +49,7 @@ section {
 }
 
 .oauth-grp {
+    text-align: center;
 
     div {
         @extend %flex-center;
@@ -109,6 +110,9 @@ section {
 @media screen and (min-width: 996px) {
     .works-grp {
         @include util.center-block(100px);
+    }
+    .oauth-grp {
+        @include util.center-block(10%, "padding");
     }
 }
 

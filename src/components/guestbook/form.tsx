@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { JsxElement } from "typescript";
 
-interface IMessage {
+const { REACT_APP_BACKEND_DOMAIN } = process.env;
+
+export interface IMessage {
     name: string | null,
     message: string
 }
@@ -23,7 +24,7 @@ function GuestbookForm() {
 
     async function fetchUser(thirdParty: string) {
         console.log(`get ${thirdParty} user`);
-        const fetchAPI = await fetch(`http://localhost:3001/oauth/${thirdParty}/user`, {
+        const fetchAPI = await fetch(`${REACT_APP_BACKEND_DOMAIN}/oauth/${thirdParty}/user`, {
             method: "GET",
             headers: {
                 "Authorization": "Bearer " + localStorage.getItem("accessToken")
@@ -64,14 +65,33 @@ function GuestbookForm() {
     
     async function submitHandler(e: any) {
         e.preventDefault();
-
+        
+        const data = JSON.parse(localStorage.getItem("data") as any);
         const input = document.getElementById("your-message") as HTMLFormElement;
+        if (input.value.length === 0) {
+            alert("Your message cannot be empty");
+            return;
+        }
+        if (input.value.length > 512) {
+            alert("Too long! Won't read -_-");
+            return;
+        }
+
         const newMessage: IMessage = {
-            name: User,
+            name: data.name,
             message: input.value
         }
-        
+        console.log(JSON.stringify(newMessage));
 
+        await fetch(`${REACT_APP_BACKEND_DOMAIN}/guestbook/add`, {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json",
+            },
+            body: JSON.stringify(newMessage),
+        })
+        .then(res => res.json())
+        .then(data => console.log(data));
     }
 
     return (

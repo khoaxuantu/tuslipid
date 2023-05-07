@@ -350,7 +350,7 @@ a:hover {
   font-family: "Courier Prime", monospace;
 }
 
-.oauth-txt {
+.oauth-txt, .guestbook-txt {
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
 }
@@ -362,7 +362,7 @@ a:hover {
   .description-txt {
     font-size: 14px;
   }
-  .oauth-txt {
+  .oauth-txt, .guestbook-txt {
     font-size: 14px;
   }
 }
@@ -870,6 +870,14 @@ hr {
   margin-right: auto;
 }
 
+.guestbook-wrapper {
+  width: 80%;
+  max-width: 768px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .single-blog-wrapper {
   width: 80%;
   max-width: 900px;
@@ -942,6 +950,9 @@ section {
   margin-top: 7.5%;
 }
 
+.oauth-grp {
+  text-align: center;
+}
 .oauth-grp button {
   font-family: "Montserrat", sans-serif;
 }
@@ -992,6 +1003,10 @@ section {
   .works-grp {
     margin-left: 100px;
     margin-right: 100px;
+  }
+  .oauth-grp {
+    padding-left: 10%;
+    padding-right: 10%;
   }
 }
 @media screen and (min-width: 1200px) {

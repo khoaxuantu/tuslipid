@@ -42,7 +42,12 @@
 }
 
 .blog-wrapper {
-    @include content-wrapper(90%, 900px, 50px)
+    @include content-wrapper(90%, 900px, 50px);
+}
+
+.guestbook-wrapper {
+    @include content-wrapper(80%, 768px, 50px);
+    // height: 1000px;
 }
 
 .single-blog-wrapper {
