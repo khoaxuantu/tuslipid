@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
+const DOMAIN = process.env.REACT_APP_BACKEND_DOMAIN; 
+
 export function GithubOauth() {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
@@ -9,7 +11,7 @@ export function GithubOauth() {
 
     if (codeParam && (localStorage.getItem("accessToken") === null)) {
         const getAccessToken = async function () {
-            await fetch("http://localhost:3001/oauth/github/access_token?code=" + codeParam, {
+            await fetch(`${DOMAIN}/oauth/github/access_token?code=` + codeParam, {
                 method: "GET"
             })
             .then(response => response.json())
@@ -17,7 +19,6 @@ export function GithubOauth() {
                 if (data.access_token) {
                     localStorage.setItem("accessToken", data.access_token);
                     localStorage.setItem("third-party", "github");
-                    localStorage.setItem("action", "signout");
                     return navigate("/guestbook");
                 }
             });
