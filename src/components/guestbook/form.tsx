@@ -20,8 +20,6 @@ function GuestbookForm() {
         username = JSON.parse(localStorage.getItem("data") as any).name;
     }
 
-    // console.log(User);
-
     async function fetchUser(thirdParty: string) {
         console.log(`get ${thirdParty} user`);
         const fetchAPI = await fetch(`${REACT_APP_BACKEND_DOMAIN}/oauth/${thirdParty}/user`, {
@@ -63,9 +61,7 @@ function GuestbookForm() {
         }
     }, []);
     
-    async function submitHandler(e: any) {
-        e.preventDefault();
-        
+    async function submitHandler() {        
         const data = JSON.parse(localStorage.getItem("data") as any);
         const input = document.getElementById("your-message") as HTMLFormElement;
         if (input.value.length === 0) {

@@ -66,7 +66,7 @@
     @include animation(fadeIn, 0.5s);
 }
 
-.transition-blog {
+.transition-blog, .guestbook-txt {
     &>*{
         @include animation(fadeInLeft, 1s);
     }

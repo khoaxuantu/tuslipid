@@ -33,6 +33,10 @@ a {
     font-size: 12px;
 }
 
+.guestbook-txt {
+    word-break: break-word;
+}
+
 @media (min-width: 576px) {
     .header-txt {
         font-size: 24px;

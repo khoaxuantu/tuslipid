@@ -5,8 +5,19 @@ import GuestbookList from "./list";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 
 const GG_CLIENT_ID: string = process.env.REACT_APP_GOOGLE_CLIENT_ID as string;
+const DOMAIN = process.env.REACT_APP_BACKEND_DOMAIN;
 
 function GuestbookBody() {
+  const [maxGuests, setMaxGuests] = useState(0);
+  useEffect(() => {
+    const fetchMaxGuests = async () => {
+      const fetchAPI = await fetch(`${DOMAIN}/guestbook/totalGuests`);
+      const curMaxGuests = await fetchAPI.json();
+      setMaxGuests(curMaxGuests[0]["count"]);
+    };
+
+    fetchMaxGuests();
+  }, []);
 
   return (
     <div className="guestbook-wrapper mb-5">
@@ -23,9 +34,13 @@ function GuestbookBody() {
         </div>
       </GoogleOAuthProvider>
       <hr />
-      <div className="mt-5 guestbook-txt">
-            <GuestbookList />
-      </div>
+      <article className="mt-5 guestbook-txt">
+        {maxGuests > 0 ? (
+          <GuestbookList maxGuests={maxGuests} />
+        ) : (
+          <p>Waiting for the first message...</p>
+        )}
+      </article>
     </div>
   );
 }
