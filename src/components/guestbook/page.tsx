@@ -11,7 +11,7 @@ function GuestbookBody() {
   const [maxGuests, setMaxGuests] = useState(0);
   useEffect(() => {
     const fetchMaxGuests = async () => {
-      const fetchAPI = await fetch(`${DOMAIN}/guestbook/totalGuests`);
+      const fetchAPI = await fetch(`${DOMAIN}/guestbook/totalRecords`);
       const curMaxGuests = await fetchAPI.json();
       setMaxGuests(curMaxGuests[0]["count"]);
     };
