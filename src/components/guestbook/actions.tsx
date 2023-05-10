@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { LoginButton } from "../../lib/factory/buttonBase";
 import { useNavigate } from "react-router-dom";
 import { oauthInfoList } from "../../lib/general_info";
