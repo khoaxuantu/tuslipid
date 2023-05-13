@@ -4,6 +4,7 @@
 @use 'components/button';
 @use 'components/navbar';
 @use 'components/card';
+@use 'components/form';
 @use 'general/var';
 @use 'general/grid';
 @use 'general/container';
@@ -47,6 +48,18 @@ section {
     margin-top: 7.5%;
 }
 
+.oauth-grp {
+    text-align: center;
+
+    div {
+        @extend %flex-center;
+    }
+
+    button {
+        font-family: var.$header-font;
+    }
+}
+
 .nav-btn-grp {
     margin-top: 10%;
     
@@ -64,6 +77,7 @@ section {
     @extend %copyright-txt;
     position: absolute;
     bottom: 1rem;
+    display: none;
 }
 
 .page-copyright {
@@ -73,6 +87,12 @@ section {
 
 .proj-github-ref {
     display: none;
+}
+
+@media screen and (min-width: 376px) {
+    .menu-copyright {
+        display: block;
+    }
 }
 
 @media (min-width: 576px) {
@@ -90,6 +110,9 @@ section {
 @media screen and (min-width: 996px) {
     .works-grp {
         @include util.center-block(100px);
+    }
+    .oauth-grp {
+        @include util.center-block(10%, "padding");
     }
 }
 

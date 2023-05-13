@@ -4,6 +4,7 @@
 @mixin shapeBtn($ratio: 1, $width: auto) {
     aspect-ratio: $ratio;
     width: $width;
+    cursor: pointer;
 }
 
 .btn {
@@ -26,7 +27,7 @@
 }
 
 .btn-rect {
-    @include shapeBtn(2, 4.6875rem)
+    @include shapeBtn(2, 4.6875rem);
 }
 
 .btn-grp {
@@ -60,11 +61,32 @@
     }
 }
 
+.btn-oauth-box {
+    width: 100%;
+}
+
+.btn-oauth {
+    @include shapeBtn(6, 80%);
+    @include util.rounded(20);
+}
+
+.btn-oauth-github {
+    background-color: black;
+    box-shadow: none;
+
+    .oauth-txt {
+        color: white;
+    }
+}
+
+.btn-oauth-google {
+    box-shadow: none;
+}
+
 .read-more-btn {
     display: flex;
     justify-content: center;
     margin-top: auto;
-    cursor: pointer;
     height: 20%;
 
     a {
@@ -119,5 +141,11 @@
     .read-more-btn {
         justify-content: flex-end;
         padding-right: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .btn-oauth {
+        aspect-ratio: 5;
     }
 }

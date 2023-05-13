@@ -28,11 +28,23 @@ a {
     font-family: var.$body-font;
 }
 
+.oauth-txt, .guestbook-txt {
+    font-family: var.$header-font;
+    font-size: 12px;
+}
+
+.guestbook-txt {
+    word-break: break-word;
+}
+
 @media (min-width: 576px) {
     .header-txt {
         font-size: 24px;
     }
     .description-txt {
+        font-size: 14px;
+    }
+    .oauth-txt, .guestbook-txt {
         font-size: 14px;
     }
 }

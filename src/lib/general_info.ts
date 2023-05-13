@@ -7,6 +7,7 @@ import { ITabProps } from "./factory/tabBase";
 import { IProjCardProps, IBlogCardProps } from "./factory/cardBase";
 import svgs from "./factory/iconBase";
 import { imgs } from "./factory/cardBase";
+import { FcGoogle } from "react-icons/fc";
 
 
 export const socialMediaInfoList: IconButtonProps[] = [
@@ -52,7 +53,7 @@ export const navBtnInfoList: DefaultButtonProps[] = [
         content: "Blogs"
     },
     {
-        url: "/",
+        url: "/guestbook",
         content: "Guestbook"
     }
 ];
@@ -326,4 +327,19 @@ export const blogInfoDict: {[id: string]: IBlogCardProps} = {
 export const blogInfoList: {dictKey: string, date: string}[] = [
     {dictKey: "great_ytb_channels_1", date: "Apr 26 2023 22:35:23 GMT+0800"},
     {dictKey: "great_ytb_channels_2", date: "Apr 27 2023 13:30:59 GMT+0800"},
+];
+
+export const oauthInfoList: IconButtonProps[] = [
+    {
+        icon: BsGithub,
+        url: "",
+        classname: "btn-oauth-github",
+        name: "Github"
+    },
+    {
+        icon: FcGoogle,
+        url: "",
+        classname: "btn-oauth-google",
+        name: "Google"
+    }
 ];

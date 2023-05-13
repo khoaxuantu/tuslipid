@@ -31,7 +31,7 @@
 }
 
 .page-wrapper {
-    width: 80%;
+    width: 100%;
     height: auto;
     margin-top: 4rem;
     margin-bottom: 4rem;
@@ -42,7 +42,12 @@
 }
 
 .blog-wrapper {
-    @include content-wrapper(90%, 900px, 50px)
+    @include content-wrapper(90%, 900px, 50px);
+}
+
+.guestbook-wrapper {
+    @include content-wrapper(80%, 768px, 50px);
+    height: 1000px;
 }
 
 .single-blog-wrapper {
@@ -52,6 +57,12 @@
 
 .lightgray-box {
     @include box($theme: var.$light-gray);
+}
+
+@media screen and (min-width: 321px) {
+    .page-wrapper {
+        width: 80%;
+    }
 }
 
 @media (min-width: 376px) {

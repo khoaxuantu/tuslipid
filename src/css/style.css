@@ -241,7 +241,7 @@
   padding: 3rem !important;
 }
 
-.btn, .read-more-btn a, .icon, .flex-image {
+.oauth-grp div, .btn, .read-more-btn a, .icon, .flex-image {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -350,11 +350,23 @@ a:hover {
   font-family: "Courier Prime", monospace;
 }
 
+.oauth-txt, .guestbook-txt {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+}
+
+.guestbook-txt {
+  word-break: break-word;
+}
+
 @media (min-width: 576px) {
   .header-txt {
     font-size: 24px;
   }
   .description-txt {
+    font-size: 14px;
+  }
+  .oauth-txt, .guestbook-txt {
     font-size: 14px;
   }
 }
@@ -387,11 +399,13 @@ hr {
 .btn-square {
   aspect-ratio: 1;
   width: 2rem;
+  cursor: pointer;
 }
 
 .btn-rect {
   aspect-ratio: 2;
   width: 4.6875rem;
+  cursor: pointer;
 }
 
 .btn-grp {
@@ -409,6 +423,7 @@ hr {
 .btn-skill {
   aspect-ratio: 1;
   width: 3rem;
+  cursor: pointer;
   font-size: 10px !important;
   color: black;
   transition: scale 150ms ease-out;
@@ -423,11 +438,33 @@ hr {
   text-decoration: none;
 }
 
+.btn-oauth-box {
+  width: 100%;
+}
+
+.btn-oauth {
+  aspect-ratio: 6;
+  width: 80%;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+.btn-oauth-github {
+  background-color: black;
+  box-shadow: none;
+}
+.btn-oauth-github .oauth-txt {
+  color: white;
+}
+
+.btn-oauth-google {
+  box-shadow: none;
+}
+
 .read-more-btn {
   display: flex;
   justify-content: center;
   margin-top: auto;
-  cursor: pointer;
   height: 20%;
 }
 .read-more-btn a {
@@ -464,6 +501,7 @@ hr {
   .btn-skill {
     aspect-ratio: 3;
     width: 150px;
+    cursor: pointer;
     font-size: 12px !important;
   }
   .btn-skill #name {
@@ -472,6 +510,11 @@ hr {
   .read-more-btn {
     justify-content: flex-end;
     padding-right: 1.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .btn-oauth {
+    aspect-ratio: 5;
   }
 }
 @keyframes fadeIn {
@@ -535,9 +578,14 @@ hr {
   animation-duration: 0.5s;
 }
 
-.transition-blog > * {
+.transition-blog > *, .guestbook-txt > * {
   animation-name: fadeInLeft;
   animation-duration: 1s;
+}
+
+.fade-in-left {
+  animation-name: fadeInLeft;
+  animation-duration: 0.5s;
 }
 
 .navbar {
@@ -551,7 +599,7 @@ hr {
   background-color: #383838;
   border: none;
   cursor: pointer;
-  position: relative;
+  position: absolute;
 }
 .navbar button::after {
   content: "";
@@ -720,6 +768,25 @@ hr {
     box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
   }
 }
+.guestbook-form {
+  width: 100%;
+  row-gap: 5px;
+}
+.guestbook-form input {
+  border-radius: 5px;
+  background-color: #cbcbcb;
+  border: none;
+  opacity: 0.6;
+}
+.guestbook-form button {
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+.guestbook-form button:hover {
+  border: 1px solid black;
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -785,7 +852,7 @@ hr {
 }
 
 .page-wrapper {
-  width: 80%;
+  width: 100%;
   height: auto;
   margin-top: 4rem;
   margin-bottom: 4rem;
@@ -807,6 +874,15 @@ hr {
   margin-right: auto;
 }
 
+.guestbook-wrapper {
+  width: 80%;
+  max-width: 768px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 1000px;
+}
+
 .single-blog-wrapper {
   width: 80%;
   max-width: 900px;
@@ -821,6 +897,11 @@ hr {
   background-color: #cbcbcb;
 }
 
+@media screen and (min-width: 321px) {
+  .page-wrapper {
+    width: 80%;
+  }
+}
 @media (min-width: 376px) {
   .menu-wrapper {
     height: 80%;
@@ -874,6 +955,13 @@ section {
   margin-top: 7.5%;
 }
 
+.oauth-grp {
+  text-align: center;
+}
+.oauth-grp button {
+  font-family: "Montserrat", sans-serif;
+}
+
 .nav-btn-grp {
   margin-top: 10%;
 }
@@ -889,6 +977,7 @@ section {
 .menu-copyright {
   position: absolute;
   bottom: 1rem;
+  display: none;
 }
 
 .page-copyright {
@@ -899,6 +988,11 @@ section {
   display: none;
 }
 
+@media screen and (min-width: 376px) {
+  .menu-copyright {
+    display: block;
+  }
+}
 @media (min-width: 576px) {
   .social-media-grp {
     margin-top: 5%;
@@ -914,6 +1008,10 @@ section {
   .works-grp {
     margin-left: 100px;
     margin-right: 100px;
+  }
+  .oauth-grp {
+    padding-left: 10%;
+    padding-right: 10%;
   }
 }
 @media screen and (min-width: 1200px) {

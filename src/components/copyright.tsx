@@ -5,7 +5,7 @@ function Copyright(props: { copyright_class?: string }) {
     return (
         <div className={`${props.copyright_class} pt-4`}>
             <div className="proj-github-ref">
-                <a href="https://github.com/khoaxuantu/tuslipid" target="_blank" rel="noreferrer">
+                <a href="https://github.com/khoaxuantu/tuslipid" target="_blank" rel="noreferrer" aria-label="web source code">
                     <BsGithub opacity={0.8} color="black" />
                 </a>
             </div>

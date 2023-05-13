@@ -14,7 +14,7 @@
         background-color: var.$navbar-bg-color;
         border: none;
         cursor: pointer;
-        position: relative;
+        position: absolute;
 
         &::after {
             content: '';
