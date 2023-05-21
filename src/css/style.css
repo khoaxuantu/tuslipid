@@ -585,7 +585,7 @@ hr {
 
 .fade-in-left {
   animation-name: fadeInLeft;
-  animation-duration: 0.5s;
+  animation-duration: 1s;
 }
 
 .navbar {
