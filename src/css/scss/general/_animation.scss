@@ -73,5 +73,5 @@
 }
 
 .fade-in-left {
-    @include animation(fadeInLeft, 0.5s);
+    @include animation(fadeInLeft, 1s);
 }

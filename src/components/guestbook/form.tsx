@@ -61,34 +61,39 @@ function GuestbookForm() {
         }
     }, []);
     
-    async function submitHandler(e: any) {        
+    async function submitHandler(e: any) {
+        // Prevent page from reloading until the POST request finishes
+        e.preventDefault();
+
         const data = JSON.parse(localStorage.getItem("data") as any);
         const input = document.getElementById("your-message") as HTMLFormElement;
         if (input.value.length === 0) {
             alert("Your message cannot be empty");
-            e.preventDefault();
             return;
         }
         if (input.value.length > 512) {
             alert("Too long! Won't read -_-");
-            e.preventDefault();
             return;
         }
-
+        
         const newMessage: IMessage = {
             name: data.name,
             message: input.value
         }
-
-        await fetch(`${REACT_APP_BACKEND_DOMAIN}/guestbook/add`, {
-            method: "POST",
-            headers: {
-                "Content-type": "application/json",
-            },
-            body: JSON.stringify(newMessage),
+        
+        await fetch(`${REACT_APP_BACKEND_DOMAIN}/guestbook/add/`, {
+                method: "POST",
+                headers: {
+                        "Content-Type": "application/json",
+                },
+                body: JSON.stringify(newMessage),
+                mode: "cors"
         })
         // .then(res => res.json())
         // .then(data => console.log(data));
+
+        alert("Sign successfully :3")
+        window.location.reload();
     }
 
     return (
