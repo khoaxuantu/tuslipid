@@ -5,6 +5,8 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeHighlight from "rehype-highlight/lib";
 import rehypeRaw from "rehype-raw";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
 import "../../css/markdown.css";
 
 export function BlogsList(props: {blogInfoList: { dictKey: string; date: string; }[]}) {
@@ -88,8 +90,8 @@ export function SingleBlog(props: {id: string}) {
         <>
             <ReactMarkdown
                 children={text}
-                remarkPlugins={[remarkGfm]}
-                rehypePlugins={[rehypeHighlight, rehypeRaw]}
+                remarkPlugins={[remarkGfm, remarkMath]}
+                rehypePlugins={[rehypeHighlight, rehypeRaw, rehypeKatex]}
             />
         </>
     );

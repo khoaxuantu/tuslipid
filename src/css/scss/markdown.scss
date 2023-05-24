@@ -1,3 +1,7 @@
+$codeblock-background: #282c34;
+$codeblock-color: #abb2bf;
+$codeinline-background: #f6f8fa;
+
 %markdown-theme {
     * {
         margin: revert;
@@ -5,14 +9,18 @@
         list-style-type: revert;
     }
 
+    p {
+        line-height: 1.25rem;
+    }
+
     code, pre {
         border-radius: 5px;
-        background-color: #f6f8fa;
-        color: inherit;
+        background-color: $codeblock-background;
+        color: $codeblock-color;
     }
     
     code {
-        padding: 1px 5px;
+        padding: 2px 5px;
     }
     
     pre {
@@ -20,6 +28,10 @@
         line-height: 1.25em;
         overflow: auto;
         padding: 6px 10px;
+
+        code {
+            display: block;
+        }
     }
 
     blockquote {
@@ -28,6 +40,19 @@
         font-style: italic;
         padding: 1.33em;
         text-align: left;
+    }
+
+    table {
+        padding: 1rem 0;
+    }
+
+    th, td {
+        padding: 6px 13px;
+        border: 1px solid black;
+    }
+
+    hr {
+        background: black;
     }
 }
 
