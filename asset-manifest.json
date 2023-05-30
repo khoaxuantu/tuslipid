@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.689cec39.css",
-    "main.js": "/static/js/main.b92aeb49.js",
+    "main.js": "/static/js/main.e7899551.js",
     "static/js/436.5ef6ea98.chunk.js": "/static/js/436.5ef6ea98.chunk.js",
     "static/css/631.5b8ac143.chunk.css": "/static/css/631.5b8ac143.chunk.css",
     "static/js/631.fca9536c.chunk.js": "/static/js/631.fca9536c.chunk.js",
@@ -11,7 +11,7 @@
     "static/js/787.66a7f121.chunk.js": "/static/js/787.66a7f121.chunk.js",
     "static/js/258.d411f128.chunk.js": "/static/js/258.d411f128.chunk.js",
     "static/js/699.faa50220.chunk.js": "/static/js/699.faa50220.chunk.js",
-    "static/js/771.5c3f1b12.chunk.js": "/static/js/771.5c3f1b12.chunk.js",
+    "static/js/771.aca2d55b.chunk.js": "/static/js/771.aca2d55b.chunk.js",
     "static/js/402.7f9601cf.chunk.js": "/static/js/402.7f9601cf.chunk.js",
     "static/media/background.webp": "/static/media/background.0fe630389f9da00b4da2.webp",
     "static/media/TaiwanTech.webp": "/static/media/TaiwanTech.3239f7b9cd053ceaa9ae.webp",
@@ -21,6 +21,7 @@
     "static/media/AutoCAD.webp": "/static/media/AutoCAD.22db55911a42d1a9012a.webp",
     "static/media/Calendar.webp": "/static/media/Calendar.2f09a23cd515977f2be4.webp",
     "static/media/HanoiAms.webp": "/static/media/HanoiAms.ddc950d4a3afc5346ba9.webp",
+    "static/media/MailSPA.webp": "/static/media/MailSPA.324994b1a4d69b103723.webp",
     "static/media/Wiki.webp": "/static/media/Wiki.8bcf16832e49d293cb0f.webp",
     "static/media/Firebase-Light.svg": "/static/media/Firebase-Light.be39887274fc1d39cbc0.svg",
     "static/media/Flask-Dark.svg": "/static/media/Flask-Dark.3b200b23ebd34ac92edc.svg",
@@ -28,7 +29,7 @@
     "static/media/Algovisual.webp": "/static/media/Algovisual.a6fd22db958d8a4a89b7.webp",
     "static/media/Financerep.webp": "/static/media/Financerep.9ff0047e1d884dd9d538.webp",
     "static/media/SQLite.svg": "/static/media/SQLite.7c48ed0de265ed5e4e6c.svg",
-    "static/media/markdown_starter.md": "/static/media/markdown_starter.d439a1927936054a448b.md",
+    "static/media/markdown_starter.md": "/static/media/markdown_starter.1692de4b73ee0391e3f7.md",
     "static/media/PostgreSQL-Light.svg": "/static/media/PostgreSQL-Light.4e36b7eb1b6c8884bb87.svg",
     "static/media/Sass.svg": "/static/media/Sass.cca6f1cbf788e988080d.svg",
     "static/media/great_ytb_channels_2.md": "/static/media/great_ytb_channels_2.751e75fbfe9635aefd00.md",
@@ -51,7 +52,7 @@
     "static/media/CSS.svg": "/static/media/CSS.5fcd7f5683afc0fc6d01.svg",
     "static/media/HTML.svg": "/static/media/HTML.ca0db580ffd74f086f2d.svg",
     "main.689cec39.css.map": "/static/css/main.689cec39.css.map",
-    "main.b92aeb49.js.map": "/static/js/main.b92aeb49.js.map",
+    "main.e7899551.js.map": "/static/js/main.e7899551.js.map",
     "436.5ef6ea98.chunk.js.map": "/static/js/436.5ef6ea98.chunk.js.map",
     "631.5b8ac143.chunk.css.map": "/static/css/631.5b8ac143.chunk.css.map",
     "631.fca9536c.chunk.js.map": "/static/js/631.fca9536c.chunk.js.map",
@@ -63,6 +64,6 @@
   },
   "entrypoints": [
     "static/css/main.689cec39.css",
-    "static/js/main.b92aeb49.js"
+    "static/js/main.e7899551.js"
   ]
 }
