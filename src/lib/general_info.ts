@@ -255,6 +255,18 @@ export const projInfoDict: {[id: string]: IProjCardProps} = {
     '4': {
         id: "4",
         content_section: "Projects",
+        title: "Email Single Page Application",
+        description: [
+            `A front-end for an email client in SPA style that makes API calls to send
+            and receive email`
+        ],
+        tools: ["Plain JavaScript", "Django", "Bootstrap"],
+        githubURL: "https://github.com/khoaxuantu/one-page-email",
+        imageURL: imgs.MailSPA
+    },
+    '5': {
+        id: "4",
+        content_section: "Projects",
         title: "Wiki Encyclopedia",
         description: [
             `A Wikipedia-like online encyclopedia that will allow users search 
@@ -264,7 +276,7 @@ export const projInfoDict: {[id: string]: IProjCardProps} = {
         githubURL: "https://github.com/khoaxuantu/wiki_encyclopedia",
         imageURL: imgs.Wiki
     },
-    '5': {
+    '6': {
         id: "5",
         content_section: "Projects",
         title: "Calendar on Terminal",
@@ -276,7 +288,7 @@ export const projInfoDict: {[id: string]: IProjCardProps} = {
         githubURL: "https://github.com/khoaxuantu/Calendar_demo",
         imageURL: imgs.Calendar
     },
-    '6': {
+    '7': {
         id: "6",
         content_section: "Projects",
         title: "Lottery Draw Robotic Application",
@@ -290,7 +302,7 @@ export const projInfoDict: {[id: string]: IProjCardProps} = {
         tools: ["Robotic automation algorithm design"],
         imageURL: imgs.Tm
     },
-    '7': {
+    '8': {
         id: "7",
         content_section: "Projects",
         title: "Gripper Base System Sketch",
