@@ -26,7 +26,7 @@ export default function MenuBuilder() {
 
     return (
         <m.div
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
             exit={{ opacity: 0 }}
             className={`container menu-wrapper ${orientation} transition-menu`}>
             <MenuHeaderGrp />
