@@ -4,7 +4,7 @@ import { worksInfoList } from "../lib/general_info";
 
 
 function TabList() {
-    const [curId, setCurId] = useState("1");
+    const [curId, setCurId] = useState("0");
 
     function tabHandler(id: string) {
         const initialTabSelector = document.getElementById(`tabselector_${curId}`) as HTMLElement;
@@ -24,22 +24,26 @@ function TabList() {
         <div className="p-2 row works-grp">
             <div className="col-3 tab-list">
                 {
-                    worksInfoList.map(tabProps => {
-                        let isCurrent = tabProps.id === curId ? " is-current" : "";
-                        return <TabSelector 
-                            key={tabProps.id} 
+                    worksInfoList.map((tabProps, index) => {
+                        let id = index.toString();
+                        let isCurrent = id === curId ? " is-current" : "";
+                        return <TabSelector
+                            id = {"tabselector_" + id}
+                            key={id} 
                             className={"vertical-tab p-2"+isCurrent}
-                            tabHandler={() => tabHandler(tabProps.id)}
+                            tabHandler={() => tabHandler(id)}
                             {...tabProps} />;
                     })
                 }
             </div>
             <div className="col-9 p-2 tab-content">
                 {
-                    worksInfoList.map(tabProps => {
-                        let isCurrent = tabProps.id === curId ? "is-current " : "";
+                    worksInfoList.map((tabProps, index) => {
+                        let id = index.toString();
+                        let isCurrent = id === curId ? "is-current " : "";
                         return <TabContent
-                            key={tabProps.id}
+                            key={id}
+                            id = {"tabcontent_" + id}
                             className={isCurrent+"content"}
                             {...tabProps} />;
                     })

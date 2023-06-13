@@ -163,7 +163,19 @@ export const skillInfoList: IconButtonProps[] = [
 
 export const worksInfoList: ITabProps[] = [
     {
-        id: "1",
+        name: "Pixta Vietnam Ltd.",
+        content: {
+            title: "Backend Web Developer @ Pixta",
+            time_space: "06/2023 - now | Hanoi, Vietnam",
+            description: [
+                `Develop and manage the backend system for Pixtastock. 
+                Analyze data, evaluate the effectiveness of features to improve
+                and develop new features.`,
+                `Main stacks: Ruby, Nestjs, Nextjs`
+            ]
+        }
+    },
+    {
         name: "Pegatron",
         content: {
             title: "Data Engineer Intern @ Pegatron",
@@ -175,12 +187,11 @@ export const worksInfoList: ITabProps[] = [
                 `Learned how to track and update the data flow, manage and develop 
                 databases via Oracle Database.`,
                 `Contributed to the transformation and loading process in the ETL
-                 by retrieving the data into >30 forms.`
+                 and customer's report by retrieving the data into >30 forms.`
             ]
         }
     },
     {
-        id: "2",
         name: "Techman Robot Inc.",
         content: {
             title: "Robotic Automation Egineering Trainee @ Techman",
@@ -193,7 +204,7 @@ export const worksInfoList: ITabProps[] = [
                 `Won the First Prize in the Projects competition held by the company.`
             ]
         }
-    }
+    },
 ];
 
 export const projInfoDict: {[id: string]: IProjCardProps} = {

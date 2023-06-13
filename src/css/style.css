@@ -647,10 +647,6 @@ hr {
   animation-duration: 300ms;
 }
 
-.tab-list {
-  display: flex;
-  flex-wrap: nowrap;
-}
 .tab-list .is-current {
   background-color: #cbcbcb;
   border-left: none;
