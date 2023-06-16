@@ -353,12 +353,21 @@ export const blogInfoDict: {[id: string]: IBlogCardProps} = {
         url:"/markdown_starter",
         file:"markdown_starter.md"
     },
+    "uncommon_javascript_keynotes": {
+        content_section: "Blogs",
+        id: "uncommon_javascript_keynotes",
+        title: "Uncommon JavaScript Keynotes",
+        brief_description: "",
+        url: "/uncommon_javascript_keynotes",
+        file: "uncommon_javascript_keynotes.md"
+    }
 };
 
 export const blogInfoList: {dictKey: string, date: string}[] = [
     {dictKey: "great_ytb_channels_1", date: "Apr 26 2023 22:35:23 GMT+0800"},
     {dictKey: "great_ytb_channels_2", date: "Apr 27 2023 13:30:59 GMT+0800"},
     {dictKey: "markdown_starter", date:"Thu Mar 23 2023 23:10:33 GMT+0700"},
+    {dictKey: "uncommon_javascript_keynotes", date: "Fri Jun 16 2023 23:02:26 GMT+0700"},
 ];
 
 export const oauthInfoList: IconButtonProps[] = [

@@ -2,8 +2,6 @@
   margin: revert;
   padding: revert;
   list-style-type: revert;
-}
-.single-blog-wrapper p {
   line-height: 1.25rem;
 }
 .single-blog-wrapper code, .single-blog-wrapper pre {
@@ -16,7 +14,6 @@
 }
 .single-blog-wrapper pre {
   border: 1px solid #CCCCCC;
-  line-height: 1.25em;
   overflow: auto;
   padding: 6px 10px;
 }
