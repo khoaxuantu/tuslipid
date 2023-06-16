@@ -163,7 +163,7 @@ export const skillInfoList: IconButtonProps[] = [
 
 export const worksInfoList: ITabProps[] = [
     {
-        name: "Pixta Vietnam Ltd.",
+        name: "Pixta Inc.",
         content: {
             title: "Backend Web Developer @ Pixta",
             time_space: "06/2023 - now | Hanoi, Vietnam",
@@ -171,7 +171,8 @@ export const worksInfoList: ITabProps[] = [
                 `Develop and manage the backend system for Pixtastock. 
                 Analyze data, evaluate the effectiveness of features to improve
                 and develop new features.`,
-                `Main stacks: Ruby, Nestjs, Nextjs`
+                `Main stacks: Ruby, Nestjs, Nextjs`,
+                `Updating...`
             ]
         }
     },

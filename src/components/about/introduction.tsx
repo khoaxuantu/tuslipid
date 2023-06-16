@@ -11,8 +11,8 @@ function AboutIntro() {
                 <div className="row">
                     <div className="col-7 description-txt lightgray-box p-2">
                         <p className="">
-                            I am a new-grad student who just had graduated from the 
-                            International Advanced Technology Program (IATP) at NTUST. 
+                            I am a web developer from Vietnam. You have learned how to call 
+                            me above, but I also use Tuslipid as my nickname across social medias and games.
                         </p>
                         <p className="mt-2">
                             I initially chose Mechanical Engineering as my major. 
@@ -22,11 +22,9 @@ function AboutIntro() {
                             and attempted to develop further in this major. 
                         </p>
                         <p className="mt-2">
-                            Currently, I am focusing on fullstack web development
-                            and cloud services; and seeking a full-time position 
-                            in backend or frontend. But if there is any opportunity
-                            in other software-related fields (such as game, mobile, system,
-                            etc...), I would love to challenge myself as well.
+                            I'm passionate about full-stack web development and cloud services, and currently 
+                            continuing my career development journey at {" "}
+                            <a href="https://pixta.vn/" target="_blank" rel="noreferrer">Pixta Vietnam</a>.
                         </p>
                     </div>
                     <div className="col-5 flex-image">
