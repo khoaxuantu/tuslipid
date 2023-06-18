@@ -2320,7 +2320,7 @@ let module = await import(modulePath);
 
 <br><br>
 
-## Upcomming
+## Upcoming
 *Uncommon JavaScript Notes - Browser: Document, Events, Interfaces* - 
 based on javascript.info's [part 2](https://javascript.info/#tab-2).
 
