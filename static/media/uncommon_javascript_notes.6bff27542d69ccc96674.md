@@ -2314,12 +2314,14 @@ let module = await import(modulePath);
 </details><br>
 <br><br>
 
+---
 ## References
 - [Javascript.info](https://javascript.info/) - Part 1: The JavaScript language
 - [MDN Web Docs - Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - JavaScript
 
 <br><br>
 
+---
 ## Upcoming
 *Uncommon JavaScript Notes - Browser: Document, Events, Interfaces* - 
 based on javascript.info's [part 2](https://javascript.info/#tab-2).
