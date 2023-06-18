@@ -10,15 +10,15 @@
   color: #abb2bf;
 }
 .single-blog-wrapper code {
-  padding: 2px 5px;
+  margin: 0.5px 0;
+  padding: 0 5px;
+  line-break: auto;
+  display: inline-block;
 }
 .single-blog-wrapper pre {
   border: 1px solid #CCCCCC;
   overflow: auto;
   padding: 6px 10px;
-}
-.single-blog-wrapper pre code {
-  display: block;
 }
 .single-blog-wrapper blockquote {
   margin: 0;

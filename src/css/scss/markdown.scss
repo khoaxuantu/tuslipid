@@ -17,7 +17,10 @@ $codeinline-background: #f6f8fa;
     }
     
     code {
-        padding: 2px 5px;
+        margin: 0.5px 0;
+        padding: 0 5px;
+        line-break: auto;
+        display: inline-block;
     }
     
     pre {
@@ -25,9 +28,9 @@ $codeinline-background: #f6f8fa;
         overflow: auto;
         padding: 6px 10px;
 
-        code {
-            display: block;
-        }
+        // code {
+        //     display: block;
+        // }
     }
 
     blockquote {

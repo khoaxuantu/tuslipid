@@ -1,23 +1,78 @@
+# Introduction
+> JavaScript is super complicated, like a pain in your ass. Even when you are pretty familiar
+> with other programming languages' logic and concepts, you still find it challenging to cover significant
+> aspects of JS.
 
+Let me tell you one story... I once started learning JavaScript with a mindset that "just like other
+programming languages". Honestly, it does have enough general programming concepts that help me
+gain some first tastes quickly. It has variables, operators, functions, objects and classes, which
+can make a newbie think: "Uhm ~~ I can understand it easily!". But the thing doesn't go as you expected,
+not like variables in C++, variables in JavaScript have `var`, `const` and `let`; not like a single `def` in
+Python, JavaScript can initiate a function in two ways: function declaration and function expression.
+Thus, I didn't understand its fundamentals the first time studying, and regularly lost track
+of my thinking flow when looking up its advanced topic. Although I have done some projects using extended
+JavaScript and libraries/frameworks such as React, ExpressJS, etc..., I still had a vague picture about
+prototypes, asynchronous, error handling, and so forth.
+
+Things even got worse, I got an invitation to a whiteboard technical interview for a full-stack developer role, in which they
+asked me about JavaScript. Initially, I believe naively my fundamental ideas can handle their questions - "Well! 
+Just some JS questions like tutorials". However, they gave me a question about asynchronous which is 
+one of my most vulnerable parts. They asked me about a promise chain meanwhile I just had been familiar with a
+single promise. As a result, I solved it incompletely and failed the interview. 🥲
+```js
+// Refactor the function below to async/await structure
+function A() {
+    return new Promise((resolve, reject) => {
+        resolve(B);
+    })
+    .then(resB => {
+        return C(resB);
+    })
+    .catch(err => {
+        console.log(`First error: ${err}`);
+    });
+    .then(resC => {
+        return D(resC);
+    })
+    .then(resD => {
+        console.log(resD);
+    })
+    .catch(err => {
+        console.log(`Second error: ${err}`);
+    })
+}
+```
+After the interview, I realized my huge gap in knowledge about JavaScript, so I started reviewing
+it again. Below are my keynotes based on [javascript.info](https://javascript.info/). It does not 
+have very fundamental topics, instead, it contains concepts that I can easily mismatch when learning. So
+for looking up JavaScript basics, you can refer to [javascript.info tutorials](https://javascript.info/)
+directly or [MDN (Mozilla) JavaScript manual](https://developer.mozilla.org/en-US/docs/Web/JavaScript).
+
+<br><br>
+
+---
 
 ## Content
 <details>
 
 - [JavaScript Fundamentals (but uncommon)](#javascript-fundamentals)
+    + [Variables](#variables)
+    + [Data types](#data-types)
     + [Interaction](#interaction)
     + [Comparisons](#comparisons)
+    + [Logical Operators](#logical-operators)
     + [Nullish coalescing operation `??`](#nullish-coalescing-operator---)
     + [Loop `for`](#loop-for)
     + [Functions](#functions)
 - [Code quality](#code-quality)
-    + [Polyfills and transpillers](#polyfills-and-transpilers)
+    + [Polyfills and transpilers](#polyfills-and-transpilers)
 - [Objects: the basics](#objects--the-basics)
     + [Objects](#objects)
     + [Symbol type](#symbol-type)
-- [Data types](#data-types)
+- [More about data types](#data-types)
     + [Iterables](#iterables)
     + [Object.keys, values, entries](#object-keys--values--entries)
-    + [Desctructuring assignment](#destructuring-assignment)
+    + [Destructuring assignment](#destructuring-assignment)
     + [Date and time](#date-and-time)
     + [JSON methods, toJSON](#json-methods--tojson)
 - [Advanced working with functions](#advanced-working-with-functions)
@@ -36,7 +91,7 @@
     + [Native prototypes](#native-prototypes)
 - [Classes](#classes)
 - [Error handling](#error-handling)
-    + [Custom erros, extending Error](#custom-errors--extending-error)
+    + [Custom errors, extending Error](#custom-errors--extending-error)
 - [Promises, async/await](#promises--async-await)
     + [Callbacks](#introduction--callbacks)
     + [Promise](#promise)
@@ -46,14 +101,108 @@
     + [Promisification](#promisification)
     + [Microtasks](#microtasks)
     + [Async/await](#async-await)
-    
+- [Generators, advanced iteration](#generators--advanced-iteration)
+    + [Generators](#generators)
+    + [Async iteration and generators](#async-iteration-and-generators)
+- [Modules](#modules)
+    + [Modules, introduction](#modules--introduction)
+    + [Dynamic imports](#dynamic-imports)
 
-</details>
+</details><br>
 <br><br>
 
 ---
 
 ## JavaScript Fundamentals
+### Variables
+```js
+var x = 1; // Too old...
+const y = 3;
+let z = 2;
+```
+<details>
+
+#### `let`
+To create a variable, use the `let` keyword.
+```js
+let message;
+message = 'Hello'; // store the string 'Hello' in the variable named message
+```
+
+#### `const`
+To declare a constant (unchanging) variable, use `const` instead of
+`let`:
+```js
+const myBirthday = '29.08.2000';
+
+myBirthday = '15.02.2004'; // error, can't reassign the constant!
+```
+For the object constant variable, we still can reassign its fields, 
+but not the whole object itself.
+```js
+const obj = {
+    name: "Tu"
+}
+
+obj.name = "Tuslipid" // name: Tuslipid
+obj = {
+    name: "Tusss"
+} // error, can't reassign the constant!
+```
+
+#### `var`
+In older scripts, you may also find another keyword: `var` instead of
+`let`:
+```js
+var message = 'Hello';
+```
+The `var` keyword is *almost* the same as `let`. It also decalares 
+variable, but in a slightly different, "old-school" way.
+
+There are subtle differences between `let` and `var`, learn more at
+[The old "var"](#the-old-var).
+
+> It is recommended to use `const`, `let` instead of `var`.
+
+</details><br>
+
+
+### Data types
+`NaN`, `null` and `undefined`
+
+<details>
+
+- `NaN`\
+A computational error. It is a result of an incorrect or and undefined
+mathematical operation.\
+`NaN` is sticky. Any further mathematical operation on `NaN` returns
+`NaN`.
+```js
+alert("not a number" / 2); // NaN, such division is erroneous
+
+alert(NaN + 1); // NaN
+```
+
+- `null`\
+In JavaScript, `null` is not a "reference to a non-existing object"
+or a "null pointer" like in some other languages.\
+It's just a speical value shich represents "nothing", "empty" or
+"value unknown".
+```js
+let age = null; // age is unknown
+```
+
+- `undefined`\
+The meaning of `undefined` is "value is not assigned".\
+If a variable is declared, but not assigned, then its value is 
+`undefined`:
+```js
+let age;
+alert(age); // undefined
+```
+
+</details><br>
+
 ### Interaction
 - alert
 - prompt
@@ -61,7 +210,8 @@
 	
 
 ### Comparisons
-- `==` vs `===`
+`==` vs `===`
+
 <details>
 
 A strict equality operator `===` checks the equality without type
@@ -75,7 +225,35 @@ converting to the same type of `a` then check the equality.
 0 === false; // false
 ```
 
-</details>
+</details><br>
+
+### Logical operators
+
+`! (NOT)`
+<details>
+
+
+The boolean NOT operator accepts a single argument and does the
+following:
+1. Converts the operand to boolean type: `true/false`.
+2. Returns the inverse value. `true/false` -> `false/true`
+
+```js
+// The boolean value of all variables except 0, false, null, undefined are TRUE.
+!true; // false
+!"non-empty string"; // false
+![1,2,3]; // false
+!!"non-empty string"; // true
+
+
+!0; // true
+!null; // true
+!undefined; // true
+!false; // true
+```
+> !a does not mean `a != null` or `a !== null && a !== undefined`.
+
+</details><br>
 
 
 ### Nullish coalescing operator `??`
@@ -88,7 +266,7 @@ the second one.
 result = a ?? b;
 
 // same as
-result = (a !== null && a !== undefined) ? a : b;
+result = (a != null) ? a : b;
 ```
 Comparison with `||`:
 - `||` returns the first *truthy* value. `||` doesn't distinguish
@@ -100,7 +278,7 @@ alert(height || 100); // 100
 alert(height ?? 100); // 0
 ```
 
-</details>
+</details><br>
 
 
 ### Loop `for`
@@ -125,7 +303,7 @@ for (const iterator of obj) {
     const value = iterator;
 }
 ```
-</details>
+</details><br>
 
 
 ### Functions
@@ -144,7 +322,7 @@ const func = function() {}
 const func = () => {}
 ```
 
-</details>
+</details><br>
 <br><br>
 
 ## Code quality
@@ -154,7 +332,7 @@ The scripts that update/add new functions.
 
 
 **Transpilers**\
-Translate code to different version.
+Translate code to a different version.
 
 <br><br>
 
@@ -177,10 +355,10 @@ Translate code to different version.
     + `Symbol.for("id")`
     + `Symbol.keyFor(sym)`
 
-</details>
+</details><br>
 <br><br>
 
-## Data types
+## More about data types
 ### Iterables
 <details>
 
@@ -229,7 +407,7 @@ let arr = Array.from(arrayLike);
 console.log(arr);
 ```
 
-</details>
+</details><br>
 
 
 ### Object.keys, values, entries
@@ -263,7 +441,7 @@ let originalObj = Object.fromEntries(
 );
 ```
 
-</details>
+</details><br>
 
 
 ### Destructuring assignment
@@ -313,7 +491,7 @@ let {
 } = options;
 ```
 
-</details>
+</details><br>
 
 
 ### Date and time
@@ -327,7 +505,7 @@ let {
     + The string format should be: `YYYY-MM-DDTHH:mm:ss.sssZ`
     + Shorter variants are also possible: `YYYY-MM-DD`, `YYYY-MM`, `YYYY`
 
-</details>
+</details><br>
 
 
 ### JSON methods, toJSON
@@ -385,7 +563,7 @@ JSON.parse(str, function(key, value) {
 })
 ```
 
-</details>
+</details><br>
 <br><br>
 
 
@@ -436,7 +614,7 @@ console.log(obj === objCopy); // false
 console.log(JSON.stringify(obj) === JSON.stringify(objCopy)); // true
 ```
 
-</details>
+</details><br>
 
 
 ### The old `var`
@@ -486,7 +664,7 @@ was called "immediately-invoked function expressions" (IIFE).
 }();
 ```
 
-</details>
+</details><br>
 
 
 ### Global object
@@ -544,7 +722,7 @@ setTimeout(() => alert("World"));
 alert("hello");
 ```
 
-</details>
+</details><br>
 
 
 ### Decorators and forwarding, call/apply
@@ -710,7 +888,7 @@ func.call(context, ...args);
 func.apply(context, args);
 ```
 
-</details>
+</details><br>
 
 
 ### Function binding
@@ -795,7 +973,7 @@ user.sayNow("Hello");
 // [10:00] John: Hello!
 ```
 
-</details>
+</details><br>
 <br><br>
 
 
@@ -831,7 +1009,7 @@ Object.defineProperties(obj, {
 })
 ```
 
-</details>
+</details><br>
 <br><br>
 
 
@@ -856,8 +1034,12 @@ console.log(rabbit.jumps); // true
 ```
 > The `__proto__` must be an object or null
 
+</details><br>
+
 
 ### F.prototype
+<details>
+
 Used when a object is created by a constructor function, like `new F()`
 ```js
 let animal = {
@@ -885,7 +1067,7 @@ Rabbit.prototype = { constructor: Rabbit };
 */
 ```
 
-</details>
+</details><br>
 
 
 ### Native prototypes
@@ -937,14 +1119,14 @@ let obj = {
 obj.join = Array.prototype.join;
 console.log(obj.join(',')); // Hello,World!
 ```
-</details>
+</details><br>
 <br><br>
 
 
 ## Classes
-<details>
-
 In JavaScript, a class is a kind of function.
+
+<details>
 
 What `class A{...}` construct really does is:
 1. Creates a function named `A`, that becomes the result of the class
@@ -970,7 +1152,7 @@ class MyClass {
 }
 ```
 
-</details>
+</details><br>
 <br><br>
 
 
@@ -988,7 +1170,7 @@ try {
 }
 ```
 
-</details>
+</details><br>
 
 ### Custom errors, extending Error
 <details>
@@ -1006,7 +1188,7 @@ class Error {
     }
 }
 ```
-Inherit `ValidationError` from it
+Inherit `ValidationError` from it:
 ```js
 class ValidationError extends Error {
     constructor(message) {
@@ -1027,7 +1209,7 @@ try {
     alert(err.stack); // a list of nested calles with lines numbers for each
 }
 ```
-Further inheritance
+Further inheritance:
 ```js
 class PropertyRequiredError extends ValidationError {
     constructor(property);
@@ -1065,7 +1247,7 @@ try {
     }
 }
 ```
-Wrapping exceptions\
+Wrapping exceptions:\
 There can be more types of errors and we may not want to check for all 
 error types one-by-one everytime, so we may need an exception wrapper.
 ```js
@@ -1113,7 +1295,7 @@ try {
 }
 ```
 
-</details>
+</details><br>
 <br><br>
 
 
@@ -1269,7 +1451,7 @@ function step3(error, script) {
 }
 ```
 
-</details>
+</details><br>
 
 
 ### Promise
@@ -1315,7 +1497,7 @@ new Promise((resolve, reject) => {
 .then(result => show result, err => show error);
 ```
 
-</details>
+</details><br>
 
 
 ### Promise chaining
@@ -1336,7 +1518,7 @@ new Promise(function(resolve, reject) {
 })
 ```
 
-</details>
+</details><br>
 
 
 ### Error handling with promises
@@ -1386,7 +1568,7 @@ new Promise((resolve, reject) => {
 });
 ```
 
-</details>
+</details><br>
 
 
 ### Promise API
@@ -1490,7 +1672,7 @@ Promise.any([
     + `Promise.resolve(value)` is same as `new Promise(resolve => resolve(value))`.
     + `Promise.reject(value)` is same as `new Promise((resolve, reject) => reject(error))`.
 
-</details>
+</details><br>
 
 
 ### Promisification
@@ -1600,7 +1782,7 @@ f(...).then(arrayOfResults => ..., err => ...);
 > functions, e.g. [es6.promisify](https://github.com/digitaldesignlabs/es6-promisify).
 > In Node.js, there's a built-in `util.promisify` function for that.
 
-</details>
+</details><br>
 
 
 ### Microtasks
@@ -1622,7 +1804,7 @@ When a promise is ready, its `.then/catch/finally` handlers are put
 into the queue, they are not executed yet. When the JavaScript engine
 becomes free from the current code, it takes a task from the queue and executes it.
 
-</details>
+</details><br>
 
 
 ### Async/await
@@ -1724,5 +1906,422 @@ async function f() {
 f().catch(alert); // TypeError: failed to fetch
 ```
 
-</details>
+</details><br>
+<br><br>
+
+
+## Generators, advanced iteration
+### Generators
+Regular functions return only one, single value (or nothing).
+
+Generators can return ("yield") multiple values, one after another,
+on-demand. They work great with [iterables](#iterables), allowing
+to create data streams with ease.
+
+<details>
+
+#### Generator functions
+To create a generator, we need a special syntax construct: `function*`,
+so-called "generator function".
+
+
+```js
+function* generateSequence() {
+    yield 1;
+    yield 2;
+    return 3;
+}
+
+// "generator function" creates "generator object"
+let generator = generateSequence();
+alert(generator); // [object Generator]
+
+let one = generator.next();
+alert(JSON.stringify(one)); // {value: 1, done: false}
+
+let two = generator.next();
+alert(JSON.stringify(two)); // {value: 2, done: false}
+
+let three = generator.next();
+alert(JSON.stringify(three)); // {value: 3, done: true}
+```
+
+#### Generators are iterable
+
+```js
+// We can loop over their values using `for...of`
+for (let value of generator) {
+    alert(value); // 1, then 2 but doesn't show 3
+                  // for...of ignores the last value when done: true
+}
+
+// We can call all related functionality, e.g the spread syntax ...
+let sequence = [0, ...generateSequence()];
+alert(sequence) // 0, 1, 2, 3
+```
+
+#### Generator composition
+Generator composition is a special feature of generators that allows
+to transparently "embed" generators in each other.
+
+For instance, we have a function that generates a sequence of numbers:
+```js
+function* generateSequence(start, end) {
+    for (let i = start; i <= end; i++) yield i;
+}
+```
+Now we'd like to reuse it to generate a more complex sequence:
+- First, digits `0...9` (with charactar codes 48...57)
+- Followed by uppercase alphabet letters `A...Z` (character codes 65...90)
+- Followed by lowercase alphabet letters `a...z` (character codes 97...122)
+
+For generators, there's a special `yield*` syntax to "embed" (compose)
+one generator into another.
+```js
+function* generatePasswordCodes() {
+    // 0...9
+    // Same as `for(let i = start; i <= end; i++) yield i;`
+    yield* generateSequence(48, 57);
+    // A...Z
+    yield* generateSequence(65, 90);
+    // a...z
+    yield* generateSequence(97, 122);
+}
+
+let str = '';
+
+for (let code of generatePasswordCodes()) {
+    str += String.fromCharCode(code);
+}
+
+alert(str); // 0...9A...Za...z
+```
+
+#### "yield" is a two-way street
+`yield` are much more powerful and flexible. It not only returns the
+result to the outside, but also can pass the value inside the 
+generator.
+
+To do so, we should call `generator.next(arg)`, with an argument. That
+argument becomes the result of `yield`.
+```js
+function* gen() {
+    let ask1 = yield "2 + 2 = ?";
+
+    alert(ask1); // 4
+
+    let ask2 = yield "3 * 3 = ?";
+
+    alert(ask2); // 9
+}
+
+let generator = gen();
+
+alert(generator.next().value); // "2 + 2 = ?"
+alert(generator.next(4).value); // "3 + 3 = ?"
+alert(generator.next(9).done); // true
+```
+
+#### Generator.throw
+To pass an error into a `yield`, we should call `generator.throw(err)`.
+In that case, the `err` is thrown in the line with that `yield`.
+```js
+function* gen() {
+    try {
+        let result = yield "2 + 2 = ?";
+        alert("The execution does not reach here, because the exception is thrown above");
+    } catch (e) {
+        alert(e); // shows the error
+    }
+}
+
+let generator = gen();
+let question = generator.next().value;
+generator.throw(new Error("The answer is not found in my database"));
+```
+
+#### Generator.return
+`generator.return(value)` finishes the generator execution and return
+the given `value`.
+```js
+function* gen() {
+    yield 1;
+    yield 2;
+    yield 3;
+}
+
+const g = gen();
+g.next();        // {value: 1, done: false}
+g.return("foo"); // {value: "foo", done: true}
+g.next();        // {value: undefined, done: true}
+```
+
+</details><br>
+
+### Async iteration and generators
+Asynchronous iteration allow us to iterate over data that comes 
+asynchrorously, on-demand. Like, for instance, when we download 
+something chunk-by-chunk over a network.
+
+<details>
+
+#### Recall iterables
+Let's recall the topic about [iterables](#iterables).
+```js
+let range = {
+    from: 1,
+    to: 5,
+
+    [Symbol.iterator]() { // called once, in the beginning of for...of
+        return {
+            current: this.from,
+            last: this.to,
+
+            next() { // called every iteration, to get the next value
+                if (this.current <= this.last) {
+                    return {done: false, value: this.current++};
+                } else {
+                    return {done: true};
+                }
+            }
+        };
+    }
+};
+
+for (let value of range) {
+    alert(value); // 1 then 2, then 3, then 4, then 5
+}
+```
+
+#### Async iterables
+Asynchronous iteration is needed when values come asynchronously: 
+after `setTimeout` or another kind of delay.
+
+To make an object iterable asynchronously:
+1. Use `Symbol.asyncIterator` instead of `Symbol.iterator`.
+2. The `next()` method should return a promise (to be fulfilled with
+the next value).
+
+    - The `async` keyword handles it, we can simply make `async next()`.
+
+3. To iterate over such an object, we should use a `for await (let item of iterable)` loop.
+
+    - Note the `await` word.
+
+```js
+let range = {
+    from: 1,
+    to: 5,
+
+    [Symbol.asyncIterator]() {
+        return {
+            current: this.from,
+            last: this.to,
+
+            async next() {
+                // not : we can use "await" inside the async next:
+                await new Promise(resolve => setTimeout(resolve, 1000));
+
+                if (this.current <= this.last) {
+                    return {doneL false, value: this.current++};
+                } else {
+                    return {done: true};
+                }
+            }
+        };
+    }
+};
+
+(async () => {
+    for await (let value of range) {
+        alert(value); // 1,2,3,4,5
+    }
+})()
+```
+<br>
+
+Table with the differences between **Iterators** and **Async iterators**:
+|                                   | Iterators         | Async iterators        |
+| --------------------------------- | ----------------- | ---------------------- |
+| Object method to provide iterator | `Symbol.iterator` | `Symbol.asyncIterator` |
+| `next()` return value is          | any value         | `Promise`              |
+| to loop, use                      | `for...of`        | `for await...of`       |
+
+#### Recall generators
+Let's recall the topic about [generators](#generators). Generators
+are labelled with `function*` (not the start) and use `yield` to
+generate a value, then we can use `for...of` to loop over them.
+```js
+function* generateSequence(start, end) {
+    for (let i = start, i <= end; i++) yield i;
+}
+
+for (let value of generateSequence(1, 5)) {
+    alert(value); // 1, then 2, then 3, then 4, then 5
+}
+```
+A common practice for `Symbol...iterator` is to return a generator:
+```js
+let range = {
+    from: 1,
+    to: 5,
+
+    *[Symbol.iterator]() { // a shorthand for [Symbol.iterator]: function*()
+        for (let value = this.form; value <= this.to; value++) {
+            yield value;
+        }
+    }
+};
+
+for (let value of ragne) {
+    alert(value); // 1, then 2, then 3, then 4, then 5
+}
+```
+> In regular generators we can't use `await`. All values must come
+> synchronously, as required by the `for...of` construct.
+
+#### Async generators
+The syntax is to prepend `function*` with `async`. That makes the 
+generator asynchronous. And then use `for await (...)` to iterate over
+it:
+```js
+async function* generateSequence(start, end) {
+    for (let i = start; i <= end; i++) {
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        yield i;
+    }
+}
+
+(async () => {
+    let generator = generateSequence(1, 5);
+    for await (let value of generator) {
+        alert(value); // 1, then 2, then 3, then 4, then 5 (with delay between)
+    }
+})();
+```
+*Async iterable range*
+```js
+let range = {
+    from: 1,
+    to: 5,
+
+    // this line is same as [Symbol.asyncIterator]: async function*() 
+    async *[Symbol.asyncIterator]() {
+        for (let value = this.from, value <= this.to; value++) {
+            // make a pause between values, wait for something
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            yield value;
+        }
+    }
+};
+
+(async () => {
+    for await (let value of range) {
+        alert(value); // 1, then 2, then 3, then 4, then 5
+    }
+})():
+```
+
+</details><br>
+<br><br>
+
+
+## Modules
+### Modules, introduction
+```js
+import { sayHi } from "./sayHi.js";
+```
+
+<details>
+
+Core module features:
+- Always "use strict"
+- Module level scope
+```html
+<!doctype html>
+<script type="module" src="hello.js"></script>
+```
+- A module code is evaluated only the first time when imported
+```js
+// 📁 alert.js
+alert("Module is evaluated!");
+```
+```js
+// Import the same module from different files
+// 📁 1.js
+import './alert.js'; // Module is evaluated!
+
+// 📁 2.js
+import './alert.js'; // (shows nothing)
+```
+- import.media\
+The object `import.media` contains the information about the current
+module.
+```html
+<script type="module">
+    alert(import.meta.url); // script URL
+    // for an inline script - the URL of the current HTML-page
+</script>
+```
+- In a module, "this" is undefined
+```html
+<script>
+    alert(this); // window
+</script>
+
+<script type="module">
+    alert(this); // undefined
+</script>
+```
+
+</details><br>
+
+### Dynamic imports
+First, we can't dynamically generate any parameters of `import`. The module path must be a primitive string, can't be a function call.
+This won't work:
+```js
+import ... from getModuleName(); // Error, only from "string" is allowed
+```
+Second, we can't import conditionally or at run-time:
+```js
+if (...) {
+    import ...; // Error, not allowed!
+}
+
+{
+    import ...; // Error, we can't put import in any block
+}
+```
+But how can we import a module dynamically, on-demand?
+
+<details>
+
+#### The import() expression
+The `import(module)` expression loads the module and returns a promise
+that resolves into a module object that contains all its exports. It 
+can be called from any place in the code.
+```js
+let modulePath = prompt("Which module to load?");
+
+import(modulePath)
+.then(obj => console.log(obj));
+.catch(err => console.log("loading error, e.g. if no such module"));
+
+// We could import like this if inside any async function
+let module = await import(modulePath);
+```
+
+</details><br>
+<br><br>
+
+## References
+- [Javascript.info](https://javascript.info/) - Part 1: The JavaScript language
+- [MDN Web Docs - Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - JavaScript
+
+<br><br>
+
+## Upcomming
+*Uncommon JavaScript Notes - Browser: Document, Events, Interfaces* - 
+based on javascript.info's [part 2](https://javascript.info/#tab-2).
+
 <br><br>
