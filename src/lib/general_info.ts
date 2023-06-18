@@ -163,7 +163,20 @@ export const skillInfoList: IconButtonProps[] = [
 
 export const worksInfoList: ITabProps[] = [
     {
-        id: "1",
+        name: "Pixta Inc.",
+        content: {
+            title: "Backend Web Developer @ Pixta",
+            time_space: "06/2023 - now | Hanoi, Vietnam",
+            description: [
+                `Develop and manage the backend system for Pixtastock. 
+                Analyze data, evaluate the effectiveness of features to improve
+                and develop new features.`,
+                `Main stacks: Ruby, Nestjs, Nextjs`,
+                `Updating...`
+            ]
+        }
+    },
+    {
         name: "Pegatron",
         content: {
             title: "Data Engineer Intern @ Pegatron",
@@ -175,12 +188,11 @@ export const worksInfoList: ITabProps[] = [
                 `Learned how to track and update the data flow, manage and develop 
                 databases via Oracle Database.`,
                 `Contributed to the transformation and loading process in the ETL
-                 by retrieving the data into >30 forms.`
+                 and customer's report by retrieving the data into >30 forms.`
             ]
         }
     },
     {
-        id: "2",
         name: "Techman Robot Inc.",
         content: {
             title: "Robotic Automation Egineering Trainee @ Techman",
@@ -193,7 +205,7 @@ export const worksInfoList: ITabProps[] = [
                 `Won the First Prize in the Projects competition held by the company.`
             ]
         }
-    }
+    },
 ];
 
 export const projInfoDict: {[id: string]: IProjCardProps} = {
@@ -342,12 +354,23 @@ export const blogInfoDict: {[id: string]: IBlogCardProps} = {
         url:"/markdown_starter",
         file:"markdown_starter.md"
     },
+    "uncommon_javascript_notes": {
+        content_section: "Blogs",
+        id: "uncommon_javascript_notes",
+        title: "Uncommon JavaScript Notes - The language",
+        brief_description: `JavaScript is super complicated, like a pain in your ass. 
+            Even when you are quite familiar with programming languages logics and concepts, 
+            you still find it difficult to cover major aspects in JS.`,
+        url: "/uncommon_javascript_notes",
+        file: "uncommon_javascript_notes.md"
+    }
 };
 
 export const blogInfoList: {dictKey: string, date: string}[] = [
     {dictKey: "great_ytb_channels_1", date: "Apr 26 2023 22:35:23 GMT+0800"},
     {dictKey: "great_ytb_channels_2", date: "Apr 27 2023 13:30:59 GMT+0800"},
     {dictKey: "markdown_starter", date:"Thu Mar 23 2023 23:10:33 GMT+0700"},
+    {dictKey: "uncommon_javascript_notes", date: "Fri Jun 16 2023 23:02:26 GMT+0700"},
 ];
 
 export const oauthInfoList: IconButtonProps[] = [

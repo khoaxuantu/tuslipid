@@ -2,8 +2,6 @@
   margin: revert;
   padding: revert;
   list-style-type: revert;
-}
-.single-blog-wrapper p {
   line-height: 1.25rem;
 }
 .single-blog-wrapper code, .single-blog-wrapper pre {
@@ -12,16 +10,15 @@
   color: #abb2bf;
 }
 .single-blog-wrapper code {
-  padding: 2px 5px;
+  margin: 0.5px 0;
+  padding: 0 5px;
+  line-break: auto;
+  display: inline-block;
 }
 .single-blog-wrapper pre {
   border: 1px solid #CCCCCC;
-  line-height: 1.25em;
   overflow: auto;
   padding: 6px 10px;
-}
-.single-blog-wrapper pre code {
-  display: block;
 }
 .single-blog-wrapper blockquote {
   margin: 0;

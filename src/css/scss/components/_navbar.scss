@@ -67,7 +67,7 @@
 }
 
 .tab-list {
-    @include util.flex-wrap(nowrap);
+    // @include util.flex-wrap(nowrap);
 
     .is-current {
         background-color: var.$light-gray;

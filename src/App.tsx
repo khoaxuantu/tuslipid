@@ -1,5 +1,5 @@
 import { lazy } from 'react';
-import { Route, Routes, useLocation } from 'react-router-dom';
+import { Route, Routes, useLocation, Navigate } from 'react-router-dom';
 import MainLayout from './components/layouts/main';
 import BlogLayout from './components/layouts/blog';
 import MenuBuilder from './components/menu/page';
@@ -7,6 +7,7 @@ import AboutPage from './components/about/page';
 import ProjectsPage from './components/projects/page';
 import { AnimatePresence } from 'framer-motion';
 import ScrollToTop from './components/scrollToTop';
+import NotFound from './components/404';
 
 const Oauth = lazy(() => import('./components/oauth'));
 const BlogsPage = lazy(() => import('./components/blogs/listpage'));
@@ -31,7 +32,9 @@ function App() {
           </Route>
           <Route path='guestbook' element={<GuestbookPage />} />
           <Route path='oauth' element={<Oauth />} />
+          <Route path='404' element={<NotFound />} />
         </Route>
+        <Route path='*' element={<Navigate to="/404" replace={true} />} />
       </Routes>
     </AnimatePresence>
   );

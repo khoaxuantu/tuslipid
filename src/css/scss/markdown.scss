@@ -7,9 +7,6 @@ $codeinline-background: #f6f8fa;
         margin: revert;
         padding: revert;
         list-style-type: revert;
-    }
-
-    p {
         line-height: 1.25rem;
     }
 
@@ -20,18 +17,20 @@ $codeinline-background: #f6f8fa;
     }
     
     code {
-        padding: 2px 5px;
+        margin: 0.5px 0;
+        padding: 0 5px;
+        line-break: auto;
+        display: inline-block;
     }
     
     pre {
         border: 1px solid #CCCCCC;
-        line-height: 1.25em;
         overflow: auto;
         padding: 6px 10px;
 
-        code {
-            display: block;
-        }
+        // code {
+        //     display: block;
+        // }
     }
 
     blockquote {

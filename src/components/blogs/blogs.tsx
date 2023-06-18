@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Card from "../../lib/factory/cardBase";
 import { blogInfoDict } from "../../lib/general_info";
 import ReactMarkdown from "react-markdown";
@@ -92,7 +92,28 @@ export function SingleBlog(props: {id: string}) {
                 children={text}
                 remarkPlugins={[remarkGfm, remarkMath]}
                 rehypePlugins={[rehypeHighlight, rehypeRaw, rehypeKatex]}
+                components={{
+                    h1: HeadingRenderer,
+                    h2: HeadingRenderer,
+                    h3: HeadingRenderer,
+                    h4: HeadingRenderer,
+                    h5: HeadingRenderer,
+                    h6: HeadingRenderer
+                }}
             />
         </>
     );
+}
+
+function HeadingRenderer(props: any) {
+    var children = React.Children.toArray(props.children)
+    var text = children.reduce(flatten, '')
+    var slug = text.toLowerCase().replace(/\W/g, '-')
+    return React.createElement('h' + props.level, {id: slug}, props.children)
+}
+
+function flatten(text: any, child: any): any {
+    return typeof child === 'string'
+        ? text + child
+        : React.Children.toArray(child.props.children).reduce(flatten, text)
 }
