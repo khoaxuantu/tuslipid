@@ -570,7 +570,7 @@ hr {
 
 .transition-page {
   animation-name: fadeInUp;
-  animation-duration: 1.5s;
+  animation-duration: 0.5s;
 }
 
 .is-current {
