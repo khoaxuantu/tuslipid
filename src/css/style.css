@@ -345,9 +345,20 @@ a:hover {
   font-family: "Montserrat", sans-serif;
 }
 
+.header-txt-blog {
+  padding: 0.5rem;
+  font-size: 20px;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
 .description-txt {
   font-size: 12px;
   font-family: "Courier Prime", monospace;
+}
+
+.description-txt-blog {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
 }
 
 .oauth-txt, .guestbook-txt {
@@ -360,7 +371,7 @@ a:hover {
 }
 
 @media (min-width: 576px) {
-  .header-txt {
+  .header-txt, .header-txt-blog {
     font-size: 24px;
   }
   .description-txt {

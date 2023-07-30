@@ -8,24 +8,37 @@
     font-family: var.$header-font;
 }
 
+@mixin select-header-txt($font: var.$header-font) {
+    padding: 0.5rem;
+    font-size: 20px;
+    font-family: $font;
+}
+
 a {
     text-decoration: none;
     color: var.$default-atag-color;
-    
+
     &:hover {
         text-decoration: underline;
     }
 }
 
 .header-txt {
-    padding: 0.5rem;
-    font-size: 20px;
-    font-family: var.$header-font;
+    @include select-header-txt();
+}
+
+.header-txt-blog {
+    @include select-header-txt($font: var.$header-font-blog)
 }
 
 .description-txt {
     font-size: 12px;
     font-family: var.$body-font;
+}
+
+.description-txt-blog {
+    font-family: var.$body-font-blog;
+    line-height: 1.5;
 }
 
 .oauth-txt, .guestbook-txt {
@@ -38,7 +51,7 @@ a {
 }
 
 @media (min-width: 576px) {
-    .header-txt {
+    .header-txt, .header-txt-blog {
         font-size: 24px;
     }
     .description-txt {

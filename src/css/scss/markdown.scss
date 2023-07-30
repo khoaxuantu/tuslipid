@@ -1,3 +1,5 @@
+@use 'general/var';
+
 $codeblock-background: #282c34;
 $codeblock-color: #abb2bf;
 $codeinline-background: #f6f8fa;
@@ -7,7 +9,7 @@ $codeinline-background: #f6f8fa;
         margin: revert;
         padding: revert;
         list-style-type: revert;
-        line-height: 1.25rem;
+        line-height: 1.5rem;
     }
 
     code, pre {
@@ -15,14 +17,14 @@ $codeinline-background: #f6f8fa;
         background-color: $codeblock-background;
         color: $codeblock-color;
     }
-    
+
     code {
-        margin: 0.5px 0;
-        padding: 0 5px;
+        padding: 0.2em 0.4em;
         line-break: auto;
         display: inline-block;
+        line-height: 1.35;
     }
-    
+
     pre {
         border: 1px solid #CCCCCC;
         overflow: auto;
@@ -57,4 +59,5 @@ $codeinline-background: #f6f8fa;
 
 .single-blog-wrapper {
     @extend %markdown-theme;
+    font-family: var.$blog-font;
 }

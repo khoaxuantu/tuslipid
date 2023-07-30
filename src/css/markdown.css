@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
 .single-blog-wrapper * {
   margin: revert;
   padding: revert;
   list-style-type: revert;
-  line-height: 1.25rem;
+  line-height: 1.5rem;
 }
 .single-blog-wrapper code, .single-blog-wrapper pre {
   border-radius: 5px;
@@ -10,10 +12,10 @@
   color: #abb2bf;
 }
 .single-blog-wrapper code {
-  margin: 0.5px 0;
-  padding: 0 5px;
+  padding: 0.2em 0.4em;
   line-break: auto;
   display: inline-block;
+  line-height: 1.35;
 }
 .single-blog-wrapper pre {
   border: 1px solid #CCCCCC;
@@ -36,6 +38,10 @@
 }
 .single-blog-wrapper hr {
   background: black;
+}
+
+.single-blog-wrapper {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 /*# sourceMappingURL=markdown.css.map */

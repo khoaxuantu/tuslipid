@@ -4,9 +4,11 @@
 // $background-url: "../background.jpg";
 $background-url: "../../public/background.webp";
 $avatar-url: "tuslipid.jpg";
+$blog-font: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+$header-font-blog: $blog-font;
+$body-font-blog: $blog-font;
 $header-font: 'Montserrat', sans-serif;
 $body-font: 'Courier Prime', monospace;
-$blog-font: sans-serif;
 $radius: 5px;
 $gray: #8c8c8c;
 $light-gray: #cbcbcb;

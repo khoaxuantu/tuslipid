@@ -48,7 +48,7 @@ function ProjectCard(props: IProjCardProps) {
             </a>
         </li>);
     }
-    
+
     return (
         <div className="card card-proj mb-5">
             <div className="col-5 proj-image">
@@ -78,10 +78,10 @@ function ProjectCard(props: IProjCardProps) {
 function BlogsCard(props: IBlogCardProps) {
     return (
         <div className="card card-blog mb-5 fade-in-left">
-            <h3 className="header-txt p-3">{props.title}</h3>
-            <div className="description-txt p-3">{props.brief_description}</div>
+            <h3 className="header-txt-blog p-3">{props.title}</h3>
+            <div className="description-txt-blog p-3">{props.brief_description}</div>
             <div className="read-more-btn mb-4">
-                <Link className="description-txt" to={"/blogs" + props.url}>Read more -{">"}</Link>
+                <Link className="description-txt-blog" to={"/blogs" + props.url}>Read more -{">"}</Link>
             </div>
         </div>
     );
