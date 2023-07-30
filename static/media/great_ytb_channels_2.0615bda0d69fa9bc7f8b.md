@@ -1,0 +1,96 @@
+> I watch youtube a lot!
+
+Follow up on what I left in [part 1](/blogs/great_ytb_channels_1). In this part, I will show you the list of Youtube channels with other exciting content.
+
+## General Sciences and Knowledge
+- [Brian Douglas](https://www.youtube.com/@ControlLectures) | Thank you for helping me pass the Automation Control course :3
+- [CGP Grey](https://www.youtube.com/@CGPGrey)
+- [Doctor Mike](https://www.youtube.com/@DoctorMike)
+- [DIY with Ben](https://www.youtube.com/@DIYProjectsideas)
+- [Eddie Woo](https://www.youtube.com/@misterwootube)
+- [GQ](https://www.youtube.com/@GQVideos)
+- [Insider](https://www.youtube.com/@Insider)
+- [LADbible TV](https://www.youtube.com/@LADbible)
+- [Lex Fridman](https://www.youtube.com/@lexfridman)
+- [Michael MJD](https://www.youtube.com/@MichaelMJD)
+- [MindYourDecisions](https://www.youtube.com/@MindYourDecisions)
+- [NASA](https://www.youtube.com/@NASA)
+- [Real Civil Engineer](https://www.youtube.com/@RealCivilEngineerGaming)
+- [Riddle](https://www.youtube.com/@VineMontanaTV)
+- [Sciencephile the AI](https://www.youtube.com/@SciencephiletheAI)
+- [The Efficient Engineer](https://www.youtube.com/@TheEfficientEngineer)
+- [The Organic Chemistry Tutor](https://www.youtube.com/@TheOrganicChemistryTutor)
+- [TheAIGRID](https://www.youtube.com/@TheAiGrid)
+- [Vanity Fair](https://www.youtube.com/@VanityFair)
+- [WIRED](https://www.youtube.com/@WIRED)
+
+## Music
+- [Davie504](https://www.youtube.com/@Davie504)
+- [Imperial Orchestra](https://www.youtube.com/@imperialorchestra)
+- [Joe Jenkins](https://www.youtube.com/@JoeJenkins)
+- [Menuhin Competition](https://www.youtube.com/@MenuhinCompetition)
+- [MayTree](https://www.youtube.com/channel/UC3mY2SKYhPjqImtBBXsR6_Q)
+- [MINA](https://www.youtube.com/@mina-bass)
+- [TwoSetViolin](https://www.youtube.com/@twosetviolin)
+- [碰碰彭碰彭Jingxuan](https://www.youtube.com/@jingxuanGuzheng)
+
+## Food
+- [Alaa Starves](https://www.youtube.com/@AlaaStarves)
+- [Alvin Zhou](https://www.youtube.com/@AlvinKZhou)
+- [Best Ever Food Review Show](https://www.youtube.com/@BestEverFoodReviewShow)
+- [Cate Food Travel 凱特食旅](https://www.youtube.com/@CateFoodTravel)
+- [Chef Elizabeth Haigh](https://www.youtube.com/@AuntieLiz)
+- [Chef Jack Ovens](https://www.youtube.com/@ChefJackOvens)
+- [Chris Lewis](https://www.youtube.com/@chrismixlewis)
+- [DancingBacons](https://www.youtube.com/@DancingBacons)
+- [Dustin Cheverier](https://www.youtube.com/@VietnamMeetsDustin)
+- [Eater](https://www.youtube.com/@eater)
+- [Guga Foods](https://www.youtube.com/@GugaFoods)
+- [Hanoi food](https://www.youtube.com/@Hanoifood)
+- [Insider Food](https://www.youtube.com/@InsiderFood)
+- [Joshua Weissman](https://www.youtube.com/@JoshuaWeissman)
+- [Luke Martin](https://www.youtube.com/@LukeMartin)
+- [Max McFarlin](https://www.youtube.com/@MaxMcFarlin)
+- [Munchies](https://www.youtube.com/Munchies)
+- [MOGUMOGU - Food Entertainment - モグモグ](https://www.youtube.com/@mogufood)
+- [More Best Ever Food Review Show](https://www.youtube.com/@MoreBestEverFoodReviewShow)
+- [Nick DiGiovanni](https://www.youtube.com/@NickDiGiovanni)
+- [Nino's Home](https://www.youtube.com/@NinosHome)
+- [Terry Films](https://www.youtube.com/@Terry-Films)
+- [Travel Thirsty](https://www.youtube.com/@TravelThirstyBlog)
+- [Vincenzo's Plate](https://www.youtube.com/@vincenzosplate)
+- [YumYum얌얌](https://www.youtube.com/@YumYum_Food)
+- [야미보이 Yummyboy](https://www.youtube.com/@yummyboys)
+- [매일맛나 delicious day](https://www.youtube.com/@deliciousday1)
+- [美食作家王刚](https://www.youtube.com/channel/UCg0m_Ah8P_MQbnn77-vYnYw) | Chef Wang ~
+- [うどんそば 兵庫 京都 Udonsoba](https://www.youtube.com/@Udonsobahyogokyoto)
+
+## Memes and Comedies
+- [Comedy Bites](https://www.youtube.com/@ComedyBites)
+- [Jimmy Kimmel Live](https://www.youtube.com/@JimmyKimmelLive)
+- [Gordon Ramsay](https://www.youtube.com/@gordonramsay)
+- [mrnigelng](https://www.youtube.com/@mrnigelng) | Hi, nieces and nephews... xD
+- [MrBeast](https://www.youtube.com/@MrBeast)
+- [Nano](https://www.youtube.com/@Nanoytgaming)
+- [Nathan Doan Comedy](https://www.youtube.com/@nathandoancomedy)
+- [Pascu y Rodri](https://www.youtube.com/channel/UCxIBZ-nQhgZES3UaTm8eDPA)
+- [Rick Astley](https://www.youtube.com/channel/UCuAXFkgsw1L7xaCfnd5JJOw) | But his songs are so damn great -.-
+- [Scorpo](https://www.youtube.com/@ScorpoYT)
+- [SovietWomble](https://www.youtube.com/@SovietWomble)
+- [Steven He](https://www.youtube.com/@StevenHe)
+- [The Tonight Show Starring Jimmy Fallon](https://www.youtube.com/@fallontonight)
+- [The Late Late Show With James Corden](https://www.youtube.com/@TheLateLateShow)
+
+## Only for Vietnamese... :)
+- [1977 Vlog](https://www.youtube.com/@1977Vlog)
+- [aNcari Room](https://www.youtube.com/@aNcariRoom)
+- [Desmond Vũ](https://www.youtube.com/@desmondvu1)
+- [Khánh Vy OFFICIAL](https://www.youtube.com/@KhanhVyOFFICIAL)
+- [Meichan](https://www.youtube.com/@meichan)
+- [MixiGaming](https://www.youtube.com/@MixiGaming89)
+- [Monsieur Tuna](https://www.youtube.com/@TunaGamingvn)
+- [The Present Writer](https://www.youtube.com/@ThePresentWriter)
+- [Tều Phạm](https://www.youtube.com/@teuphm)
+- [Trực Tiếp Game](https://www.youtube.com/@TrucTiepGameVN)
+
+> Pheww... That's more than I expected, hope you enjoy it -.-

@@ -1682,7 +1682,7 @@ returns a promise.
 <details>
 
 For instance, we have `loadScript(src, callback)` from
-[Introduction: callbacks](#introduction--callbacks)
+[Introduction: callbacks](#introduction-callbacks)
 ```js
 function loadScript(src, callback) {
     let script = document.createElement('script');
