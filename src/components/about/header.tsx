@@ -7,7 +7,12 @@ export default function AboutHeaderGrp () {
           <b>Hi there! I'm Tu</b>
         </div>
         <div className='description-txt mt-2'>
-          <b>Xuan Khoa Tu Nguyen | 阮春科秀 | Tu | Nguyễn Xuân Khoa Tú</b>
+          <b>
+            <span>Xuan Khoa Tu Nguyen |</span>{" "}
+            <span>阮春科秀 | </span>{" "}
+            <span>Tu |</span>{" "}
+            <span>Nguyễn Xuân Khoa Tú</span>
+          </b>
         </div>
         <div className="description-txt mt-3">
           ~ You can call me by any name ~

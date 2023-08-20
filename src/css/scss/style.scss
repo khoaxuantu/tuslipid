@@ -25,6 +25,7 @@ body {
     background-attachment: fixed;
     background-position: center;
     font-family: var.$body-font;
+    line-height: 1.5;
 }
 
 ul {
@@ -33,6 +34,10 @@ ul {
 
 section {
     padding-bottom: 50px;
+}
+
+span {
+    display: inline-block;
 }
 
 .header-grp {
@@ -63,7 +68,7 @@ section {
 .nav-btn-grp {
     margin-top: 10%;
     z-index: 1000;
-    
+
     a {
         text-decoration: none;
         color: #000;
@@ -109,19 +114,12 @@ section {
 }
 
 @media screen and (min-width: 996px) {
-    .works-grp {
-        @include util.center-block(100px);
-    }
     .oauth-grp {
         @include util.center-block(10%, "padding");
     }
 }
 
 @media screen and (min-width: 1200px) {
-    .works-grp {
-        @include util.center-block(150px);
-    }
-    
     .proj-tool-list {
         flex-wrap: nowrap;
     }

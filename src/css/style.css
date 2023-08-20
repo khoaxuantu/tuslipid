@@ -1,5 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+/* Font */
 /* Bootstrap-like spacing */
 .mt-0 {
   margin-top: 0rem !important;
@@ -328,7 +329,7 @@ img {
   text-align: center;
   padding: 0 0.5rem 0 0.5rem;
   font-size: 12px;
-  font-family: "Montserrat", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
 }
 
 a {
@@ -340,29 +341,35 @@ a:hover {
 }
 
 .header-txt {
+  padding: 0.5rem 0;
+  font-size: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+}
+
+.header-txt-proj {
   padding: 0.5rem;
   font-size: 20px;
-  font-family: "Montserrat", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
 }
 
 .header-txt-blog {
-  padding: 0.5rem;
+  padding: 0.5rem 0;
   font-size: 20px;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Segoe UI", "Helvetica Neue", system-ui, "Ubuntu", sans-serif;
 }
 
 .description-txt {
   font-size: 12px;
-  font-family: "Courier Prime", monospace;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
 }
 
 .description-txt-blog {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Segoe UI", "Helvetica Neue", system-ui, "Ubuntu", sans-serif;
   line-height: 1.5;
 }
 
 .oauth-txt, .guestbook-txt {
-  font-family: "Montserrat", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
   font-size: 12px;
 }
 
@@ -371,7 +378,7 @@ a:hover {
 }
 
 @media (min-width: 576px) {
-  .header-txt, .header-txt-blog {
+  .header-txt, .header-txt-blog, .header-txt-proj {
     font-size: 24px;
   }
   .description-txt {
@@ -672,7 +679,7 @@ hr {
   border-bottom: 2px solid #cbcbcb;
   background-color: white;
   cursor: pointer;
-  font-family: "Montserrat", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
   text-align: start;
 }
 .vertical-tab:hover {
@@ -681,6 +688,10 @@ hr {
 
 .tab-content {
   height: 400px;
+  overflow: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.5rem;
 }
 .tab-content .content {
   display: none;
@@ -718,6 +729,7 @@ hr {
   }
   .tab-content {
     height: 250px;
+    padding-top: 0;
   }
 }
 .card {
@@ -937,7 +949,8 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  font-family: "Courier Prime", monospace;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+  line-height: 1.5;
 }
 
 ul {
@@ -946,6 +959,10 @@ ul {
 
 section {
   padding-bottom: 50px;
+}
+
+span {
+  display: inline-block;
 }
 
 .header-grp {
@@ -966,7 +983,7 @@ section {
   text-align: center;
 }
 .oauth-grp button {
-  font-family: "Montserrat", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
 }
 
 .nav-btn-grp {
@@ -1013,20 +1030,12 @@ section {
   }
 }
 @media screen and (min-width: 996px) {
-  .works-grp {
-    margin-left: 100px;
-    margin-right: 100px;
-  }
   .oauth-grp {
     padding-left: 10%;
     padding-right: 10%;
   }
 }
 @media screen and (min-width: 1200px) {
-  .works-grp {
-    margin-left: 150px;
-    margin-right: 150px;
-  }
   .proj-tool-list {
     flex-wrap: nowrap;
   }

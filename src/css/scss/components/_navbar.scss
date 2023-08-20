@@ -59,7 +59,7 @@
             background-color: var.$gray;
             opacity: 0.6;
         }
-    } 
+    }
 }
 
 .menu-animation {
@@ -94,6 +94,9 @@
 
 .tab-content {
     height: 400px;
+    overflow: auto;
+    @include util.center-block($m: 0.5rem, $mode: "padding");
+    padding-top: .5rem;
 
     .content {
         display: none;
@@ -112,7 +115,7 @@
         left: 25px;
         max-width: 150px;
     }
-    
+
     .navbar-menu {
         width: 150px;
     }
@@ -139,5 +142,6 @@
 
     .tab-content {
         height: 250px;
+        padding-top: 0;
     }
 }

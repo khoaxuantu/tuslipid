@@ -2,7 +2,7 @@
 @use '../general/var';
 
 .card {
-    @include util.flex-wrap(wrap);
+    @include util.flex-wrap;
     width: 100%;
     background-color: white;
 
@@ -32,8 +32,7 @@
 }
 
 .proj-tool-list {
-    display: flex;
-    flex-wrap: wrap;
+    @include util.flex-wrap;
     font-size: 12px;
 }
 

@@ -8,8 +8,8 @@
     font-family: var.$header-font;
 }
 
-@mixin select-header-txt($font: var.$header-font) {
-    padding: 0.5rem;
+@mixin select-header-txt($font: var.$header-font, $padding: 0.5rem 0) {
+    padding: $padding;
     font-size: 20px;
     font-family: $font;
 }
@@ -25,6 +25,10 @@ a {
 
 .header-txt {
     @include select-header-txt();
+}
+
+.header-txt-proj {
+    @include select-header-txt($padding: 0.5rem)
 }
 
 .header-txt-blog {
@@ -51,7 +55,7 @@ a {
 }
 
 @media (min-width: 576px) {
-    .header-txt, .header-txt-blog {
+    .header-txt, .header-txt-blog, .header-txt-proj {
         font-size: 24px;
     }
     .description-txt {

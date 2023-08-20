@@ -4,8 +4,10 @@ export interface ITabProps {
     content: {
         content_class?: string,
         title: string,
-        time_space: string,
-        description: string[]
+        time: string,
+        location: string,
+        description: string[],
+        company: string
     },
     className?: string,
     tabHandler?: React.MouseEventHandler<HTMLButtonElement>
@@ -23,8 +25,11 @@ export function TabSelector(props: ITabProps) {
 export function TabContent(props: ITabProps) {
     return (
         <div id={props.id} className={props.className}>
-            <h3>{props.content.title}</h3>
-            <div className="pt-1 mb-3">{props.content.time_space}</div>
+            <h3>{props.content.title} <span>{'@ ' + props.content.company}</span></h3>
+            <div className="pt-1 mb-3">
+                <span>{props.content.time + ' |'}</span>{" "}
+                <span>{props.content.location}</span>
+            </div>
             <div className="description-txt">
                 {
                     props.content.description.map((bp, index) => {

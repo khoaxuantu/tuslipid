@@ -55,7 +55,7 @@ function ProjectCard(props: IProjCardProps) {
                 {image}
             </div>
             <div className="col-7 p-3 proj-description">
-                <h3 className="header-txt">{props.title}</h3>
+                <h3 className="header-txt-proj">{props.title}</h3>
                 <ul className="pb-4 ps-2 proj-tool-list">{
                     props.tools.map(tool => {
                         return <li className="pe-2" key={tool}>{tool}</li>;
