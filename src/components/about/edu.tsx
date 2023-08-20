@@ -24,7 +24,7 @@ function Education() {
                         <div className="bt-1 mb-2" style={{opacity: 0.5}}>
                             Sep 2018 - July 2022
                         </div>
-                        <div className="description-txt">
+                        <div className="body-txt">
                             <ul style={{listStyleType: "unset", listStylePosition:"inside"}}>
                                 <b><i>Specialization: </i></b>
                                 <li>Software Engineering</li>
@@ -39,7 +39,7 @@ function Education() {
                     </div>
                 </div>
                 <div className="mt-3 pt-2 pb-2 d-flex">
-                    <div className="edu-content-grp">
+                    <div className="edu-content-grp pe-3">
                         <h3>
                             <span>Hanoi - Amsterdam</span>{" "}
                             <span>High School</span>{" "}

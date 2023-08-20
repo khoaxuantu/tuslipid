@@ -6,7 +6,7 @@ export function BlogsPageHeaderGrp() {
         <div className='header-txt-blog'>
           <b>Tus's Blogs</b>
         </div>
-        <div className='description-txt mt-2'>
+        <div className='body-txt mt-2'>
           Some notes, some ideas, some opinions
         </div>
         <hr />

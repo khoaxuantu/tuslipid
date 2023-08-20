@@ -23,15 +23,15 @@ function Navbar() {
     return (
         <nav className="navbar navbar-wrap">
             <button type="button" className="navbar-trigger" onClick={() => navHandler('none', 'block')} aria-label="navbar"></button>
-            <ul className="navbar-menu menu-animation">
+            <ul className="navbar-menu navbar-txt menu-animation">
                 <li key="Home">
                     <DefaultButton url="/" content="Home" />
                 </li>
                 {navBtnInfoList.map(btnProps => {
                     return (
                         <li key={btnProps.content}>
-                            <DefaultButton 
-                                url={btnProps.url} 
+                            <DefaultButton
+                                url={btnProps.url}
                                 content={btnProps.content} />
                         </li>
                     );

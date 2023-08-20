@@ -10,8 +10,8 @@ export default function NotFound() {
                 <div className="header-txt">
                     <b>404</b>
                 </div>
-                <div className="description-txt mt-2">
-                    Oi ~ This URL does not exist. 
+                <div className="body-txt mt-2">
+                    Oi ~ This URL does not exist.
                     <br />
                     <br />
                     <Link to="/">Get back to my homepage...</Link>

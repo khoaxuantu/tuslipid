@@ -9,7 +9,7 @@ function AboutIntro() {
                     Get to know me
                 </h3>
                 <div className="row">
-                    <div className="col-7 description-txt lightgray-box p-2">
+                    <div className="col-7 body-txt lightgray-box p-2">
                         <p className="">
                             I am a web developer from Vietnam. You have learned how to call
                             me above, but I also use Tuslipid as my nickname across social medias and games.

@@ -4,7 +4,7 @@ export default function ProjectsPageHeaderGrp() {
         <div className='header-txt'>
           <b>Projects</b>
         </div>
-        <div className='description-txt mt-2'>
+        <div className='body-txt mt-2'>
           I just have studied Information Technology for two and a half years, {" "}
           but luckily have some fun works done.
         </div>

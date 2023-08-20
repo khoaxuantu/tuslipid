@@ -88,14 +88,14 @@
     text-align: start;
 
     &:hover {
-        font-weight: bold;
+        font-weight: 650;
     }
 }
 
 .tab-content {
+    @include util.center-block($m: 0.5rem, $mode: "padding");
     height: 400px;
     overflow: auto;
-    @include util.center-block($m: 0.5rem, $mode: "padding");
     padding-top: .5rem;
 
     .content {
@@ -141,7 +141,7 @@
     }
 
     .tab-content {
-        height: 250px;
+        height: 320px;
         padding-top: 0;
     }
 }
