@@ -13,17 +13,27 @@ function GuestbookList({maxGuests} : {maxGuests: number}) {
     const [msgs, setMsgs] : [any, any] = useState([]);
 
     useEffect(() => {
+        const controller = new AbortController();
+        const signal = controller.signal;
 
         const fetchMsgs = async (startId: number) => {
             const nextStartId = startId + messageNums;
             if (nextStartId >= maxGuests) setHasMore(!hasMore);
 
-            const fetchAPI = await fetch(`${DOMAIN}/guestbook/list/${startId}`);
-            const data = await fetchAPI.json();
-            setMsgs([...msgs, ...data]);
+            try {
+                const fetchAPI = await fetch(`${DOMAIN}/guestbook/list/${startId}`, { signal });
+                const data = await fetchAPI.json();
+                setMsgs([...msgs, ...data]);
+            } catch (error) {
+                console.log(error)
+            }
         }
 
         if (hasMore) fetchMsgs(startId);
+
+        return () => {
+            controller.abort();
+        }
     }, [startId]);
 
     useEffect(() => {

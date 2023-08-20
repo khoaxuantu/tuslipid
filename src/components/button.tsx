@@ -7,10 +7,10 @@ function SocialMediaBtnGroup() {
     return (
         <div className='btn-grp social-media-grp'>
             {Info.socialMediaInfoList.map((btnProp) => {
-                return <Btn.IconButton 
-                    url={btnProp.url} 
-                    icon={btnProp.icon} 
-                    key={btnProp.id} 
+                return <Btn.IconButton
+                    url={btnProp.url}
+                    icon={btnProp.icon}
+                    key={btnProp.id}
                     id={btnProp.id}
                     classname='btn btn-square' />;
             })}
@@ -23,9 +23,9 @@ export default SocialMediaBtnGroup;
 
 export function NavBtnGroup() {
     return (
-        <div className='btn-grp nav-btn-grp mb-3'>
+        <div className='btn-grp nav-btn-grp mb-3 body-txt-menu'>
             {Info.navBtnInfoList.map(btnProp => {
-                return <Btn.DefaultButton 
+                return <Btn.DefaultButton
                     url={btnProp.url}
                     content={btnProp.content}
                     classname='btn btn-rect'
@@ -36,10 +36,18 @@ export function NavBtnGroup() {
 }
 
 export function SkillBtnGroup() {
+    Info.skillInfoList.sort(compareSkill);
+
+    function compareSkill(a: Btn.IconButtonProps, b: Btn.IconButtonProps): number {
+        if ((a.name as string) < (b.name as string)) return -1;
+        else if ((a.name as string) > (b.name as string)) return 1;
+        return 0;
+    }
+
     return (
-        <div className='btn-grp mt-2'>
+        <div className='btn-grp mt-2 col-8'>
             {Info.skillInfoList.map(btnProp => {
-                return <Btn.IconButton 
+                return <Btn.IconButton
                     id={btnProp.name}
                     url={btnProp.url}
                     icon={btnProp.icon}

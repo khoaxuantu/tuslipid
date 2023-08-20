@@ -5,27 +5,59 @@
     text-align: center;
     padding: 0 0.5rem 0 0.5rem;
     font-size: 12px;
-    font-family: var.$header-font;
+    font-family: var.$conpyright-font;
+}
+
+@mixin set-font($font, $size) {
+    font-size: $size;
+    font-family: $font;
+}
+
+@mixin select-header-txt($font: var.$header-font, $padding: 0.5rem 0, $size: var.$default-header-font-size) {
+    padding: $padding;
+    @include set-font($font, $size);
+}
+
+@mixin select-body-txt($font: var.$body-font, $size: var.$default-body-font-size) {
+    @include set-font($font, $size);
 }
 
 a {
     text-decoration: none;
     color: var.$default-atag-color;
-    
+
     &:hover {
         text-decoration: underline;
     }
 }
 
 .header-txt {
-    padding: 0.5rem;
-    font-size: 20px;
-    font-family: var.$header-font;
+    @include select-header-txt;
 }
 
-.description-txt {
-    font-size: 12px;
-    font-family: var.$body-font;
+.header-txt-menu {
+    @include select-header-txt($size: 24px, $font: var.$header-font-menu, $padding: 0.5rem)
+}
+
+.header-txt-proj {
+    @include select-header-txt($padding: 0.5rem, $size: 20px)
+}
+
+.header-txt-blog {
+    @include select-header-txt($font: var.$header-font-blog, $size: 20px)
+}
+
+.body-txt-menu, .navbar-txt {
+    @include select-body-txt($font: var.$body-font-menu, $size: 14px)
+}
+
+.body-txt {
+    @include select-body-txt;
+}
+
+.body-txt-blog {
+    font-family: var.$body-font-blog;
+    line-height: 1.5;
 }
 
 .oauth-txt, .guestbook-txt {
@@ -38,13 +70,13 @@ a {
 }
 
 @media (min-width: 576px) {
-    .header-txt {
+    .header-txt-blog, .header-txt-proj {
         font-size: 24px;
     }
-    .description-txt {
-        font-size: 14px;
+    .body-txt {
+        font-size: 16px;
     }
     .oauth-txt, .guestbook-txt {
-        font-size: 14px;
+        font-size: 16px;
     }
 }

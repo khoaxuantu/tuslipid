@@ -10,13 +10,24 @@ const DOMAIN = process.env.REACT_APP_BACKEND_DOMAIN;
 function GuestbookBody() {
   const [maxGuests, setMaxGuests] = useState(0);
   useEffect(() => {
+    const controller = new AbortController();
+    const signal = controller.signal;
+
     const fetchMaxGuests = async () => {
-      const fetchAPI = await fetch(`${DOMAIN}/guestbook/totalRecords`);
-      const curMaxGuests = await fetchAPI.json();
-      setMaxGuests(curMaxGuests[0]["count"]);
+      try {
+        const fetchAPI = await fetch(`${DOMAIN}/guestbook/totalRecords`, { signal });
+        const curMaxGuests = await fetchAPI.json();
+        setMaxGuests(curMaxGuests[0]["count"]);
+      } catch (error) {
+        console.log(error)
+      }
     };
 
     fetchMaxGuests();
+
+    return () => {
+      controller.abort();
+    }
   }, []);
 
   return (

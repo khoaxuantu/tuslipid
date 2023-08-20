@@ -1,5 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
+/* Font */
 /* Bootstrap-like spacing */
 .mt-0 {
   margin-top: 0rem !important;
@@ -340,18 +343,46 @@ a:hover {
 }
 
 .header-txt {
+  padding: 0.5rem 0;
+  font-size: clamp(1.25rem, 1.29rem + 1.07vw, 1.75rem);
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+}
+
+.header-txt-menu {
   padding: 0.5rem;
-  font-size: 20px;
+  font-size: 24px;
   font-family: "Montserrat", sans-serif;
 }
 
-.description-txt {
-  font-size: 12px;
+.header-txt-proj {
+  padding: 0.5rem;
+  font-size: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+}
+
+.header-txt-blog {
+  padding: 0.5rem 0;
+  font-size: 20px;
+  font-family: "Segoe UI", "Helvetica Neue", system-ui, "Ubuntu", sans-serif;
+}
+
+.body-txt-menu, .navbar-txt {
+  font-size: 14px;
   font-family: "Courier Prime", monospace;
 }
 
+.body-txt {
+  font-size: clamp(1rem, 0.96rem + 0.18vw, 1.125rem);
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+}
+
+.body-txt-blog {
+  font-family: "Segoe UI", "Helvetica Neue", system-ui, "Ubuntu", sans-serif;
+  line-height: 1.5;
+}
+
 .oauth-txt, .guestbook-txt {
-  font-family: "Montserrat", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
   font-size: 12px;
 }
 
@@ -360,14 +391,14 @@ a:hover {
 }
 
 @media (min-width: 576px) {
-  .header-txt {
+  .header-txt-blog, .header-txt-proj {
     font-size: 24px;
   }
-  .description-txt {
-    font-size: 14px;
+  .body-txt {
+    font-size: 16px;
   }
   .oauth-txt, .guestbook-txt {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 hr {
@@ -436,6 +467,7 @@ hr {
 .btn-skill:hover {
   scale: 1.1;
   text-decoration: none;
+  font-weight: 650;
 }
 
 .btn-oauth-box {
@@ -570,7 +602,7 @@ hr {
 
 .transition-page {
   animation-name: fadeInUp;
-  animation-duration: 1.5s;
+  animation-duration: 0.5s;
 }
 
 .is-current {
@@ -661,15 +693,19 @@ hr {
   border-bottom: 2px solid #cbcbcb;
   background-color: white;
   cursor: pointer;
-  font-family: "Montserrat", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
   text-align: start;
 }
 .vertical-tab:hover {
-  font-weight: bold;
+  font-weight: 650;
 }
 
 .tab-content {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   height: 400px;
+  overflow: auto;
+  padding-top: 0.5rem;
 }
 .tab-content .content {
   display: none;
@@ -706,9 +742,15 @@ hr {
     border-left: 2px solid #8c8c8c;
   }
   .tab-content {
-    height: 250px;
+    height: 320px;
+    padding-top: 0;
   }
 }
+.card-featured-proj, .card-proj {
+  border: 1px solid #cbcbcb;
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.25);
+}
+
 .card {
   display: flex;
   flex-wrap: wrap;
@@ -723,8 +765,6 @@ hr {
 .card-proj {
   border-radius: 15px;
   aspect-ratio: 2;
-  border: 1px solid #cbcbcb;
-  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.25);
   transition: scale 250ms ease-in-out;
   z-index: 2;
 }
@@ -732,6 +772,16 @@ hr {
   scale: 1.2;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   z-index: 3;
+}
+
+.card-featured-proj {
+  border-radius: 15px;
+}
+.card-featured-proj .proj-image {
+  height: 400px;
+}
+.card-featured-proj .proj-image img {
+  height: inherit;
 }
 
 .proj-description {
@@ -832,13 +882,21 @@ hr {
 .container {
   margin-left: auto;
   margin-right: auto;
-  background-color: white;
   border-radius: 5px;
+  background-color: white;
 }
 
 .menu-wrapper {
   width: 80%;
   height: 550px;
+  line-height: initial;
+}
+
+.menu-proj-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 2rem;
+  row-gap: 2rem;
 }
 
 .mobile-landscape {
@@ -914,6 +972,12 @@ hr {
     height: 40rem;
   }
 }
+@media (min-width: 976px) {
+  .menu-proj-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -926,7 +990,8 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  font-family: "Courier Prime", monospace;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+  line-height: 1.5;
 }
 
 ul {
@@ -935,6 +1000,10 @@ ul {
 
 section {
   padding-bottom: 50px;
+}
+
+span {
+  display: inline-block;
 }
 
 .header-grp {
@@ -955,7 +1024,7 @@ section {
   text-align: center;
 }
 .oauth-grp button {
-  font-family: "Montserrat", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
 }
 
 .nav-btn-grp {
@@ -1002,20 +1071,12 @@ section {
   }
 }
 @media screen and (min-width: 996px) {
-  .works-grp {
-    margin-left: 100px;
-    margin-right: 100px;
-  }
   .oauth-grp {
     padding-left: 10%;
     padding-right: 10%;
   }
 }
 @media screen and (min-width: 1200px) {
-  .works-grp {
-    margin-left: 150px;
-    margin-right: 150px;
-  }
   .proj-tool-list {
     flex-wrap: nowrap;
   }

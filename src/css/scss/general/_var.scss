@@ -1,12 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
 
-// $background-url: "../background.jpg";
 $background-url: "../../public/background.webp";
 $avatar-url: "tuslipid.jpg";
-$header-font: 'Montserrat', sans-serif;
-$body-font: 'Courier Prime', monospace;
-$blog-font: sans-serif;
+
+/* Font */
+$default-font: -apple-system,BlinkMacSystemFont,"Inter",sans-serif;
+$blog-font: "Segoe UI","Helvetica Neue",system-ui,"Ubuntu",sans-serif;
+$header-font-menu: "Montserrat",sans-serif;
+$body-font-menu: "Courier Prime",monospace;
+$header-font-blog: $blog-font;
+$body-font-blog: $blog-font;
+$header-font: $default-font;
+$body-font: $default-font;
+$conpyright-font: $header-font-menu;
+$default-header-font-size: clamp(1.25rem, 1.29rem + 1.07vw, 1.75rem);
+$default-body-font-size: clamp(1rem, 0.96rem + 0.18vw, 1.125rem);
+
 $radius: 5px;
 $gray: #8c8c8c;
 $light-gray: #cbcbcb;

@@ -59,7 +59,7 @@
 }
 
 .transition-page {
-    @include animation(fadeInUp, 1.5s);
+    @include animation(fadeInUp, .5s);
 }
 
 .is-current {

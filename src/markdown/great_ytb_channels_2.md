@@ -26,6 +26,7 @@ Follow up on what I left in [part 1](/blogs/great_ytb_channels_1). In this part,
 
 ## Music
 - [Davie504](https://www.youtube.com/@Davie504)
+- [Imperial Orchestra](https://www.youtube.com/@imperialorchestra)
 - [Joe Jenkins](https://www.youtube.com/@JoeJenkins)
 - [Menuhin Competition](https://www.youtube.com/@MenuhinCompetition)
 - [MayTree](https://www.youtube.com/channel/UC3mY2SKYhPjqImtBBXsR6_Q)
@@ -58,9 +59,11 @@ Follow up on what I left in [part 1](/blogs/great_ytb_channels_1). In this part,
 - [Terry Films](https://www.youtube.com/@Terry-Films)
 - [Travel Thirsty](https://www.youtube.com/@TravelThirstyBlog)
 - [Vincenzo's Plate](https://www.youtube.com/@vincenzosplate)
+- [YumYum얌얌](https://www.youtube.com/@YumYum_Food)
 - [야미보이 Yummyboy](https://www.youtube.com/@yummyboys)
 - [매일맛나 delicious day](https://www.youtube.com/@deliciousday1)
 - [美食作家王刚](https://www.youtube.com/channel/UCg0m_Ah8P_MQbnn77-vYnYw) | Chef Wang ~
+- [うどんそば 兵庫 京都 Udonsoba](https://www.youtube.com/@Udonsobahyogokyoto)
 
 ## Memes and Comedies
 - [Comedy Bites](https://www.youtube.com/@ComedyBites)

@@ -60,9 +60,9 @@ export const navBtnInfoList: DefaultButtonProps[] = [
 
 export const skillInfoList: IconButtonProps[] = [
     {
-        name: "AutoCAD",
-        url: "https://www.autodesk.com/products/autocad/overview",
-        icon: svgs.AutoCAD
+        name: "AWS",
+        url: "https://aws.amazon.com/",
+        icon: svgs["AWS-Dark"]
     },
     {
         name: "Bootstrap",
@@ -130,14 +130,14 @@ export const skillInfoList: IconButtonProps[] = [
         icon: svgs["PostgreSQL-Light"]
     },
     {
-        name: "PyTorch",
-        url: "https://pytorch.org/",
-        icon: svgs["PyTorch-Light"]
-    },
-    {
         name: "Python",
         url: "https://www.python.org/",
         icon: svgs["Python-Light"]
+    },
+    {
+        name: "Rails",
+        url: "https://rubyonrails.org/",
+        icon: svgs.Rails
     },
     {
         name: "React",
@@ -145,9 +145,9 @@ export const skillInfoList: IconButtonProps[] = [
         icon: svgs["React-Dark"]
     },
     {
-        name: "SQLite",
-        url: "https://sqlite.org/",
-        icon: svgs.SQLite
+        name: "Ruby",
+        url: "https://www.ruby-lang.org/en/",
+        icon: svgs.Ruby
     },
     {
         name: "SASS",
@@ -155,23 +155,54 @@ export const skillInfoList: IconButtonProps[] = [
         icon: svgs.Sass
     },
     {
+        name: "SQLite",
+        url: "https://sqlite.org/",
+        icon: svgs.SQLite
+    },
+    {
         name: "TypeScript",
         url: "https://www.typescriptlang.org/",
         icon: svgs.TypeScript
-    }
+    },
+    {
+        name: "NextJS",
+        url: "https://nextjs.org/",
+        icon: svgs["NextJS-Light"]
+    },
+    {
+        name: "Git",
+        url: "https://git-scm.com/",
+        icon: svgs.Git
+    },
+    {
+        name: "NodeJS",
+        url: "https://nodejs.org/",
+        icon: svgs["NodeJS-Dark"]
+    },
+    {
+        name: "Redis",
+        url: "https://redis.io/",
+        icon: svgs["Redis-Light"]
+    },
 ];
 
 export const worksInfoList: ITabProps[] = [
     {
         name: "Pixta Inc.",
         content: {
-            title: "Backend Web Developer @ Pixta",
-            time_space: "06/2023 - now | Hanoi, Vietnam",
+            title: "Fullstack Web Developer",
+            company: "Pixta",
+            time: "06/2023 - now",
+            location: "Hanoi, Vietnam",
             description: [
-                `Develop and manage the backend system for Pixtastock. 
+                `Develop and maintain the backend system of PixtaStock.
                 Analyze data, evaluate the effectiveness of features to improve
                 and develop new features.`,
-                `Main stacks: Ruby, Nestjs, Nextjs`,
+                `Work closely with the Japan product design team to maintain the web application for
+                internal tools.`,
+                `Provide technical support to resolve and monitor PixtaStock's issues reported
+                by the customers.`,
+                `Frequently used stacks: Ruby on Rails, NodeJS, MySQL, MongoDB, Docker, AWS`,
                 `Updating...`
             ]
         }
@@ -179,13 +210,15 @@ export const worksInfoList: ITabProps[] = [
     {
         name: "Pegatron",
         content: {
-            title: "Data Engineer Intern @ Pegatron",
-            time_space: "02/2022 - 06/2022 | Taipei, Taiwan",
+            title: "Data Engineer Intern",
+            company: "Pegatron",
+            time: "02/2022 - 06/2022",
+            location: "Taipei, Taiwan",
             description: [
-                `Participated in the Shop Floor Information System (SFIS) development team, 
-                which processes the data to integrate it with Pegatron's manufacturing process 
+                `Participated in the Shop Floor Information System (SFIS) development team,
+                which processes the data to integrate it with Pegatron's manufacturing process
                 among 7 global and 2 local factories.`,
-                `Learned how to track and update the data flow, manage and develop 
+                `Learned how to track and update the data flow, manage and develop
                 databases via Oracle Database.`,
                 `Contributed to the transformation and loading process in the ETL
                  and customer's report by retrieving the data into >30 forms.`
@@ -195,8 +228,10 @@ export const worksInfoList: ITabProps[] = [
     {
         name: "Techman Robot Inc.",
         content: {
-            title: "Robotic Automation Egineering Trainee @ Techman",
-            time_space: "06/2020 - 08/2020 | Taoyuan, Taiwan",
+            title: "Robotic Automation Egineering Trainee",
+            company: "Techman",
+            time: "06/2020 - 08/2020",
+            location: "Taoyuan, Taiwan",
             description: [
                 `Got training in practical robotic processing and functioning.
                  (Robotic arm, AI, IoT, Computer vision)`,
@@ -209,27 +244,27 @@ export const worksInfoList: ITabProps[] = [
 ];
 
 export const projInfoDict: {[id: string]: IProjCardProps} = {
-    '0': {
+    'algo-visual': {
         id: "0",
         content_section: "Projects",
         title: "Algorithm Visualizer",
         description: [
-            `A web application that visualizes algorithms from code 
+            `A web application that visualizes algorithms from code
             (initially provides sorting algorithms demonstration).`
         ],
-        tools: ["HTML/CSS/JavaScript", "Bootstrap", "Flask", "Heroku"],
+        tools: ["TypeScript", "Next", "Bootstrap"],
         demoURL: "https://algovisual.xuankhoatu.com/",
         githubURL: "https://github.com/khoaxuantu/Algorithms-Visualizer",
         imageURL: imgs.Algovisual
     },
-    '1': {
-        id: "1",
+    'finance-rep': {
+        id: 1,
         content_section: "Projects",
         title: "CS50 Finance Replication",
         description: [
-            `A web-app replication of CS50 finance's mock stock-trading website 
-            (finance.cs50.net), which initially comes from a problem set in CS50X. 
-            It has been extended with some additional features and 
+            `A web-app replication of CS50 finance's mock stock-trading website
+            (finance.cs50.net), which initially comes from a problem set in CS50X.
+            It has been extended with some additional features and
             different database.`
         ],
         tools: ["Flask", "Bootstrap", "SQLite", "Firestore", "GCP"],
@@ -237,12 +272,12 @@ export const projInfoDict: {[id: string]: IProjCardProps} = {
         githubURL: "https://github.com/khoaxuantu/finance-rep",
         imageURL: imgs.Financerep
     },
-    '2': {
-        id: "2",
+    'e-commerce-auction': {
+        id: 2,
         content_section: "Projects",
         title: "E-commerce Auction",
         description: [
-            `An eBay-like e-commerce auction site that will allow users to post 
+            `An eBay-like e-commerce auction site that will allow users to post
             auction listings, place bids on listings,
             comment on those listings, and add listings to a ”watchlist”.`
         ],
@@ -251,21 +286,21 @@ export const projInfoDict: {[id: string]: IProjCardProps} = {
         githubURL: "https://github.com/khoaxuantu/E-commerce_auction_site",
         imageURL: imgs.Auction
     },
-    '3': {
-        id: "3",
+    'knapsack-solvers-analysis': {
+        id: 3,
         content_section: "Projects",
         title: "Knapsack Solvers Analysis",
         description: [
-            `An analysis of the performance in solving typical knapsack problems 
-            by the Simplex Algorithm and the Harmony Search Algorithm, 
+            `An analysis of the performance in solving typical knapsack problems
+            by the Simplex Algorithm and the Harmony Search Algorithm,
             as the Advanced Algorithms coursework project.`
         ],
         tools: ["Python", "Or-tools"],
         githubURL: "https://github.com/khoaxuantu/Solving-Knapsacks-in-LinearProg-vs-HarmonySearch",
         imageURL: imgs.Knapsack
     },
-    '4': {
-        id: "4",
+    'email-spa': {
+        id: 4,
         content_section: "Projects",
         title: "Email Single Page Application",
         description: [
@@ -276,46 +311,46 @@ export const projInfoDict: {[id: string]: IProjCardProps} = {
         githubURL: "https://github.com/khoaxuantu/one-page-email",
         imageURL: imgs.MailSPA
     },
-    '5': {
-        id: "4",
+    'wiki-encyclopedia': {
+        id: 4,
         content_section: "Projects",
         title: "Wiki Encyclopedia",
         description: [
-            `A Wikipedia-like online encyclopedia that will allow users search 
+            `A Wikipedia-like online encyclopedia that will allow users search
             for an encyclopedia entry, create new entries and edit an existing entry.`
         ],
         tools: ["Django", "Bootstrap"],
         githubURL: "https://github.com/khoaxuantu/wiki_encyclopedia",
         imageURL: imgs.Wiki
     },
-    '6': {
-        id: "5",
+    'calendar-on-terminal': {
+        id: 5,
         content_section: "Projects",
         title: "Calendar on Terminal",
         description: [
-            `A small project of calendar queried on terminal, as a midterm project 
+            `A small project of calendar queried on terminal, as a midterm project
             when I first took the C programming course in 2020.`
         ],
         tools: ["C"],
         githubURL: "https://github.com/khoaxuantu/Calendar_demo",
         imageURL: imgs.Calendar
     },
-    '7': {
-        id: "6",
+    'techman-proj': {
+        id: 6,
         content_section: "Projects",
         title: "Lottery Draw Robotic Application",
         description: [
-            `Participated in a group project to develop the robotic arm 
+            `Participated in a group project to develop the robotic arm
             application project in the lottery drawing.`,
-            `My responsibility is to set up Eye-in-hand Vision and 
+            `My responsibility is to set up Eye-in-hand Vision and
             3D Vision via a camera attached to the robotic arm to detect
             the prize's patterns and the area for the gift box container.`
         ],
         tools: ["Robotic automation algorithm design"],
         imageURL: imgs.Tm
     },
-    '8': {
-        id: "7",
+    'gripper-sketch': {
+        id: 7,
         content_section: "Projects",
         title: "Gripper Base System Sketch",
         description:[
@@ -358,8 +393,8 @@ export const blogInfoDict: {[id: string]: IBlogCardProps} = {
         content_section: "Blogs",
         id: "uncommon_javascript_notes",
         title: "Uncommon JavaScript Notes - The language",
-        brief_description: `JavaScript is super complicated, like a pain in your ass. 
-            Even when you are quite familiar with programming languages logics and concepts, 
+        brief_description: `JavaScript is super complicated, like a pain in your ass.
+            Even when you are quite familiar with programming languages logics and concepts,
             you still find it difficult to cover major aspects in JS.`,
         url: "/uncommon_javascript_notes",
         file: "uncommon_javascript_notes.md"
