@@ -14,7 +14,8 @@ export interface IProjCardProps extends ICardProps {
     tools: string[],
     demoURL?: string,
     githubURL?: string,
-    imageURL?: string
+    imageURL?: string,
+    isFeatured?: boolean
 }
 
 export interface IBlogCardProps extends ICardProps {
@@ -28,11 +29,80 @@ const reqImgs = require.context('../../../public/images/projects', true, /\.jpg$
 export const imgs = new ImportMedia(reqImgs).get();
 
 function ProjectCard(props: IProjCardProps) {
-    let image;
-    if (props.imageURL !== undefined) {
-        image = <img src={props.imageURL} alt={props.title+" image"} />;
-    }
+    return (
+        <>
+            {!props.isFeatured ? (
+                <DefaultProjectCard {...props} />
+            ) : (
+                <FeaturedProjCard {...props} />
+            )}
+        </>
+    );
+}
 
+function DefaultProjectCard(props: IProjCardProps) {
+    let image = ProjImage(props);
+    let href = ProjHref(props);
+
+    return (
+        <div className="card card-proj mb-5">
+            <div className="col-5 proj-image">
+                {image}
+            </div>
+            <div className="col-7 p-3 proj-description">
+                <h3 className="header-txt-proj">{props.title}</h3>
+                <ul className="pb-4 ps-2 proj-tool-list">{
+                    props.tools.map(tool => {
+                        return <li className="pe-2" key={tool}>{tool}</li>;
+                    })
+                }</ul>
+                <div className="ps-2">{
+                    props.description.map((p, index) => {
+                        return <p key={index} className="pb-2 body-txt">{p}</p>;
+                    })
+                }</div>
+                <ul className="proj-href">
+                    {href.github}
+                    {href.demo}
+                </ul>
+            </div>
+        </div>
+    );
+}
+
+function FeaturedProjCard(props: IProjCardProps) {
+    let href = ProjHref(props);
+
+    return (
+        <div className="card card-featured-proj">
+            <div className="p-3 proj-description">
+                <h3 className="header-txt-proj">{props.title}</h3>
+                <ul className="pb-4 ps-2 proj-tool-list">{
+                    props.tools.map(tool => {
+                        return <li className="pe-2" key={tool}>{tool}</li>;
+                    })
+                }</ul>
+                <div className="ps-2">{
+                    props.description.map((p, index) => {
+                        return <p key={index} className="pb-2 body-txt">{p}</p>;
+                    })
+                }</div>
+                <ul className="proj-href">
+                    {href.github}
+                    {href.demo}
+                </ul>
+            </div>
+        </div>
+    );
+}
+
+function ProjImage(props: IProjCardProps) {
+    if (props.imageURL !== undefined) {
+        return <img src={props.imageURL} alt={props.title+" image"} />;
+    }
+}
+
+function ProjHref(props: IProjCardProps) {
     let demo, github;
     if (props.githubURL !== undefined) {
         github = (<li>
@@ -49,39 +119,16 @@ function ProjectCard(props: IProjCardProps) {
         </li>);
     }
 
-    return (
-        <div className="card card-proj mb-5">
-            <div className="col-5 proj-image">
-                {image}
-            </div>
-            <div className="col-7 p-3 proj-description">
-                <h3 className="header-txt-proj">{props.title}</h3>
-                <ul className="pb-4 ps-2 proj-tool-list">{
-                    props.tools.map(tool => {
-                        return <li className="pe-2" key={tool}>{tool}</li>;
-                    })
-                }</ul>
-                <div className="ps-2">{
-                    props.description.map((p, index) => {
-                        return <p key={index} className="pb-2 description-txt">{p}</p>;
-                    })
-                }</div>
-                <ul className="proj-href">
-                    {github}
-                    {demo}
-                </ul>
-            </div>
-        </div>
-    );
+    return { demo: demo, github: github };
 }
 
 function BlogsCard(props: IBlogCardProps) {
     return (
         <div className="card card-blog mb-5 fade-in-left">
             <h3 className="header-txt-blog p-3">{props.title}</h3>
-            <div className="description-txt-blog p-3">{props.brief_description}</div>
+            <div className="body-txt-blog p-3">{props.brief_description}</div>
             <div className="read-more-btn mb-4">
-                <Link className="description-txt-blog" to={"/blogs" + props.url}>Read more -{">"}</Link>
+                <Link className="body-txt-blog" to={"/blogs" + props.url}>Read more {">>"}</Link>
             </div>
         </div>
     );

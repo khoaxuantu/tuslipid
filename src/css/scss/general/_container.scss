@@ -16,14 +16,23 @@
 
 .container {
     @include util.center-block();
-    background-color: white;
     @include util.rounded;
+    background-color: white;
 }
 
 .menu-wrapper {
     width: 80%;
     height: 550px;
+    line-height: initial;
 }
+
+.menu-proj-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+
 .mobile-landscape {
     position: relative;
     margin-top: 10%;
@@ -83,5 +92,12 @@
     .menu-wrapper {
         width: 720px;
         height: 40rem;
+    }
+}
+
+@media (min-width: 976px) {
+    .menu-proj-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
     }
 }

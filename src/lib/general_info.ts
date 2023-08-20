@@ -244,7 +244,7 @@ export const worksInfoList: ITabProps[] = [
 ];
 
 export const projInfoDict: {[id: string]: IProjCardProps} = {
-    '0': {
+    'algo-visual': {
         id: "0",
         content_section: "Projects",
         title: "Algorithm Visualizer",
@@ -257,8 +257,8 @@ export const projInfoDict: {[id: string]: IProjCardProps} = {
         githubURL: "https://github.com/khoaxuantu/Algorithms-Visualizer",
         imageURL: imgs.Algovisual
     },
-    '1': {
-        id: "1",
+    'finance-rep': {
+        id: 1,
         content_section: "Projects",
         title: "CS50 Finance Replication",
         description: [
@@ -272,8 +272,8 @@ export const projInfoDict: {[id: string]: IProjCardProps} = {
         githubURL: "https://github.com/khoaxuantu/finance-rep",
         imageURL: imgs.Financerep
     },
-    '2': {
-        id: "2",
+    'e-commerce-auction': {
+        id: 2,
         content_section: "Projects",
         title: "E-commerce Auction",
         description: [
@@ -286,8 +286,8 @@ export const projInfoDict: {[id: string]: IProjCardProps} = {
         githubURL: "https://github.com/khoaxuantu/E-commerce_auction_site",
         imageURL: imgs.Auction
     },
-    '3': {
-        id: "3",
+    'knapsack-solvers-analysis': {
+        id: 3,
         content_section: "Projects",
         title: "Knapsack Solvers Analysis",
         description: [
@@ -299,8 +299,8 @@ export const projInfoDict: {[id: string]: IProjCardProps} = {
         githubURL: "https://github.com/khoaxuantu/Solving-Knapsacks-in-LinearProg-vs-HarmonySearch",
         imageURL: imgs.Knapsack
     },
-    '4': {
-        id: "4",
+    'email-spa': {
+        id: 4,
         content_section: "Projects",
         title: "Email Single Page Application",
         description: [
@@ -311,8 +311,8 @@ export const projInfoDict: {[id: string]: IProjCardProps} = {
         githubURL: "https://github.com/khoaxuantu/one-page-email",
         imageURL: imgs.MailSPA
     },
-    '5': {
-        id: "4",
+    'wiki-encyclopedia': {
+        id: 4,
         content_section: "Projects",
         title: "Wiki Encyclopedia",
         description: [
@@ -323,8 +323,8 @@ export const projInfoDict: {[id: string]: IProjCardProps} = {
         githubURL: "https://github.com/khoaxuantu/wiki_encyclopedia",
         imageURL: imgs.Wiki
     },
-    '6': {
-        id: "5",
+    'calendar-on-terminal': {
+        id: 5,
         content_section: "Projects",
         title: "Calendar on Terminal",
         description: [
@@ -335,8 +335,8 @@ export const projInfoDict: {[id: string]: IProjCardProps} = {
         githubURL: "https://github.com/khoaxuantu/Calendar_demo",
         imageURL: imgs.Calendar
     },
-    '7': {
-        id: "6",
+    'techman-proj': {
+        id: 6,
         content_section: "Projects",
         title: "Lottery Draw Robotic Application",
         description: [
@@ -349,8 +349,8 @@ export const projInfoDict: {[id: string]: IProjCardProps} = {
         tools: ["Robotic automation algorithm design"],
         imageURL: imgs.Tm
     },
-    '8': {
-        id: "7",
+    'gripper-sketch': {
+        id: 7,
         content_section: "Projects",
         title: "Gripper Base System Sketch",
         description:[
