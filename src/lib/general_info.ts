@@ -166,22 +166,22 @@ export const skillInfoList: IconButtonProps[] = [
     },
     {
         name: "NextJS",
-        url: "https://www.typescriptlang.org/",
+        url: "https://nextjs.org/",
         icon: svgs["NextJS-Light"]
     },
     {
         name: "Git",
-        url: "https://www.typescriptlang.org/",
+        url: "https://git-scm.com/",
         icon: svgs.Git
     },
     {
         name: "NodeJS",
-        url: "https://www.typescriptlang.org/",
+        url: "https://nodejs.org/",
         icon: svgs["NodeJS-Dark"]
     },
     {
         name: "Redis",
-        url: "https://www.typescriptlang.org/",
+        url: "https://redis.io/",
         icon: svgs["Redis-Light"]
     },
 ];
