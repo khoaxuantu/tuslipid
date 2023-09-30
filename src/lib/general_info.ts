@@ -55,6 +55,10 @@ export const navBtnInfoList: DefaultButtonProps[] = [
     {
         url: "/guestbook",
         content: "Guestbook"
+    },
+    {
+        url: "/contact",
+        content: "Contact"
     }
 ];
 
@@ -408,7 +412,7 @@ export const blogInfoDict: {[id: string]: IBlogCardProps} = {
             and how the resource is loaded.`,
         url: "/uncommon_javascript_notes_1",
         file: "uncommon_javascript_notes_1.md"
-    }, 
+    },
 };
 
 export const blogInfoList: {dictKey: string, date: string}[] = [
