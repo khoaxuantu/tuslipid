@@ -6,7 +6,7 @@ function addOrientationHandler(): string {
 
     // Handle orientation change if a device is `mobile`
     if (isMobileOnly) {
-        if (!mql.matches) orientation = "mobile-landscape";
+        if (!mql.matches) orientation = "mobile-landscape-wrapper";
         mql.addEventListener("change", m => orientationHandler(m));
     }
 
@@ -14,17 +14,31 @@ function addOrientationHandler(): string {
 }
 
 function orientationHandler(m: MediaQueryListEvent) {
-    const container = document.getElementsByClassName("container")[0] as HTMLElement;
+    const PREFIX = "mobile-landscape";
+    const [container, overlay] = processElement();
+
     if (m.matches) {
-        changeOrientation(container, "mobile-landscape", "center");
+        changeOrientation(container, `${PREFIX}-wrapper`, "center");
+        changeOrientation(overlay, `${PREFIX}-overlay`, "");
     } else {
-        changeOrientation(container, "center", "mobile-landscape");
+        changeOrientation(container, "center", `${PREFIX}-wrapper`);
+        changeOrientation(overlay, "", `${PREFIX}-overlay`);
     }
 }
 
+function processElement(): HTMLElement[] {
+    const CLASS_LIST = ["container", "background-overlay"];
+    let arr : HTMLElement[] = [];
+    CLASS_LIST.forEach(elem => {
+        arr.push(document.getElementsByClassName(elem)[0] as HTMLElement);
+    })
+    return arr;
+}
+
 function changeOrientation(container: HTMLElement, initMode: string, newMode: string): void {
-    container.classList.remove(initMode);
-    container.classList.add(newMode);
+    if (!container) return;
+    if (initMode) container.classList.remove(initMode);
+    if (newMode) container.classList.add(newMode);
 }
 
 export default addOrientationHandler;

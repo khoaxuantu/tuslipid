@@ -7,6 +7,7 @@
 @use 'components/form';
 @use 'general/var';
 @use 'general/grid';
+@use 'general/landscape';
 @use 'general/container';
 @use 'general/util';
 
@@ -40,6 +41,10 @@ span {
     display: inline-block;
 }
 
+.background-overlay {
+    @include util.overlay(rgba($color: dimgray, $alpha: 0.9));
+}
+
 .header-grp {
     padding: 5%;
     text-align: center;
@@ -47,10 +52,6 @@ span {
 
 .content-grp {
     @include util.center-block(5%, "padding");
-}
-
-.social-media-grp {
-    margin-top: 7.5%;
 }
 
 .oauth-grp {
@@ -73,6 +74,10 @@ span {
         text-decoration: none;
         color: #000;
     }
+
+    button {
+        font-family: var.$body-font-menu;
+    }
 }
 
 .edu-content-grp {
@@ -81,18 +86,18 @@ span {
 
 .menu-copyright {
     @extend %copyright-txt;
-    position: absolute;
-    bottom: 1rem;
+    position: relative;
     display: none;
+    color: lightgray;
+
+    a {
+        color: bisque;
+    }
 }
 
 .page-copyright {
     @extend %copyright-txt;
     position: relative;
-}
-
-.proj-github-ref {
-    display: none;
 }
 
 @media screen and (min-width: 376px) {
@@ -102,14 +107,8 @@ span {
 }
 
 @media (min-width: 576px) {
-    .social-media-grp {
-        margin-top: 5%;
-    }
     .nav-btn-grp {
         margin-top: 5%;
-    }
-    .proj-github-ref {
-        display: block;
     }
 }
 

@@ -20,9 +20,7 @@ export default function MenuHeaderGrp () {
           })}
         </button>
         <div className="header-txt-menu"><b>Xuan Khoa Tu Nguyen</b></div>
-        <hr />
         <div className="body-txt-menu mt-3">SWE @ Pixta</div>
-        <hr />
       </div>
     );
 }

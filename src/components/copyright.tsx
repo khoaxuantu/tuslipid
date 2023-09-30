@@ -4,7 +4,7 @@ function Copyright(props: { copyright_class?: string }) {
     const year = new Date().getFullYear();
     return (
         <div className={`${props.copyright_class}`}>
-            <div className="proj-github-ref">
+            <div>
                 <a href="https://github.com/khoaxuantu/tuslipid" target="_blank" rel="noreferrer" aria-label="web source code">
                     <BsGithub opacity={0.8} color="black" />
                 </a>
