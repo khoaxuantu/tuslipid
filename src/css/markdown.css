@@ -13,14 +13,20 @@
 }
 .single-blog-wrapper code {
   padding: 0.2em 0.4em;
-  line-break: auto;
+  line-break: anywhere;
   display: inline-block;
   line-height: 1.35;
+}
+.single-blog-wrapper code span {
+  display: contents;
 }
 .single-blog-wrapper pre {
   border: 1px solid #CCCCCC;
   overflow: auto;
   padding: 6px 10px;
+}
+.single-blog-wrapper pre code {
+  font-size: 14px;
 }
 .single-blog-wrapper blockquote {
   margin: 0;
@@ -38,6 +44,9 @@
 }
 .single-blog-wrapper hr {
   background: black;
+}
+.single-blog-wrapper ul, .single-blog-wrapper ol {
+  padding-left: 20px;
 }
 
 .single-blog-wrapper {
