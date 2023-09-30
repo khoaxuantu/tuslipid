@@ -5,11 +5,15 @@ import * as Info from '../lib/general_info';
 
 export function SocialMediaBtnGroup() {
     return (
-        <div className=''>
+        <>
             <div className='btn-contact-overlay'>
             </div>
-            <div className="center body-txt-menu">
-                <div className='btn-grp btn-contact-grp'>
+            <div className="container contact-wrapper center body-txt-menu">
+                <div className="header-txt-contact">
+                    ~ Oi ~<br></br>
+                    Say hello to me by one of the following {":)"}
+                </div>
+                <div className='btn-grp btn-contact-grp mt-5'>
                     {Info.socialMediaInfoList.map((btnProp) => {
                         return <Btn.IconButton
                             url={btnProp.url}
@@ -21,7 +25,7 @@ export function SocialMediaBtnGroup() {
                 </div>
                 <Link to="/" className='btn btn-rect mt-5' id='go-back'>Home</Link>
             </div>
-        </div>
+        </>
     );
 }
 

@@ -347,10 +347,15 @@ a:hover {
   font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
 }
 
-.header-txt-menu {
+.header-txt-menu, .header-txt-contact {
   padding: 0.5rem;
   font-size: 24px;
   font-family: "JetBrains Mono", monospace;
+}
+
+.header-txt-contact {
+  color: lightgray;
+  text-align: center;
 }
 
 .header-txt-proj {
@@ -778,7 +783,7 @@ hr {
 }
 .card-featured-proj, .card-proj {
   border: 1px solid #cbcbcb;
-  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 .card {
@@ -799,7 +804,7 @@ hr {
   z-index: 2;
 }
 .card-proj:hover {
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
 }
 
 .card-featured-proj {
@@ -839,7 +844,7 @@ hr {
 
 @media screen and (min-width: 768px) {
   .card-proj {
-    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
   }
 }
 .guestbook-form {
@@ -923,7 +928,7 @@ hr {
   border-radius: 5px;
 }
 
-.menu-wrapper {
+.menu-wrapper, .contact-wrapper {
   position: relative;
   width: 80%;
   line-height: initial;
@@ -998,6 +1003,16 @@ hr {
   .menu-proj-wrapper {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .project-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    max-width: clamp(900px, 1000px + 10vw, 1400px);
+    width: 90%;
+    align-items: stretch;
   }
 }
 * {
@@ -1102,9 +1117,6 @@ span {
   }
 }
 @media screen and (min-width: 1200px) {
-  .proj-tool-list {
-    flex-wrap: nowrap;
-  }
   .content-grp {
     margin-left: auto;
     margin-right: auto;

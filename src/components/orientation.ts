@@ -15,19 +15,21 @@ function addOrientationHandler(): string {
 
 function orientationHandler(m: MediaQueryListEvent) {
     const PREFIX = "mobile-landscape";
-    const [container, overlay] = processElement();
+    const [container, overlay, contactOverlay] = processElement();
 
     if (m.matches) {
         changeOrientation(container, `${PREFIX}-wrapper`, "center");
         changeOrientation(overlay, `${PREFIX}-overlay`, "");
+        changeOrientation(contactOverlay, `${PREFIX}-overlay`, "");
     } else {
         changeOrientation(container, "center", `${PREFIX}-wrapper`);
         changeOrientation(overlay, "", `${PREFIX}-overlay`);
+        changeOrientation(contactOverlay, "", `${PREFIX}-overlay`);
     }
 }
 
 function processElement(): HTMLElement[] {
-    const CLASS_LIST = ["container", "background-overlay"];
+    const CLASS_LIST = ["container", "background-overlay", "btn-contact-overlay"];
     let arr : HTMLElement[] = [];
     CLASS_LIST.forEach(elem => {
         arr.push(document.getElementsByClassName(elem)[0] as HTMLElement);

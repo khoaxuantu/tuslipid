@@ -1,8 +1,8 @@
 import { IconButtonProps, DefaultButtonProps } from "./factory/buttonBase";
 import { CgMail } from 'react-icons/cg';
-import { BsLinkedin, BsGithub, BsDiscord } from 'react-icons/bs';
+import { BsLinkedin, BsGithub, BsDiscord, BsReddit } from 'react-icons/bs';
 import { ImFacebook2 } from "react-icons/im";
-import { FaCodepen } from "react-icons/fa";
+import { FaCodepen, FaDev } from "react-icons/fa";
 import { ITabProps } from "./factory/tabBase";
 import { IProjCardProps, IBlogCardProps } from "./factory/cardBase";
 import svgs from "./factory/iconBase";
@@ -35,6 +35,16 @@ export const socialMediaInfoList: IconButtonProps[] = [
         id: "discord",
         url: "https://discordapp.com/users/623530338869837825",
         icon: BsDiscord
+    },
+    {
+        id: "reddit",
+        url: "https://www.reddit.com/user/khoaxuantu",
+        icon: BsReddit
+    },
+    {
+        id: "dev-to",
+        url: "https://dev.to/khoaxuantu",
+        icon: FaDev
     },
     {
         id: "codepen",

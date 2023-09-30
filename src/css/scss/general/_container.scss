@@ -19,7 +19,7 @@
     @include util.rounded;
 }
 
-.menu-wrapper {
+.menu-wrapper, .contact-wrapper {
     position: relative;
     width: 80%;
     line-height: initial;
@@ -79,5 +79,16 @@
     .menu-proj-wrapper {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .project-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+        max-width: clamp(900px, 1000px + 10vw, 1400px);
+        width: 90%;
+        align-items: stretch;
     }
 }

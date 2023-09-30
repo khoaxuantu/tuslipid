@@ -119,10 +119,6 @@ span {
 }
 
 @media screen and (min-width: 1200px) {
-    .proj-tool-list {
-        flex-wrap: nowrap;
-    }
-
     .content-grp {
         @include util.center-block();
         max-width: 900px;

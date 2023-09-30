@@ -3,7 +3,7 @@
 
 %card-bodering {
     border: 1px solid var.$light-gray;
-    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 .card {
@@ -25,7 +25,7 @@
     z-index: 2;
 
     &:hover {
-        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
     }
 }
 
@@ -69,6 +69,6 @@
 
 @media screen and (min-width: 768px) {
     .card-proj {
-        box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
     }
 }
