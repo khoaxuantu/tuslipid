@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Card from "../../lib/factory/cardBase";
 import { blogInfoDict } from "../../lib/general_info";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeHighlight from "rehype-highlight/lib";
 import rehypeRaw from "rehype-raw";
+import rehypeSlug from "rehype-slug";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import "../../css/markdown.css";
@@ -97,37 +98,38 @@ export function SingleBlog(props: {id: string}) {
      */
     useEffect(() => {
         const blogWrapper = document.getElementsByClassName("single-blog-wrapper")[0] as HTMLElement;
-        if (blogWrapper.childNodes.length !== 0) blogWrapper.style.height = "auto";
+        if (blogWrapper.childNodes.length !== 0) {
+            blogWrapper.style.height = "auto";
+            scrollToAnchor();
+        }
     }, [mdWrapper]);
 
     return (
         <>
             <ReactMarkdown
                 children={text}
-                remarkPlugins={[remarkGfm, remarkMath]}
-                rehypePlugins={[rehypeHighlight, rehypeRaw, rehypeKatex]}
-                components={{
-                    h1: HeadingRenderer,
-                    h2: HeadingRenderer,
-                    h3: HeadingRenderer,
-                    h4: HeadingRenderer,
-                    h5: HeadingRenderer,
-                    h6: HeadingRenderer
-                }}
+                remarkPlugins={[
+                  remarkGfm, remarkMath,
+                ]}
+                rehypePlugins={[
+                  rehypeHighlight, rehypeRaw, rehypeKatex, rehypeSlug,
+                ]}
             />
         </>
     );
 }
 
-function HeadingRenderer(props: any) {
-    var children = React.Children.toArray(props.children)
-    var text = children.reduce(flatten, '')
-    var slug = text.toLowerCase().replace(/\W/g, '-')
-    return React.createElement('h' + props.level, {id: slug}, props.children)
+function scrollToAnchor() {
+    const target = window.location.hash;
+    if (!target) return;
+    const anchor = document.querySelector(target) as HTMLElement;
+    if (anchor) {
+      setTimeout(() => {
+        window.scrollTo({
+          top: anchor.offsetTop,
+          behavior: "smooth",
+        })
+      }, 200);
+    }
 }
 
-function flatten(text: any, child: any): any {
-    return typeof child === 'string'
-        ? text + child
-        : React.Children.toArray(child.props.children).reduce(flatten, text)
-}

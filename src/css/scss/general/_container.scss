@@ -17,13 +17,13 @@
 .container {
     @include util.center-block();
     @include util.rounded;
-    background-color: white;
 }
 
 .menu-wrapper {
+    position: relative;
     width: 80%;
-    height: 550px;
     line-height: initial;
+    color: lightgray;
 }
 
 .menu-proj-wrapper {
@@ -33,17 +33,12 @@
     row-gap: 2rem;
 }
 
-.mobile-landscape {
-    position: relative;
-    margin-top: 10%;
-    margin-bottom: 10%;
-}
-
 .page-wrapper {
     width: 100%;
     height: auto;
     margin-top: 4rem;
     margin-bottom: 4rem;
+    background-color: white;
 }
 
 .project-wrapper {
@@ -74,24 +69,9 @@
     }
 }
 
-@media (min-width: 376px) {
-    .menu-wrapper {
-        height: 80%;
-    }
-}
-
-// For mobile landscape orientation
-// Initially: screen and (min-width: 376px) and (max-height: 992px)
-@media (orientation: landscape) {
-    .menu-wrapper {
-        height: 40rem;
-    }
-}
-
 @media (min-width: 768px) {
     .menu-wrapper {
         width: 720px;
-        height: 40rem;
     }
 }
 

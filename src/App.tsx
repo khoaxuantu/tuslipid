@@ -7,6 +7,7 @@ import AboutPage from './components/about/page';
 import ProjectsPage from './components/projects/page';
 import ScrollToTop from './components/scrollToTop';
 import NotFound from './components/404';
+import Contact from './components/menu/contact';
 
 
 const Oauth = lazy(() => import('./components/oauth'));
@@ -22,8 +23,9 @@ function App() {
     <>
       <ScrollToTop />
       <Routes location={location} key={location.pathname}>
+        <Route path='contact' element={<Contact />} />
+        <Route path='/' element={<MenuBuilder />} />
         <Route path='/' element={<MainLayout />}>
-          <Route index element={<MenuBuilder />} />
           <Route path='about' element={<AboutPage />} />
           <Route path='projects' element={<ProjectsPage />} />
           <Route path='blogs' element={<BlogLayout />}>

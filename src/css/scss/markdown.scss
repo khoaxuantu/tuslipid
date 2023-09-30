@@ -20,9 +20,15 @@ $codeinline-background: #f6f8fa;
 
     code {
         padding: 0.2em 0.4em;
-        line-break: auto;
+        line-break: anywhere;
         display: inline-block;
         line-height: 1.35;
+        font-family: var.$code-blog-font;
+        font-size: 13px;
+
+        span {
+            display: contents;
+        }
     }
 
     pre {
@@ -30,9 +36,9 @@ $codeinline-background: #f6f8fa;
         overflow: auto;
         padding: 6px 10px;
 
-        // code {
-        //     display: block;
-        // }
+        code {
+            font-size: 14px;
+        }
     }
 
     blockquote {
@@ -54,6 +60,10 @@ $codeinline-background: #f6f8fa;
 
     hr {
         background: black;
+    }
+
+    ul, ol {
+        padding-left: 20px;
     }
 }
 

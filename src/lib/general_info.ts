@@ -55,6 +55,10 @@ export const navBtnInfoList: DefaultButtonProps[] = [
     {
         url: "/guestbook",
         content: "Guestbook"
+    },
+    {
+        url: "/contact",
+        content: "Contact"
     }
 ];
 
@@ -398,7 +402,17 @@ export const blogInfoDict: {[id: string]: IBlogCardProps} = {
             you still find it difficult to cover major aspects in JS.`,
         url: "/uncommon_javascript_notes",
         file: "uncommon_javascript_notes.md"
-    }
+    },
+    "uncommon_javascript_notes_1": {
+        content_section: "Blogs",
+        id: "uncommon_javascript_notes_1",
+        title: "Uncommon JavaScript Notes - Browser: Document, Events, Interfaces",
+        brief_description: `One thing that make JavaScript weird to learn is
+            how it interacts with the browser DOM, how to control the events, the forms,
+            and how the resource is loaded.`,
+        url: "/uncommon_javascript_notes_1",
+        file: "uncommon_javascript_notes_1.md"
+    },
 };
 
 export const blogInfoList: {dictKey: string, date: string}[] = [
@@ -406,6 +420,7 @@ export const blogInfoList: {dictKey: string, date: string}[] = [
     {dictKey: "great_ytb_channels_2", date: "Apr 27 2023 13:30:59 GMT+0800"},
     {dictKey: "markdown_starter", date:"Thu Mar 23 2023 23:10:33 GMT+0700"},
     {dictKey: "uncommon_javascript_notes", date: "Fri Jun 16 2023 23:02:26 GMT+0700"},
+    {dictKey: "uncommon_javascript_notes_1", date:"Sun Sep 03 2023 11:13:44 GMT+0700"},
 ];
 
 export const oauthInfoList: IconButtonProps[] = [

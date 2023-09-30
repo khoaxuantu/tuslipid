@@ -9,7 +9,7 @@ img {
 
 .avatar-grp {
     border: none;
-    background-color: white;
+    background-color: unset;
 }
 
 .avatar {
@@ -23,7 +23,7 @@ img {
 .icon {
     @extend %flex-center;
     width: 33.33%;
-    
+
     img {
         max-width: 32px;
     }

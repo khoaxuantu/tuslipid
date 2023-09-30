@@ -1,25 +1,29 @@
-import * as React from 'react';
+import { Link } from 'react-router-dom';
 import * as Btn from '../lib/factory/buttonBase';
 import * as Info from '../lib/general_info';
 
 
-function SocialMediaBtnGroup() {
+export function SocialMediaBtnGroup() {
     return (
-        <div className='btn-grp social-media-grp'>
-            {Info.socialMediaInfoList.map((btnProp) => {
-                return <Btn.IconButton
-                    url={btnProp.url}
-                    icon={btnProp.icon}
-                    key={btnProp.id}
-                    id={btnProp.id}
-                    classname='btn btn-square' />;
-            })}
+        <div className=''>
+            <div className='btn-contact-overlay'>
+            </div>
+            <div className="center body-txt-menu">
+                <div className='btn-grp btn-contact-grp'>
+                    {Info.socialMediaInfoList.map((btnProp) => {
+                        return <Btn.IconButton
+                            url={btnProp.url}
+                            icon={btnProp.icon}
+                            key={btnProp.id}
+                            id={btnProp.id}
+                            classname='btn btn-square' />;
+                    })}
+                </div>
+                <Link to="/" className='btn btn-rect mt-5' id='go-back'>Home</Link>
+            </div>
         </div>
     );
 }
-
-export default SocialMediaBtnGroup;
-
 
 export function NavBtnGroup() {
     return (
@@ -45,13 +49,13 @@ export function SkillBtnGroup() {
     }
 
     return (
-        <div className='btn-grp mt-2 col-8'>
+        <div className='btn-skill-grp mt-2 col-8'>
             {Info.skillInfoList.map(btnProp => {
                 return <Btn.IconButton
                     id={btnProp.name}
                     url={btnProp.url}
                     icon={btnProp.icon}
-                    classname='btn btn-skill m-2'
+                    classname='btn btn-skill mt-2 mb-2'
                     key={btnProp.name} />
             })}
         </div>

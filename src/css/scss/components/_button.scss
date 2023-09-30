@@ -1,10 +1,30 @@
 @use '../general/util';
 @use '../general/var';
 
+%btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    row-gap: 0.5rem;
+}
+
+
 @mixin shapeBtn($ratio: 1, $width: auto) {
     aspect-ratio: $ratio;
     width: $width;
     cursor: pointer;
+}
+
+#go-back {
+    @include util.center-block;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+        font-weight: bold;
+    }
 }
 
 .btn {
@@ -31,16 +51,23 @@
 }
 
 .btn-grp {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    @extend %btn-group;
     justify-content: center;
-    row-gap: 0.5rem;
 
-    a {
+    a, button {
         margin: 0 0.625rem 0 0.625rem;
         font-size: 12px;
     }
+}
+
+.btn-contact-overlay {
+    @include util.overlay(rgba($color: dimgray, $alpha: 1));
+}
+
+.btn-skill-grp {
+    @extend %btn-group;
+    justify-content: space-between;
+    column-gap: 0.625rem;
 }
 
 .btn-skill {
@@ -125,7 +152,7 @@
     }
 
     .btn-grp {
-        a {
+        a, button {
             font-size: 16px;
         }
     }
