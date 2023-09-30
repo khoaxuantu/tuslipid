@@ -16,11 +16,11 @@ export default function MenuHeaderGrp () {
             let isCur = "";
             if (index === avaIndex) isCur = " is-current";
             return <img key={index} className={'transition-ava avatar'+isCur} src={avaURL}
-              alt="Tuslipid's avatar" height={128} width={128} />;
+              alt="Tuslipid's avatar" height={160} width={160} />;
           })}
         </button>
-        <div className="header-txt-menu"><b>Xuan Khoa Tu Nguyen</b></div>
-        <div className="body-txt-menu mt-3">SWE @ Pixta</div>
+        <div className="header-txt-menu mt-3"><b>Xuan Khoa Tu Nguyen</b></div>
+        <div className="body-txt-menu mt-3"><b>SWE @ Pixta</b></div>
       </div>
     );
 }

@@ -1,10 +1,13 @@
 import { SocialMediaBtnGroup } from "../button";
+import addOrientationHandler from "../orientation";
 
 function Contact() {
+  addOrientationHandler();
+
   return (
-    <div>
+    <>
       <SocialMediaBtnGroup />
-    </div>
+    </>
   )
 }
 

@@ -35,8 +35,13 @@ a {
     @include select-header-txt;
 }
 
-.header-txt-menu {
+.header-txt-menu, .header-txt-contact {
     @include select-header-txt($size: 24px, $font: var.$header-font-menu, $padding: 0.5rem)
+}
+
+.header-txt-contact {
+    color: lightgray;
+    text-align: center;
 }
 
 .header-txt-proj {
