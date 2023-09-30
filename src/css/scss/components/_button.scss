@@ -1,6 +1,14 @@
 @use '../general/util';
 @use '../general/var';
 
+%btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    row-gap: 0.5rem;
+}
+
+
 @mixin shapeBtn($ratio: 1, $width: auto) {
     aspect-ratio: $ratio;
     width: $width;
@@ -31,16 +39,19 @@
 }
 
 .btn-grp {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    @extend %btn-group;
     justify-content: center;
-    row-gap: 0.5rem;
 
     a {
         margin: 0 0.625rem 0 0.625rem;
         font-size: 12px;
     }
+}
+
+.btn-skill-grp {
+    @extend %btn-group;
+    justify-content: space-between;
+    column-gap: 0.625rem;
 }
 
 .btn-skill {

@@ -45,13 +45,13 @@ export function SkillBtnGroup() {
     }
 
     return (
-        <div className='btn-grp mt-2 col-8'>
+        <div className='btn-skill-grp mt-2 col-8'>
             {Info.skillInfoList.map(btnProp => {
                 return <Btn.IconButton
                     id={btnProp.name}
                     url={btnProp.url}
                     icon={btnProp.icon}
-                    classname='btn btn-skill m-2'
+                    classname='btn btn-skill mt-2 mb-2'
                     key={btnProp.name} />
             })}
         </div>
