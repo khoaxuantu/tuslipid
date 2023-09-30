@@ -800,6 +800,8 @@ hr {
 .card-proj {
   border-radius: 15px;
   aspect-ratio: 2;
+  transition: scale 250ms ease-in-out;
+  z-index: 2;
 }
 .card-proj:hover {
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
@@ -1003,6 +1005,16 @@ hr {
     grid-template-rows: repeat(2, 1fr);
   }
 }
+@media (min-width: 1200px) {
+  .project-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    max-width: clamp(900px, 1000px + 10vw, 1400px);
+    width: 90%;
+    align-items: stretch;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -1105,9 +1117,6 @@ span {
   }
 }
 @media screen and (min-width: 1200px) {
-  .proj-tool-list {
-    flex-wrap: nowrap;
-  }
   .content-grp {
     margin-left: auto;
     margin-right: auto;
