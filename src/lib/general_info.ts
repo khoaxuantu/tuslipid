@@ -287,7 +287,7 @@ export const projInfoDict: {[id: string]: IProjCardProps} = {
         imageURL: imgs.Financerep
     },
     'e-commerce-auction': {
-        id: 2,
+        id: 3,
         content_section: "Projects",
         title: "E-commerce Auction",
         description: [
@@ -301,7 +301,7 @@ export const projInfoDict: {[id: string]: IProjCardProps} = {
         imageURL: imgs.Auction
     },
     'knapsack-solvers-analysis': {
-        id: 3,
+        id: 4,
         content_section: "Projects",
         title: "Knapsack Solvers Analysis",
         description: [
@@ -373,6 +373,19 @@ export const projInfoDict: {[id: string]: IProjCardProps} = {
         ],
         tools: ["AutoCAD"],
         imageURL: imgs.AutoCAD
+    },
+    'fontscale-sass': {
+        id: 2,
+        content_section: "Projects",
+        title: "Font Scale Sass",
+        description: [
+            `A SASS font-scale generator module which provides
+            a preset font size for your footnote, endnote, caption, body, blockquote, and headings (from h6 to h1)`
+        ],
+        tools: ["SASS"],
+        imageURL: "",
+        githubURL: "https://github.com/khoaxuantu/Font-scale-sass",
+        demoURL: "https://www.npmjs.com/package/fontscale-sass"
     }
 };
 
