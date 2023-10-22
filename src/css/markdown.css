@@ -1,5 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
+/* Font */
 .single-blog-wrapper * {
   margin: revert;
   padding: revert;
@@ -16,6 +18,8 @@
   line-break: anywhere;
   display: inline-block;
   line-height: 1.35;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
 }
 .single-blog-wrapper code span {
   display: contents;
@@ -50,7 +54,7 @@
 }
 
 .single-blog-wrapper {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Ubuntu", system-ui, sans-serif;
 }
 
 /*# sourceMappingURL=markdown.css.map */
