@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 export default function AboutHeaderGrp () {
     return (
       <div className='header-grp'>
@@ -18,7 +16,6 @@ export default function AboutHeaderGrp () {
           ~ You can call me by any name ~
         </div>
         <div className='body-txt mt-3'>
-          <Link to="/">Menu</Link> | {" "}
           <a href="https://drive.google.com/file/d/1UdFJgT35HysZGTpfk86I3E8Mcg2vrfv3/view?usp=share_link" target='_blank' rel="noreferrer">Resume</a> | {" "}
           <a href="https://drive.google.com/file/d/1XxdNzIyDktPseomnn0HszhgMyfEW8TtV/view?usp=share_link" target='_blank' rel='noreferrer'>CV</a>
         </div>

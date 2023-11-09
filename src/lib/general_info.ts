@@ -198,6 +198,16 @@ export const skillInfoList: IconButtonProps[] = [
         url: "https://redis.io/",
         icon: svgs["Redis-Light"]
     },
+    {
+        name: "MySQL",
+        url: "https://www.mysql.com/",
+        icon: svgs["MySQL-Light"]
+    },
+    {
+        name: "MongoDB",
+        url: "https://www.mongodb.com/",
+        icon: svgs.MongoDB
+    },
 ];
 
 export const worksInfoList: ITabProps[] = [
@@ -216,7 +226,7 @@ export const worksInfoList: ITabProps[] = [
                 internal tools.`,
                 `Provide technical support to resolve and monitor PixtaStock's issues reported
                 by the customers.`,
-                `Frequently used stacks: Ruby on Rails, NodeJS, MySQL, MongoDB, Docker, AWS`,
+                `Frequently used stacks: Ruby on Rails, React, NodeJS, MySQL, MongoDB, Docker, AWS`,
                 `Updating...`
             ]
         }
@@ -287,7 +297,7 @@ export const projInfoDict: {[id: string]: IProjCardProps} = {
         imageURL: imgs.Financerep
     },
     'e-commerce-auction': {
-        id: 2,
+        id: 3,
         content_section: "Projects",
         title: "E-commerce Auction",
         description: [
@@ -301,7 +311,7 @@ export const projInfoDict: {[id: string]: IProjCardProps} = {
         imageURL: imgs.Auction
     },
     'knapsack-solvers-analysis': {
-        id: 3,
+        id: 4,
         content_section: "Projects",
         title: "Knapsack Solvers Analysis",
         description: [
@@ -373,7 +383,32 @@ export const projInfoDict: {[id: string]: IProjCardProps} = {
         ],
         tools: ["AutoCAD"],
         imageURL: imgs.AutoCAD
-    }
+    },
+    'fontscale-sass': {
+        id: 2,
+        content_section: "Projects",
+        title: "Font Scale Sass",
+        description: [
+            `A SASS font-scale generator module which provides
+            a preset font size for your footnote, endnote, caption, body, blockquote, and headings (from h6 to h1).`
+        ],
+        tools: ["SASS"],
+        imageURL: imgs.Fontscale,
+        githubURL: "https://github.com/khoaxuantu/Font-scale-sass",
+        demoURL: "https://www.npmjs.com/package/fontscale-sass"
+    },
+    'random-meme-picker': {
+        id: 2,
+        content_section: "Projects",
+        title: "Random Meme Picker",
+        description: [
+            `A random meme web chosen from my more than 800-meme collection. Pick a meme a day for a better life.`
+        ],
+        tools: ["React", "Bun", "SASS", "Cloud storage"],
+        demoURL: "https://meme.xuankhoatu.com",
+        githubURL: "https://github.com/khoaxuantu/random-meme-gen",
+        imageURL: imgs.RandomMeme
+    },
 };
 
 export const blogInfoDict: {[id: string]: IBlogCardProps} = {
@@ -423,6 +458,17 @@ export const blogInfoDict: {[id: string]: IBlogCardProps} = {
         url: "/uncommon_javascript_notes_1",
         file: "uncommon_javascript_notes_1.md"
     },
+    "learn_from_react_bun_boilerplate": {
+        content_section: "Blogs",
+        id: "learn_from_react_bun_boilerplate",
+        title: "Trying to re-create React boilerplate in Bun and what I learned from it",
+        brief_description: `Many people are hyped with Bun for its performance and new features compared with
+            NodeJS. One of them is .jsx and .tsx file support with its internal transpiler, which help creating a React
+            app by Bun becomes more convenient. But the problem here is to have a boilerplate to optimize the feature
+            for creating React app.`,
+        url: "/learn_from_react_bun_boilerplate",
+        file: "react_bun_boilerplate.md"
+    },
 };
 
 export const blogInfoList: {dictKey: string, date: string}[] = [
@@ -431,6 +477,7 @@ export const blogInfoList: {dictKey: string, date: string}[] = [
     {dictKey: "markdown_starter", date:"Thu Mar 23 2023 23:10:33 GMT+0700"},
     {dictKey: "uncommon_javascript_notes", date: "Fri Jun 16 2023 23:02:26 GMT+0700"},
     {dictKey: "uncommon_javascript_notes_1", date:"Sun Sep 03 2023 11:13:44 GMT+0700"},
+    {dictKey: "learn_from_react_bun_boilerplate", date: "Sun Oct 22 2023 19:43:00 GMT+0700"},
 ];
 
 export const oauthInfoList: IconButtonProps[] = [

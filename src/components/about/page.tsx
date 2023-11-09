@@ -4,6 +4,7 @@ import Works from "./works";
 import Education from "./edu";
 import { AboutProject } from "../projects/projects";
 import Copyright from "../copyright";
+import GetInTouch from "./get_in_touch";
 
 export default function AboutPage() {
     return (
@@ -14,6 +15,7 @@ export default function AboutPage() {
                 <Education />
                 <Works />
                 <AboutProject />
+                <GetInTouch />
             </div>
             <Copyright copyright_class="page-copyright pb-3" />
         </div>
