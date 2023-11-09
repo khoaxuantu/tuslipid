@@ -34,7 +34,8 @@ function AboutIntro() {
             </section>
             <section className="mb-5 row">
                 <h3 className="header-txt col-4 pe-5">
-                    I love learning and trying new things, here are some tools that I have used
+                    <span>I love learning and trying new things...</span>
+                    <span>Let's me show you the things I'm confident</span>
                 </h3>
                 <SkillBtnGroup />
             </section>
