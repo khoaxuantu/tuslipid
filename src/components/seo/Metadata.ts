@@ -1,5 +1,5 @@
 export interface CommonMetadata {
-  title: string,
+  title?: string,
   description?: string,
   author?: string,
   image?: string,
@@ -15,7 +15,8 @@ export interface OpenGraphMetadata {
   title?: string,
   image?: string,
   description?: string,
-  url?: string
+  url?: string,
+  site_name?: string,
 }
 
 export interface TwitterMetadata {

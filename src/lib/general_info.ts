@@ -297,7 +297,7 @@ export const projInfoDict: {[id: string]: IProjCardProps} = {
         imageURL: imgs.Financerep
     },
     'e-commerce-auction': {
-        id: 3,
+        id: 4,
         content_section: "Projects",
         title: "E-commerce Auction",
         description: [
@@ -398,7 +398,7 @@ export const projInfoDict: {[id: string]: IProjCardProps} = {
         demoURL: "https://www.npmjs.com/package/fontscale-sass"
     },
     'random-meme-picker': {
-        id: 2,
+        id: 3,
         content_section: "Projects",
         title: "Random Meme Picker",
         description: [

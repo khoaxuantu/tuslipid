@@ -25,8 +25,8 @@ function Education() {
                             Sep 2018 - July 2022
                         </div>
                         <div className="body-txt">
+                            <b><i>Specialization: </i></b>
                             <ul style={{listStyleType: "unset", listStylePosition:"inside"}}>
-                                <b><i>Specialization: </i></b>
                                 <li>Software Engineering</li>
                                 <li>Algorithms & Data Structure</li>
                                 <li>Machine Learning</li>

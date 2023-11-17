@@ -106,14 +106,16 @@ function ProjHref(props: IProjCardProps) {
     let demo, github;
     if (props.githubURL !== undefined) {
         github = (<li>
-            <a href={props.githubURL} target="_blank" rel="noreferrer">
+            <a href={props.githubURL} target="_blank" rel="noreferrer"
+                aria-label={`project github href - ${props.title}`}>
                 <BsGithub size={24} color="#000" />
             </a>
         </li>);
     }
     if (props.demoURL !== undefined) {
         demo = (<li className="ps-3">
-            <a href={props.demoURL} target="_blank" rel="noreferrer">
+            <a href={props.demoURL} target="_blank" rel="noreferrer"
+                aria-label={`project demo href - ${props.title}`}>
                 <FiExternalLink size={24} color="#000" />
             </a>
         </li>);

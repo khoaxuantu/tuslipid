@@ -4,11 +4,10 @@ import { Metadata } from "../seo/Metadata";
 
 const defaultTitle = "Tuslipid";
 const defaultDescription = "Xuan Khoa Tu Nguyen's personal website";
-const defaultSEOImage = process.env.PUBLIC_URL + '/menu_preview.jpg';
+const defaultSEOImage = process.env.PUBLIC_URL + '/seo/menu-preview.jpg';
 const defaultURL = "https://xuankhoatu.com/";
 
 const metadata: Metadata = {
-    title: defaultTitle,
     description: defaultDescription,
     author: "Xuan Khoa Tu Nguyen",
     image: defaultSEOImage,
@@ -18,6 +17,7 @@ const metadata: Metadata = {
       title: 'Tuslipid',
       description: defaultDescription,
       url: defaultURL,
+      site_name: defaultTitle,
     },
     twitter: {
       card: "summary_large_image",

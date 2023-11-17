@@ -19,7 +19,7 @@ export default function SEO({props, children} : HeadProps) {
 
 function GeneralSEO({title, description, author, image}: SeoProps.CommonMetadata) {
   return (
-    <Helmet>
+    <Helmet titleTemplate="Tuslipid - %s" defaultTitle="Tuslipid">
       <title>{title}</title>
       <meta name="title" content={title} />
       <meta itemProp="name" content={title} />
@@ -42,6 +42,7 @@ function OpenGraphSEO(og: SeoProps.OpenGraphMetadata) {
       {og.image && <meta property="og:image" content={og.image} />}
       {og.description && <meta property="og:description" content={og.description} />}
       {og.url && <meta property="og:url" content={og.url} />}
+      {og.site_name && <meta property="og:site_name" content={og.site_name} />}
     </Helmet>
   );
 }
