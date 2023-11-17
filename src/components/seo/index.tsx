@@ -2,16 +2,16 @@ import { Helmet } from "react-helmet";
 import * as SeoProps from "./Metadata";
 
 interface HeadProps {
-  props: SeoProps.Metadata,
+  metadata: SeoProps.Metadata,
   children?: React.ReactNode
 }
 
-export default function SEO({props, children} : HeadProps) {
+export default function CustomHead({metadata, children} : HeadProps) {
   return (
     <>
-      <GeneralSEO {...props} />
-      <OpenGraphSEO {...props.og} />
-      <TwitterSEO {...props.twitter} />
+      <GeneralSEO {...metadata} />
+      <OpenGraphSEO {...metadata.og} />
+      <TwitterSEO {...metadata.twitter} />
       {children}
     </>
   );

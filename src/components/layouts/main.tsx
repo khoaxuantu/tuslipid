@@ -1,4 +1,4 @@
-import SEO from "../seo";
+import CustomHead from "../seo";
 import { Outlet } from "react-router-dom";
 import { Metadata } from "../seo/Metadata";
 
@@ -32,7 +32,7 @@ const metadata: Metadata = {
 function MainLayout() {
     return (
         <>
-            <SEO props={metadata} />
+            <CustomHead metadata={metadata} />
             <Outlet />
         </>
     );

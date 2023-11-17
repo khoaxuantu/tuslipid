@@ -6,7 +6,7 @@ import { AboutProject } from "../projects/projects";
 import Copyright from "../copyright";
 import GetInTouch from "./get_in_touch";
 import { Metadata } from "../seo/Metadata";
-import SEO from "../seo";
+import CustomHead from "../seo";
 import { useLocation } from "react-router-dom";
 import { getMetadataURL } from "../../lib/utils/Location";
 
@@ -37,7 +37,7 @@ export default function AboutPage() {
 
   return (
     <>
-      <SEO props={metadata} />
+      <CustomHead metadata={metadata} />
       <div className="container page-wrapper transition-page">
         <AboutHeaderGrp />
         <div className="content-grp">
