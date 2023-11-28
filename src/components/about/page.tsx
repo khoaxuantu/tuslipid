@@ -20,6 +20,7 @@ export default function AboutPage() {
   const metadata: Metadata = {
     title: "About me",
     description: aboutDescription,
+    image: aboutImage,
     og: {
       title: "About Tuslipid",
       description: aboutDescription,
