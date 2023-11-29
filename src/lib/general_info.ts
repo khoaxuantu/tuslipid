@@ -252,7 +252,7 @@ export const worksInfoList: ITabProps[] = [
     {
         name: "Techman Robot Inc.",
         content: {
-            title: "Robotic Automation Egineering Trainee",
+            title: "Robotic Automation Engineering Trainee",
             company: "Techman",
             time: "06/2020 - 08/2020",
             location: "Taoyuan, Taiwan",
