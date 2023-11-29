@@ -32,18 +32,17 @@ export function IconButton(props: IconButtonProps) {
     if (typeof props.icon === "string") {
         Icon = <>
             <div className="icon">
-                <img className="m-1" src={props.icon} alt={props.name} width={32} />
+                <img className="m-1" src={props.icon} alt={'icon-' + props.id} width={32} />
             </div>
             <div id="name">{props.id}</div>
         </>;
     }
     else {
-        Icon = <props.icon className='icon' size={"1.5rem"} color='#000' />;
+        Icon = <props.icon className='icon' size={"1.5rem"} color='#000' aria-label={props.id} />;
     }
 
     return (
-        <Link id={props.id} className={props.classname} to={props.url} target="_blank" key={props.id}
-            aria-label={"Button with icon " + props.id}>
+        <Link id={props.id} className={props.classname} to={props.url} target="_blank" key={props.id}>
             {Icon}
         </Link>
     );
@@ -51,8 +50,8 @@ export function IconButton(props: IconButtonProps) {
 
 export function LoginButton(props: IconButtonProps) {
     return (
-        <button 
-            className={`btn btn-oauth ${props.classname} ps-3 pe-3 pt-1 pb-1`} 
+        <button
+            className={`btn btn-oauth ${props.classname} ps-3 pe-3 pt-1 pb-1`}
             onClick={props.onClick}>
             <props.icon size={20} color="white" className="me-3" />
             <span className="oauth-txt">{"Sign in with "+props.name}</span>
