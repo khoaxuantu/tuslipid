@@ -473,8 +473,8 @@ hr {
 .btn-contact-overlay {
   background: dimgray;
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 100dvw;
+  height: 100dvh;
   top: 0;
   bottom: 0;
   left: 0;
@@ -503,6 +503,11 @@ hr {
   scale: 1.1;
   text-decoration: none;
   font-weight: 650;
+}
+
+.oauth-grp button {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .btn-oauth-box {
@@ -1046,8 +1051,8 @@ span {
 .background-overlay {
   background: rgba(105, 105, 105, 0.9);
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 100dvw;
+  height: 100dvh;
   top: 0;
   bottom: 0;
   left: 0;

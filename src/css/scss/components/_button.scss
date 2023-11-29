@@ -89,6 +89,12 @@
     }
 }
 
+.oauth-grp {
+    button {
+        @include util.center-block(0);
+    }
+}
+
 .btn-oauth-box {
     width: 100%;
 }
