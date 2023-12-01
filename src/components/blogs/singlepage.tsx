@@ -33,6 +33,7 @@ function generateMetadata(blogInfo: IBlogCardProps, url: string): Metadata {
   return {
     title: blogInfo.title,
     description: blogInfo.brief_description,
+    canonicalURL: url,
     og: {
       title: blogInfo.title + " | Tusss blogs",
       description: blogInfo.brief_description,

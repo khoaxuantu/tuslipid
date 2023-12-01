@@ -18,6 +18,7 @@ export default function ProjectsPage() {
     title: projTitle,
     description: projDescription,
     image: projThumb,
+    canonicalURL: projURL,
     og: {
       title: projTitle,
       description: projDescription,

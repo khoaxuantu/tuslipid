@@ -17,7 +17,7 @@ export default function CustomHead({metadata, children} : HeadProps) {
   );
 }
 
-function GeneralSEO({title, description, author, image}: SeoProps.CommonMetadata) {
+function GeneralSEO({title, description, author, image, canonicalURL}: SeoProps.CommonMetadata) {
   return (
     <Helmet titleTemplate="Tuslipid - %s" defaultTitle="Tuslipid">
       <title>{title}</title>
@@ -30,6 +30,7 @@ function GeneralSEO({title, description, author, image}: SeoProps.CommonMetadata
       }
       {author && <meta name="author" content={author} />}
       {image && <meta itemProp="image" content={image} />}
+      {canonicalURL && <link rel="canonical" href={canonicalURL} />}
     </Helmet>
   );
 }

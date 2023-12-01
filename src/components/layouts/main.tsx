@@ -11,6 +11,7 @@ const metadata: Metadata = {
     description: defaultDescription,
     author: "Xuan Khoa Tu Nguyen",
     image: defaultSEOImage,
+    canonicalURL: defaultURL,
     og: {
       type: 'website',
       image: defaultSEOImage,
