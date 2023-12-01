@@ -13,6 +13,7 @@ export default function BlogsPage() {
   const metadata: Metadata = {
     description: blogsDescription,
     title: "Blogs",
+    canonicalURL: url,
     og: {
       description: blogsDescription,
       title: "Tusss Blogs",

@@ -21,6 +21,7 @@ export default function AboutPage() {
     title: "About me",
     description: aboutDescription,
     image: aboutImage,
+    canonicalURL: aboutURL,
     og: {
       title: "About Tuslipid",
       description: aboutDescription,

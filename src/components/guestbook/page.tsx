@@ -14,6 +14,7 @@ export default function GuestbookPage() {
   const metadata: Metadata = {
     title: "Guestbook",
     description: guestbookDescription,
+    canonicalURL: url,
     og: {
       url: url,
       description: guestbookDescription,

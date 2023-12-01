@@ -31,7 +31,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "postbuild": "react-snap"
   },
   "eslintConfig": {
     "extends": [
@@ -58,6 +59,10 @@
     "@types/react-dom": "^18.0.11",
     "@types/react-helmet": "^6.1.9",
     "@types/webpack-env": "^1.18.0",
-    "gh-pages": "^5.0.0"
+    "gh-pages": "^5.0.0",
+    "react-snap": "^1.23.0"
+  },
+  "reactSnap": {
+    "puppeteerArgs": [ "--no-sandbox", "--disable-setuid-sandbox" ]
   }
 }

@@ -3,6 +3,7 @@ export interface CommonMetadata {
   description?: string,
   author?: string,
   image?: string,
+  canonicalURL?: string,
 }
 
 export interface Metadata extends CommonMetadata {
