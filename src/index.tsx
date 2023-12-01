@@ -1,18 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
-import App from './App';
-import './css/style.css';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import App from "./App";
+import "./css/style.css";
+import reportWebVitals from "./reportWebVitals";
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-root.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
-);
+const rootElement = document.getElementById("root") as HTMLElement;
+
+if (rootElement.hasChildNodes()) {
+  ReactDOM.hydrateRoot(
+    rootElement,
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  );
+} else {
+  ReactDOM.createRoot(rootElement).render(
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  );
+}
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
