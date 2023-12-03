@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.ce584f9e.css",
-    "main.js": "/static/js/main.8f10880e.js",
+    "main.js": "/static/js/main.3d607bc4.js",
     "static/js/436.5ef6ea98.chunk.js": "/static/js/436.5ef6ea98.chunk.js",
     "static/css/631.5cc9aec9.chunk.css": "/static/css/631.5cc9aec9.chunk.css",
     "static/js/631.97393ba1.chunk.js": "/static/js/631.97393ba1.chunk.js",
@@ -12,7 +12,7 @@
     "static/js/258.d411f128.chunk.js": "/static/js/258.d411f128.chunk.js",
     "static/js/699.c59df455.chunk.js": "/static/js/699.c59df455.chunk.js",
     "static/js/771.aca2d55b.chunk.js": "/static/js/771.aca2d55b.chunk.js",
-    "static/js/659.69074663.chunk.js": "/static/js/659.69074663.chunk.js",
+    "static/js/659.40b0853a.chunk.js": "/static/js/659.40b0853a.chunk.js",
     "static/js/769.39682b76.chunk.js": "/static/js/769.39682b76.chunk.js",
     "static/js/951.f82459b9.chunk.js": "/static/js/951.f82459b9.chunk.js",
     "static/js/197.c54db791.chunk.js": "/static/js/197.c54db791.chunk.js",
@@ -39,6 +39,7 @@
     "static/media/RandomMeme.webp": "/static/media/RandomMeme.f9fcfa400340e11652e2.webp",
     "static/media/markdown_starter.md": "/static/media/markdown_starter.1692de4b73ee0391e3f7.md",
     "static/media/PostgreSQL-Light.svg": "/static/media/PostgreSQL-Light.4e36b7eb1b6c8884bb87.svg",
+    "static/media/react_bun_boilerplate.md": "/static/media/react_bun_boilerplate.5626087677b18a6d4c31.md",
     "static/media/Sass.svg": "/static/media/Sass.cca6f1cbf788e988080d.svg",
     "static/media/AWS-Dark.svg": "/static/media/AWS-Dark.0b1b9ae542cebfa669f3.svg",
     "static/media/great_ytb_channels_2.md": "/static/media/great_ytb_channels_2.0615bda0d69fa9bc7f8b.md",
@@ -51,17 +52,16 @@
     "static/media/Rails.svg": "/static/media/Rails.7a981cae7b1c757ddb27.svg",
     "static/media/NextJS-Light.svg": "/static/media/NextJS-Light.24b4ea0776052cd1aa53.svg",
     "static/media/React-Dark.svg": "/static/media/React-Dark.45e05858175d1edbb570.svg",
-    "static/media/react_bun_boilerplate.md": "/static/media/react_bun_boilerplate.7d8ba798af62b34128af.md",
     "static/media/Python-Dark.svg": "/static/media/Python-Dark.bf36a7c430d4004862f4.svg",
     "static/media/Python-Light.svg": "/static/media/Python-Light.2b3e1cac446d5c43d147.svg",
     "static/media/TypeScript.svg": "/static/media/TypeScript.5d93426aa26d9e2ac669.svg",
     "static/media/GCP-Light.svg": "/static/media/GCP-Light.f00a27e6433771c0a335.svg",
     "static/media/AutoCAD.svg": "/static/media/AutoCAD.5ddafb98ae1507835984.svg",
+    "index.html": "/index.html",
     "static/media/JavaScript.svg": "/static/media/JavaScript.9a071f2801f9f9259876.svg",
     "static/media/MongoDB.svg": "/static/media/MongoDB.d4ec4d452a7f201ba12b.svg",
     "static/media/Docker.svg": "/static/media/Docker.f99b96943df37cd4112b.svg",
     "static/media/Django.svg": "/static/media/Django.8cc0a3238d17915c7a74.svg",
-    "index.html": "/index.html",
     "static/media/Oracle.svg": "/static/media/Oracle.f388d645cd2612f14006.svg",
     "static/media/CPP.svg": "/static/media/CPP.0170491bcee6df72d47e.svg",
     "static/media/PyTorch-Light.svg": "/static/media/PyTorch-Light.ee37d5e59e9ed88b25a9.svg",
@@ -69,7 +69,7 @@
     "static/media/CSS.svg": "/static/media/CSS.5fcd7f5683afc0fc6d01.svg",
     "static/media/HTML.svg": "/static/media/HTML.ca0db580ffd74f086f2d.svg",
     "main.ce584f9e.css.map": "/static/css/main.ce584f9e.css.map",
-    "main.8f10880e.js.map": "/static/js/main.8f10880e.js.map",
+    "main.3d607bc4.js.map": "/static/js/main.3d607bc4.js.map",
     "436.5ef6ea98.chunk.js.map": "/static/js/436.5ef6ea98.chunk.js.map",
     "631.5cc9aec9.chunk.css.map": "/static/css/631.5cc9aec9.chunk.css.map",
     "631.97393ba1.chunk.js.map": "/static/js/631.97393ba1.chunk.js.map",
@@ -81,6 +81,6 @@
   },
   "entrypoints": [
     "static/css/main.ce584f9e.css",
-    "static/js/main.8f10880e.js"
+    "static/js/main.3d607bc4.js"
   ]
 }
