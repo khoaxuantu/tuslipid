@@ -130,7 +130,7 @@ function BlogsCard(props: IBlogCardProps) {
             <h3 className="header-txt-blog p-3">{props.title}</h3>
             <div className="body-txt-blog p-3">{props.brief_description}</div>
             <div className="read-more-btn mb-4">
-                <Link className="body-txt-blog" to={"/blogs" + props.url}>Read more {">>"}</Link>
+                <Link className="body-txt-blog" to={"/blogs" + props.url + "/"}>Read more {">>"}</Link>
             </div>
         </div>
     );

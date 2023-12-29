@@ -6,20 +6,11 @@ import reportWebVitals from "./reportWebVitals";
 
 const rootElement = document.getElementById("root") as HTMLElement;
 
-if (rootElement.hasChildNodes()) {
-  ReactDOM.hydrateRoot(
-    rootElement,
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  );
-} else {
-  ReactDOM.createRoot(rootElement).render(
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  );
-}
+ReactDOM.createRoot(rootElement).render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

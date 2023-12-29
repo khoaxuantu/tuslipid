@@ -1,7 +1,12 @@
+import { useEffect, useState } from "react";
 import { BsGithub } from "react-icons/bs";
 
 function Copyright(props: { copyright_class?: string }) {
-    const year = new Date().getFullYear();
+    const [year, setYear] = useState<number>();
+    useEffect(() => {
+        setYear(new Date().getFullYear());
+    }, []);
+
     return (
         <div className={`${props.copyright_class}`}>
             <div>
