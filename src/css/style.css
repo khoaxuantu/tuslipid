@@ -305,6 +305,7 @@ img {
 .edu-image {
   width: 16.66%;
   min-width: 48px;
+  text-align: end;
 }
 
 .flex-image {
