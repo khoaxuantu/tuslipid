@@ -942,7 +942,6 @@ hr {
 
 .menu-proj-wrapper {
   display: grid;
-  grid-template-columns: 1fr;
   column-gap: 2rem;
   row-gap: 2rem;
 }
@@ -1002,12 +1001,6 @@ hr {
 @media (min-width: 768px) {
   .menu-wrapper {
     width: 720px;
-  }
-}
-@media (min-width: 976px) {
-  .menu-proj-wrapper {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
   }
 }
 @media (min-width: 1200px) {
