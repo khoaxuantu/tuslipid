@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktuslipid=self.webpackChunktuslipid||[]).push([[771],{2771:(e,s,t)=>{e.exports=t.p+"static/media/markdown_starter.1692de4b73ee0391e3f7.md"}}]);
