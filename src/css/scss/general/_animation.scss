@@ -59,7 +59,7 @@
 }
 
 .transition-page {
-    @include animation(fadeInUp, .5s);
+    @include animation(fadeInUp, .3s);
 }
 
 .is-current {
@@ -68,10 +68,10 @@
 
 .transition-blog, .guestbook-txt {
     &>*{
-        @include animation(fadeInLeft, 1s);
+        @include animation(fadeInLeft, .3s);
     }
 }
 
 .fade-in-left {
-    @include animation(fadeInLeft, 1s);
+    @include animation(fadeInLeft, .3s);
 }

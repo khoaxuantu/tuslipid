@@ -643,7 +643,7 @@ hr {
 
 .transition-page {
   animation-name: fadeInUp;
-  animation-duration: 0.5s;
+  animation-duration: 0.3s;
 }
 
 .is-current {
@@ -653,12 +653,12 @@ hr {
 
 .transition-blog > *, .guestbook-txt > * {
   animation-name: fadeInLeft;
-  animation-duration: 1s;
+  animation-duration: 0.3s;
 }
 
 .fade-in-left {
   animation-name: fadeInLeft;
-  animation-duration: 1s;
+  animation-duration: 0.3s;
 }
 
 .navbar {

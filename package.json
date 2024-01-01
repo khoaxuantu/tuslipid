@@ -34,7 +34,7 @@
     "eject": "react-scripts eject",
     "postbuild": "react-snap",
     "style:main": "sass --watch src/css/scss/style.scss src/css/style.css",
-    "style:md": "sass --watch src/css/scss/markdown.scss src/css/scss/markdown.css"
+    "style:md": "sass --watch src/css/scss/markdown.scss src/css/markdown.css"
   },
   "eslintConfig": {
     "extends": [
