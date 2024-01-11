@@ -9,23 +9,27 @@ export function AboutProject() {
 
     return (
         <section className="mb-5">
-            <h3 className="header-txt">
-                What I have built
-            </h3>
-            <div className="menu-proj-wrapper">{
-                featuredProj.map(proj => {
-                    return (
-                        <Card key={proj.id} isFeatured={true} {...proj} />
-                    );
-                })
-            }</div>
-            <div className="body-txt pt-3 pe-2 pb-2">
-                Above are only my featured projects.
-                Let's navigate to my full list here {" "}
-                <span>
-                    ---{"> "}
-                    <Link to="/projects">All Projects</Link>
-                </span>
+            <div className="row">
+                <div className="col-4 pe-5">
+                    <h3 className="header-txt">
+                        What I <span>have built</span>
+                    </h3>
+                        <div className="body-txt pt-3 pe-2 pb-2">
+                        Here are only my featured projects.
+                        Let's navigate to my full list here {" "}
+                        <span>
+                            ---{"> "}
+                            <Link to="/projects"><span>All Projects</span></Link>
+                        </span>
+                    </div>
+                </div>
+                <div className="col-8 menu-proj-wrapper">{
+                    featuredProj.map(proj => {
+                        return (
+                            <Card key={proj.id} isFeatured={true} {...proj} />
+                        );
+                    })
+                }</div>
             </div>
         </section>
     );

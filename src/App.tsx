@@ -1,5 +1,5 @@
 import { Suspense, lazy } from "react";
-import { Route, Routes, useLocation, Navigate } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import MainLayout from "./components/layouts/main";
 import BlogLayout from "./components/layouts/blog";
 import NavbarContainLayout from "./components/layouts/navbarContain";
@@ -62,10 +62,9 @@ function App() {
                 </Suspense>
               }
             />
-            <Route path="404" element={<NotFound />} />
           </Route>
         </Route>
-        <Route path="*" element={<Navigate to="/404" replace={true} />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );

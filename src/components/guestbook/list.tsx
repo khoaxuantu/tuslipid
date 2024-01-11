@@ -42,7 +42,7 @@ function GuestbookList({maxGuests} : {maxGuests: number}) {
             const scrollHeight = document.documentElement.scrollHeight;
             const clientHeight = document.documentElement.clientHeight;
 
-            if (scrollTop + clientHeight >= scrollHeight && hasMore) {
+            if (scrollTop + clientHeight >= scrollHeight - 100 && hasMore) {
                 setStartId(startId => startId + messageNums);
             }
         }

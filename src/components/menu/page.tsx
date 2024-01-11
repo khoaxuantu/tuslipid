@@ -2,9 +2,13 @@ import MenuHeaderGrp from "./header";
 import Copyright from "../copyright";
 import { NavBtnGroup } from "../button";
 import addOrientationHandler from "../orientation";
+import { useEffect, useState } from "react";
 
 export default function MenuBuilder() {
-    let orientation = addOrientationHandler();
+    const [orientation, setOrientation] = useState("center");
+    useEffect(() => {
+        setOrientation(addOrientationHandler());
+    }, []);
 
     return (
         <>

@@ -305,6 +305,7 @@ img {
 .edu-image {
   width: 16.66%;
   min-width: 48px;
+  text-align: end;
 }
 
 .flex-image {
@@ -599,7 +600,7 @@ hr {
 }
 @keyframes fadeInUp {
   from {
-    transform: translate3d(0, 5%, 0);
+    transform: translate3d(0, 24px, 0);
     opacity: 0;
   }
   to {
@@ -609,7 +610,7 @@ hr {
 }
 @keyframes fadeInDown {
   from {
-    transform: translate3d(0, -5%, 0);
+    transform: translate3d(0, -24px, 0);
     opacity: 0;
   }
   to {
@@ -619,7 +620,7 @@ hr {
 }
 @keyframes fadeInLeft {
   from {
-    transform: translate3d(-5%, 0, 0);
+    transform: translate3d(-24px, 0, 0);
     opacity: 0;
   }
   to {
@@ -642,7 +643,7 @@ hr {
 
 .transition-page {
   animation-name: fadeInUp;
-  animation-duration: 0.5s;
+  animation-duration: 0.3s;
 }
 
 .is-current {
@@ -652,12 +653,12 @@ hr {
 
 .transition-blog > *, .guestbook-txt > * {
   animation-name: fadeInLeft;
-  animation-duration: 1s;
+  animation-duration: 0.3s;
 }
 
 .fade-in-left {
   animation-name: fadeInLeft;
-  animation-duration: 1s;
+  animation-duration: 0.3s;
 }
 
 .navbar {
@@ -942,7 +943,6 @@ hr {
 
 .menu-proj-wrapper {
   display: grid;
-  grid-template-columns: 1fr;
   column-gap: 2rem;
   row-gap: 2rem;
 }
@@ -1002,12 +1002,6 @@ hr {
 @media (min-width: 768px) {
   .menu-wrapper {
     width: 720px;
-  }
-}
-@media (min-width: 976px) {
-  .menu-proj-wrapper {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
   }
 }
 @media (min-width: 1200px) {
