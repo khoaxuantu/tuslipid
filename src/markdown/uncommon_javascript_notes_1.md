@@ -16,7 +16,6 @@ using JavaScript. It is based on [javascript.info's part 2](https://javascript.i
 to have a fundamental knowledge of JavaScript. If you are a newbie in JS, let's check out the
 [javascript.info's part 1](https://javascript.info/#tab-1) first before jumping into this section.
 
-<br><br>
 
 ---
 
@@ -32,18 +31,17 @@ to have a fundamental knowledge of JavaScript. If you are a newbie in JS, let's 
   + [Node properties: type, tag and contents](#node-properties-type-tag-and-contents)
   + [Attributes and properties](#attributes-and-properties)
   + [Modifying the document](#modifying-the-document)
-  + [Styles and classes](#styles-and-classes) 
-  + [Element sizes and scrolling](#element-sizes-and-scrolling) 
-  + [Window sizes and scrolling](#window-sizes-and-scrolling) 
-  + [Coordinates](#coordinates) 
+  + [Styles and classes](#styles-and-classes)
+  + [Element sizes and scrolling](#element-sizes-and-scrolling)
+  + [Window sizes and scrolling](#window-sizes-and-scrolling)
+  + [Coordinates](#coordinates)
 - [Introduction to Events](#introduction-to-events)
-  + [Introduction to browser events](#introduction-to-browser-events) 
-  + [Bubbling and capturing](#bubbling-and-capturing) 
+  + [Introduction to browser events](#introduction-to-browser-events)
+  + [Bubbling and capturing](#bubbling-and-capturing)
   + [Event delegation](#event-delegation)
 
 </details>
 
-<br><br>
 
 ---
 
@@ -228,7 +226,7 @@ corresponding DOM object. All operations on the DOM start with the `document` ob
 
 <br>
 
-![DOM nodes](../images/blogs/uncommon_javascript_notes_1/1.webp "DOM nodes")
+![DOM nodes](/images/blogs/uncommon_javascript_notes_1/1.webp "DOM nodes")
 
 <br>
 
@@ -292,7 +290,7 @@ So let's see more navigation links that only take *element nodes* into account:
 
 <br>
 
-![element nodes](../images/blogs/uncommon_javascript_notes_1/2.webp "element nodes")
+![element nodes](/images/blogs/uncommon_javascript_notes_1/2.webp "element nodes")
 
 <br>
 
@@ -362,7 +360,7 @@ and other DOM nodes inherit from it.
 
 <br>
 
-![DOM node classes](../images/blogs/uncommon_javascript_notes_1/3.webp "DOM node classes")
+![DOM node classes](/images/blogs/uncommon_javascript_notes_1/3.webp "DOM node classes")
 
 <br>
 
@@ -724,7 +722,7 @@ elem.remove()
 > All insertion methods automatically remove the node from the old place
 
 #### Cloning nodes: cloneNode
-The call `elem.cloneNode(true)` creates a "deep" clone of the element - with all attributes and 
+The call `elem.cloneNode(true)` creates a "deep" clone of the element - with all attributes and
 subelements. If we call `elem.cloneNode(false)`, then the clone is made without child elements.
 ```javascript
 let div2 = div.cloneNode(true); // clone the existing div
@@ -741,7 +739,7 @@ div.after(div2); // show the clone after the existing div
 <script>
   function getListContent() {
     let fragment = new DocumentFragment();
-    
+
     for (let i = 1; i <= 3; i++) {
       let li = document.createElement('li');
       li.append(i);
@@ -762,8 +760,8 @@ At the last line `(*)` we append `DocumentFragment`, but it "blends in", so the 
   <li>3</li>
 </ul>
 ```
-> `DocumentFragment` is rarely used explicitly. We mention it mainly because there are some concepts on 
-top of it, like [template](#template-element) element, that we'll cover much later. 
+> `DocumentFragment` is rarely used explicitly. We mention it mainly because there are some concepts on
+top of it, like [template](#template-element) element, that we'll cover much later.
 
 </details>
 
@@ -861,14 +859,14 @@ alert(computedStyle.color);
   }
 </style>
 ```
-![sample element](../images/blogs/uncommon_javascript_notes_1/4.webp "Sample element")
+![sample element](/images/blogs/uncommon_javascript_notes_1/4.webp "Sample element")
 
 > Mind the scrollbar. If the scrollbar is `16px` wide then the content width remains only `300 - 16 = 284px`.
 
 #### Geometry
 Here's the overall picture with geometry properties:
 
-![Geometry picture](../images/blogs/uncommon_javascript_notes_1/5.webp "Geometry picture") 
+![Geometry picture](/images/blogs/uncommon_javascript_notes_1/5.webp "Geometry picture")
 
 - `offsetWidth`: The outer width = inner CSS-width + paddings + borders
 - `offsetHeight`: The outer height = inner CSS-height + paddings + borders
@@ -879,11 +877,11 @@ Here's the overall picture with geometry properties:
 - `scrollWidth`: The full inner width including the scrolled out parts
 - `scrollHeight`: The full inner height including the scrolled out parts
 - `scrollTop`: *How much is scrolled up*
-- `scrollLeft`: *How much is scrolled left* 
+- `scrollLeft`: *How much is scrolled left*
 
 #### Don't take width/height from CSS
 We should use geometry properties instead of `getComputedStyle`:
-1. CSS `width/height` depend on another property: `box-sizing` that defines "what is" CSS width and 
+1. CSS `width/height` depend on another property: `box-sizing` that defines "what is" CSS width and
 height. A change in `box-sizing` for CSS purpose may break such JavaScript.
 2. CSS `width/height` maybe `auto`
     ```html
@@ -915,7 +913,7 @@ documentElement.clientWidth;
 > ```
 
 #### Width/height of the document
-Theoretically, as the root document element is `document.documentElement`, and it encloses all the content, 
+Theoretically, as the root document element is `document.documentElement`, and it encloses all the content,
 we could measure the document's full size as `document.documentElement.scrollWidth/scrollHeight`.
 
 But on that element, for the whole page, these properties do not work as intended. In Chrome/Safari/Opera, if
@@ -979,8 +977,8 @@ document top/left edge.
 ```javascript
 elem.getBoundingClientRect()
 ```
-Returns window coordinates for a minimal rectangle that encloses `elem` as an object of built-in 
-[DOMRect](https://www.w3.org/TR/geometry-1/#domrect) class. 
+Returns window coordinates for a minimal rectangle that encloses `elem` as an object of built-in
+[DOMRect](https://www.w3.org/TR/geometry-1/#domrect) class.
 
 Main `DOMRect` properties:
 - `x/y`: X/Y-coordinates of the rectangle origin relative to window.
@@ -989,7 +987,7 @@ Main `DOMRect` properties:
 Additionally, there are derived properties:
 - `top/bottom`: Y-coordinates for the top/bottom rectangle edge.
 - `left/right`: X-coordinates for the left/right rectangle edge.
-  
+
 Output
 ```ts
 x: 10
@@ -1010,7 +1008,7 @@ from them:
 - `bottom = y + height`
 
 > - Coordinates may be decimal fractions, e.g. `10.5`.
-> 
+>
 > - Coordinates may be negative. For instance, if the page is scrolled so that `elem` is now above the window.
 
 #### elementFromPoint(x,y)
@@ -1039,7 +1037,6 @@ function getCoords(elem) {
 
 </details>
 
-<br><br>
 
 ---
 
@@ -1069,7 +1066,7 @@ Here's a list of the most useful DOM events:
 **Document events:**
 - `DOMContentLoaded` when the HTML is loaded and processed, DOM is fully built
 
-**CSS events:** 
+**CSS events:**
 - `transitioned` when a CSS-animation finishes
 
 #### Event handlers
@@ -1104,7 +1101,7 @@ elem.onclick = sayThanks; // ok
 elem.onclick = sayThanks(); // nope
 ```
 If we add parentheses, then `sayThanks()` becomes a function call. So the last line actually takes the *result* of the function execution,
-that is `undefined` (as the function returns nothing), and assigns it to `onclick`. That's doesn't work because we need to assign the 
+that is `undefined` (as the function returns nothing), and assigns it to `onclick`. That's doesn't work because we need to assign the
 function.
 
 ...On the other hand, in the markup we do need the parentheses:
@@ -1140,7 +1137,7 @@ The handler function.
 `options`\
 An addition optional object with properties:
 - `once: boolean`: if `true`, then the listener is automatically removed after it triggers.
-- `capture: boolean`: the phase where to handle the event. 
+- `capture: boolean`: the phase where to handle the event.
 - `passive: boolean`: if `true`, then the handler will not call `preventDefault()`
 
 To remove the handler, use `removeEventListener`:
@@ -1191,7 +1188,7 @@ elem.addEventListener('click', obj);
 > When an event happens on an element, it first runs the handlers on it, then on its parent, then all the way up on other ancestors.
 ```html
 <!-- The event handlers will be triggered from p -> div -> form -->
-<form id="form" style="border: 1px solid black; cursor: pointer;" onClick="alert"> 
+<form id="form" style="border: 1px solid black; cursor: pointer;" onClick="alert">
   --> click on FORM
   <div id="div" style="border: 1px solid black; margin: 10px; cursor: pointer;">
     --> click on DIV
@@ -1210,7 +1207,7 @@ The differences from `this` (= `event.currentTarget`):
 - `this`: is the "current" element, the one that has a currently running handler on it.
 
 #### Stopping bubbling
-A bubbling event goes from the target element straight up. Normally it goes upwards till `<html>`, and then to `document` object, and some 
+A bubbling event goes from the target element straight up. Normally it goes upwards till `<html>`, and then to `document` object, and some
 events even reach `window`, calling all handlers on the path.
 
 But any handler may decide that the event has been fully processed and stop the bubbling.
@@ -1230,7 +1227,7 @@ The standard [DOM Events](https://www.w3.org/TR/DOM-Level-3-Events/) describes 3
 2. Target phase - the event reached the target element.
 3. Bubbling phase - the event bubbles up from the element.
 
-![Event propagation](../images/blogs/uncommon_javascript_notes_1/6.webp "Event propagation visualizer") 
+![Event propagation](/images/blogs/uncommon_javascript_notes_1/6.webp "Event propagation visualizer")
 
 To catch an event on the capturing phase, we need to set the handler `capture` option to `true`:
 ```js
@@ -1250,12 +1247,13 @@ There are 2 possible values of the `capture` option:
 ## Event delegation
 Capturing and bubbling allow us to implement one of the most powerful event handling patterns called *event delegation*.
 
-The idea is that if we have a lot of elements handled in a similar way, then instead of assigning a handler to each of them - we put a 
+The idea is that if we have a lot of elements handled in a similar way, then instead of assigning a handler to each of them - we put a
 single handler on their common ancestor.
 
-See the detailed example [here.](https://javascript.info/event-delegation) 
+See the detailed example [here.](https://javascript.info/event-delegation)
 
 
+> Updating...
 
-<br><br>
+
 
