@@ -6,7 +6,7 @@ export function BlogsPageHeaderGrp() {
         <div className='header-txt-blog'>
           <b>Tus's Blogs</b>
         </div>
-        <div className='body-txt mt-2'>
+        <div className='body-txt-blog mt-2'>
           Some notes, some ideas, some opinions
         </div>
         <hr />
@@ -20,6 +20,20 @@ export function SingleBlogPageHeaderGrp(props: {id: string}) {
         <div className='header-txt-blog'>
           <b>{blogInfoDict[props.id].title}</b>
         </div>
+        <div className='body-txt-blog mt-2'>
+          {formatDate(blogInfoDict[props.id].date)}
+        </div>
       </div>
     );
+}
+
+function formatDate(date: Date) {
+  const options: Intl.DateTimeFormatOptions = {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    weekday: "long",
+  }
+
+  return date.toLocaleDateString("en-UK", options);
 }
