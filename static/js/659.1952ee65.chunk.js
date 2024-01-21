@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktuslipid=self.webpackChunktuslipid||[]).push([[659],{3659:(e,a,s)=>{e.exports=s.p+"static/media/react_bun_boilerplate.b74a0e5a6e305ad66d20.md"}}]);
