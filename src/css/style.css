@@ -473,7 +473,7 @@ hr {
 
 .btn-contact-overlay {
   background: dimgray;
-  position: absolute;
+  position: fixed;
   width: 100dvw;
   height: 100dvh;
   top: 0;
@@ -938,7 +938,7 @@ hr {
   position: relative;
   width: 80%;
   line-height: initial;
-  color: lightgray;
+  color: #E2E8F0;
 }
 
 .menu-proj-wrapper {
@@ -1043,8 +1043,8 @@ span {
 }
 
 .background-overlay {
-  background: rgba(105, 105, 105, 0.9);
-  position: absolute;
+  background: rgba(30, 41, 59, 0.75);
+  position: fixed;
   width: 100dvw;
   height: 100dvh;
   top: 0;
@@ -1089,7 +1089,7 @@ span {
 .menu-copyright {
   position: relative;
   display: none;
-  color: lightgray;
+  color: #E2E8F0;
 }
 .menu-copyright a {
   color: bisque;

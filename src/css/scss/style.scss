@@ -42,7 +42,7 @@ span {
 }
 
 .background-overlay {
-    @include util.overlay(rgba($color: dimgray, $alpha: 0.9));
+    @include util.overlay(rgba($color: var.$overlay-color, $alpha: 0.75));
 }
 
 .header-grp {
@@ -88,7 +88,7 @@ span {
     @extend %copyright-txt;
     position: relative;
     display: none;
-    color: lightgray;
+    color: var.$text-menu;
 
     a {
         color: bisque;
