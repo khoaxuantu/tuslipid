@@ -1,4 +1,4 @@
-## Introduction
+# Introduction
 >
 > One thing that make JavaScript weird to learn is
 > how it interacts with the browser DOM: how to control the events, the forms,
@@ -16,10 +16,7 @@ using JavaScript. It is based on [javascript.info's part 2](https://javascript.i
 to have a fundamental knowledge of JavaScript. If you are a newbie in JS, let's check out the
 [javascript.info's part 1](https://javascript.info/#tab-1) first before jumping into this section.
 
-
----
-
-## Table of Contents
+# Table of Contents
 <details open>
 <summary>Details</summary>
 
@@ -42,15 +39,12 @@ to have a fundamental knowledge of JavaScript. If you are a newbie in JS, let's 
 
 </details>
 
-
----
-
-## Document
+# Document
 > Manipulate a web-page using JavaScript
 
 <br>
 
-### Browser environment, specs
+## Browser environment, specs
 <details open>
 <summary>Details</summary>
 
@@ -135,7 +129,7 @@ read the current URL and can redirect the browser to a new one.
 
 <br>
 
-### DOM tree
+## DOM tree
 <details open>
 <summary>Details</summary>
 
@@ -152,7 +146,7 @@ document.body.style.background = 'red';
 setTimeout(() => document.body.style.background = '', 3000);
 ```
 
-#### An example of the DOM
+### An example of the DOM
 ```html
 <!DOCTYPE HTML>
 <html>
@@ -177,7 +171,7 @@ The DOM represents HTML as a tree structure of tags. Here's how it looks:
   |--- <body>
   |      |--- text "Something about Tusss..."
 ```
-#### Autocorrection
+### Autocorrection
 If the browser encounters malformed HTML, it automatically corrects it when making the DOM.
 
 For instance, the top tag is always `<html>`. Even if it doesn't exist in the document, it will exists in
@@ -204,7 +198,7 @@ As an example, if the HTML file is the single word `"Hello"`, the browser will w
 >     |         |      |--- <td>
 >     |         |      |       |--- text "1"
 > ```
-#### Other node types
+### Other node types
 There are [12 node types](https://dom.spec.whatwg.org/#node). In practice we usually work 4 of them:
 - `document` - the "entry point" into DOM
 - element nodes - HTML tags, the tree building blocks
@@ -215,7 +209,7 @@ There are [12 node types](https://dom.spec.whatwg.org/#node). In practice we usu
 
 <br>
 
-### Walking the DOM
+## Walking the DOM
 
 <details open>
 <summary>Details</summary>
@@ -230,7 +224,7 @@ corresponding DOM object. All operations on the DOM start with the `document` ob
 
 <br>
 
-#### On top: documentElement and body
+### On top: documentElement and body
 ```html
 <html> = document.documentElement
 <body> = document.body
@@ -238,7 +232,7 @@ corresponding DOM object. All operations on the DOM start with the `document` ob
 ```
 > `document.body` can be `null`
 
-#### Children: childNodes, firstChild, lastChild
+### Children: childNodes, firstChild, lastChild
 There are 2 terms that we'll use from now on:
 - **Child nodes (or children)** - elements that are direct children. For instance, `<head>` and `<body>`
 are children of `<html>` element.
@@ -250,7 +244,7 @@ firstChild - gives fast access to the first children
 lastChild - gives fast access to the last children
 ```
 
-#### DOM collections
+### DOM collections
 As we can see, `childNodes` looks like an array. But actually it's not an array, but rather a *collection* - a special array - like iterable object.
 
 There are 2 important consequences:
@@ -269,7 +263,7 @@ There are 2 important consequences:
 > - DOM collections are live (current state of DOM).
 > - Don't use `for..in` to loop over collections.
 
-#### Siblings and the parent
+### Siblings and the parent
 *Siblings* are nodes that are children of the same parent. For instance, `<head>` and `<body>` are
 siblings:
 - `<body>` is said to be the "next" or "right" sibling of `<head>`
@@ -282,7 +276,7 @@ alert(document.head.nextSibling); // HTMLBodyElement
 alert(document.body.previousSibling); // HTMLHeadElement
 ```
 
-#### Element-only navigation
+### Element-only navigation
 Navigation properties listed above refer to all nodes. But for many tasks we don't want text or comment
 nodes. We want to manipulate element nodes that represents tags and form the structure of the page.
 
@@ -300,7 +294,7 @@ The links are similar to those given above, just with `Element` word inside:
 - `previousElementSibling`, `nextElementSibling` - neighbor elements.
 - `parentElement` - parent element.
 
-#### More links: tables
+### More links: tables
 The `<table>` element supports (in addition to the given above) these properties:
 - `table.rows` - the collection of `<tr>` elements of the table.
 - `table.caption/tHead/tFoot` - references to elements `<caption>`, `<thead>`, `<tfoot>`
@@ -324,7 +318,7 @@ DOM).
 
 <br>
 
-### Searching: getElement*, querySelector*
+## Searching: getElement*, querySelector*
 <details open>
 <summary>Details</summary>
 
@@ -345,11 +339,11 @@ rarely used.
 
 <br>
 
-### Node properties: type, tag and contents
+## Node properties: type, tag and contents
 <details open>
 <summary>Details</summary>
 
-#### DOM node classes
+### DOM node classes
 Different DOM nodes may have different properties. For instance, an element node corresponding to tag
 `<a>` has a link-related properties, and the one corresponding to `<input>` has input-related properties
 and so on.
@@ -370,7 +364,7 @@ and other DOM nodes inherit from it.
 > alert(document.body.constructor.name) // HTMLBodyElement
 > ```
 
-#### The "nodeType" property
+### The "nodeType" property
 The `nodeType` property provides one more, "old-fashioned" way to get the "type" of a DOM node.
 
 It has a numeric value:
@@ -382,7 +376,7 @@ It has a numeric value:
 In modern scripts, we can use `instanceof` and other class-based tests to see the node type, but sometimes
 `nodeType` may be simpler.
 
-#### Tag: nodeName and tagName
+### Tag: nodeName and tagName
 Given a DOM node, we can read its tag name from `nodeName` or `tagName` properties:
 ```js
 alert(document.body.nodeName); // BODY
@@ -394,11 +388,11 @@ Differences between `tagName` and `nodeName`:
   + For elements it means the same as `tagName`.
   + For other node types (text, comment, etc...) it has a string with the node type.
 
-#### innerHTML: the contents
+### innerHTML: the contents
 The [innerHTML](https://w3c.github.io/DOM-Parsing/#the-innerhtml-mixin) property allows to get the HTML
 inside the element as a string.
 
-#### Beware: "innerHTML +=" does a full overwrite
+### Beware: "innerHTML +=" does a full overwrite
 We can append HTML like this
 ```js
 elem.innerHTML += "<div>Hello<img src='smile.gif'/> !</div>";
@@ -416,7 +410,7 @@ elem.innerHTML = elem.innerHTML + "..."
 > As the content is "zeroed-out" and rewritten from the scratch, all images and other resources will
 be reloaded.
 
-#### outerHTML: full HTML of the element
+### outerHTML: full HTML of the element
 The `outerHTML` property contains the full HTML of the element. That's like `innerHTML` plus the element
 itself.
 
@@ -451,7 +445,7 @@ itself.
 > - Another piece of HTML `<p>A new element</p>` was inserted in its place.
 > - `div` still has its old value. The new HTML wasn't saved to any variable.
 
-#### nodeValue/data: text node content
+### nodeValue/data: text node content
 
 The `innerHTML` property is only valid for element nodes.
 
@@ -472,7 +466,7 @@ These two are almost the same for practical use, there are only minor specificat
 </body>
 ```
 
-#### textContent: pure text
+### textContent: pure text
 The `textContent` provides access to the *text* inside the element: only text, minus all `<tags>`
 ```html
 <div id="news">
@@ -487,7 +481,7 @@ The `textContent` provides access to the *text* inside the element: only text, m
 ```
 > Writing to `textContent` is much more useful, because it allows to write text the "safe way"
 
-#### The "hidden" property
+### The "hidden" property
 The "hidden" attribute and the DOM property specifies whether the element is visible or not
 ```html
 <div>Both divs below are hidden</div>
@@ -501,7 +495,7 @@ The "hidden" attribute and the DOM property specifies whether the element is vis
 </script>
 ```
 
-#### More properties
+### More properties
 - `value` - the value for `<input>`, `<select>` and `<textarea>` (`HTMLInputElement`, `HTMLSelectElement`...)
 - `href` - the "href" for `<a href="...">` (`HTMLAnchorElement`)
 - `id` - the value of "id" attribute, for all elements (`HTMLElment`)
@@ -511,11 +505,11 @@ The "hidden" attribute and the DOM property specifies whether the element is vis
 
 <br>
 
-### Attributes and properties
+## Attributes and properties
 <details open>
     <summary>Details</summary>
 
-#### DOM properties
+### DOM properties
 There are a lot of built-in DOM properties, but technically no one limits us, and if there aren't
 enough, we can add our own.
 
@@ -542,7 +536,7 @@ document.documentElement.sayHi(); // Hello, I'm HTML
 document.body.sayHi(); // Hello, I'm BODY
 ```
 
-#### HTML attributes
+### HTML attributes
 ```html
 <body id="test">
   <script>
@@ -562,7 +556,7 @@ All attributes are accessible by using the following mthods:
 > - The `attributes` collection is iterable and has all the attributes of the element (standard and
 > non-standard) as objects with `name` and `value` properties
 
-#### Property-attribute synchronization
+### Property-attribute synchronization
 When a standard attribute changes, the corresponding property is auto-updated, and (with some exception)
 vice versa.
 ```html
@@ -592,7 +586,7 @@ input.value = 'newValue';
 alert(input.getAttribute('value')); // text (not updated)
 ```
 
-#### DOM properties are typed
+### DOM properties are typed
 - DOM properties are not always strings.
 - For instace, the `input.checked` property (for checkboxes) is a boolean
 - The `style` attribute is a string, but the `style` property is an object
@@ -608,7 +602,7 @@ a `#hash`
     alert(a.href); // full URL in the form https://example.com/page#hello
   ```
 
-#### Non-standard attributes, dataset
+### Non-standard attributes, dataset
 Sometimes non-standard attributes are used to pass custom data from HTML to JavaScript, or to "mark"
 HTML-elements for JavaScript
 ```html
@@ -673,11 +667,11 @@ attributes.
 
 <br>
 
-### Modifying the document
+## Modifying the document
 <details open>
     <summary>Details</summary>
 
-#### Creating an element
+### Creating an element
 `document.createElement(tag)`
 ```javascript
 let div = document.createElement('div');
@@ -687,7 +681,7 @@ let div = document.createElement('div');
 let textNode = document.createTextNode('Lmao');
 ```
 
-#### Insertion method
+### Insertion method
 ```javascript
 document.body.append(div);
 ```
@@ -699,7 +693,7 @@ document.body.append(div);
 - `node.replaceWith(...nodes or strings)`: replaces `node` with the given
 nodes or strings.
 
-#### insertAdjacentHTML/Text/Element
+### insertAdjacentHTML/Text/Element
 `elem.insertAdjacentHTML(where, html)`
 
 The first parameter is a code word, specifying where to insert relative to
@@ -715,13 +709,13 @@ is inserted "as text" instead of HTML.
 - `elem.insertAdjacentElement(where, elem)`: the same syntax, but inserts an
 element.
 
-#### Node removal
+### Node removal
 ```js
 elem.remove()
 ```
 > All insertion methods automatically remove the node from the old place
 
-#### Cloning nodes: cloneNode
+### Cloning nodes: cloneNode
 The call `elem.cloneNode(true)` creates a "deep" clone of the element - with all attributes and
 subelements. If we call `elem.cloneNode(false)`, then the clone is made without child elements.
 ```javascript
@@ -731,7 +725,7 @@ div2.querySelector('b').innerHTML = 'Bye there!'; // change the clone
 div.after(div2); // show the clone after the existing div
 ```
 
-#### DocumentFragment
+### DocumentFragment
 `DocumentFragment` is a special DOM node that servers as a wrapper to pass around lists of nodes. We canappend other nodes to it, but when we insert it somewhere, then its content is inserted instead.
 ```html
 <ul id="ul"></ul>
@@ -767,7 +761,7 @@ top of it, like [template](#template-element) element, that we'll cover much lat
 
 <br>
 
-### Styles and classes
+## Styles and classes
 <details open>
     <summary>Details</summary>
 
@@ -784,7 +778,7 @@ elem.style.top = top;
 elem.style.left = left;
 ```
 
-#### className and classList
+### className and classList
 The `elem.className` corresponds to the `"class"` attribute
 ```html
 <body class= "main page">
@@ -801,7 +795,7 @@ elem.classList.toggle("class") // Adds the class if it doesn't exist, otherwise 
 elem.classList.contains("class") // checks for the given class, returns boolean
 ```
 
-#### Element style
+### Element style
 The property `elem.style` is an object that corresponds to what's written in the `"style"` attribute.
 ```
 width => elem.style.width
@@ -811,16 +805,16 @@ z-index           => elem.style.zIndex
 border-left-width => elem.style.borderLeftWidth
 ```
 
-#### Resetting the style property
+### Resetting the style property
 `elem.style.removeProperty('style property)`: Remove a property of style
 
-#### Mind the units
+### Mind the units
 ```javascript
 document.body.style.margin = 20; // doesn't work
 document.body.style.margin = '20px'; // Add the CSS unit and it works
 ```
 
-#### Computed styles: getComputedStyle
+### Computed styles: getComputedStyle
 > The `style` property operates only on the value of the `"style"` attribute, without CSS cascade.
 
 So we can't read anything that comes from CSS classes using `elem.style`
@@ -840,11 +834,11 @@ alert(computedStyle.color);
 
 <br>
 
-### Element sizes and scrolling
+## Element sizes and scrolling
 <details open>
     <summary>Details</summary>
 
-#### Sample element
+### Sample element
 ```html
 <div id="example">
   ...Text...
@@ -863,7 +857,7 @@ alert(computedStyle.color);
 
 > Mind the scrollbar. If the scrollbar is `16px` wide then the content width remains only `300 - 16 = 284px`.
 
-#### Geometry
+### Geometry
 Here's the overall picture with geometry properties:
 
 ![Geometry picture](/images/blogs/uncommon_javascript_notes_1/5.webp "Geometry picture")
@@ -879,7 +873,7 @@ Here's the overall picture with geometry properties:
 - `scrollTop`: *How much is scrolled up*
 - `scrollLeft`: *How much is scrolled left*
 
-#### Don't take width/height from CSS
+### Don't take width/height from CSS
 We should use geometry properties instead of `getComputedStyle`:
 1. CSS `width/height` depend on another property: `box-sizing` that defines "what is" CSS width and
 height. A change in `box-sizing` for CSS purpose may break such JavaScript.
@@ -897,11 +891,11 @@ height. A change in `box-sizing` for CSS purpose may break such JavaScript.
 
 <br>
 
-### Window sizes and scrolling
+## Window sizes and scrolling
 <details open>
     <summary>Details</summary>
 
-#### Width/height of the window
+### Width/height of the window
 ```javascript
 documentElement.clientHeight;
 documentElement.clientWidth;
@@ -912,7 +906,7 @@ documentElement.clientWidth;
 > alert(document.documentElement.clientWidth); // window width minus the scrollbar
 > ```
 
-#### Width/height of the document
+### Width/height of the document
 Theoretically, as the root document element is `document.documentElement`, and it encloses all the content,
 we could measure the document's full size as `document.documentElement.scrollWidth/scrollHeight`.
 
@@ -929,7 +923,7 @@ let scrollHeight = Math.max(
 );
 ```
 
-#### Get the current scroll
+### Get the current scroll
 DOM elements have their current scroll state in their `scrollLeft/scrollTop` properties.
 
 For document scroll: `document.documentElement.scrollLeft/scrollTop`
@@ -940,7 +934,7 @@ Speical properties: `window.pageXOffset/pageYOffset`
 > - `window.pageXOffset` is an alias of `window.scrollX`
 > - `window.pageYOffset` is an alias of `window.scrollY`
 
-#### Scrolling: scrollTo, scrollBy, scrollIntoView
+### Scrolling: scrollTo, scrollBy, scrollIntoView
 - `window.scrollBy(x,y)` - scrolls the page *relative to its current position*
 - `widnow.scrollTo(pageX, pageY)` - scrolls the page to *absolute coordinates*, so that the top-left corner
 of the visible part has coordinates `(pageX, pageY)` ralative to the document's top-left corner. It's like setting
@@ -953,7 +947,7 @@ upper edge of the element will be aligned with the window top.
 - If `top=false`, then the page scrolls to make `elem` appear at the bottom. The bottom edge of the element
 will be aligned with the window bottom.
 
-#### Forbid the scrolling
+### Forbid the scrolling
 ```javascript
 document.body.style.overflow = "hidden"
 ```
@@ -962,7 +956,7 @@ document.body.style.overflow = "hidden"
 
 <br>
 
-### Coordinates
+## Coordinates
 <details open>
     <summary>Details</summary>
 
@@ -973,7 +967,7 @@ Most JavaScript methods deal with one of 2 coordinate systems:
 document top/left edge.
     - We'll denote them `pageX/pageY`.
 
-#### Element coordinates: getBoundingClientRect
+### Element coordinates: getBoundingClientRect
 ```javascript
 elem.getBoundingClientRect()
 ```
@@ -1011,13 +1005,13 @@ from them:
 >
 > - Coordinates may be negative. For instance, if the page is scrolled so that `elem` is now above the window.
 
-#### elementFromPoint(x,y)
+### elementFromPoint(x,y)
 ```javascript
 let elem = document.elementFromPoint(x, y);
 ```
 Returns the most nested element at window coordinates `(x,y)`.
 
-#### Document coordinates
+### Document coordinates
 The 2 coordinates systems are connected by the formula:
 - `pageY` = `clientY` + height of the scrolled-out vertical part of the document.
 - `pageX` = `clientX` + width of the scrolled-out horizontal part of the document.
@@ -1037,13 +1031,10 @@ function getCoords(elem) {
 
 </details>
 
-
----
-
-## Introduction to Events
+# Introduction to Events
 > An introduction to browser events, event properties and handling patterns.
 
-### Introduction to browser events
+## Introduction to browser events
 <details open>
     <summary>Details</summary>
 
@@ -1069,16 +1060,16 @@ Here's a list of the most useful DOM events:
 **CSS events:**
 - `transitioned` when a CSS-animation finishes
 
-#### Event handlers
+### Event handlers
 To react on events we can assign a *handler* - a function that runs in case of an event.
 
-##### HTML-attribute
+#### HTML-attribute
 A handler can be set in HTML with an attribute named `on<event>`.
 ```html
 <input value="Slap me" onclick="alert('Slapped!')" type="button">
 ```
 
-##### DOM property
+#### DOM property
 We can assign a handler using a DOM property `on<event>`.
 ```html
 <input id="elem" type="button" value="Slap me">
@@ -1090,7 +1081,7 @@ We can assign a handler using a DOM property `on<event>`.
 </script>
 ```
 
-#### Possible mistakes
+### Possible mistakes
 We can set an existing function as a handler. But be careful: the function should be assigned without parentheses
 ```javascript
 function sayThanks() {
@@ -1117,7 +1108,7 @@ When the browser reads the attribute, it creates a handler function with body fr
 > document.body.setAttribute('onclick', function() { alert(1) });
 > ```
 
-#### addEventListener
+### addEventListener
 The fundamental problem of the aforementioned ways to assign handlers is that we *can't assign multiple handlers to one event.*
 
 Developers of web standards understood that long ago and suggested an alternative way of managing handlers using the special methods
@@ -1145,7 +1136,7 @@ To remove the handler, use `removeEventListener`:
 element.removeEventListener(event, handler)
 ```
 
-#### Event object
+### Event object
 To properly handle an event we'd want to know more about what's happened. Not just a "click" or a "keydown", but whate were the pointer
 coordinates? Which key was pressed? And so on.
 
@@ -1159,7 +1150,7 @@ elem.onclick = function(event) {
 }
 ```
 
-#### Object handlers: handleEvent
+### Object handlers: handleEvent
 We can assign not just a function, but an object as an event handler using `addEventListener`. When an event occurs, its 'handleEvent'
 method is called.
 ```javascript
@@ -1174,7 +1165,7 @@ elem.addEventListener('click', obj);
 
 </details>
 
-### Bubbling and capturing
+## Bubbling and capturing
 <details open>
     <summary>Details</summary>
 
@@ -1184,7 +1175,7 @@ elem.addEventListener('click', obj);
 </div>
 ```
 
-#### Bubbling
+### Bubbling
 > When an event happens on an element, it first runs the handlers on it, then on its parent, then all the way up on other ancestors.
 ```html
 <!-- The event handlers will be triggered from p -> div -> form -->
@@ -1197,7 +1188,7 @@ elem.addEventListener('click', obj);
 </form>
 ```
 
-#### event.target
+### event.target
 A handler on a parent element can always get the details about where it actually happened.
 
 > The most deeply nested element that caused the event is called a *target* element, accessible as `event.target`.
@@ -1206,7 +1197,7 @@ The differences from `this` (= `event.currentTarget`):
 - `event.target`: is the "target" element that initiated the event, it doesn't change through the bubbling process.
 - `this`: is the "current" element, the one that has a currently running handler on it.
 
-#### Stopping bubbling
+### Stopping bubbling
 A bubbling event goes from the target element straight up. Normally it goes upwards till `<html>`, and then to `document` object, and some
 events even reach `window`, calling all handlers on the path.
 
@@ -1219,7 +1210,7 @@ The method for it is `event.stopPropagation()`.
 </body>
 ```
 
-#### Capturing
+### Capturing
 There's another phase of event processing called "capturing". It is rarely used in real code, but sometimes can be useful.
 
 The standard [DOM Events](https://www.w3.org/TR/DOM-Level-3-Events/) describes 3 phases of event propagation:

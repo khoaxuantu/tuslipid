@@ -472,7 +472,7 @@ hr {
 }
 
 .btn-contact-overlay {
-  background: dimgray;
+  background: rgba(226, 232, 240, 0.7);
   position: fixed;
   width: 100dvw;
   height: 100dvh;
