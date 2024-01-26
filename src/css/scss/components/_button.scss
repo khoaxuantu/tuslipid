@@ -61,7 +61,7 @@
 }
 
 .btn-contact-overlay {
-    @include util.overlay(rgba($color: var.$text-menu, $alpha: 0.7));
+    @include util.overlay(rgba($color: var.$overlay-color, $alpha: 0.7));
 }
 
 .btn-skill-grp {

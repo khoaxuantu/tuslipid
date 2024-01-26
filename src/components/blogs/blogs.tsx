@@ -69,7 +69,7 @@ export function BlogsList(props: {blogInfoList: { dictKey: string; date: string;
 export function SingleBlog(props: {id: string}) {
     const blogInfo = blogInfoDict[props.id];
     const [text, setText] = useState('');
-    const mdWrapper = document.getElementsByClassName("single-blog-wrapper")[0];
+    const [mdLoaded, setMdLoaded] = useState(false);
 
     useEffect(() => {
         const controller = new AbortController();
@@ -79,7 +79,10 @@ export function SingleBlog(props: {id: string}) {
             .then(res => {
                 fetch(res.default, {signal})
                 .then(res => res.text())
-                .then(txt => setText(txt))
+                .then(txt => {
+                    setText(txt);
+                    setMdLoaded(true);
+                })
                 .catch(err => console.log(err));
             })
             .catch(err => console.log(err));
@@ -102,7 +105,7 @@ export function SingleBlog(props: {id: string}) {
             blogWrapper.style.height = "auto";
             scrollToAnchor();
         }
-    }, [mdWrapper]);
+    }, [mdLoaded]);
 
     return (
         <>
