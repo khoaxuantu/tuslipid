@@ -6,7 +6,10 @@
   margin: revert;
   padding: revert;
   list-style-type: revert;
-  line-height: 1.5rem;
+  line-height: 1.625rem;
+}
+.single-blog-wrapper h1 {
+  padding-top: 3rem;
 }
 .single-blog-wrapper code, .single-blog-wrapper pre {
   border-radius: 5px;
@@ -38,6 +41,7 @@
   font-style: italic;
   padding: 1.33em;
   text-align: left;
+  font-weight: bold;
 }
 .single-blog-wrapper table {
   padding: 1rem 0;

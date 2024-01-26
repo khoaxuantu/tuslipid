@@ -131,12 +131,12 @@ Reference-style:
 Here's my logo (hover to see the title text):
 
 Inline-style: 
-![alt text](../logo/favicon-32x32.png "Tuslipid 1")
+![alt text](/logo/favicon-32x32.png "Tuslipid 1")
 
 Reference-style: 
 ![alt text][logo]
 
-[logo]: ../logo/favicon-32x32.png "Tuslipid 2"
+[logo]: /logo/favicon-32x32.png "Tuslipid 2"
 
 <br>
 

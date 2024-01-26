@@ -18,7 +18,7 @@ function Copyright(props: { copyright_class?: string }) {
             <a href="https://react.dev/" target="_blank" rel="noreferrer">React</a>, {" "}
             <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer">TypeScript</a> and {" "}
             <a href="https://sass-lang.com/" target="_blank" rel="noreferrer">Sass</a>.<br></br>
-            Copyright © {year} All Rights Reserved.
+            Copyright © 2023-{year} All Rights Reserved.
         </div>
     );
 }

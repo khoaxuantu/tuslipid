@@ -48,7 +48,6 @@ have very fundamental topics, instead, it contains concepts that I can easily mi
 for looking up JavaScript basics, you can refer to [javascript.info tutorials](https://javascript.info/)
 directly or [MDN (Mozilla) JavaScript manual](https://developer.mozilla.org/en-US/docs/Web/JavaScript).
 
-<br><br>
 
 ---
 
@@ -109,7 +108,6 @@ directly or [MDN (Mozilla) JavaScript manual](https://developer.mozilla.org/en-U
     + [Dynamic imports](#dynamic-imports)
 
 </details><br>
-<br><br>
 
 ---
 
@@ -323,7 +321,6 @@ const func = () => {}
 ```
 
 </details><br>
-<br><br>
 
 ## Code quality
 ### Polyfills and transpilers
@@ -334,7 +331,6 @@ The scripts that update/add new functions.
 **Transpilers**\
 Translate code to a different version.
 
-<br><br>
 
 ## Objects: the basics
 ### Objects
@@ -356,7 +352,6 @@ Translate code to a different version.
     + `Symbol.keyFor(sym)`
 
 </details><br>
-<br><br>
 
 ## More about data types
 ### Iterables
@@ -564,7 +559,6 @@ JSON.parse(str, function(key, value) {
 ```
 
 </details><br>
-<br><br>
 
 
 ## Advanced working with functions
@@ -974,7 +968,6 @@ user.sayNow("Hello");
 ```
 
 </details><br>
-<br><br>
 
 
 ## Object properties configuration
@@ -1010,7 +1003,6 @@ Object.defineProperties(obj, {
 ```
 
 </details><br>
-<br><br>
 
 
 ## Prototypes, inheritance
@@ -1120,7 +1112,6 @@ obj.join = Array.prototype.join;
 console.log(obj.join(',')); // Hello,World!
 ```
 </details><br>
-<br><br>
 
 
 ## Classes
@@ -1153,7 +1144,6 @@ class MyClass {
 ```
 
 </details><br>
-<br><br>
 
 
 ## Error handling
@@ -1296,7 +1286,6 @@ try {
 ```
 
 </details><br>
-<br><br>
 
 
 ## Promises, async/await
@@ -1907,7 +1896,6 @@ f().catch(alert); // TypeError: failed to fetch
 ```
 
 </details><br>
-<br><br>
 
 
 ## Generators, advanced iteration
@@ -2223,7 +2211,6 @@ let range = {
 ```
 
 </details><br>
-<br><br>
 
 
 ## Modules
@@ -2312,18 +2299,15 @@ let module = await import(modulePath);
 ```
 
 </details><br>
-<br><br>
 
 ---
 ## References
 - [Javascript.info](https://javascript.info/) - Part 1: The JavaScript language
 - [MDN Web Docs - Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - JavaScript
 
-<br><br>
 
 ---
 ## Upcoming
 *Uncommon JavaScript Notes - Browser: Document, Events, Interfaces* - 
 based on javascript.info's [part 2](https://javascript.info/#tab-2).
 
-<br><br>

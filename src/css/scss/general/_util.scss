@@ -60,7 +60,7 @@ $directions: (
 
 @mixin overlay($color) {
     background: $color;
-    position: absolute;
+    position: fixed;
     width: 100dvw;
     height: 100dvh;
     top: 0;

@@ -21,7 +21,7 @@ function BlogLayout() {
         <div className="container page-wrapper">
             <CustomHead metadata={metadata} />
             <Outlet />
-            <Copyright copyright_class="page-copyright pb-3" />
+            <Copyright copyright_class="page-copyright mt-5 pt-5 pb-3" />
         </div>
     );
 }
