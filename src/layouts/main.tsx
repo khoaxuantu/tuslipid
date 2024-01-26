@@ -1,6 +1,6 @@
-import CustomHead from "../seo";
+import CustomHead from "../components/seo";
 import { Outlet } from "react-router-dom";
-import { Metadata } from "../seo/Metadata";
+import { Metadata } from "../components/seo/Metadata";
 
 const defaultTitle = "Tuslipid";
 const defaultDescription = "Xuan Khoa Tu Nguyen's personal website";

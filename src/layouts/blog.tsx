@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
-import Copyright from "../copyright";
-import { Metadata } from "../seo/Metadata";
-import CustomHead from "../seo";
+import Copyright from "../components/copyright";
+import { Metadata } from "../components/seo/Metadata";
+import CustomHead from "../components/seo";
 
 const blogThumb = process.env.PUBLIC_URL + '/seo/blogs-tuslipid.webp';
 const metadata: Metadata = {
