@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { BsGithub } from "react-icons/bs";
-import { FiExternalLink } from "react-icons/fi";
 import { IBlogCardProps, IProjCardProps } from "../type/card";
+import GithubIcon from "./icons/GithubIcon";
+import ExternalLinkIcon from "./icons/ExternalLink";
 
 function ProjectCard(props: IProjCardProps) {
   return (
@@ -102,7 +102,7 @@ function ProjHref(props: IProjCardProps) {
           rel="noreferrer"
           aria-label={`project github href - ${props.title}`}
         >
-          <BsGithub size={24} color="#000" />
+          <GithubIcon width={24} height={24} color="#000" />
         </a>
       </li>
     );
@@ -116,7 +116,7 @@ function ProjHref(props: IProjCardProps) {
           rel="noreferrer"
           aria-label={`project demo href - ${props.title}`}
         >
-          <FiExternalLink size={24} color="#000" />
+          <ExternalLinkIcon width={24} height={24} color="#000" />
         </a>
       </li>
     );

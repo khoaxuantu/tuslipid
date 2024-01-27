@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { IconType } from "react-icons/lib";
+import { SVGProps } from "react";
 
 interface IBaseButtonProps {
   id?: string;
@@ -12,7 +12,7 @@ export interface DefaultButtonProps extends IBaseButtonProps {
 }
 
 export interface IconButtonProps extends IBaseButtonProps {
-  icon: IconType | string;
+  icon: ((props: SVGProps<SVGSVGElement>) => JSX.Element) | string;
   name?: string;
   onClick?: any;
 }
@@ -45,7 +45,8 @@ export function IconButton(props: IconButtonProps) {
     Icon = (
       <props.icon
         className="icon"
-        size={"1.5rem"}
+        width="1.5rem"
+        height="1.5rem"
         color="#000"
         aria-label={props.id}
       />
@@ -71,7 +72,7 @@ export function LoginButton(props: IconButtonProps) {
       className={`btn btn-oauth ${props.classname} ps-3 pe-3 pt-1 pb-1`}
       onClick={props.onClick}
     >
-      <props.icon size={20} color="white" className="me-3" />
+      <props.icon width={20} height={20} color="white" className="me-3" />
       <span className="oauth-txt">{"Sign in with " + props.name}</span>
     </button>
   );

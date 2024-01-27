@@ -1,7 +1,7 @@
 'use client';
 
+import GithubIcon from "@/lib/factory/icons/GithubIcon";
 import { useEffect, useState } from "react";
-import { BsGithub } from "react-icons/bs";
 
 function Copyright(props: { copyright_class?: string }) {
     const [year, setYear] = useState<number>();
@@ -13,7 +13,7 @@ function Copyright(props: { copyright_class?: string }) {
         <div className={`${props.copyright_class}`}>
             <div>
                 <a href="https://github.com/khoaxuantu/tuslipid" target="_blank" rel="noreferrer" aria-label="web source code">
-                    <BsGithub opacity={0.8} color="black" />
+                    <GithubIcon opacity={0.8} color="black" width="1em" height="1em" />
                 </a>
             </div>
             Built and designed by Xuan Khoa Tu Nguyen with {" "}

@@ -1,15 +1,13 @@
 import { IconButtonProps, DefaultButtonProps } from "./factory/buttonBase";
-import {
-  CodepenIcon,
-  DevToIcon,
-  DiscordIcon,
-  FbIcon,
-  GithubIcon,
-  GoogleIcon,
-  LinkedinIcon,
-  MailIcon,
-  RedditIcon,
-} from "./factory/importIcons";
+import CodepenIcon from "./factory/icons/CodepenIcon";
+import DevToIcon from "./factory/icons/DevToIcon";
+import DiscordIcon from "./factory/icons/DiscordIcon";
+import FbIcon from "./factory/icons/FbIcon";
+import GithubIcon from "./factory/icons/GithubIcon";
+import GoogleIcon from "./factory/icons/GoogleIcon";
+import LinkedinIcon from "./factory/icons/LinkedinIcon";
+import MailIcon from "./factory/icons/MailIcon";
+import RedditIcon from "./factory/icons/RedditIcon";
 import { ITabProps } from "./factory/tabBase";
 import { IBlogCardProps } from "./type/card";
 
