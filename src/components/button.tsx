@@ -25,7 +25,12 @@ export function SocialMediaBtnGroup() {
             );
           })}
         </div>
-        <Link href="/" className="btn btn-rect mt-5" id="go-back">
+        <Link
+          href="/"
+          className="btn btn-rect mt-5"
+          id="go-back"
+          prefetch={true}
+        >
           Home
         </Link>
       </div>
