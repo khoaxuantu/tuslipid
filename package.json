@@ -5,17 +5,13 @@
   "homepage": "https://xuankhoatu.com/",
   "dependencies": {
     "@react-oauth/google": "^0.11.0",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
+    "next": "^14.1.0",
     "react": "^18.2.0",
     "react-device-detect": "^2.2.3",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.8.0",
     "react-markdown": "^8.0.7",
-    "react-router-dom": "^6.10.0",
-    "react-scripts": "5.0.1",
     "rehype-highlight": "^6.0.0",
     "rehype-katex": "^6.0.3",
     "rehype-raw": "^6.1.1",
@@ -26,45 +22,16 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "postbuild": "react-snap",
-    "style:main": "sass --watch src/css/scss/style.scss src/css/style.css",
-    "style:md": "sass --watch src/css/scss/markdown.scss src/css/markdown.css"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "start": "next start",
+    "build": "next build",
+    "dev": "next dev",
+    "lint": "next lint",
+    "style:main": "sass --watch src/css/scss/style.scss ../public/css/style.css",
+    "style:md": "sass --watch src/css/scss/markdown.scss ../public/markdown.css"
   },
   "devDependencies": {
-    "@types/jest": "^27.5.2",
     "@types/node": "^16.18.22",
     "@types/react": "^18.0.31",
-    "@types/react-dom": "^18.0.11",
-    "@types/react-helmet": "^6.1.9",
-    "@types/webpack-env": "^1.18.0",
-    "gh-pages": "^5.0.0",
-    "react-snap": "^1.23.0"
-  },
-  "reactSnap": {
-    "puppeteerArgs": [ "--no-sandbox", "--disable-setuid-sandbox" ]
+    "@types/react-dom": "^18.0.11"
   }
 }

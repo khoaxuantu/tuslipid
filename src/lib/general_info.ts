@@ -4,9 +4,8 @@ import { BsLinkedin, BsGithub, BsDiscord, BsReddit } from 'react-icons/bs';
 import { ImFacebook2 } from "react-icons/im";
 import { FaCodepen, FaDev } from "react-icons/fa";
 import { ITabProps } from "./factory/tabBase";
-import { IProjCardProps, IBlogCardProps } from "./factory/cardBase";
-import svgs from "./factory/iconBase";
-import { imgs } from "./factory/cardBase";
+import { IProjCardProps, IBlogCardProps } from "./type/card";
+import { imgs, svgs } from "./factory/importMedia";
 import { FcGoogle } from "react-icons/fc";
 
 

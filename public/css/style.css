@@ -1021,7 +1021,7 @@ hr {
 }
 
 body {
-  background-image: url("../../public/background.webp");
+  background-image: url("/background.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
