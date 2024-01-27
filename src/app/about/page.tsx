@@ -10,7 +10,7 @@ import { Metadata } from "next";
 const aboutDescription = `Here comes my profile - from a mechanical engineering student to \
 a computer science student then a full-stack developer`;
 const aboutImage = "/seo/about-tuslipid.jpg";
-const aboutURL = process.env.HOST_URL + "/about/";
+const aboutURL = process.env.HOST_URL + "/about";
 
 export const metadata: Metadata = {
   title: "About me",
