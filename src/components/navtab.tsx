@@ -1,3 +1,5 @@
+'use client'
+
 import { useState } from "react";
 import { TabSelector, TabContent } from "../lib/factory/tabBase";
 import { worksInfoList } from "../lib/general_info";

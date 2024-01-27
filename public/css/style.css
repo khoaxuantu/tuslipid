@@ -280,7 +280,6 @@ img {
   margin-right: auto;
   border-radius: 50%;
   cursor: pointer;
-  display: none;
   transition: src 500ms;
 }
 

@@ -26,8 +26,8 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
-    "style:main": "sass --watch src/css/scss/style.scss ../public/css/style.css",
-    "style:md": "sass --watch src/css/scss/markdown.scss ../public/markdown.css"
+    "style:main": "sass --watch src/css/scss/style.scss public/css/style.css",
+    "style:md": "sass --watch src/css/scss/markdown.scss public/markdown.css"
   },
   "devDependencies": {
     "@types/node": "^16.18.22",

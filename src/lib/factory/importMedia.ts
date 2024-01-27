@@ -1,21 +1,21 @@
-'use server';
+"use server";
 
 import fs from "fs";
 
 export type mediaMap = Record<string, string>;
 
 /**
- * @param mediaDir A media directory PUBLIC_URL + "/image/directory"
+ * @param mediaSubPath A media directory subpath "/images/directory"
  *
  * @method get() Return an object of media path
  *
- * @return {mediaMap} object {media's name: file path}
+ * @return {mediaMap} object {media's name: "media/sub/path/file"}
  */
 class ImportMedia {
-  private mediaDir: string;
+  private mediaSubPath: string;
 
-  public constructor(mediaDir: string) {
-    this.mediaDir = mediaDir;
+  public constructor(mediaSubPath: string) {
+    this.mediaSubPath = mediaSubPath;
   }
 
   public get() {
@@ -24,22 +24,30 @@ class ImportMedia {
         file.lastIndexOf("/") + 1,
         file.lastIndexOf(".")
       );
-      media[key] = file;
+      media[key] = this.mediaSubPath + file;
       return media;
     }, {});
     return tmp;
   }
 
   private getFilePaths() {
-    return fs.readdirSync(this.mediaDir);
+    return fs.readdirSync(process.env.PUBLIC_PATH + this.mediaSubPath);
   }
 }
 
-const reqImgs = process.env.PUBLIC_URL + "/images/projects";
-export const imgs = new ImportMedia(reqImgs).get();
-console.log("🚀 ~ imgs:", imgs)
+const reqImgs = "/images/projects/";
+export const getImgs = async () => {
+  return new ImportMedia(reqImgs).get();
+};
 
-const reqSvgs = process.env.PUBLIC_URL + "/images/icons";
-export const svgs = new ImportMedia(reqSvgs).get();
+const reqSvgs = "/images/icons/";
+export const getSvgs = async () => {
+  return new ImportMedia(reqSvgs).get();
+};
+
+const reqEduImgs = "/images/edu/";
+export const getEduImgs = async () => {
+  return new ImportMedia(reqEduImgs).get();
+};
 
 export default ImportMedia;

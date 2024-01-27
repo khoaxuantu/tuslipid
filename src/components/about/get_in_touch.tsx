@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 export default function GetInTouch() {
   return (
@@ -12,7 +12,7 @@ export default function GetInTouch() {
           Reddit, DEV Community, or CodePen.
         </p>
         <p className="pt-2">
-          <Link to="/contact">
+          <Link href="/contact">
             ~ Feel free to connect with me ~
           </Link>
         </p>

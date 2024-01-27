@@ -1,7 +1,6 @@
-import ImportMedia from "./importMedia";
+import Link from "next/link";
 import { BsGithub } from "react-icons/bs";
 import { FiExternalLink } from "react-icons/fi";
-import Link from "next/link";
 import { IBlogCardProps, IProjCardProps } from "../type/card";
 
 function ProjectCard(props: IProjCardProps) {

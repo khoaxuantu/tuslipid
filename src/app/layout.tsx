@@ -3,11 +3,14 @@ import React from "react";
 
 const defaultTitle = "Tuslipid";
 const defaultDescription = "Xuan Khoa Tu Nguyen's personal website";
-const defaultSEOImage = process.env.PUBLIC_URL + '/seo/menu-preview.jpg';
+const defaultSEOImage = '/seo/menu-preview.jpg';
 const defaultURL = "https://xuankhoatu.com/";
 
 export const metadata: Metadata = {
-  title: defaultTitle,
+  title: {
+    template: defaultTitle + " - %s",
+    default: defaultTitle
+  },
   description: defaultDescription,
   authors: {
     name: "Xuan Khoa Tu Nguyen"

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import * as Btn from "../lib/factory/buttonBase";
 import * as Info from "../lib/general_info";
+import { getSkillInfo } from "@/lib/general_info_server";
 
 export function SocialMediaBtnGroup() {
   return (
@@ -49,8 +50,9 @@ export function NavBtnGroup() {
   );
 }
 
-export function SkillBtnGroup() {
-  Info.skillInfoList.sort(compareSkill);
+export async function SkillBtnGroup() {
+  const skillInfoList = await getSkillInfo();
+  skillInfoList.sort(compareSkill);
 
   function compareSkill(
     a: Btn.IconButtonProps,
@@ -63,7 +65,7 @@ export function SkillBtnGroup() {
 
   return (
     <div className="btn-skill-grp mt-2 col-8">
-      {Info.skillInfoList.map((btnProp) => {
+      {skillInfoList.map((btnProp) => {
         return (
           <Btn.IconButton
             id={btnProp.name}
