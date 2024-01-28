@@ -32,6 +32,9 @@
       ],
       "@md/*": [
         "src/markdown/*"
+      ],
+      "@components/*": [
+        "src/components/*"
       ]
     }
   },

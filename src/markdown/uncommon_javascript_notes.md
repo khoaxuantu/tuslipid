@@ -15,8 +15,8 @@ JavaScript and libraries/frameworks such as React, ExpressJS, etc..., I still ha
 prototypes, asynchronous, error handling, and so forth.
 
 Things even got worse, I got an invitation to a whiteboard technical interview for a full-stack developer role, in which they
-asked me about JavaScript. Initially, I believe naively my fundamental ideas can handle their questions - "Well! 
-Just some JS questions like tutorials". However, they gave me a question about asynchronous which is 
+asked me about JavaScript. Initially, I believe naively my fundamental ideas can handle their questions - "Well!
+Just some JS questions like tutorials". However, they gave me a question about asynchronous which is
 one of my most vulnerable parts. They asked me about a promise chain meanwhile I just had been familiar with a
 single promise. As a result, I solved it incompletely and failed the interview. 🥲
 ```js
@@ -43,7 +43,7 @@ function A() {
 }
 ```
 After the interview, I realized my huge gap in knowledge about JavaScript, so I started reviewing
-it again. Below are my keynotes based on [javascript.info](https://javascript.info/). It does not 
+it again. Below are my keynotes based on [javascript.info](https://javascript.info/). It does not
 have very fundamental topics, instead, it contains concepts that I can easily mismatch when learning. So
 for looking up JavaScript basics, you can refer to [javascript.info tutorials](https://javascript.info/)
 directly or [MDN (Mozilla) JavaScript manual](https://developer.mozilla.org/en-US/docs/Web/JavaScript).
@@ -107,7 +107,7 @@ directly or [MDN (Mozilla) JavaScript manual](https://developer.mozilla.org/en-U
     + [Modules, introduction](#modules-introduction)
     + [Dynamic imports](#dynamic-imports)
 
-</details><br>
+</details><br></br>
 
 ---
 
@@ -135,7 +135,7 @@ const myBirthday = '29.08.2000';
 
 myBirthday = '15.02.2004'; // error, can't reassign the constant!
 ```
-For the object constant variable, we still can reassign its fields, 
+For the object constant variable, we still can reassign its fields,
 but not the whole object itself.
 ```js
 const obj = {
@@ -154,7 +154,7 @@ In older scripts, you may also find another keyword: `var` instead of
 ```js
 var message = 'Hello';
 ```
-The `var` keyword is *almost* the same as `let`. It also decalares 
+The `var` keyword is *almost* the same as `let`. It also decalares
 variable, but in a slightly different, "old-school" way.
 
 There are subtle differences between `let` and `var`, learn more at
@@ -162,7 +162,7 @@ There are subtle differences between `let` and `var`, learn more at
 
 > It is recommended to use `const`, `let` instead of `var`.
 
-</details><br>
+</details><br></br>
 
 
 ### Data types
@@ -192,20 +192,20 @@ let age = null; // age is unknown
 
 - `undefined`\
 The meaning of `undefined` is "value is not assigned".\
-If a variable is declared, but not assigned, then its value is 
+If a variable is declared, but not assigned, then its value is
 `undefined`:
 ```js
 let age;
 alert(age); // undefined
 ```
 
-</details><br>
+</details><br></br>
 
 ### Interaction
 - alert
 - prompt
 - confirm
-	
+
 
 ### Comparisons
 `==` vs `===`
@@ -223,7 +223,7 @@ converting to the same type of `a` then check the equality.
 0 === false; // false
 ```
 
-</details><br>
+</details><br></br>
 
 ### Logical operators
 
@@ -251,7 +251,7 @@ following:
 ```
 > !a does not mean `a != null` or `a !== null && a !== undefined`.
 
-</details><br>
+</details><br></br>
 
 
 ### Nullish coalescing operator `??`
@@ -276,7 +276,7 @@ alert(height || 100); // 100
 alert(height ?? 100); // 0
 ```
 
-</details><br>
+</details><br></br>
 
 
 ### Loop `for`
@@ -301,13 +301,13 @@ for (const iterator of obj) {
     const value = iterator;
 }
 ```
-</details><br>
+</details><br></br>
 
 
 ### Functions
 <details>
 
-- Function declaration: 
+- Function declaration:
 ```js
 function func() {}
 ```
@@ -320,7 +320,7 @@ const func = function() {}
 const func = () => {}
 ```
 
-</details><br>
+</details><br></br>
 
 ## Code quality
 ### Polyfills and transpilers
@@ -351,7 +351,7 @@ Translate code to a different version.
     + `Symbol.for("id")`
     + `Symbol.keyFor(sym)`
 
-</details><br>
+</details><br></br>
 
 ## More about data types
 ### Iterables
@@ -402,7 +402,7 @@ let arr = Array.from(arrayLike);
 console.log(arr);
 ```
 
-</details><br>
+</details><br></br>
 
 
 ### Object.keys, values, entries
@@ -436,7 +436,7 @@ let originalObj = Object.fromEntries(
 );
 ```
 
-</details><br>
+</details><br></br>
 
 
 ### Destructuring assignment
@@ -486,7 +486,7 @@ let {
 } = options;
 ```
 
-</details><br>
+</details><br></br>
 
 
 ### Date and time
@@ -494,13 +494,13 @@ let {
 
 - Date before 01/01/1970 has negative timestamp
 - Autocorrection
-- Benchmarking: 
+- Benchmarking:
 `date1.getTime()-date2.getTime()` is faster than `date1-date2`
 - Date.parse from a string:
     + The string format should be: `YYYY-MM-DDTHH:mm:ss.sssZ`
     + Shorter variants are also possible: `YYYY-MM-DD`, `YYYY-MM`, `YYYY`
 
-</details><br>
+</details><br></br>
 
 
 ### JSON methods, toJSON
@@ -551,14 +551,14 @@ JSON.parse(str, [reviver]);
 - Using reviver
 ```js
 JSON.parse(str, function(key, value) {
-    // A date string may not be a Date object so we have to 
+    // A date string may not be a Date object so we have to
     // update it to a Date object
     if (key == 'date') return new Date(value);
     return value;
 })
 ```
 
-</details><br>
+</details><br></br>
 
 
 ## Advanced working with functions
@@ -596,7 +596,7 @@ Math.max(...arr,5,...arr1,6); // 6
 - Copy an array/object
 ```js
 let arr = [1, 2, 3];
-let arrCopy = [...arr]; // Spread the array into a list of parameters 
+let arrCopy = [...arr]; // Spread the array into a list of parameters
                         // then put the result into a new array
 console.log(arr === arrCopy) // false
 ```
@@ -608,7 +608,7 @@ console.log(obj === objCopy); // false
 console.log(JSON.stringify(obj) === JSON.stringify(objCopy)); // true
 ```
 
-</details><br>
+</details><br></br>
 
 
 ### The old `var`
@@ -658,7 +658,7 @@ was called "immediately-invoked function expressions" (IIFE).
 }();
 ```
 
-</details><br>
+</details><br></br>
 
 
 ### Global object
@@ -716,21 +716,21 @@ setTimeout(() => alert("World"));
 alert("hello");
 ```
 
-</details><br>
+</details><br></br>
 
 
 ### Decorators and forwarding, call/apply
 <details>
 
 #### Transparent caching
-Let's say we have a function `slow(x)` which is CPU-heavy, but its 
+Let's say we have a function `slow(x)` which is CPU-heavy, but its
 results are stable. In other words, for the same `x` it always return
 the same result.
 
 If the function is called often, we may want to cache (remember) the
 results to avoid spending extra-time on recalculations.
 
-Instead of adding that functionality into `slow()` we'll create a 
+Instead of adding that functionality into `slow()` we'll create a
 wrapper function, that adds caching
 ```js
 function slow(x) {
@@ -743,7 +743,7 @@ function cachingDecorator(func) {
     let cache = new Map();
 
     return function(x) {
-        if (cache.has(x)) {         // if there's such key in cache 
+        if (cache.has(x)) {         // if there's such key in cache
             return cache.get(x);    // read the result from it
         }
 
@@ -761,7 +761,7 @@ alert( "Again: " + slow(1)); // slow(1) result returned from cache
 ```
 
 #### Using `func.call` for the context
-The caching decorator mentioned above is not suited to work with 
+The caching decorator mentioned above is not suited to work with
 object methods.
 
 For instance, in the code below `worker.slow()` stops working after
@@ -826,7 +826,7 @@ let admin = { name: "Admin" };
 sayHi.call(user);
 sayHi.call(admin);
 ```
-In our case, we can `call` in the wrapper to pass the context to 
+In our case, we can `call` in the wrapper to pass the context to
 the original function:
 ```js
 // before: let result = func(x);
@@ -871,7 +871,7 @@ alert("Again " + worker.slow(3, 5)); // same (cached)
 ```
 
 #### `func.apply`
-Instead of `func.call(this, ...arguments)` we could use 
+Instead of `func.call(this, ...arguments)` we could use
 `func.apply(this, arguments)`.
 ```js
 func.apply(context, args)
@@ -882,7 +882,7 @@ func.call(context, ...args);
 func.apply(context, args);
 ```
 
-</details><br>
+</details><br></br>
 
 
 ### Function binding
@@ -967,7 +967,7 @@ user.sayNow("Hello");
 // [10:00] John: Hello!
 ```
 
-</details><br>
+</details><br></br>
 
 
 ## Object properties configuration
@@ -976,12 +976,12 @@ user.sayNow("Hello");
 
 `Propety flags`\
 Object properties, besides a `value`, have three special attributes:
-    
+
     + `writable`
     + `enumerable`
     + `configurable`
 
-Method `Object.getOwnPropertyDescriptor` allows to query the full 
+Method `Object.getOwnPropertyDescriptor` allows to query the full
 information about a property
 ```js
 let descriptor = Object.getOwnPropertyDescriptor(obj, propertyName);
@@ -1002,7 +1002,7 @@ Object.defineProperties(obj, {
 })
 ```
 
-</details><br>
+</details><br></br>
 
 
 ## Prototypes, inheritance
@@ -1026,7 +1026,7 @@ console.log(rabbit.jumps); // true
 ```
 > The `__proto__` must be an object or null
 
-</details><br>
+</details><br></br>
 
 
 ### F.prototype
@@ -1059,7 +1059,7 @@ Rabbit.prototype = { constructor: Rabbit };
 */
 ```
 
-</details><br>
+</details><br></br>
 
 
 ### Native prototypes
@@ -1111,7 +1111,7 @@ let obj = {
 obj.join = Array.prototype.join;
 console.log(obj.join(',')); // Hello,World!
 ```
-</details><br>
+</details><br></br>
 
 
 ## Classes
@@ -1143,7 +1143,7 @@ class MyClass {
 }
 ```
 
-</details><br>
+</details><br></br>
 
 
 ## Error handling
@@ -1160,7 +1160,7 @@ try {
 }
 ```
 
-</details><br>
+</details><br></br>
 
 ### Custom errors, extending Error
 <details>
@@ -1238,7 +1238,7 @@ try {
 }
 ```
 Wrapping exceptions:\
-There can be more types of errors and we may not want to check for all 
+There can be more types of errors and we may not want to check for all
 error types one-by-one everytime, so we may need an exception wrapper.
 ```js
 class ReadError extends Error {
@@ -1285,7 +1285,7 @@ try {
 }
 ```
 
-</details><br>
+</details><br></br>
 
 
 ## Promises, async/await
@@ -1328,12 +1328,12 @@ loadScript('/my/script.js', function() {
     ...
 });
 ```
-<br>
+<br></br>
 
 **Callback in callback**\
 How can we load two scripts sequentially: the first one, and then the
 second one after it?\
-The natural solution would be to put the second `loadScript` call 
+The natural solution would be to put the second `loadScript` call
 inside the callback
 ```js
 loadScript('/my/script.js', function(script) {
@@ -1346,7 +1346,7 @@ loadScript('/my/script.js', function(script) {
 
 });
 ```
-After the outer `loadScript` is complete, the callback initiates the 
+After the outer `loadScript` is complete, the callback initiates the
 inner one.\
 What if we want one more script...?
 ```js
@@ -1358,7 +1358,7 @@ loadScript('/my/script.js', function(script) {
     })
 })
 ```
-<br>
+<br></br>
 
 **Handling errors**\
 Here's an improved version of `loadScript` that tracks loading errors
@@ -1382,7 +1382,7 @@ loadScript('/my/script.js', function(err, script) {
     }
 });
 ```
-<br>
+<br></br>
 
 **Pyramid of Doom**
 ```js
@@ -1440,7 +1440,7 @@ function step3(error, script) {
 }
 ```
 
-</details><br>
+</details><br></br>
 
 
 ### Promise
@@ -1451,7 +1451,7 @@ let promise = new Promise(function(resolve, reject) {
 ```
 <details>
 
-The `promise` object returned by the `new Promise` constructor has 
+The `promise` object returned by the `new Promise` constructor has
 these internal properties
 - `state` - initially `"pending"`, then changes to either `"fulfilled"`
 when `resolve` is called or `"rejected"` when `reject` is called.
@@ -1474,7 +1474,7 @@ promise.catch(errorHandlingFunction);
 ```
 
 **Cleanup: finally**\
-The call `.finally(f)` is similar to `.then(f, f)` in the sense that 
+The call `.finally(f)` is similar to `.then(f, f)` in the sense that
 `f` runs always, when the promise is settled: be it resolve or reject.
 ```js
 new Promise((resolve, reject) => {
@@ -1486,7 +1486,7 @@ new Promise((resolve, reject) => {
 .then(result => show result, err => show error);
 ```
 
-</details><br>
+</details><br></br>
 
 
 ### Promise chaining
@@ -1507,7 +1507,7 @@ new Promise(function(resolve, reject) {
 })
 ```
 
-</details><br>
+</details><br></br>
 
 
 ### Error handling with promises
@@ -1536,7 +1536,7 @@ The "invisible `try...catch`" around the executor automatically catches
 the error and turns it into rejected promise.
 
 **Rethrowing**\
-In a promise we may analyze the error and rethrow it like a regular 
+In a promise we may analyze the error and rethrow it like a regular
 `try...catch` if it can't be handled.
 ```js
 // the execution: catch -> catch
@@ -1557,7 +1557,7 @@ new Promise((resolve, reject) => {
 });
 ```
 
-</details><br>
+</details><br></br>
 
 
 ### Promise API
@@ -1571,7 +1571,7 @@ the array of their results becomes its result.
 ```js
 let promise = Promise.all(iterable)
 ```
-For instance, the `Promise.all` below settles after 3 seconds, and 
+For instance, the `Promise.all` below settles after 3 seconds, and
 then it result is an array `[1,2,3]`
 ```js
 Promise.all([
@@ -1580,7 +1580,7 @@ Promise.all([
     new Promise(resolve => setTimeout(() => resolve(3), 1000))  // 3
 ]).then(alert); // 1,2,3 when promises are ready
 ```
-> If one promise rejects, `Promise.all` immediately rejects, 
+> If one promise rejects, `Promise.all` immediately rejects,
 > completely forgetting about the other ones in the list. Their result
 > are ignored.
 
@@ -1661,11 +1661,11 @@ Promise.any([
     + `Promise.resolve(value)` is same as `new Promise(resolve => resolve(value))`.
     + `Promise.reject(value)` is same as `new Promise((resolve, reject) => reject(error))`.
 
-</details><br>
+</details><br></br>
 
 
 ### Promisification
-"Promisification" is a long word for a simple transformation - the 
+"Promisification" is a long word for a simple transformation - the
 conversion of a function that accepts a callback into a function that
 returns a promise.
 <details>
@@ -1701,7 +1701,7 @@ The new function is a wrapper arount the original `loadScript` function.
 It calls it providng its own callback that translates to promise
 `resolve/reject`.
 
-In practice we may need to promisify more than one function, so it 
+In practice we may need to promisify more than one function, so it
 makes sense to use a helper. We'll call it `promisify(f)`: it accepts
 a to-promisify function `f` and returns a wrapper function.
 ```js
@@ -1728,18 +1728,18 @@ let loadScriptPromise = promisify(loadScript);
 loadScriptPromise(...).then(...);
 ```
 Here, `promisify` assumes that the original function expects a callback
-with exactly two arguments `(err, result)`. That's what we encounter 
-most often. Then our custom callback is in exactly the right format, 
+with exactly two arguments `(err, result)`. That's what we encounter
+most often. Then our custom callback is in exactly the right format,
 and `promisify` works great for such a case.
 
 But what if the original `f` expects a callback with more arguments
 `callback(err, res1, res2, ...)?
 
-We can improve our helper. Let's make a more advanced version of 
+We can improve our helper. Let's make a more advanced version of
 `promisify`.
 - When called as `promisify(f)` it should work similar to the version
 above.
-- When called as `promisify(f, true)`, it should return the promise 
+- When called as `promisify(f, true)`, it should return the promise
 that resolves with the array of callback results. That's exactly for
 callbacks with many arguments.
 ```js
@@ -1752,7 +1752,7 @@ function promisify(f, manyArgs = false) {
                     reject(err);
                 } else {
                     // resolve with all callback results if manyArgs is specified
-                    resolve(manyArgs ? results : results[0]); 
+                    resolve(manyArgs ? results : results[0]);
                 }
             }
 
@@ -1771,7 +1771,7 @@ f(...).then(arrayOfResults => ..., err => ...);
 > functions, e.g. [es6.promisify](https://github.com/digitaldesignlabs/es6-promisify).
 > In Node.js, there's a built-in `util.promisify` function for that.
 
-</details><br>
+</details><br></br>
 
 
 ### Microtasks
@@ -1793,7 +1793,7 @@ When a promise is ready, its `.then/catch/finally` handlers are put
 into the queue, they are not executed yet. When the JavaScript engine
 becomes free from the current code, it takes a task from the queue and executes it.
 
-</details><br>
+</details><br></br>
 
 
 ### Async/await
@@ -1804,7 +1804,7 @@ and use.
 
 #### Async function
 The word `async` before a function means one simple thing: a function
-always returns a promise. Other values are wrapped in a resolved 
+always returns a promise. Other values are wrapped in a resolved
 promise automatically.
 ```js
 async function f() {
@@ -1884,7 +1884,7 @@ async function f() {
 f();
 ```
 If we don't have `try...catch`, then the promise generated by the call
-of the async function `f()` becomes rejected. We can append `.catch` 
+of the async function `f()` becomes rejected. We can append `.catch`
 to handle it:
 ```js
 async function f() {
@@ -1895,7 +1895,7 @@ async function f() {
 f().catch(alert); // TypeError: failed to fetch
 ```
 
-</details><br>
+</details><br></br>
 
 
 ## Generators, advanced iteration
@@ -1987,7 +1987,7 @@ alert(str); // 0...9A...Za...z
 
 #### "yield" is a two-way street
 `yield` are much more powerful and flexible. It not only returns the
-result to the outside, but also can pass the value inside the 
+result to the outside, but also can pass the value inside the
 generator.
 
 To do so, we should call `generator.next(arg)`, with an argument. That
@@ -2044,11 +2044,11 @@ g.return("foo"); // {value: "foo", done: true}
 g.next();        // {value: undefined, done: true}
 ```
 
-</details><br>
+</details><br></br>
 
 ### Async iteration and generators
-Asynchronous iteration allow us to iterate over data that comes 
-asynchrorously, on-demand. Like, for instance, when we download 
+Asynchronous iteration allow us to iterate over data that comes
+asynchrorously, on-demand. Like, for instance, when we download
 something chunk-by-chunk over a network.
 
 <details>
@@ -2082,7 +2082,7 @@ for (let value of range) {
 ```
 
 #### Async iterables
-Asynchronous iteration is needed when values come asynchronously: 
+Asynchronous iteration is needed when values come asynchronously:
 after `setTimeout` or another kind of delay.
 
 To make an object iterable asynchronously:
@@ -2126,7 +2126,7 @@ let range = {
     }
 })()
 ```
-<br>
+<br></br>
 
 Table with the differences between **Iterators** and **Async iterators**:
 |                                   | Iterators         | Async iterators        |
@@ -2169,7 +2169,7 @@ for (let value of ragne) {
 > synchronously, as required by the `for...of` construct.
 
 #### Async generators
-The syntax is to prepend `function*` with `async`. That makes the 
+The syntax is to prepend `function*` with `async`. That makes the
 generator asynchronous. And then use `for await (...)` to iterate over
 it:
 ```js
@@ -2193,7 +2193,7 @@ let range = {
     from: 1,
     to: 5,
 
-    // this line is same as [Symbol.asyncIterator]: async function*() 
+    // this line is same as [Symbol.asyncIterator]: async function*()
     async *[Symbol.asyncIterator]() {
         for (let value = this.from, value <= this.to; value++) {
             // make a pause between values, wait for something
@@ -2210,7 +2210,7 @@ let range = {
 })():
 ```
 
-</details><br>
+</details><br></br>
 
 
 ## Modules
@@ -2261,7 +2261,7 @@ module.
 </script>
 ```
 
-</details><br>
+</details><br></br>
 
 ### Dynamic imports
 First, we can't dynamically generate any parameters of `import`. The module path must be a primitive string, can't be a function call.
@@ -2285,7 +2285,7 @@ But how can we import a module dynamically, on-demand?
 
 #### The import() expression
 The `import(module)` expression loads the module and returns a promise
-that resolves into a module object that contains all its exports. It 
+that resolves into a module object that contains all its exports. It
 can be called from any place in the code.
 ```js
 let modulePath = prompt("Which module to load?");
@@ -2298,7 +2298,7 @@ import(modulePath)
 let module = await import(modulePath);
 ```
 
-</details><br>
+</details><br></br>
 
 ---
 ## References
@@ -2308,6 +2308,6 @@ let module = await import(modulePath);
 
 ---
 ## Upcoming
-*Uncommon JavaScript Notes - Browser: Document, Events, Interfaces* - 
+*Uncommon JavaScript Notes - Browser: Document, Events, Interfaces* -
 based on javascript.info's [part 2](https://javascript.info/#tab-2).
 

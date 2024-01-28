@@ -56,19 +56,19 @@ export const socialMediaInfoList: IconButtonProps[] = [
 
 export const navBtnInfoList: DefaultButtonProps[] = [
   {
-    url: "/about/",
+    url: "/about",
     content: "About",
   },
   {
-    url: "/blogs/",
+    url: "/blogs",
     content: "Blogs",
   },
   {
-    url: "/guestbook/",
+    url: "/guestbook",
     content: "Guestbook",
   },
   {
-    url: "/contact/",
+    url: "/contact",
     content: "Contact",
   },
 ];

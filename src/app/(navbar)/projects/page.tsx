@@ -1,6 +1,6 @@
-import ProjectsPageHeaderGrp from "../../components/projects/header";
-import { ProjectsList } from "../../components/projects/projects";
-import Copyright from "../../components/copyright";
+import ProjectsPageHeaderGrp from "@/components/projects/header";
+import { ProjectsList } from "@/components/projects/projects";
+import Copyright from "@/components/copyright";
 import { Metadata } from "next";
 
 const projDescription = `I just have studied Information Technology for three years,

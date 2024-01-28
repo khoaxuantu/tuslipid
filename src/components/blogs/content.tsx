@@ -1,5 +1,5 @@
-import { blogInfoList } from "../../lib/general_info";
-import { BlogsList, SingleBlog } from "./blogs";
+import { blogInfoList } from "@/lib/general_info";
+import { BlogsList } from "./list";
 
 export function BlogsContent() {
     /* blogInfoList needs sorting first */
@@ -15,13 +15,5 @@ export function BlogsContent() {
         <div className="blog-wrapper">
             <BlogsList blogInfoList={blogInfoList} />
         </div>
-    );
-}
-
-export function SingleBlogContent(props: {id: string}) {
-    return (
-        <article className="single-blog-wrapper transition-blog">
-            <SingleBlog id={props.id} />
-        </article>
     );
 }

@@ -42,7 +42,7 @@ to have a fundamental knowledge of JavaScript. If you are a newbie in JS, let's 
 # Document
 > Manipulate a web-page using JavaScript
 
-<br>
+<br></br>
 
 ## Browser environment, specs
 <details open>
@@ -103,7 +103,7 @@ setTimeout(() => document.body.style.background = "", 1000);
 > also possible.
 </details>
 
-<br>
+<br></br>
 
 <details>
 <summary><b>BOM (Browser Object Model)</b></summary>
@@ -127,7 +127,7 @@ read the current URL and can redirect the browser to a new one.
 
 </details>
 
-<br>
+<br></br>
 
 ## DOM tree
 <details open>
@@ -207,7 +207,7 @@ There are [12 node types](https://dom.spec.whatwg.org/#node). In practice we usu
 
 </details>
 
-<br>
+<br></br>
 
 ## Walking the DOM
 
@@ -218,11 +218,11 @@ The DOM allows us to do anything with elements and their contents, but first we 
 corresponding DOM object. All operations on the DOM start with the `document` object - the main
 "entry point".
 
-<br>
+<br></br>
 
 ![DOM nodes](/images/blogs/uncommon_javascript_notes_1/1.webp "DOM nodes")
 
-<br>
+<br></br>
 
 ### On top: documentElement and body
 ```html
@@ -282,11 +282,11 @@ nodes. We want to manipulate element nodes that represents tags and form the str
 
 So let's see more navigation links that only take *element nodes* into account:
 
-<br>
+<br></br>
 
 ![element nodes](/images/blogs/uncommon_javascript_notes_1/2.webp "element nodes")
 
-<br>
+<br></br>
 
 The links are similar to those given above, just with `Element` word inside:
 - `children` - only those children that are element nodes.
@@ -316,7 +316,7 @@ DOM).
 
 </details>
 
-<br>
+<br></br>
 
 ## Searching: getElement*, querySelector*
 <details open>
@@ -337,7 +337,7 @@ rarely used.
 
 </details>
 
-<br>
+<br></br>
 
 ## Node properties: type, tag and contents
 <details open>
@@ -352,11 +352,11 @@ Each DOM node belongs to the corresponding built-in class. The root of the hiera
 [EventTarget](https://dom.spec.whatwg.org/#eventtarget), that is inherited by [Node](https://dom.spec.whatwg.org/#interface-node),
 and other DOM nodes inherit from it.
 
-<br>
+<br></br>
 
 ![DOM node classes](/images/blogs/uncommon_javascript_notes_1/3.webp "DOM node classes")
 
-<br>
+<br></br>
 
 > To see the DOM node class name, we can recall that an object ususally has the `constructor` property.
 > It references the class constructor, and `constructor.name` is its name:
@@ -503,7 +503,7 @@ The "hidden" attribute and the DOM property specifies whether the element is vis
 
 </details>
 
-<br>
+<br></br>
 
 ## Attributes and properties
 <details open>
@@ -665,7 +665,7 @@ attributes.
 
 </details>
 
-<br>
+<br></br>
 
 ## Modifying the document
 <details open>
@@ -759,7 +759,7 @@ top of it, like [template](#template-element) element, that we'll cover much lat
 
 </details>
 
-<br>
+<br></br>
 
 ## Styles and classes
 <details open>
@@ -832,7 +832,7 @@ alert(computedStyle.color);
 
 </details>
 
-<br>
+<br></br>
 
 ## Element sizes and scrolling
 <details open>
@@ -889,7 +889,7 @@ height. A change in `box-sizing` for CSS purpose may break such JavaScript.
 
 </details>
 
-<br>
+<br></br>
 
 ## Window sizes and scrolling
 <details open>
@@ -954,7 +954,7 @@ document.body.style.overflow = "hidden"
 
 </details>
 
-<br>
+<br></br>
 
 ## Coordinates
 <details open>
@@ -1233,7 +1233,7 @@ There are 2 possible values of the `capture` option:
 
 </details>
 
-<br>
+<br></br>
 
 ## Event delegation
 Capturing and bubbling allow us to implement one of the most powerful event handling patterns called *event delegation*.

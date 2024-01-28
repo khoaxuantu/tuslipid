@@ -1,10 +1,10 @@
-import AboutHeaderGrp from "../../components/about/header";
-import AboutIntro from "../../components/about/introduction";
-import Works from "../../components/about/works";
-import Education from "../../components/about/edu";
-import { AboutProject } from "../../components/projects/projects";
-import Copyright from "../../components/copyright";
-import GetInTouch from "../../components/about/get_in_touch";
+import AboutHeaderGrp from "@/components/about/header";
+import AboutIntro from "@/components/about/introduction";
+import Works from "@/components/about/works";
+import Education from "@/components/about/edu";
+import { AboutProject } from "@/components/projects/projects";
+import Copyright from "@/components/copyright";
+import GetInTouch from "@/components/about/get_in_touch";
 import { Metadata } from "next";
 
 const aboutDescription = `Here comes my profile - from a mechanical engineering student to \
