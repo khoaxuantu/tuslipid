@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     description: defaultDescription,
     creator: "Xuan Khoa Tu Nguyen",
     images: {
-      url: defaultURL,
+      url: defaultSEOImage,
       alt: "Tuslipid preview",
     },
   },
