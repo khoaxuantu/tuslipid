@@ -3,17 +3,17 @@ import React from "react";
 
 const defaultTitle = "Tuslipid";
 const defaultDescription = "Xuan Khoa Tu Nguyen's personal website";
-const defaultSEOImage = '/seo/menu-preview.jpg';
-const defaultURL = "https://xuankhoatu.com/";
+const defaultSEOImage = "/seo/menu-preview.jpg";
+const defaultURL = process.env.HOST_URL as string;
 
 export const metadata: Metadata = {
   title: {
     template: defaultTitle + " - %s",
-    default: defaultTitle
+    default: defaultTitle,
   },
   description: defaultDescription,
   authors: {
-    name: "Xuan Khoa Tu Nguyen"
+    name: "Xuan Khoa Tu Nguyen",
   },
   metadataBase: new URL(defaultURL),
   openGraph: {
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description: defaultDescription,
     url: defaultURL,
     siteName: defaultTitle,
-    images: defaultSEOImage
+    images: defaultSEOImage,
   },
   twitter: {
     card: "summary_large_image",
@@ -31,10 +31,10 @@ export const metadata: Metadata = {
     creator: "Xuan Khoa Tu Nguyen",
     images: {
       url: defaultURL,
-      alt: "Tuslipid preview"
+      alt: "Tuslipid preview",
     },
-  }
-}
+  },
+};
 
 export default function RootLayout({
   children,
@@ -48,6 +48,24 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
         <link rel="stylesheet" href="/css/style.css" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href={`${defaultURL}/logo/apple-touch-icon.png`}
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href={`${defaultURL}/logo/favicon-32x32.png`}
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href={`${defaultURL}/logo/favicon-16x16.png`}
+        />
+        <link rel="manifest" href={`${defaultURL}/logo/site.webmanifest`}></link>
       </head>
       <body>{children}</body>
     </html>
