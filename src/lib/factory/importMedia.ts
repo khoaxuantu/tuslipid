@@ -1,27 +1,53 @@
+"use server";
+
+import fs from "fs";
+
+export type mediaMap = Record<string, string>;
+
 /**
- * @param reqMedia An media object got from require.context()
- * 
+ * @param mediaSubPath A media directory subpath "/images/directory"
+ *
  * @method get() Return an object of media path
- * 
- * @return object {media's name: file path}
+ *
+ * @return {mediaMap} object {media's name: "media/sub/path/file"}
  */
 class ImportMedia {
-    private reqMedia: __WebpackModuleApi.RequireContext;
+  private mediaSubPath: string;
 
-    public constructor(reqMedia: __WebpackModuleApi.RequireContext) {
-        this.reqMedia = reqMedia;
-    }
+  public constructor(mediaSubPath: string) {
+    this.mediaSubPath = mediaSubPath;
+  }
 
-    public get() {
-        const tmp = this.reqMedia
-            .keys()
-            .reduce((images: any, path: string) => {
-                const key = path.substring(path.lastIndexOf('/')+1,path.lastIndexOf('.'));
-                images[key] = this.reqMedia(path);
-                return images;
-            }, {});
-        return tmp;
-    }
+  public get() {
+    const tmp = this.getFilePaths().reduce((media: mediaMap, file: string) => {
+      const key = file.substring(
+        file.lastIndexOf("/") + 1,
+        file.lastIndexOf(".")
+      );
+      media[key] = this.mediaSubPath + file;
+      return media;
+    }, {});
+    return tmp;
+  }
+
+  private getFilePaths() {
+    return fs.readdirSync(process.cwd() + "/public" + this.mediaSubPath);
+  }
 }
+
+const reqImgs = "/images/projects/";
+export const getImgs = async () => {
+  return new ImportMedia(reqImgs).get();
+};
+
+const reqSvgs = "/images/icons/";
+export const getSvgs = async () => {
+  return new ImportMedia(reqSvgs).get();
+};
+
+const reqEduImgs = "/images/edu/";
+export const getEduImgs = async () => {
+  return new ImportMedia(reqEduImgs).get();
+};
 
 export default ImportMedia;

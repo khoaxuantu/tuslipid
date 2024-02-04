@@ -16,7 +16,7 @@
 #### H4
 ##### H5
 ###### H6
-<br>
+<br></br>
 
 ---
 # Emphasis
@@ -38,18 +38,18 @@ Combined emphasis with **asterisks and _underscores_**.
 
 Strikethrough uses two tildes. ~~Scratch this.~~
 
-<br>
+<br></br>
 
 ---
 # List
 ```md
 1. First ordered list item
 2. Another item
-  * Unordered sub-list. 
+  * Unordered sub-list.
 1. Actual numbers don't matter, just that it's a number
   1. Ordered sub-list
-4. And another item.  
-   
+4. And another item.
+
    Some text that should be aligned with the above item.
 
 * Unordered list can use asterisks
@@ -59,18 +59,18 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 
 1. First ordered list item
 2. Another item
-  * Unordered sub-list. 
+  * Unordered sub-list.
 1. Actual numbers don't matter, just that it's a number
   1. Ordered sub-list
-4. And another item.  
-   
+4. And another item.
+
    Some text that should be aligned with the above item.
 
 * Unordered list can use asterisks
 - Or minuses
 + Or pluses
 
-<br>
+<br></br>
 
 ---
 # Links
@@ -83,8 +83,8 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 
 Or leave it empty and use the [link text itself]
 
-URLs and URLs in angle brackets will automatically get turned into links. 
-http://www.example.com or <http://www.example.com> and sometimes 
+URLs and URLs in angle brackets will automatically get turned into links.
+http://www.example.com or <http://www.example.com> and sometimes
 example.com (but not on Github, for example).
 
 Some text to show that the reference links can follow later.
@@ -102,8 +102,8 @@ Some text to show that the reference links can follow later.
 
 Or leave it empty and use the [link text itself]
 
-URLs and URLs in angle brackets will automatically get turned into links. 
-http://www.example.com or <http://www.example.com> and sometimes 
+URLs and URLs in angle brackets will automatically get turned into links.
+`http://www.example.com` or `<http://www.example.com>` and sometimes
 example.com (but not on Github, for example).
 
 Some text to show that the reference links can follow later.
@@ -112,17 +112,17 @@ Some text to show that the reference links can follow later.
 [1]: http://slashdot.org
 [link text itself]: http://www.reddit.com
 
-<br>
+<br></br>
 
 ---
 # Images
 ```md
 Here's our logo (hover to see the title text):
 
-Inline-style: 
+Inline-style:
 ![alt text](path/to/my/logo/ "Tuslipid 1")
 
-Reference-style: 
+Reference-style:
 ![alt text][logo]
 
 [logo]: path/to/my/logo "Tuslipid 2"
@@ -130,26 +130,26 @@ Reference-style:
 
 Here's my logo (hover to see the title text):
 
-Inline-style: 
+Inline-style:
 ![alt text](/logo/favicon-32x32.png "Tuslipid 1")
 
-Reference-style: 
+Reference-style:
 ![alt text][logo]
 
 [logo]: /logo/favicon-32x32.png "Tuslipid 2"
 
-<br>
+<br></br>
 
 ---
 # Code and Syntax Highlighting
 Syntax Highlighting tool: [highlight.js](https://highlightjs.org/)
 
-Theme: 
+Theme:
 ```
 Atom One Dark
 ```
 
-<br>
+<br></br>
 
 <pre>
 <code>
@@ -166,7 +166,7 @@ print s
 ```
 
 ```
-No language indicated, so no syntax highlighting. 
+No language indicated, so no syntax highlighting.
 But let's throw in a <b>tag</b>.
 ```
 </code>
@@ -178,18 +178,18 @@ Inline `code` has `back-ticks around` it.
 var s = "JavaScript syntax highlighting";
 alert(s);
 ```
- 
+
 ```python
 s = "Python syntax highlighting"
 print s
 ```
- 
+
 ```
-No language indicated, so no syntax highlighting. 
+No language indicated, so no syntax highlighting.
 But let's throw in a <b>tag</b>.
 ```
 
-<br>
+<br></br>
 
 ---
 # Tables
@@ -221,7 +221,7 @@ Markdown | Less | Pretty
 *Still* | `renders` | **nicely**
 1 | 2 | 3
 
-<br>
+<br></br>
 
 ---
 # Blockquotes
@@ -231,7 +231,7 @@ Markdown | Less | Pretty
 
 Quote break.
 
-> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. 
+> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
 ```
 
 > Blockquotes are very handy in email to emulate reply text.
@@ -239,9 +239,9 @@ Quote break.
 
 Quote break.
 
-> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. 
+> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
 
-<br>
+<br></br>
 
 ---
 # Inline HTML
@@ -261,11 +261,11 @@ Quote break.
   <dt>Markdown in HTML</dt>
   <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
 </dl>
-<br>
+<br></br>
 
 ---
 # Horizontal Rule
-```md
+```txt
 Three or more...
 
 ---
@@ -294,36 +294,36 @@ Asterisks
 ___
 
 Underscores
-<br><br><br>
+<br></br><br></br><br></br>
 
 ---
 # KaTeX Mathematical Formular
 ```md
 $-b \pm \sqrt{b^2 - 4ac} \over 2a$
 
-<br>
+<br></br>
 
 $x = a_0 + \frac{1}{a_1 + \frac{1}{a_2 + \frac{1}{a_3 + a_4}}}$
 
-<br>
+<br></br>
 
 $\forall x \in X, \quad \exists y \leq \epsilon$
 
-<br>
+<br></br>
 
 $L = \frac{1}{2} \rho v^2 S C_L$
 ```
 
 $-b \pm \sqrt{b^2 - 4ac} \over 2a$
 
-<br>
+<br></br>
 
 $x = a_0 + \frac{1}{a_1 + \frac{1}{a_2 + \frac{1}{a_3 + a_4}}}$
 
-<br>
+<br></br>
 
 $\forall x \in X, \quad \exists y \leq \epsilon$
 
-<br>
+<br></br>
 
 $L = \frac{1}{2} \rho v^2 S C_L$

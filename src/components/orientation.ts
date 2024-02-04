@@ -1,3 +1,5 @@
+'use client';
+
 import { isMobileOnly } from "react-device-detect";
 
 function addOrientationHandler(): string {

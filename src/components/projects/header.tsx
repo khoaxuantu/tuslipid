@@ -5,8 +5,8 @@ export default function ProjectsPageHeaderGrp() {
           <b>Projects</b>
         </div>
         <div className='body-txt mt-2'>
-          I just have studied Information Technology for three years, {" "}
-          but luckily have some fun works done.
+          I started studying Information Technology in 2020 and {" "}
+          luckily done some fun works since then.
         </div>
       </div>
     );
