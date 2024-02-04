@@ -5,10 +5,13 @@ type Props = {
   params: { blog_id: string };
 };
 
+const blogBaseURL = process.env.HOST_URL + "/blogs";
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const blogId = params.blog_id;
   const blogInfo = blogInfoDict[blogId];
-  const url = process.env.HOST_URL + "/" + blogId;
+  if (!blogInfo) return notFoundMetadata();
+  const url = blogBaseURL + "/" + blogId;
 
   return {
     title: blogInfo.title,
@@ -23,6 +26,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     twitter: {
       title: blogInfo.title,
       description: blogInfo.brief_description,
+    },
+  };
+}
+
+function notFoundMetadata(): Metadata {
+  const notFoundDescription =
+    `Oi ~ This URL does not exist, get to my blogs page at ${blogBaseURL}`;
+
+  return {
+    title: "404 | Tusss Blogs",
+    description: notFoundDescription,
+    openGraph: {
+      title: "404 | Page not found | Tusss Blogs",
+      description: notFoundDescription,
+    },
+    twitter: {
+      title: "404 | Page not found | Tusss Blogs",
+      description: notFoundDescription,
     },
   };
 }

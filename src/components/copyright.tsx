@@ -1,13 +1,7 @@
-"use client";
-
 import GithubIcon from "@/lib/factory/icons/GithubIcon";
-import { useEffect, useState } from "react";
 
 function Copyright(props: { copyright_class?: string }) {
-  const [year, setYear] = useState<number>();
-  useEffect(() => {
-    setYear(new Date().getFullYear());
-  }, []);
+  const year = new Date().getFullYear();
 
   return (
     <div className={`${props.copyright_class}`}>

@@ -9,8 +9,6 @@ interface SingleBlogProps {
   content: string;
 }
 
-// Nghi ty
-
 export async function SingleBlog({ content }: SingleBlogProps) {
   return (
     <>

@@ -265,7 +265,7 @@ Quote break.
 
 ---
 # Horizontal Rule
-```md
+```txt
 Three or more...
 
 ---
