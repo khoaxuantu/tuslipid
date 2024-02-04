@@ -83,7 +83,9 @@ There's a "root" objet called `window`. It has 2 roles:
 2. It represents the "browser window" and provides methods to control it.
 
 <details>
-<summary><b>DOM (Document Object Model)</b></summary>
+
+<summary>**DOM (Document Object Model)**</summary>
+
 The Document Object Model, or DOM for short, represents all page content as objects that can be modified.
 
 The `document` object is the main "entry point" to the page.
@@ -101,12 +103,15 @@ setTimeout(() => document.body.style.background = "", 1000);
 > The CSSOM is used together with the DOM when we modify style rules for the document. In practice though,
 > the CSSOM is rarely required, because we rarely need to modify CSS rules from JavaScript, but that's
 > also possible.
+
 </details>
 
 <br></br>
 
 <details>
-<summary><b>BOM (Browser Object Model)</b></summary>
+
+<summary>**BOM (Browser Object Model)**</summary>
+
 The Browser Object Model (BOM) represents additional objects provided by the browser (host environment)
 for working with everything except the document.
 
@@ -123,6 +128,7 @@ read the current URL and can redirect the browser to a new one.
         location.href = "https://xuankhoatu.com";
     }
     ```
+
 </details>
 
 </details>

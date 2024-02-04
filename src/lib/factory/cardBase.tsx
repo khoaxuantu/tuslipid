@@ -87,7 +87,7 @@ function FeaturedProjCard(props: IProjCardProps) {
 
 function ProjImage(props: IProjCardProps) {
   if (props.imageURL !== undefined) {
-    return <img src={props.imageURL} alt={props.title + " image"} />;
+    return <img src={props.imageURL} alt={props.title + " image"} loading="lazy" />;
   }
 }
 

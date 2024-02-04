@@ -31,10 +31,17 @@ export const metadata: Metadata = {
 
 function BlogsLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="container page-wrapper transistion-page">
-      {children}
-      <Copyright copyright_class="page-copyright mt-5 pt-5 pb-3" />
-    </div>
+    <>
+      <div className="container page-wrapper transistion-page">
+        {children}
+        <Copyright copyright_class="page-copyright mt-5 pt-5 pb-3" />
+      </div>
+      <div className="fkkk-next-js">
+        <link rel="preload stylesheet" href="/css/markdown.css" as="style" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/atom-one-dark.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossOrigin="anonymous" />
+      </div>
+    </>
   );
 }
 
