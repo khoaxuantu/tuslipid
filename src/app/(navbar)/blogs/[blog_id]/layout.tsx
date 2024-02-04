@@ -6,6 +6,7 @@ type Props = {
 };
 
 const blogBaseURL = process.env.HOST_URL + "/blogs";
+export const dynamic = 'force-static';
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const blogId = params.blog_id;
@@ -61,5 +62,6 @@ export default function BlogLayout({
   return (
     <>
       {children}
-    </>);
+    </>
+  );
 }
