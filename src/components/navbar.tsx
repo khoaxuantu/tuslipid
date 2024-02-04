@@ -52,9 +52,6 @@ function Navbar() {
             </li>
           );
         })}
-        <li key="Projects">
-          <DefaultButton url="/projects" content="Projects" />
-        </li>
       </ul>
     </nav>
   );

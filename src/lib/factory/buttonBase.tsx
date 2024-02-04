@@ -65,15 +65,3 @@ export function IconButton(props: IconButtonProps) {
     </Link>
   );
 }
-
-export function LoginButton(props: IconButtonProps) {
-  return (
-    <button
-      className={`btn btn-oauth ${props.classname} ps-3 pe-3 pt-1 pb-1`}
-      onClick={props.onClick}
-    >
-      <props.icon width={20} height={20} color="white" className="me-3" />
-      <span className="oauth-txt">{"Sign in with " + props.name}</span>
-    </button>
-  );
-}

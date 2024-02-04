@@ -4,7 +4,6 @@ import DevToIcon from "./factory/icons/DevToIcon";
 import DiscordIcon from "./factory/icons/DiscordIcon";
 import FbIcon from "./factory/icons/FbIcon";
 import GithubIcon from "./factory/icons/GithubIcon";
-import GoogleIcon from "./factory/icons/GoogleIcon";
 import LinkedinIcon from "./factory/icons/LinkedinIcon";
 import MailIcon from "./factory/icons/MailIcon";
 import RedditIcon from "./factory/icons/RedditIcon";
@@ -64,8 +63,8 @@ export const navBtnInfoList: DefaultButtonProps[] = [
     content: "Blogs",
   },
   {
-    url: "/guestbook",
-    content: "Guestbook",
+    url: "/projects",
+    content: "Projects",
   },
   {
     url: "/contact",
@@ -210,20 +209,5 @@ export const blogInfoList: { dictKey: string; date: string }[] = [
   {
     dictKey: "learn_from_react_bun_boilerplate",
     date: "Sun Oct 22 2023 19:43:00 GMT+0700",
-  },
-];
-
-export const oauthInfoList: IconButtonProps[] = [
-  {
-    icon: GithubIcon,
-    url: "",
-    classname: "btn-oauth-github",
-    name: "Github",
-  },
-  {
-    icon: GoogleIcon,
-    url: "",
-    classname: "btn-oauth-google",
-    name: "Google",
   },
 ];

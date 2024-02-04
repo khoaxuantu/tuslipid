@@ -31,7 +31,7 @@ class ImportMedia {
   }
 
   private getFilePaths() {
-    return fs.readdirSync(process.env.PUBLIC_PATH + this.mediaSubPath);
+    return fs.readdirSync(process.cwd() + "/public" + this.mediaSubPath);
   }
 }
 
