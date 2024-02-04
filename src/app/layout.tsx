@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import React from "react";
 
 const defaultTitle = "Tuslipid";
@@ -68,7 +69,10 @@ export default function RootLayout({
         />
         <link rel="manifest" href={`${defaultURL}/logo/site.webmanifest`}></link>
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <SpeedInsights />
+      </body>
     </html>
   );
 }
