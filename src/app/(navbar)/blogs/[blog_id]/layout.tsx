@@ -11,21 +11,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const blogId = params.blog_id;
   const blogInfo = blogInfoDict[blogId];
   if (!blogInfo) return notFoundMetadata();
-  const url = blogBaseURL + "/" + blogId;
+  const blogTitle = `${blogInfo.title} | Tusss Blogs`;
+  const blogThumb = "/seo/blogs-tuslipid.webp";
 
   return {
     title: blogInfo.title,
     description: blogInfo.brief_description,
-    metadataBase: new URL(url),
     openGraph: {
       type: "article",
-      title: blogInfo.title,
+      title: blogTitle,
       description: blogInfo.brief_description,
-      url: url,
+      url: blogId,
+      images: blogThumb,
+      siteName: "Tusss Blogs",
+      publishedTime: blogInfo.date.toISOString(),
+      authors: "Xuan Khoa Tu Nguyen",
     },
     twitter: {
-      title: blogInfo.title,
+      title: blogTitle,
       description: blogInfo.brief_description,
+      images: blogThumb,
     },
   };
 }

@@ -6,14 +6,21 @@ const blogThumb = "/seo/blogs-tuslipid.webp";
 const url = process.env.HOST_URL + "/blogs";
 
 export const metadata: Metadata = {
-  title: "Blogs",
+  title: {
+    default: "Blogs",
+    template: "%s | Tusss Blogs",
+  },
   description: blogsDescription,
   metadataBase: new URL(url),
+  alternates: {
+    canonical: '.',
+  },
   openGraph: {
     images: blogThumb,
     description: blogsDescription,
     title: "Tusss Blogs",
     siteName: "Tusss Blogs",
+    url: ".",
   },
   twitter: {
     images: blogThumb,

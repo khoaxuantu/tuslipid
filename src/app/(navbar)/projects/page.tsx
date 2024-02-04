@@ -3,20 +3,22 @@ import { ProjectsList } from "@/components/projects/projects";
 import Copyright from "@/components/copyright";
 import { Metadata } from "next";
 
-const projDescription = `I just have studied Information Technology for three years,
+const projDescription = `I just have studied Information Technology for three years, \
 but luckily have some fun works done.`;
 const projTitle = "Projects";
 const projThumb = "/seo/projects-tuslipid.webp";
-const projURL = process.env.HOST_URL + "/projects";
+const projPath = "/projects";
 
 export const metadata: Metadata = {
   title: projTitle,
   description: projDescription,
-  metadataBase: new URL(projURL),
+  alternates: {
+    canonical: '/projects'
+  },
   openGraph: {
     title: projTitle,
     description: projDescription,
-    url: projURL,
+    url: projPath,
     siteName: "Something from Tusss",
     images: projThumb,
   },

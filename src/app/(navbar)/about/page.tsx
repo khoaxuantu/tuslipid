@@ -10,16 +10,17 @@ import { Metadata } from "next";
 const aboutDescription = `Here comes my profile - from a mechanical engineering student to \
 a computer science student then a full-stack developer`;
 const aboutImage = "/seo/about-tuslipid.jpg";
-const aboutURL = process.env.HOST_URL + "/about";
 
 export const metadata: Metadata = {
   title: "About me",
   description: aboutDescription,
-  metadataBase: new URL(aboutURL),
+  alternates: {
+    canonical: '/about',
+  },
   openGraph: {
     title: "About Tuslipid",
     description: aboutDescription,
-    url: aboutURL,
+    url: '/about',
     type: "profile",
     images: aboutImage,
   },

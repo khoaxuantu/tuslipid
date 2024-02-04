@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     name: "Xuan Khoa Tu Nguyen",
   },
   metadataBase: new URL(defaultURL),
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     type: "website",
     title: defaultTitle,
@@ -44,8 +47,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
         <link rel="stylesheet" href="/css/style.css" />
         <link
