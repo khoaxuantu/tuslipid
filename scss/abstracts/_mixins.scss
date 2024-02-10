@@ -1,0 +1,42 @@
+@mixin flex-wrap($wrap: wrap) {
+    display: flex;
+    flex-wrap: $wrap;
+}
+
+@mixin rounded($offset: 0px) {
+    border-radius: var.$RADIUS + $offset;
+}
+
+@mixin center-block($m: auto, $mode: "margin") {
+    #{$mode}-left: $m;
+    #{$mode}-right: $m;
+}
+
+@mixin overlay($color) {
+    background: $color;
+    position: fixed;
+    width: 100dvw;
+    height: 100dvh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+@mixin box($theme: white) {
+    @include util.rounded($offset: 5px);
+    background-color: $theme;
+}
+
+@mixin content-wrapper($width, $maxWidth, $marginTop) {
+    width: $width;
+    max-width: $maxWidth;
+    margin-top: $marginTop;
+    @include util.center-block();
+}
+
+@mixin shape-btn($ratio: 1, $width: auto) {
+    aspect-ratio: $ratio;
+    width: $width;
+    cursor: pointer;
+}
