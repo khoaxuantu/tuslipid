@@ -32,9 +32,9 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
   return (
     <>
-      <div className="container page-wrapper transition-page">
+      <div className="sl-l-container sl-l-wrapper transition-page">
         <ProjectsPageHeaderGrp />
-        <div className="project-wrapper">
+        <div className="project-l-wrapper">
           <ProjectsList />
         </div>
         <Copyright copyright_class="page-copyright pb-3" />

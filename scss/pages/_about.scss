@@ -1,0 +1,57 @@
+@use '../abstracts' as *;
+
+.about {
+    &-l {
+        &-wrapper {
+            &__proj {
+                display: grid;
+                column-gap: 2rem;
+                row-gap: 2rem;
+            }
+        }
+    }
+
+    &-c {
+        &-box__me {
+            @include box($theme: $LIGHT_GRAY);
+        }
+
+        &-btn {
+            &__group-skill {
+                @extend %btn-group;
+                justify-content: space-between;
+                column-gap: 0.625rem;
+            }
+
+            &__skill {
+                @include shape-btn(1, 3rem);
+                font-size: 10px !important;
+                color: black;
+                transition: scale 150ms ease-out;
+
+                #name {
+                    width: 66.66%;
+                    text-align: center;
+                    display: none;
+                }
+
+                &:hover {
+                    scale: 1.1;
+                    text-decoration: none;
+                    font-weight: 650;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) {
+    .about-c-btn__skill {
+        @include shape-btn(3, 150px);
+        font-size: 12px !important;
+
+        #name {
+            display: block;
+        }
+    }
+}

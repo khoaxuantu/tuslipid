@@ -1,4 +1,4 @@
-@use 'general/var';
+@use 'abstracts/var';
 
 $codeblock-background: #282c34;
 $codeblock-color: #abb2bf;
@@ -27,7 +27,7 @@ $codeinline-background: #f6f8fa;
         line-break: anywhere;
         display: inline-block;
         line-height: 1.35;
-        font-family: var.$code-blog-font;
+        font-family: var.$CODE_BLOG_FONT;
         font-size: 13px;
 
         span {
@@ -72,7 +72,7 @@ $codeinline-background: #f6f8fa;
     }
 }
 
-.single-blog-wrapper {
+.blog-l-wrapper {
     @extend %markdown-theme;
-    font-family: var.$blog-font;
+    font-family: var.$BLOG_FONT;
 }

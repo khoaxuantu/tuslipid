@@ -1,0 +1,16 @@
+@use '../layout/wrapper';
+
+.menu {
+    &-l {
+        &-wrapper {
+            @extend %menu-l-wrapper;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .menu-l-wrapper {
+        width: 720px;
+    }
+}
+

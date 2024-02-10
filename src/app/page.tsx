@@ -15,7 +15,7 @@ export default function TuslipidMenu() {
   return (
     <>
       <div className="background-overlay"></div>
-      <div className={`container menu-wrapper ${orientation} transition-menu`}>
+      <div className={`sl-l-container menu-l-wrapper ${orientation} transition-menu`}>
         <MenuHeaderGrp />
         <NavBtnGroup />
         <Copyright copyright_class="menu-copyright mt-5" />

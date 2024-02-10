@@ -11,7 +11,7 @@
         @include util.rounded;
         width: 45px;
         aspect-ratio: 1/1;
-        background-color: var.$navbar-bg-color;
+        background-color: var.$NAVBAR-BG-COLOR;
         border: none;
         cursor: pointer;
         position: absolute;
@@ -21,8 +21,8 @@
             position: absolute;
             width: 66.67%;
             height: 0.5rem;
-            background-color: var.$navbar-stick-color;
-            box-shadow: 0 10px 0 var.$navbar-stick-color, 0 20px var.$navbar-stick-color;
+            background-color: var.$NAVBAR-STICK-COLOR;
+            box-shadow: 0 10px 0 var.$NAVBAR-STICK-COLOR, 0 20px var.$NAVBAR-STICK-COLOR;
             left: 18%;
             top: 18%;
         }
@@ -38,7 +38,7 @@
 
 .navbar-menu {
     @include util.rounded;
-    background-color: var.$navbar-bg-color;
+    background-color: var.$NAVBAR-BG-COLOR;
     width: 100%;
     display: none;
 
@@ -56,7 +56,7 @@
         }
 
         &:hover {
-            background-color: var.$gray;
+            background-color: var.$GRAY;
             opacity: 0.6;
         }
     }
@@ -70,9 +70,9 @@
     // @include util.flex-wrap(nowrap);
 
     .is-current {
-        background-color: var.$light-gray;
+        background-color: var.$LIGHT_GRAY;
         border-left: none;
-        border-bottom: 2px solid var.$gray;
+        border-bottom: 2px solid var.$GRAY;
         font-weight: bold;
     }
 }
@@ -81,10 +81,10 @@
     height: 50px;
     width: 100%;
     border: none;
-    border-bottom: 2px solid var.$light-gray;
+    border-bottom: 2px solid var.$LIGHT_GRAY;
     background-color: white;
     cursor: pointer;
-    font-family: var.$header-font;
+    font-family: var.$HEADER_FONT;
     text-align: start;
 
     &:hover {
@@ -128,7 +128,7 @@
         height: 50px;
         width: 100%;
         border: none;
-        border-left: 2px solid var.$light-gray;
+        border-left: 2px solid var.$LIGHT_GRAY;
     }
 
     .tab-list {
@@ -136,7 +136,7 @@
 
         .is-current {
             border-bottom: none;
-            border-left: 2px solid var.$gray;
+            border-left: 2px solid var.$GRAY;
         }
     }
 

@@ -20,7 +20,7 @@ export default function NotFound() {
   return (
     <>
       <div className="background-overlay"></div>
-      <div className={`container menu-wrapper center transition-menu`}>
+      <div className={`sl-l-container menu-l-wrapper center transition-menu`}>
         <div className="header-grp center">
           <div className="header-txt">
             <b>404</b>

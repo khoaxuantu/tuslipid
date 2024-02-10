@@ -1,0 +1,18 @@
+@use '../layout/wrapper';
+@use '../abstracts' as *;
+
+.contact {
+    &-l {
+        &-wrapper {
+            @extend %menu-l-wrapper;
+        }
+    }
+
+    &-c {
+        &-btn {
+            &__overlay {
+                @include overlay(rgba($color: var.$OVERLAY_COLOR, $alpha: 0.7));
+            }
+        }
+    }
+}

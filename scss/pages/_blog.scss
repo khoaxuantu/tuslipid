@@ -1,0 +1,9 @@
+@use '../abstracts' as *;
+
+.blog {
+    &-l {
+        &-wrapper {
+            @include content-wrapper(80%, 900px, 50px);
+        }
+    }
+}

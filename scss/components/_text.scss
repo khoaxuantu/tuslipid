@@ -5,7 +5,7 @@
     text-align: center;
     padding: 0 0.5rem 0 0.5rem;
     font-size: 12px;
-    font-family: var.$conpyright-font;
+    font-family: var.$COPYRIGHT_FONT;
 }
 
 @mixin set-font($font, $size) {
@@ -13,18 +13,18 @@
     font-family: $font;
 }
 
-@mixin select-header-txt($font: var.$header-font, $padding: 0.5rem 0, $size: var.$default-header-font-size) {
+@mixin select-header-txt($font: var.$HEADER_FONT, $padding: 0.5rem 0, $size: var.$DEFAULT_HEADER_FONT_SIZE) {
     padding: $padding;
     @include set-font($font, $size);
 }
 
-@mixin select-body-txt($font: var.$body-font, $size: var.$default-body-font-size) {
+@mixin select-body-txt($font: var.$BODY_FONT, $size: var.$DEFAULT_BODY_FONT_SIZE) {
     @include set-font($font, $size);
 }
 
 a {
     text-decoration: none;
-    color: var.$default-atag-color;
+    color: var.$DEFAULT-ATAG-COLOR;
 
     &:hover {
         text-decoration: underline;
@@ -36,7 +36,7 @@ a {
 }
 
 .header-txt-menu, .header-txt-contact {
-    @include select-header-txt($size: 24px, $font: var.$header-font-menu, $padding: 0.5rem)
+    @include select-header-txt($size: 24px, $font: var.$HEADER_FONT_MENU, $padding: 0.5rem)
 }
 
 .header-txt-contact {
@@ -49,11 +49,11 @@ a {
 }
 
 .header-txt-blog {
-    @include select-header-txt($font: var.$header-font-blog, $size: 20px)
+    @include select-header-txt($font: var.$HEADER_FONT_BLOG, $size: 20px)
 }
 
 .body-txt-menu, .navbar-txt {
-    @include select-body-txt($font: var.$body-font-menu, $size: 14px)
+    @include select-body-txt($font: var.$BODY_FONT_MENU, $size: 14px)
 }
 
 .body-txt {
@@ -61,12 +61,12 @@ a {
 }
 
 .body-txt-blog {
-    font-family: var.$body-font-blog;
+    font-family: var.$BODY_FONT_BLOG;
     line-height: 1.5;
 }
 
 .oauth-txt, .guestbook-txt {
-    font-family: var.$header-font;
+    font-family: var.$HEADER_FONT;
     font-size: 12px;
 }
 

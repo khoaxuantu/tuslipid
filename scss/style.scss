@@ -11,21 +11,13 @@
 @use 'general/container';
 @use 'general/util';
 
-*
-{
-    margin: 0;
-    padding: 0;
-    // font-size: 100%;
-    box-sizing: border-box;
-}
-
 body {
-    background-image: url(var.$background-url);
+    background-image: url(var.$BACKGROUND_URL);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    font-family: var.$body-font;
+    font-family: var.$BODY_FONT;
     line-height: 1.5;
 }
 
@@ -42,7 +34,7 @@ span {
 }
 
 .background-overlay {
-    @include util.overlay(rgba($color: var.$overlay-color, $alpha: 0.75));
+    @include util.overlay(rgba($color: var.$OVERLAY_COLOR, $alpha: 0.75));
 }
 
 .header-grp {
@@ -62,11 +54,11 @@ span {
     }
 
     button {
-        font-family: var.$header-font;
+        font-family: var.$HEADER_FONT;
     }
 }
 
-.nav-btn-grp {
+.nav-sl-c-btn__group {
     margin-top: 10%;
     z-index: 1000;
 
@@ -76,7 +68,7 @@ span {
     }
 
     button {
-        font-family: var.$body-font-menu;
+        font-family: var.$BODY_FONT_MENU;
     }
 }
 
@@ -88,7 +80,7 @@ span {
     @extend %copyright-txt;
     position: relative;
     display: none;
-    color: var.$text-menu;
+    color: var.$TEXT_MENU;
 
     a {
         color: bisque;
@@ -107,7 +99,7 @@ span {
 }
 
 @media (min-width: 576px) {
-    .nav-btn-grp {
+    .nav-sl-c-btn__group {
         margin-top: 5%;
     }
 }

@@ -25,7 +25,7 @@ export async function AboutProject() {
             </span>
           </div>
         </div>
-        <div className="col-8 menu-proj-wrapper">
+        <div className="col-8 about-l-wrapper__proj">
           {featuredProj.map((proj) => {
             return <Card key={proj.id} isFeatured={true} {...proj} />;
           })}

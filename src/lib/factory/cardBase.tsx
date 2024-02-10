@@ -130,7 +130,7 @@ function BlogsCard(props: IBlogCardProps) {
     <div className="card card-blog mb-5 fade-in-left">
       <h3 className="header-txt-blog p-3">{props.title}</h3>
       <div className="body-txt-blog p-3">{props.brief_description}</div>
-      <div className="read-more-btn mb-4">
+      <div className="blogs-c-btn__read-more mb-4">
         <Link className="body-txt-blog" href={"/blogs" + props.url + "/"}>
           Read more {">>"}
         </Link>

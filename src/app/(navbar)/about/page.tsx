@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <div className="container page-wrapper transition-page">
+      <div className="sl-l-container sl-l-wrapper transition-page">
         <AboutHeaderGrp />
         <div className="content-grp">
           <AboutIntro />

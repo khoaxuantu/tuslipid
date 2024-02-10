@@ -1,0 +1,20 @@
+@use '../abstracts' as *;
+
+.project {
+    &-l {
+        &-wrapper {
+            @include content-wrapper(80%, 600px, 50px);
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .project-l-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+        max-width: clamp(900px, 1000px + 10vw, 1400px);
+        width: 90%;
+        align-items: stretch;
+    }
+}
