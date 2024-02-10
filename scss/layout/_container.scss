@@ -1,0 +1,24 @@
+@use '../abstracts' as *;
+
+.sl {
+    &-l {
+        &-wrapper {
+            width: 100%;
+            height: auto;
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+            background-color: white;
+        }
+
+        &-container {
+            @include center-block();
+            @include rounded;
+        }
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .sl-l-wrapper {
+        width: 80%;
+    }
+}
