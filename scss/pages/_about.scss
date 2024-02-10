@@ -42,6 +42,21 @@
                 }
             }
         }
+
+        &-card {
+            &__featured-proj {
+                @include rounded(10);
+                @extend %card-bodering;
+
+                .proj-image {
+                    height: 400px;
+
+                    img {
+                        height: inherit;
+                    }
+                }
+            }
+        }
     }
 }
 

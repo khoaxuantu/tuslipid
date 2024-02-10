@@ -18,7 +18,7 @@
                 a {
                     @extend %flex-center;
                     @include rounded(10px);
-                    background-color: var.$LIGHT_GRAY;
+                    background-color: $LIGHT_GRAY;
                     color: black;
                     width: 16.67%;
                     min-width: 120px;
@@ -27,12 +27,21 @@
                     transition: all 300ms ease-in-out;
 
                     &:hover {
-                        background-color: var.$GRAY;
+                        background-color: $GRAY;
                         color: white;
                         text-decoration: none;
                     }
                 }
             }
+        }
+
+        &-card {
+            @include rounded(10);
+            border: 1px solid $LIGHT_GRAY;
+            box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
+            aspect-ratio: 4;
+            flex-direction: column;
+            flex-wrap: nowrap;
         }
     }
 }

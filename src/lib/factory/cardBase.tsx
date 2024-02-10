@@ -20,11 +20,11 @@ function DefaultProjectCard(props: IProjCardProps) {
   let href = ProjHref(props);
 
   return (
-    <div className="card card-proj mb-5">
+    <div className="sl-c-card projects-c-card mb-5">
       <div className="col-5 proj-image">{image}</div>
-      <div className="col-7 p-3 proj-description">
+      <div className="col-7 p-3 sl-c-card__proj-description">
         <h3 className="header-txt-proj">{props.title}</h3>
-        <ul className="pb-4 ps-2 proj-tool-list">
+        <ul className="pb-4 ps-2 sl-c-card__proj-tool-list">
           {props.tools.map((tool) => {
             return (
               <li className="pe-2" key={tool}>
@@ -42,7 +42,7 @@ function DefaultProjectCard(props: IProjCardProps) {
             );
           })}
         </div>
-        <ul className="proj-href">
+        <ul className="sl-c-card__proj-href">
           {href.github}
           {href.demo}
         </ul>
@@ -55,10 +55,10 @@ function FeaturedProjCard(props: IProjCardProps) {
   let href = ProjHref(props);
 
   return (
-    <div className="card card-featured-proj">
-      <div className="p-3 proj-description">
+    <div className="sl-c-card about-c-card__featured-proj">
+      <div className="p-3 sl-c-card__proj-description">
         <h3 className="header-txt-proj">{props.title}</h3>
-        <ul className="pb-4 ps-2 proj-tool-list">
+        <ul className="pb-4 ps-2 sl-c-card__proj-tool-list">
           {props.tools.map((tool) => {
             return (
               <li className="pe-2" key={tool}>
@@ -76,7 +76,7 @@ function FeaturedProjCard(props: IProjCardProps) {
             );
           })}
         </div>
-        <ul className="proj-href">
+        <ul className="sl-c-card__proj-href">
           {href.github}
           {href.demo}
         </ul>
@@ -127,7 +127,7 @@ function ProjHref(props: IProjCardProps) {
 
 function BlogsCard(props: IBlogCardProps) {
   return (
-    <div className="card card-blog mb-5 fade-in-left">
+    <div className="sl-c-card blogs-c-card mb-5 fade-in-left">
       <h3 className="header-txt-blog p-3">{props.title}</h3>
       <div className="body-txt-blog p-3">{props.brief_description}</div>
       <div className="blogs-c-btn__read-more mb-4">

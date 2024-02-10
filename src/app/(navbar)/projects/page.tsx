@@ -34,7 +34,7 @@ export default function ProjectsPage() {
     <>
       <div className="sl-l-container sl-l-wrapper transition-page">
         <ProjectsPageHeaderGrp />
-        <div className="project-l-wrapper">
+        <div className="projects-l-wrapper">
           <ProjectsList />
         </div>
         <Copyright copyright_class="page-copyright pb-3" />
