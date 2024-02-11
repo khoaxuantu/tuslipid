@@ -1,0 +1,19 @@
+@forward 'reset';
+@forward 'typography';
+@forward 'preset';
+@forward 'animation';
+
+.center {
+    position: absolute !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.is-current {
+    display: block !important;
+}

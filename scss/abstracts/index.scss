@@ -1,0 +1,29 @@
+@forward 'mixins';
+@forward 'var';
+
+@use 'var';
+
+%flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+%btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    row-gap: 0.5rem;
+}
+
+%card-bodering {
+    border: 1px solid var.$LIGHT_GRAY;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+%menu-l-wrapper {
+    position: relative;
+    width: 80%;
+    line-height: initial;
+    color: var.$TEXT_MENU;
+}

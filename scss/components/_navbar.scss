@@ -1,146 +1,145 @@
-@use '../general/var';
-@use '../general/util';
-@use '../general/animation';
+@use '../abstracts' as *;
 
-
-.navbar {
-    @include util.rounded;
-    width: 100%;
-
-    button {
-        @include util.rounded;
-        width: 45px;
-        aspect-ratio: 1/1;
-        background-color: var.$navbar-bg-color;
-        border: none;
-        cursor: pointer;
-        position: absolute;
-
-        &::after {
-            content: '';
-            position: absolute;
-            width: 66.67%;
-            height: 0.5rem;
-            background-color: var.$navbar-stick-color;
-            box-shadow: 0 10px 0 var.$navbar-stick-color, 0 20px var.$navbar-stick-color;
-            left: 18%;
-            top: 18%;
-        }
-    }
-}
-
-.navbar-wrap {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
-
-.navbar-menu {
-    @include util.rounded;
-    background-color: var.$navbar-bg-color;
-    width: 100%;
-    display: none;
-
-    li {
-        cursor: pointer;
-
-        a {
-            padding: 0.5rem;
-            font-size: 14px;
-            text-decoration: none;
-            color: white;
+.sl {
+    &-c {
+        &-navbar {
+            @include rounded;
             width: 100%;
-            height: auto;
-            display: block;
+
+            &__wrap {
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 1;
+
+                button {
+                    @include rounded;
+                    width: 45px;
+                    aspect-ratio: 1/1;
+                    background-color: $NAVBAR-BG-COLOR;
+                    border: none;
+                    cursor: pointer;
+                    position: absolute;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        width: 66.67%;
+                        height: 0.5rem;
+                        background-color: $NAVBAR-STICK-COLOR;
+                        box-shadow: 0 10px 0 $NAVBAR-STICK-COLOR, 0 20px $NAVBAR-STICK-COLOR;
+                        left: 18%;
+                        top: 18%;
+                    }
+                }
+            }
+
+            &__menu {
+                @include rounded;
+                background-color: $NAVBAR-BG-COLOR;
+                width: 100%;
+                display: none;
+
+                li {
+                    cursor: pointer;
+
+                    a {
+                        padding: 0.5rem;
+                        font-size: 14px;
+                        text-decoration: none;
+                        color: white;
+                        width: 100%;
+                        height: auto;
+                        display: block;
+                    }
+
+                    &:hover {
+                        background-color: $GRAY;
+                        opacity: 0.6;
+                    }
+                }
+            }
         }
 
-        &:hover {
-            background-color: var.$gray;
-            opacity: 0.6;
+        &-txt {
+            &__navbar {
+                @include select-body-txt($font: $BODY_FONT_MENU, $size: 14px);
+            }
         }
-    }
-}
 
-.menu-animation {
-    @include animation.animation(fadeInDown, 300ms);
-}
+        &-tab {
+            &__list {
+                .is-current {
+                    background-color: $LIGHT_GRAY;
+                    border-left: none;
+                    border-bottom: 2px solid $GRAY;
+                    font-weight: bold;
+                }
+            }
 
-.tab-list {
-    // @include util.flex-wrap(nowrap);
+            &__vertical {
+                height: 50px;
+                width: 100%;
+                border: none;
+                border-bottom: 2px solid $LIGHT_GRAY;
+                background-color: white;
+                cursor: pointer;
+                font-family: $HEADER_FONT;
+                text-align: start;
 
-    .is-current {
-        background-color: var.$light-gray;
-        border-left: none;
-        border-bottom: 2px solid var.$gray;
-        font-weight: bold;
-    }
-}
+                &:hover {
+                    font-weight: 650;
+                }
+            }
 
-.vertical-tab {
-    height: 50px;
-    width: 100%;
-    border: none;
-    border-bottom: 2px solid var.$light-gray;
-    background-color: white;
-    cursor: pointer;
-    font-family: var.$header-font;
-    text-align: start;
+            &__content {
+                @include center-block($m: 0.5rem, $mode: "padding");
+                height: 400px;
+                overflow: auto;
+                padding-top: .5rem;
 
-    &:hover {
-        font-weight: 650;
-    }
-}
-
-.tab-content {
-    @include util.center-block($m: 0.5rem, $mode: "padding");
-    height: 400px;
-    overflow: auto;
-    padding-top: .5rem;
-
-    .content {
-        display: none;
+                .content {
+                    display: none;
+                }
+            }
+        }
     }
 }
 
 @media screen and (min-width: 320px) {
-    .tab-content {
+    .sl-c-tab__content {
         height: 320px;
     }
 }
 
 @media screen and (min-width: 768px) {
-    .navbar-wrap {
+    .sl-c-navbar__wrap {
         top: 25px;
         left: 25px;
         max-width: 150px;
     }
 
-    .navbar-menu {
+    .sl-c-navbar__menu {
         width: 150px;
     }
 
-    .menu-animation {
-        animation-name: fadeInUp;
-    }
-
-    .vertical-tab {
+    .sl-c-tab__vertical {
         height: 50px;
         width: 100%;
         border: none;
-        border-left: 2px solid var.$light-gray;
+        border-left: 2px solid $LIGHT_GRAY;
     }
 
-    .tab-list {
+    .sl-c-tab__list {
         display: block;
 
         .is-current {
             border-bottom: none;
-            border-left: 2px solid var.$gray;
+            border-left: 2px solid $GRAY;
         }
     }
 
-    .tab-content {
+    .sl-c-tab__content {
         height: 320px;
         padding-top: 0;
     }

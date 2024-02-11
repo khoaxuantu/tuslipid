@@ -31,7 +31,7 @@ function orientationHandler(m: MediaQueryListEvent) {
 }
 
 function processElement(): HTMLElement[] {
-    const CLASS_LIST = ["container", "background-overlay", "btn-contact-overlay"];
+    const CLASS_LIST = ["container", "sl-c-overlay", "contact-c-btn__overlay"];
     let arr : HTMLElement[] = [];
     CLASS_LIST.forEach(elem => {
         arr.push(document.getElementsByClassName(elem)[0] as HTMLElement);

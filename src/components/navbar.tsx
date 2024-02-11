@@ -15,8 +15,8 @@ function Navbar() {
   function clickHandler(e: MouseEvent) {
     const target = e.target as HTMLInputElement;
     if (
-      target.className !== "navbar-trigger" &&
-      target.className !== "navbar-menu"
+      target.className !== "sl-js-navbar-trigger" &&
+      target.className !== "sl-c-navbar__menu"
     ) {
       navHandler("block", "none");
     }
@@ -24,24 +24,24 @@ function Navbar() {
 
   function navHandler(navBtnDisplay: string, navBarDisplay: string): void {
     const navbtn = document.getElementsByClassName(
-      "navbar-trigger"
+      "sl-js-navbar-trigger"
     )[0] as HTMLElement;
     navbtn.style.display = navBtnDisplay;
     const navbar = document.getElementsByClassName(
-      "navbar-menu"
+      "sl-c-navbar__menu"
     )[0] as HTMLElement;
     navbar.style.display = navBarDisplay;
   }
 
   return (
-    <nav className="navbar navbar-wrap">
+    <nav className="sl-c-navbar sl-c-navbar__wrap">
       <button
         type="button"
-        className="navbar-trigger"
+        className="sl-js-navbar-trigger"
         aria-label="navbar"
         onClick={() => navHandler("none", "block")}
       ></button>
-      <ul className="navbar-menu navbar-txt menu-animation">
+      <ul className="sl-c-navbar__menu sl-c-txt__navbar menu-animation">
         <li key="Home">
           <DefaultButton url="/" content="Home" />
         </li>

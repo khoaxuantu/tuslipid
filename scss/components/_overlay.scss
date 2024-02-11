@@ -1,0 +1,9 @@
+@use '../abstracts' as *;
+
+.sl {
+    &-c {
+        &-overlay {
+            @include overlay(rgba($color: $OVERLAY_COLOR, $alpha: 0.75));
+        }
+    }
+}

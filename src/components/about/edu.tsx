@@ -5,10 +5,10 @@ async function Education() {
 
   return (
     <section className="mb-5 row">
-      <h3 className="header-txt col-4 pe-5">Where I studied</h3>
+      <h3 className="sl-c-txt__header col-4 pe-5">Where I studied</h3>
       <div className="col-8">
         <div className="pt-2 pb-2 d-flex">
-          <div className="edu-content-grp pe-3">
+          <div className="about-l-wrapper__edu-content pe-3">
             <h3>
               <span>National Taiwan University</span>{" "}
               <span>of Science and Technology</span>
@@ -22,7 +22,7 @@ async function Education() {
             <div className="bt-1 mb-2" style={{ opacity: 0.5 }}>
               Sep 2018 - July 2022
             </div>
-            <div className="body-txt">
+            <div className="sl-c-txt__body">
               <b>
                 <i>Specialization: </i>
               </b>
@@ -36,12 +36,12 @@ async function Education() {
               </ul>
             </div>
           </div>
-          <div className="edu-image">
+          <div className="about-c-img__edu">
             <img src={eduImgs.TaiwanTech} alt="" width={64} />
           </div>
         </div>
         <div className="mt-3 pt-2 pb-2 d-flex">
-          <div className="edu-content-grp pe-3">
+          <div className="about-l-wrapper__edu-content pe-3">
             <h3>
               <span>Hanoi - Amsterdam</span> <span>High School</span>{" "}
               <span>for the Gifted</span>
@@ -51,7 +51,7 @@ async function Education() {
               Aug 2015 - May 2018
             </div>
           </div>
-          <div className="edu-image">
+          <div className="about-c-img__edu">
             <img src={eduImgs.HanoiAms} alt="" width={64} />
           </div>
         </div>

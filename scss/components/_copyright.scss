@@ -1,0 +1,37 @@
+@use '../abstracts' as *;
+
+%copyright-txt {
+    width: 100%;
+    text-align: center;
+    padding: 0 0.5rem 0 0.5rem;
+    font-size: 12px;
+    font-family: $COPYRIGHT_FONT;
+}
+
+.sl {
+    &-c {
+        &-copyright {
+            &__menu {
+                @extend %copyright-txt;
+                position: relative;
+                display: none;
+                color: $TEXT_MENU;
+
+                a {
+                    color: bisque;
+                }
+            }
+
+            &__page {
+                @extend %copyright-txt;
+                position: relative;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 376px) {
+    .sl-c-copyright__menu {
+        display: block;
+    }
+}

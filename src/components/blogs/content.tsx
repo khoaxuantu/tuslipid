@@ -12,7 +12,7 @@ export function BlogsContent() {
     });
 
     return (
-        <div className="blog-wrapper">
+        <div className="blogs-l-wrapper">
             <BlogsList blogInfoList={blogInfoList} />
         </div>
     );

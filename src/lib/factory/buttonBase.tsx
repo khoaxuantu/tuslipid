@@ -30,7 +30,7 @@ export function IconButton(props: IconButtonProps) {
   if (typeof props.icon === "string") {
     Icon = (
       <>
-        <div className="icon">
+        <div className="sl-c-icon">
           <img
             className="m-1"
             src={props.icon}
@@ -44,7 +44,7 @@ export function IconButton(props: IconButtonProps) {
   } else {
     Icon = (
       <props.icon
-        className="icon"
+        className="sl-c-icon"
         width="1.5rem"
         height="1.5rem"
         color="#000"

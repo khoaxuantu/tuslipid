@@ -1,69 +1,21 @@
-@use "../general/util";
-@use "../general/var";
+@use "../abstracts" as *;
 
-img {
-    max-width: 100%;
-    height: auto;
-    object-fit: fill;
-}
+.sl {
+    &-c {
+        &-icon {
+            @extend %flex-center;
+            width: 33.33%;
 
-.avatar-grp {
-    border: none;
-    background-color: unset;
-}
+            img {
+                max-width: 32px;
+            }
+        }
 
-.avatar {
-    @include util.center-block();
-    border-radius: 50%;
-    cursor: pointer;
-    transition: src 500ms;
-}
-
-.icon {
-    @extend %flex-center;
-    width: 33.33%;
-
-    img {
-        max-width: 32px;
-    }
-}
-
-.proj-image {
-    border-radius: inherit;
-    justify-content: center;
-    align-items: center;
-
-    img {
-        border-radius: inherit;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-    }
-}
-
-.edu-image {
-    width: 16.66%;
-    min-width: 48px;
-    text-align: end;
-    // border-right: 1px solid var.$light-gray;
-}
-
-.flex-image {
-    @extend %flex-center;
-    justify-content: center;
-}
-
-@media (max-width: 320px) {
-    .avatar {
-        width: 100px;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .proj-image {
-        border-radius: 5px;
-        img {
-            border-bottom-left-radius: 5px;
-            border-bottom-right-radius: 5px;
+        &-img {
+            &__flex {
+                @extend %flex-center;
+                justify-content: center;
+            }
         }
     }
 }

@@ -6,13 +6,13 @@ import { getSkillInfo } from "@/lib/general_info_server";
 export function SocialMediaBtnGroup() {
   return (
     <>
-      <div className="btn-contact-overlay"></div>
-      <div className="container contact-wrapper center body-txt-menu">
-        <div className="header-txt-contact">
+      <div className="contact-c-btn__overlay"></div>
+      <div className="sl-l-container contact-l-wrapper center menu-c-txt__body">
+        <div className="contact-c-txt__header">
           ~ Oi ~<br></br>
           Say hello to me by one of the following {":)"}
         </div>
-        <div className="btn-grp btn-contact-grp mt-5">
+        <div className="sl-c-btn__group btn-contact-grp mt-5">
           {Info.socialMediaInfoList.map((btnProp) => {
             return (
               <Btn.IconButton
@@ -20,14 +20,14 @@ export function SocialMediaBtnGroup() {
                 icon={btnProp.icon}
                 key={btnProp.id}
                 id={btnProp.id}
-                classname="btn btn-square"
+                classname="sl-c-btn sl-c-btn__square"
               />
             );
           })}
         </div>
         <Link
           href="/"
-          className="btn btn-rect mt-5"
+          className="sl-c-btn sl-c-btn__rect mt-5"
           id="go-back"
           prefetch={true}
         >
@@ -40,13 +40,13 @@ export function SocialMediaBtnGroup() {
 
 export function NavBtnGroup() {
   return (
-    <div className="btn-grp nav-btn-grp mb-3 body-txt-menu">
+    <div className="sl-c-btn__group menu-l-grp__nav-btn mb-3 menu-c-txt__body">
       {Info.navBtnInfoList.map((btnProp) => {
         return (
           <Btn.DefaultButton
             url={btnProp.url}
             content={btnProp.content}
-            classname="btn btn-rect"
+            classname="sl-c-btn sl-c-btn__rect"
             key={btnProp.content}
           />
         );
@@ -69,14 +69,14 @@ export async function SkillBtnGroup() {
   }
 
   return (
-    <div className="btn-skill-grp mt-2 col-8">
+    <div className="about-c-btn__group-skill mt-2 col-8">
       {skillInfoList.map((btnProp) => {
         return (
           <Btn.IconButton
             id={btnProp.name}
             url={btnProp.url}
             icon={btnProp.icon}
-            classname="btn btn-skill mt-2 mb-2"
+            classname="sl-c-btn about-c-btn__skill mt-2 mb-2"
             key={btnProp.name}
           />
         );

@@ -1,22 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
 /* Font */
-.single-blog-wrapper * {
+.blog-l-wrapper * {
   margin: revert;
   padding: revert;
   list-style-type: revert;
   line-height: 1.625rem;
 }
-.single-blog-wrapper h1 {
+.blog-l-wrapper h1 {
   padding-top: 3rem;
 }
-.single-blog-wrapper code, .single-blog-wrapper pre {
+.blog-l-wrapper code, .blog-l-wrapper pre {
   border-radius: 5px;
   background-color: #282c34;
   color: #abb2bf;
 }
-.single-blog-wrapper code {
+.blog-l-wrapper code {
   padding: 0.2em 0.4em;
   line-break: anywhere;
   display: inline-block;
@@ -24,18 +21,18 @@
   font-family: "JetBrains Mono", monospace;
   font-size: 13px;
 }
-.single-blog-wrapper code span {
+.blog-l-wrapper code span {
   display: contents;
 }
-.single-blog-wrapper pre {
+.blog-l-wrapper pre {
   border: 1px solid #CCCCCC;
   overflow: auto;
   padding: 6px 10px;
 }
-.single-blog-wrapper pre code {
+.blog-l-wrapper pre code {
   font-size: 14px;
 }
-.single-blog-wrapper blockquote {
+.blog-l-wrapper blockquote {
   margin: 0;
   border-left: 5px solid #7a7a7a;
   font-style: italic;
@@ -43,21 +40,21 @@
   text-align: left;
   font-weight: bold;
 }
-.single-blog-wrapper table {
+.blog-l-wrapper table {
   padding: 1rem 0;
 }
-.single-blog-wrapper th, .single-blog-wrapper td {
+.blog-l-wrapper th, .blog-l-wrapper td {
   padding: 6px 13px;
   border: 1px solid black;
 }
-.single-blog-wrapper hr {
+.blog-l-wrapper hr {
   background: black;
 }
-.single-blog-wrapper ul, .single-blog-wrapper ol {
+.blog-l-wrapper ul, .blog-l-wrapper ol {
   padding-left: 20px;
 }
 
-.single-blog-wrapper {
+.blog-l-wrapper {
   font-family: "Ubuntu", system-ui, sans-serif;
 }
 

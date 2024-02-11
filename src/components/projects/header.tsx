@@ -1,10 +1,10 @@
 export default function ProjectsPageHeaderGrp() {
     return (
-      <div className='header-grp'>
-        <div className='header-txt'>
+      <div className='sl-l-container__header'>
+        <div className='sl-c-txt__header'>
           <b>Projects</b>
         </div>
-        <div className='body-txt mt-2'>
+        <div className='sl-c-txt__body mt-2'>
           I started studying Information Technology in 2020 and {" "}
           luckily done some fun works since then.
         </div>

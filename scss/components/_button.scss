@@ -1,22 +1,7 @@
-@use '../general/util';
-@use '../general/var';
-
-%btn-group {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    row-gap: 0.5rem;
-}
-
-
-@mixin shapeBtn($ratio: 1, $width: auto) {
-    aspect-ratio: $ratio;
-    width: $width;
-    cursor: pointer;
-}
+@use '../abstracts' as *;
 
 #go-back {
-    @include util.center-block;
+    @include center-block;
     text-align: center;
     cursor: pointer;
     text-decoration: none;
@@ -27,159 +12,61 @@
     }
 }
 
-.btn {
-    @extend %flex-center;
-    background-color: #fff;
-    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
-    border: 1px solid var.$light-gray;
-    opacity: .8;
-    @include util.rounded;
+.sl {
+    &-c {
+        &-btn {
+            @extend %flex-center;
+            background-color: #fff;
+            box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
+            border: 1px solid $LIGHT_GRAY;
+            opacity: .8;
+            @include rounded;
 
-    &:hover {
-        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-        border: none;
-        opacity: 1;
-    }
-}
+            &:hover {
+                box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+                border: none;
+                opacity: 1;
+            }
 
-.btn-square {
-    @include shapeBtn($width: 2rem);
-}
+            &__square {
+                @include shape-btn($width: 2rem);
+            }
 
-.btn-rect {
-    @include shapeBtn(2, 4.6875rem);
-}
+            &__rect {
+                @include shape-btn(2, 4.6875rem);
+            }
 
-.btn-grp {
-    @extend %btn-group;
-    justify-content: center;
+            &__group {
+                @extend %btn-group;
+                justify-content: center;
 
-    a, button {
-        margin: 0 0.625rem 0 0.625rem;
-        font-size: 12px;
-    }
-}
-
-.btn-contact-overlay {
-    @include util.overlay(rgba($color: var.$overlay-color, $alpha: 0.7));
-}
-
-.btn-skill-grp {
-    @extend %btn-group;
-    justify-content: space-between;
-    column-gap: 0.625rem;
-}
-
-.btn-skill {
-    @include shapeBtn(1, 3rem);
-    font-size: 10px !important;
-    color: black;
-    transition: scale 150ms ease-out;
-
-    #name {
-        width: 66.66%;
-        text-align: center;
-        display: none;
-    }
-
-    &:hover {
-        scale: 1.1;
-        text-decoration: none;
-        font-weight: 650;
-    }
-}
-
-.oauth-grp {
-    button {
-        @include util.center-block(0);
-    }
-}
-
-.btn-oauth-box {
-    width: 100%;
-}
-
-.btn-oauth {
-    @include shapeBtn(6, 80%);
-    @include util.rounded(20);
-}
-
-.btn-oauth-github {
-    background-color: black;
-    box-shadow: none;
-
-    .oauth-txt {
-        color: white;
-    }
-}
-
-.btn-oauth-google {
-    box-shadow: none;
-}
-
-.read-more-btn {
-    display: flex;
-    justify-content: center;
-    margin-top: auto;
-    height: 20%;
-
-    a {
-        @extend %flex-center;
-        @include util.rounded(10px);
-        background-color: var.$light-gray;
-        color: black;
-        width: 16.67%;
-        min-width: 120px;
-        height: 100%;
-        min-height: 30px;
-        transition: all 300ms ease-in-out;
-
-        &:hover {
-            background-color: var.$gray;
-            color: white;
-            text-decoration: none;
+                a, button {
+                    margin: 0 0.625rem 0 0.625rem;
+                    font-size: 12px;
+                }
+            }
         }
     }
 }
 
 @media (min-width: 320px) {
-    .btn-square {
+    .sl-c-btn__square {
         width: 3rem;
     }
 }
 
 @media (min-width: 576px) {
-    .btn-square {
+    .sl-c-btn__square {
         width: 4rem;
     }
 
-    .btn-rect {
+    .sl-c-btn__rect {
         width: 6.25rem;
     }
 
-    .btn-grp {
+    .sl-c-btn__group {
         a, button {
             font-size: 16px;
         }
-    }
-
-    .btn-skill {
-        @include shapeBtn(3, 150px);
-        font-size: 12px !important;
-
-        #name {
-            display: block;
-        }
-    }
-
-    .read-more-btn {
-        justify-content: flex-end;
-        padding-right: 1.5rem;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .btn-oauth {
-        aspect-ratio: 5;
     }
 }

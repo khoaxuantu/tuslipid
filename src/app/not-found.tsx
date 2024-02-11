@@ -19,13 +19,13 @@ export const metadata: Metadata = {
 export default function NotFound() {
   return (
     <>
-      <div className="background-overlay"></div>
-      <div className={`container menu-wrapper center transition-menu`}>
-        <div className="header-grp center">
-          <div className="header-txt">
+      <div className="sl-c-overlay"></div>
+      <div className={`sl-l-container menu-l-wrapper center transition-menu`}>
+        <div className="sl-l-container__header center">
+          <div className="sl-c-txt__header">
             <b>404</b>
           </div>
-          <div className="body-txt mt-2">
+          <div className="sl-c-txt__body mt-2">
             Oi ~ This URL does not exist.
             <br />
             <br />

@@ -34,16 +34,16 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <div className="container page-wrapper transition-page">
+      <div className="sl-l-container sl-l-wrapper transition-page">
         <AboutHeaderGrp />
-        <div className="content-grp">
+        <div className="sl-l-container__content">
           <AboutIntro />
           <Education />
           <Works />
           <AboutProject />
           <GetInTouch />
         </div>
-        <Copyright copyright_class="page-copyright pb-3" />
+        <Copyright copyright_class="sl-c-copyright__page pb-3" />
       </div>
     </>
   );

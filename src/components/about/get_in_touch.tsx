@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function GetInTouch() {
   return (
     <section className="mb-5 row">
-      <h3 className="header-txt col-4 pe-5">
+      <h3 className="sl-c-txt__header col-4 pe-5">
         Get in touch
       </h3>
       <div className="col-8">

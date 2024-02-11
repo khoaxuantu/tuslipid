@@ -1,128 +1,13 @@
-@use 'components/image';
-@use 'components/text';
-@use 'components/line';
-@use 'components/button';
-@use 'components/navbar';
-@use 'components/card';
-@use 'components/form';
-@use 'general/var';
-@use 'general/grid';
-@use 'general/landscape';
-@use 'general/container';
-@use 'general/util';
+/* They should be imported only once */
+@use 'base';
+@use 'components';
 
-*
-{
-    margin: 0;
-    padding: 0;
-    // font-size: 100%;
-    box-sizing: border-box;
-}
+/* Pages */
+@use 'pages/about';
+@use 'pages/contact';
+@use 'pages/menu';
+@use 'pages/projects';
+@use 'pages/blog';
+@use 'pages/blogs';
 
-body {
-    background-image: url(var.$background-url);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    font-family: var.$body-font;
-    line-height: 1.5;
-}
-
-ul {
-    list-style-type: none;
-}
-
-section {
-    padding-bottom: 50px;
-}
-
-span {
-    display: inline-block;
-}
-
-.background-overlay {
-    @include util.overlay(rgba($color: var.$overlay-color, $alpha: 0.75));
-}
-
-.header-grp {
-    padding: 5%;
-    text-align: center;
-}
-
-.content-grp {
-    @include util.center-block(5%, "padding");
-}
-
-.oauth-grp {
-    text-align: center;
-
-    div {
-        @extend %flex-center;
-    }
-
-    button {
-        font-family: var.$header-font;
-    }
-}
-
-.nav-btn-grp {
-    margin-top: 10%;
-    z-index: 1000;
-
-    a {
-        text-decoration: none;
-        color: #000;
-    }
-
-    button {
-        font-family: var.$body-font-menu;
-    }
-}
-
-.edu-content-grp {
-    width: 83.33%;
-}
-
-.menu-copyright {
-    @extend %copyright-txt;
-    position: relative;
-    display: none;
-    color: var.$text-menu;
-
-    a {
-        color: bisque;
-    }
-}
-
-.page-copyright {
-    @extend %copyright-txt;
-    position: relative;
-}
-
-@media screen and (min-width: 376px) {
-    .menu-copyright {
-        display: block;
-    }
-}
-
-@media (min-width: 576px) {
-    .nav-btn-grp {
-        margin-top: 5%;
-    }
-}
-
-@media screen and (min-width: 996px) {
-    .oauth-grp {
-        @include util.center-block(10%, "padding");
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .content-grp {
-        @include util.center-block();
-        max-width: 900px;
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
+@use 'layout';
