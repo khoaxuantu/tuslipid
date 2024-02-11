@@ -1,4 +1,4 @@
-@use '../layout/wrapper';
+@use '../abstracts' as *;
 
 .menu {
     &-l {
@@ -10,6 +10,20 @@
             &__avatar {
                 border: none;
                 background-color: unset;
+            }
+
+            &__nav-btn {
+                margin-top: 10%;
+                z-index: 1000;
+
+                a {
+                    text-decoration: none;
+                    color: #000;
+                }
+
+                button {
+                    font-family: $BODY_FONT_MENU;
+                }
             }
         }
     }
@@ -39,6 +53,12 @@
 @media (max-width: 320px) {
     .menu-c-img__avatar {
         width: 100px;
+    }
+}
+
+@media (min-width: 576px) {
+    .menu-l-grp__nav-btn {
+        margin-top: 5%;
     }
 }
 

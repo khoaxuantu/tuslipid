@@ -34,7 +34,7 @@ function BlogsLayout({ children }: { children: React.ReactNode }) {
     <>
       <div className="sl-l-container sl-l-wrapper transistion-page">
         {children}
-        <Copyright copyright_class="page-copyright mt-5 pt-5 pb-3" />
+        <Copyright copyright_class="sl-c-copyright__page mt-5 pt-5 pb-3" />
       </div>
       <div className="fkkk-next-js">
         <link rel="preload stylesheet" href="/css/markdown.css" as="style" />

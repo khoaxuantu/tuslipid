@@ -18,9 +18,9 @@
             @extend %flex-center;
             background-color: #fff;
             box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
-            border: 1px solid var.$LIGHT_GRAY;
+            border: 1px solid $LIGHT_GRAY;
             opacity: .8;
-            @include util.rounded;
+            @include rounded;
 
             &:hover {
                 box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);

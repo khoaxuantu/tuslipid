@@ -1,5 +1,27 @@
 @use '../abstracts' as *;
 
+body {
+    background-image: url($BACKGROUND_URL);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: $BODY_FONT;
+    line-height: 1.5;
+}
+
+ul {
+    list-style-type: none;
+}
+
+section {
+    padding-bottom: 50px;
+}
+
+span {
+    display: inline-block;
+}
+
 img {
     max-width: 100%;
     height: auto;

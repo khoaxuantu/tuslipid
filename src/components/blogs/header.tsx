@@ -2,7 +2,7 @@ import { blogInfoDict } from "../../lib/general_info";
 
 export function BlogsPageHeaderGrp() {
     return (
-      <div className='header-grp'>
+      <div className='sl-l-container__header'>
         <div className='blogs-c-txt__header'>
           <b>Tus's Blogs</b>
         </div>
@@ -16,7 +16,7 @@ export function BlogsPageHeaderGrp() {
 
 export function SingleBlogPageHeaderGrp(props: {id: string}) {
     return (
-      <div className='header-grp'>
+      <div className='sl-l-container__header'>
         <div className='blog-c-txt__header'>
           <b>{blogInfoDict[props.id].title}</b>
         </div>

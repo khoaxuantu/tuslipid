@@ -12,7 +12,7 @@ export default function MenuHeaderGrp() {
   }
 
   return (
-    <div className="header-grp">
+    <div className="sl-l-container__header">
       <button className="menu-l-grp__avatar" onClick={(e) => avaHandler(e)}>
         <img
           className="transition-ava menu-c-img__avatar"

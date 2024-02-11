@@ -40,13 +40,13 @@ export function SocialMediaBtnGroup() {
 
 export function NavBtnGroup() {
   return (
-    <div className="sl-c-btn__group nav-sl-c-btn__group mb-3 menu-c-txt__body">
+    <div className="sl-c-btn__group menu-l-grp__nav-btn mb-3 menu-c-txt__body">
       {Info.navBtnInfoList.map((btnProp) => {
         return (
           <Btn.DefaultButton
             url={btnProp.url}
             content={btnProp.content}
-            classname="sl-c-btnbtn-rect"
+            classname="sl-c-btn btn-rect"
             key={btnProp.content}
           />
         );

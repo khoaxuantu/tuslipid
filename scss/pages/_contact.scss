@@ -1,4 +1,3 @@
-@use '../layout/wrapper';
 @use '../abstracts' as *;
 
 .contact {
@@ -11,7 +10,7 @@
     &-c {
         &-btn {
             &__overlay {
-                @include overlay(rgba($color: var.$OVERLAY_COLOR, $alpha: 0.7));
+                @include overlay(rgba($color: $OVERLAY_COLOR, $alpha: 0.7));
             }
         }
 

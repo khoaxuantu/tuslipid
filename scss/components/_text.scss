@@ -1,13 +1,5 @@
 @use '../abstracts' as *;
 
-%copyright-txt {
-    width: 100%;
-    text-align: center;
-    padding: 0 0.5rem 0 0.5rem;
-    font-size: 12px;
-    font-family: $COPYRIGHT_FONT;
-}
-
 .sl {
     &-c {
         &-txt {

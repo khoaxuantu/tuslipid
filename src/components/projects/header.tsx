@@ -1,6 +1,6 @@
 export default function ProjectsPageHeaderGrp() {
     return (
-      <div className='header-grp'>
+      <div className='sl-l-container__header'>
         <div className='sl-c-txt__header'>
           <b>Projects</b>
         </div>

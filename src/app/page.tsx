@@ -14,11 +14,11 @@ export default function TuslipidMenu() {
 
   return (
     <>
-      <div className="background-overlay"></div>
+      <div className="sl-c-overlay"></div>
       <div className={`sl-l-container menu-l-wrapper ${orientation} transition-menu`}>
         <MenuHeaderGrp />
         <NavBtnGroup />
-        <Copyright copyright_class="menu-copyright mt-5" />
+        <Copyright copyright_class="sl-c-copyright__menu mt-5" />
       </div>
     </>
   );

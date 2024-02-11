@@ -1,3 +1,5 @@
+@use 'var';
+
 @mixin flex-wrap($wrap: wrap) {
     display: flex;
     flex-wrap: $wrap;
@@ -24,7 +26,7 @@
 }
 
 @mixin box($theme: white) {
-    @include util.rounded($offset: 5px);
+    @include rounded($offset: 5px);
     background-color: $theme;
 }
 
@@ -32,7 +34,7 @@
     width: $width;
     max-width: $maxWidth;
     margin-top: $marginTop;
-    @include util.center-block();
+    @include center-block();
 }
 
 @mixin shape-btn($ratio: 1, $width: auto) {
