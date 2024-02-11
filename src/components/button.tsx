@@ -46,7 +46,7 @@ export function NavBtnGroup() {
           <Btn.DefaultButton
             url={btnProp.url}
             content={btnProp.content}
-            classname="sl-c-btn btn-rect"
+            classname="sl-c-btn sl-c-btn__rect"
             key={btnProp.content}
           />
         );

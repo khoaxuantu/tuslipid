@@ -1,76 +1,7 @@
 @use 'abstracts/var';
-
-$codeblock-background: #282c34;
-$codeblock-color: #abb2bf;
-$codeinline-background: #f6f8fa;
-
-%markdown-theme {
-    * {
-        margin: revert;
-        padding: revert;
-        list-style-type: revert;
-        line-height: 1.625rem;
-    }
-
-    h1 {
-        padding-top: 3rem;
-    }
-
-    code, pre {
-        border-radius: 5px;
-        background-color: $codeblock-background;
-        color: $codeblock-color;
-    }
-
-    code {
-        padding: 0.2em 0.4em;
-        line-break: anywhere;
-        display: inline-block;
-        line-height: 1.35;
-        font-family: var.$CODE_BLOG_FONT;
-        font-size: 13px;
-
-        span {
-            display: contents;
-        }
-    }
-
-    pre {
-        border: 1px solid #CCCCCC;
-        overflow: auto;
-        padding: 6px 10px;
-
-        code {
-            font-size: 14px;
-        }
-    }
-
-    blockquote {
-        margin: 0;
-        border-left: 5px solid #7a7a7a;
-        font-style: italic;
-        padding: 1.33em;
-        text-align: left;
-        font-weight: bold;
-    }
-
-    table {
-        padding: 1rem 0;
-    }
-
-    th, td {
-        padding: 6px 13px;
-        border: 1px solid black;
-    }
-
-    hr {
-        background: black;
-    }
-
-    ul, ol {
-        padding-left: 20px;
-    }
-}
+@use 'theme/markdown';
+@use 'pages/blog';
+@use 'pages/blogs';
 
 .blog-l-wrapper {
     @extend %markdown-theme;

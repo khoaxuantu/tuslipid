@@ -1,6 +1,5 @@
 /* They should be imported only once */
 @use 'base';
-@use 'layout';
 @use 'components';
 
 /* Pages */
@@ -8,3 +7,5 @@
 @use 'pages/contact';
 @use 'pages/menu';
 @use 'pages/projects';
+
+@use 'layout';

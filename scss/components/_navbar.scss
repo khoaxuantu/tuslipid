@@ -11,6 +11,27 @@
                 top: 0;
                 left: 0;
                 z-index: 1;
+
+                button {
+                    @include rounded;
+                    width: 45px;
+                    aspect-ratio: 1/1;
+                    background-color: $NAVBAR-BG-COLOR;
+                    border: none;
+                    cursor: pointer;
+                    position: absolute;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        width: 66.67%;
+                        height: 0.5rem;
+                        background-color: $NAVBAR-STICK-COLOR;
+                        box-shadow: 0 10px 0 $NAVBAR-STICK-COLOR, 0 20px $NAVBAR-STICK-COLOR;
+                        left: 18%;
+                        top: 18%;
+                    }
+                }
             }
 
             &__menu {
@@ -80,27 +101,6 @@
                 .content {
                     display: none;
                 }
-            }
-        }
-
-        button {
-            @include rounded;
-            width: 45px;
-            aspect-ratio: 1/1;
-            background-color: $NAVBAR-BG-COLOR;
-            border: none;
-            cursor: pointer;
-            position: absolute;
-
-            &::after {
-                content: '';
-                position: absolute;
-                width: 66.67%;
-                height: 0.5rem;
-                background-color: $NAVBAR-STICK-COLOR;
-                box-shadow: 0 10px 0 $NAVBAR-STICK-COLOR, 0 20px $NAVBAR-STICK-COLOR;
-                left: 18%;
-                top: 18%;
             }
         }
     }
