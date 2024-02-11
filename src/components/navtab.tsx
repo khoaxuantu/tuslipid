@@ -24,7 +24,7 @@ function TabList() {
 
     return (
         <div className="pt-2 pb-2 row col-8">
-            <div className="col-3 tab-list">
+            <div className="col-3 sl-c-tab__list">
                 {
                     worksInfoList.map((tabProps, index) => {
                         let id = index.toString();
@@ -32,13 +32,13 @@ function TabList() {
                         return <TabSelector
                             id = {"tabselector_" + id}
                             key={id}
-                            className={"vertical-tab p-2"+isCurrent}
+                            className={"sl-c-tab__vertical p-2"+isCurrent}
                             tabHandler={() => tabHandler(id)}
                             {...tabProps} />;
                     })
                 }
             </div>
-            <div className="col-9 tab-content">
+            <div className="col-9 sl-c-tab__content">
                 {
                     worksInfoList.map((tabProps, index) => {
                         let id = index.toString();

@@ -75,3 +75,13 @@
 .fade-in-left {
     @include animation(fadeInLeft, .3s);
 }
+
+.menu-animation {
+    @include animation(fadeInDown, 300ms);
+}
+
+@media (min-width: 768px) {
+    .menu-animation {
+        animation-name: fadeInUp;
+    }
+}
