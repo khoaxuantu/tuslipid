@@ -43,11 +43,6 @@ export const getSkillInfo = async (): Promise<IconButtonProps[]> => {
       icon: svgs.Docker,
     },
     {
-      name: "Firebase",
-      url: "https://firebase.google.com/",
-      icon: svgs["Firebase-Light"],
-    },
-    {
       name: "Flask",
       url: "https://flask.palletsprojects.com/",
       icon: svgs["Flask-Light"],
@@ -66,11 +61,6 @@ export const getSkillInfo = async (): Promise<IconButtonProps[]> => {
       name: "JavaScript",
       url: "https://www.javascript.com/",
       icon: svgs.JavaScript,
-    },
-    {
-      name: "Oracle DB",
-      url: "https://www.oracle.com/database/",
-      icon: svgs.Oracle,
     },
     {
       name: "PostgreSQL",
@@ -141,6 +131,16 @@ export const getSkillInfo = async (): Promise<IconButtonProps[]> => {
       name: "MongoDB",
       url: "https://www.mongodb.com/",
       icon: svgs.MongoDB,
+    },
+    {
+      name: "Kubernetes",
+      url: "https://kubernetes.io/",
+      icon: svgs.Kubernetes,
+    },
+    {
+      name: "Vercel",
+      url: "https://vercel.com/",
+      icon: svgs["Vercel-Dark"]
     },
   ];
 };
