@@ -27,7 +27,7 @@ function AboutIntro() {
                             <a href="https://pixta.vn/" target="_blank" rel="noreferrer">Pixta Vietnam</a>.
                         </p>
                     </div>
-                    <div className="col-5 flex-image">
+                    <div className="col-5 sl-c-img__flex">
                         <img src="https://media.giphy.com/media/j0HjChGV0J44KrrlGv/giphy.gif" alt="typing cat" width={300} />
                     </div>
                 </div>

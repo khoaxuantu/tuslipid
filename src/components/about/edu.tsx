@@ -36,7 +36,7 @@ async function Education() {
               </ul>
             </div>
           </div>
-          <div className="edu-image">
+          <div className="about-c-img__edu">
             <img src={eduImgs.TaiwanTech} alt="" width={64} />
           </div>
         </div>
@@ -51,7 +51,7 @@ async function Education() {
               Aug 2015 - May 2018
             </div>
           </div>
-          <div className="edu-image">
+          <div className="about-c-img__edu">
             <img src={eduImgs.HanoiAms} alt="" width={64} />
           </div>
         </div>

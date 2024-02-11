@@ -5,6 +5,30 @@
         &-wrapper {
             @extend %menu-l-wrapper;
         }
+
+        &-grp {
+            &__avatar {
+                border: none;
+                background-color: unset;
+            }
+        }
+    }
+
+    &-c {
+        &-img {
+            &__avatar {
+                @include center-block();
+                border-radius: 50%;
+                cursor: pointer;
+                transition: src 500ms;
+            }
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .menu-c-img__avatar {
+        width: 100px;
     }
 }
 

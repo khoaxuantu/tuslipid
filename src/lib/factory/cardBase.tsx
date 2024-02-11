@@ -21,7 +21,7 @@ function DefaultProjectCard(props: IProjCardProps) {
 
   return (
     <div className="sl-c-card projects-c-card mb-5">
-      <div className="col-5 proj-image">{image}</div>
+      <div className="col-5 projects-c-img">{image}</div>
       <div className="col-7 p-3 sl-c-card__proj-description">
         <h3 className="header-txt-proj">{props.title}</h3>
         <ul className="pb-4 ps-2 sl-c-card__proj-tool-list">

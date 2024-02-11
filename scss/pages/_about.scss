@@ -48,13 +48,21 @@
                 @include rounded(10);
                 @extend %card-bodering;
 
-                .proj-image {
+                .projects-c-img {
                     height: 400px;
 
                     img {
                         height: inherit;
                     }
                 }
+            }
+        }
+
+        &-img {
+            &__edu {
+                width: 16.66%;
+                min-width: 48px;
+                text-align: end;
             }
         }
     }
