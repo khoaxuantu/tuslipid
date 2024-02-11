@@ -3,7 +3,6 @@ import { Metadata } from "next";
 
 const blogsDescription = "Some notes, some ideas, some opinions";
 const blogThumb = "/seo/blogs-tuslipid.webp";
-const url = process.env.HOST_URL + "/blogs";
 
 export const metadata: Metadata = {
   title: {
@@ -11,16 +10,15 @@ export const metadata: Metadata = {
     template: "%s | Tusss Blogs",
   },
   description: blogsDescription,
-  metadataBase: new URL(url),
   alternates: {
-    canonical: '.',
+    canonical: '/blogs',
   },
   openGraph: {
     images: blogThumb,
     description: blogsDescription,
     title: "Tusss Blogs",
     siteName: "Tusss Blogs",
-    url: ".",
+    url: "/blogs",
   },
   twitter: {
     images: blogThumb,

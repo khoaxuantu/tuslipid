@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "article",
       title: blogTitle,
       description: blogInfo.brief_description,
-      url: blogId,
+      url: blogBaseURL + "/" + blogId,
       images: blogThumb,
       siteName: "Tusss Blogs",
       publishedTime: blogInfo.date.toISOString(),
