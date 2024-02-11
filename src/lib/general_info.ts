@@ -82,13 +82,14 @@ export const worksInfoList: ITabProps[] = [
       location: "Hanoi, Vietnam",
       description: [
         `Develop and maintain the backend system of PixtaStock.
-                Analyze data, evaluate the effectiveness of features to improve
-                and develop new features.`,
+          Analyze data, evaluate the effectiveness of features to improve
+          and develop new features.`,
         `Work closely with the Japan product design team to maintain the web application for
-                internal tools.`,
+          internal tools.`,
         `Provide technical support to resolve and monitor PixtaStock's issues reported
-                by the customers.`,
-        `Frequently used stacks: Ruby on Rails, React, NodeJS, MySQL, MongoDB, Docker, AWS`,
+          by the customers.`,
+        `Frequently used stacks: Ruby on Rails, React, NodeJS, MySQL, MongoDB, Docker, Kubernetes,
+          AWS`,
         `Updating...`,
       ],
     },
