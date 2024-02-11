@@ -40,3 +40,21 @@
     width: $width;
     cursor: pointer;
 }
+
+@mixin set-font($font, $size) {
+    font-size: $size;
+    font-family: $font;
+}
+
+@mixin select-header-txt(
+    $font: var.$HEADER_FONT,
+    $padding: 0.5rem 0,
+    $size: var.$DEFAULT_HEADER_FONT_SIZE
+) {
+    padding: $padding;
+    @include set-font($font, $size);
+}
+
+@mixin select-body-txt($font: var.$BODY_FONT, $size: var.$DEFAULT_BODY_FONT_SIZE) {
+    @include set-font($font, $size);
+}

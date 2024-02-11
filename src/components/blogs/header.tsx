@@ -3,10 +3,10 @@ import { blogInfoDict } from "../../lib/general_info";
 export function BlogsPageHeaderGrp() {
     return (
       <div className='header-grp'>
-        <div className='header-txt-blog'>
+        <div className='blogs-c-txt__header'>
           <b>Tus's Blogs</b>
         </div>
-        <div className='body-txt-blog mt-2'>
+        <div className='blogs-c-txt__body mt-2'>
           Some notes, some ideas, some opinions
         </div>
         <hr />
@@ -17,10 +17,10 @@ export function BlogsPageHeaderGrp() {
 export function SingleBlogPageHeaderGrp(props: {id: string}) {
     return (
       <div className='header-grp'>
-        <div className='header-txt-blog'>
+        <div className='blog-c-txt__header'>
           <b>{blogInfoDict[props.id].title}</b>
         </div>
-        <div className='body-txt-blog mt-2'>
+        <div className='blog-c-txt__body mt-2'>
           {formatDate(blogInfoDict[props.id].date)}
         </div>
       </div>

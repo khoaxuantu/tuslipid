@@ -1,87 +1,41 @@
-@use '../general/var';
+@use '../abstracts' as *;
 
 %copyright-txt {
     width: 100%;
     text-align: center;
     padding: 0 0.5rem 0 0.5rem;
     font-size: 12px;
-    font-family: var.$COPYRIGHT_FONT;
+    font-family: $COPYRIGHT_FONT;
 }
 
-@mixin set-font($font, $size) {
-    font-size: $size;
-    font-family: $font;
-}
+.sl {
+    &-c {
+        &-txt {
+            &__header {
+                @include select-header-txt;
 
-@mixin select-header-txt($font: var.$HEADER_FONT, $padding: 0.5rem 0, $size: var.$DEFAULT_HEADER_FONT_SIZE) {
-    padding: $padding;
-    @include set-font($font, $size);
-}
+                &-proj {
+                    @include select-header-txt($padding: 0.5rem, $size: 20px)
+                }
+            }
 
-@mixin select-body-txt($font: var.$BODY_FONT, $size: var.$DEFAULT_BODY_FONT_SIZE) {
-    @include set-font($font, $size);
-}
-
-a {
-    text-decoration: none;
-    color: var.$DEFAULT-ATAG-COLOR;
-
-    &:hover {
-        text-decoration: underline;
+            &__body {
+                @include select-body-txt;
+            }
+        }
     }
 }
 
-.header-txt {
-    @include select-header-txt;
-}
-
-.header-txt-menu, .header-txt-contact {
-    @include select-header-txt($size: 24px, $font: var.$HEADER_FONT_MENU, $padding: 0.5rem)
-}
-
-.header-txt-contact {
-    color: lightgray;
-    text-align: center;
-}
-
-.header-txt-proj {
-    @include select-header-txt($padding: 0.5rem, $size: 20px)
-}
-
-.header-txt-blog {
-    @include select-header-txt($font: var.$HEADER_FONT_BLOG, $size: 20px)
-}
-
-.body-txt-menu, .navbar-txt {
-    @include select-body-txt($font: var.$BODY_FONT_MENU, $size: 14px)
-}
-
-.body-txt {
+.sl-c-txt__body {
     @include select-body-txt;
 }
 
-.body-txt-blog {
-    font-family: var.$BODY_FONT_BLOG;
-    line-height: 1.5;
-}
-
-.oauth-txt, .guestbook-txt {
-    font-family: var.$HEADER_FONT;
-    font-size: 12px;
-}
-
-.guestbook-txt {
-    word-break: break-word;
-}
-
 @media (min-width: 576px) {
-    .header-txt-blog, .header-txt-proj {
+    .sl-c-txt__header-proj {
         font-size: 24px;
     }
-    .body-txt {
-        font-size: 16px;
-    }
-    .oauth-txt, .guestbook-txt {
+
+    .sl-c-txt__body {
         font-size: 16px;
     }
 }

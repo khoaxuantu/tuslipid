@@ -5,7 +5,7 @@ async function Education() {
 
   return (
     <section className="mb-5 row">
-      <h3 className="header-txt col-4 pe-5">Where I studied</h3>
+      <h3 className="sl-c-txt__header col-4 pe-5">Where I studied</h3>
       <div className="col-8">
         <div className="pt-2 pb-2 d-flex">
           <div className="edu-content-grp pe-3">
@@ -22,7 +22,7 @@ async function Education() {
             <div className="bt-1 mb-2" style={{ opacity: 0.5 }}>
               Sep 2018 - July 2022
             </div>
-            <div className="body-txt">
+            <div className="sl-c-txt__body">
               <b>
                 <i>Specialization: </i>
               </b>

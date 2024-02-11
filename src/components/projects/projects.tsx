@@ -11,10 +11,10 @@ export async function AboutProject() {
     <section className="mb-5">
       <div className="row">
         <div className="col-4 pe-5">
-          <h3 className="header-txt">
+          <h3 className="sl-c-txt__header">
             What I <span>have built</span>
           </h3>
-          <div className="body-txt pt-3 pe-2 pb-2">
+          <div className="sl-c-txt__body pt-3 pe-2 pb-2">
             Here are only my featured projects. Let's navigate to my full list
             here{" "}
             <span>

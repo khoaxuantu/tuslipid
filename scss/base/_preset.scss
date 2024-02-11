@@ -1,5 +1,16 @@
+@use '../abstracts' as *;
+
 img {
     max-width: 100%;
     height: auto;
     object-fit: fill;
+}
+
+a {
+    text-decoration: none;
+    color: $DEFAULT-ATAG-COLOR;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }

@@ -6,4 +6,23 @@
             @include content-wrapper(80%, 900px, 50px);
         }
     }
+
+    &-c {
+        &-txt {
+            &__header {
+                @include select-header-txt($font: $HEADER_FONT_BLOG, $size: 20px);
+            }
+
+            &__body {
+                font-family: $BODY_FONT_BLOG;
+                line-height: 1.5;
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) {
+    .blog-c-txt__header {
+        font-size: 24px;
+    }
 }

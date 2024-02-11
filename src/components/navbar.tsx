@@ -41,7 +41,7 @@ function Navbar() {
         aria-label="navbar"
         onClick={() => navHandler("none", "block")}
       ></button>
-      <ul className="sl-c-navbar__menu navbar-txt menu-animation">
+      <ul className="sl-c-navbar__menu sl-c-txt__navbar menu-animation">
         <li key="Home">
           <DefaultButton url="/" content="Home" />
         </li>

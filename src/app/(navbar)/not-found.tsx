@@ -6,10 +6,10 @@ export default function NotFound() {
       <div className="background-overlay"></div>
       <div className={`sl-l-container menu-l-wrapper center transition-menu`}>
         <div className="header-grp center">
-          <div className="header-txt">
+          <div className="sl-c-txt__header">
             <b>404</b>
           </div>
-          <div className="body-txt mt-2">
+          <div className="sl-c-txt__body mt-2">
             Oi ~ This URL does not exist.
             <br />
             <br />

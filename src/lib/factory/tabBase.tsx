@@ -30,7 +30,7 @@ export function TabContent(props: ITabProps) {
                 <span>{props.content.time + ' |'}</span>{" "}
                 <span>{props.content.location}</span>
             </div>
-            <div className="body-txt">
+            <div className="sl-c-txt__body">
                 {
                     props.content.description.map((bp, index) => {
                         return <p key={index} className="pb-2">{bp}</p>

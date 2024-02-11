@@ -7,8 +7,8 @@ export function SocialMediaBtnGroup() {
   return (
     <>
       <div className="contact-c-btn__overlay"></div>
-      <div className="sl-l-container contact-l-wrapper center body-txt-menu">
-        <div className="header-txt-contact">
+      <div className="sl-l-container contact-l-wrapper center menu-c-txt__body">
+        <div className="contact-c-txt__header">
           ~ Oi ~<br></br>
           Say hello to me by one of the following {":)"}
         </div>
@@ -40,7 +40,7 @@ export function SocialMediaBtnGroup() {
 
 export function NavBtnGroup() {
   return (
-    <div className="sl-c-btn__group nav-sl-c-btn__group mb-3 body-txt-menu">
+    <div className="sl-c-btn__group nav-sl-c-btn__group mb-3 menu-c-txt__body">
       {Info.navBtnInfoList.map((btnProp) => {
         return (
           <Btn.DefaultButton

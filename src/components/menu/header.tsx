@@ -22,10 +22,10 @@ export default function MenuHeaderGrp() {
           width={160}
         />
       </button>
-      <div className="header-txt-menu mt-3">
+      <div className="menu-c-txt__header mt-3">
         <b>Xuan Khoa Tu Nguyen</b>
       </div>
-      <div className="body-txt-menu mt-3">
+      <div className="menu-c-txt__body mt-3">
         <b>SWE @ Pixta</b>
       </div>
     </div>
