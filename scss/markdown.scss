@@ -1,7 +1,5 @@
 @use 'abstracts/var';
 @use 'theme/markdown';
-@use 'pages/blog';
-@use 'pages/blogs';
 
 .blog-l-wrapper {
     @extend %markdown-theme;
