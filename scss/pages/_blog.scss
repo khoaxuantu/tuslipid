@@ -3,7 +3,7 @@
 .blog {
     &-l {
         &-wrapper {
-            @include content-wrapper(80%, 900px, 50px);
+            @include content-wrapper(80%, 40em, 50px);
         }
     }
 

@@ -627,7 +627,7 @@ hr {
 }
 .blog-l-wrapper {
   width: 80%;
-  max-width: 900px;
+  max-width: 40em;
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
