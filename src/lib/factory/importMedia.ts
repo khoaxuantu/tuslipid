@@ -49,5 +49,3 @@ const reqEduImgs = "/images/edu/";
 export const getEduImgs = async () => {
   return new ImportMedia(reqEduImgs).get();
 };
-
-export default ImportMedia;
