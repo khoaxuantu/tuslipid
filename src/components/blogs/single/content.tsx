@@ -22,6 +22,7 @@ export async function SingleBlog({ content }: SingleBlogProps) {
             rehypePlugins: [
               rehypeHighlight,
               rehypeSlug,
+              // @ts-expect-error
               rehypeKatex,
             ],
           },
