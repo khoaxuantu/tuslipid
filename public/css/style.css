@@ -1,3 +1,4 @@
+/* They should be imported only once */
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
@@ -151,7 +152,7 @@ a:hover {
   }
 }
 .center {
-  position: absolute !important;
+  position: fixed !important;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -451,6 +452,7 @@ hr {
     font-size: 16px;
   }
 }
+/* Pages */
 .about-l-wrapper__proj {
   display: grid;
   column-gap: 2rem;
@@ -640,6 +642,14 @@ hr {
 .blog-c-txt__body {
   font-family: "Ubuntu", system-ui, sans-serif;
   line-height: 1.5;
+}
+.blog-c-img__extend {
+  width: 90%;
+  max-width: 960px;
+  height: auto;
+  max-height: 100dvh;
+  z-index: 9999;
+  opacity: 1 !important;
 }
 
 @media (min-width: 576px) {
@@ -1029,8 +1039,5 @@ hr {
 .p-5 {
   padding: 3rem !important;
 }
-
-/* They should be imported only once */
-/* Pages */
 
 /*# sourceMappingURL=style.css.map */

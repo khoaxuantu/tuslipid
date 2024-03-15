@@ -53,6 +53,9 @@
 .blog-l-wrapper ul, .blog-l-wrapper ol {
   padding-left: 20px;
 }
+.blog-l-wrapper img {
+  cursor: pointer;
+}
 
 .blog-l-wrapper {
   font-family: "Ubuntu", system-ui, sans-serif;
