@@ -659,7 +659,7 @@ hr {
 }
 .blogs-l-wrapper {
   width: 90%;
-  max-width: 900px;
+  max-width: 40rem;
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
@@ -677,7 +677,7 @@ hr {
   width: 16.67%;
   min-width: 120px;
   height: 100%;
-  min-height: 30px;
+  min-height: 40px;
   transition: all 300ms ease-in-out;
 }
 .blogs-c-btn__read-more a:hover {
@@ -689,7 +689,6 @@ hr {
   border-radius: 15px;
   border: 1px solid #cbcbcb;
   box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
-  aspect-ratio: 4;
   flex-direction: column;
   flex-wrap: nowrap;
 }
