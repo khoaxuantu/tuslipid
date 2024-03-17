@@ -25,7 +25,16 @@ export function CustomMdImg(
   return (
     <>
       {fade && <span className="sl-c-overlay"></span>}
-      <img {...props} loading="lazy" onClick={(e) => extendHandler(e)} />
+      <img 
+        {...props} 
+        loading="lazy" 
+        onClick={(e) => extendHandler(e)} 
+        title={formatTitle(props.title as string)}
+      />
     </>
   );
+}
+
+function formatTitle(s: string) {
+  return `${s} (click to zoom in/out)`;
 }
