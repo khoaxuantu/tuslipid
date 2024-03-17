@@ -18,6 +18,17 @@
                 line-height: 1.5;
             }
         }
+
+        &-img {
+            &__extend {
+                width: 90%;
+                max-width: 960px;
+                height: auto;
+                max-height: 100dvh;
+                z-index: 9999;
+                opacity: 1 !important;
+            }
+        }
     }
 }
 

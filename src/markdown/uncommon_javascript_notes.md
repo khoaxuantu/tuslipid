@@ -80,7 +80,7 @@ directly or [MDN (Mozilla) JavaScript manual](https://developer.mozilla.org/en-U
     + [Global object](#global-object)
     + [The `new Function` syntax](#the-new-function-syntax)
     + [Scheduling: `setTimeout` and `setInterval`](#scheduling-settimeout-and-setinterval)
-    + [Decorators and forwarding, call/apply](#decorators-and-forwarding-call-apply)
+    + [Decorators and forwarding, call/apply](#decorators-and-forwarding-callapply)
     + [Function binding](#function-binding)
 - [Object properties configuration](#object-properties-configuration)
     + [Property flags and descriptors](#property-flags-and-descriptors)
