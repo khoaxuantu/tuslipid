@@ -255,12 +255,21 @@ src/
 |   |   |── postgres.ts
 |   |―― entity/
 |   |   |── a_to_a1/
-|   |   |   |── index.ts
-|   |   |   |── Human.ts
-|   |   |   |── Animal.ts
+|   |   |   |―― a/
+|   |   |   |   |── index.ts
+|   |   |   |   |── Human.ts
+|   |   |   |   |── Animal.ts
+|   |   |   |―― a1/
+|   |   |   |   |―― index.ts
+|   |   |   |   |── Human.ts
+|   |   |   |   |── Animal.ts
 |   |   |── b_to_b1/
-|   |   |   |── index.ts
-|   |   |   |── Vehicle.ts
+|   |   |   |―― b/
+|   |   |   |   |── index.ts
+|   |   |   |   |── Vehicle.ts
+|   |   |   |―― b1/
+|   |   |   |   |―― index.ts
+|   |   |   |   |── Vehicle.ts
 |
 |―― migration_project_2/
 |   |── command/
