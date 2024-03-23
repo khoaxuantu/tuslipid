@@ -1,10 +1,10 @@
 import { SVGProps } from "react";
 
-type ButtonType = "default" | "icon";
+type ButtonType = "default" | "icon" | "go-top";
 
 export interface IBaseButtonProps {
   id?: string;
-  url: string;
+  url?: string;
   classname?: string;
   buttonType: ButtonType;
 }
@@ -19,4 +19,4 @@ export interface IconButtonProps extends IBaseButtonProps {
   onClick?: any;
 }
 
-export type AllButonTypes = DefaultButtonProps | IconButtonProps;
+export type AllButonTypes = IBaseButtonProps | DefaultButtonProps | IconButtonProps;
