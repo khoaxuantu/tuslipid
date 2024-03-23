@@ -1,4 +1,4 @@
-import { IconButtonProps, DefaultButtonProps } from "./factory/buttonBase";
+import { SVGProps } from "react";
 import CodepenIcon from "./factory/icons/CodepenIcon";
 import DevToIcon from "./factory/icons/DevToIcon";
 import DiscordIcon from "./factory/icons/DiscordIcon";
@@ -10,7 +10,18 @@ import RedditIcon from "./factory/icons/RedditIcon";
 import { ITabProps } from "./factory/tabBase";
 import { IBlogCardProps } from "./type/card";
 
-export const socialMediaInfoList: IconButtonProps[] = [
+export interface SocialMediaProps {
+  id: string;
+  url: string;
+  icon: (props: SVGProps<SVGSVGElement>) => JSX.Element;
+}
+
+export interface RoutingProps {
+  url: string;
+  content: string;
+}
+
+export const SOCIAL_MEDIA_INFO_LIST: SocialMediaProps[] = [
   {
     id: "mail",
     url: "mailto:tungxk2908@gmail.com",
@@ -53,7 +64,7 @@ export const socialMediaInfoList: IconButtonProps[] = [
   },
 ];
 
-export const navBtnInfoList: DefaultButtonProps[] = [
+export const NAV_BTN_INFO_LIST: RoutingProps[] = [
   {
     url: "/about",
     content: "About",
@@ -72,7 +83,7 @@ export const navBtnInfoList: DefaultButtonProps[] = [
   },
 ];
 
-export const worksInfoList: ITabProps[] = [
+export const WORK_INFO_LIST: ITabProps[] = [
   {
     name: "Pixta Inc.",
     content: {
@@ -81,15 +92,15 @@ export const worksInfoList: ITabProps[] = [
       time: "06/2023 - now",
       location: "Hanoi, Vietnam",
       description: [
-        `Develop and maintain the backend system of PixtaStock.
-          Analyze data, evaluate the effectiveness of features to improve
-          and develop new features.`,
-        `Work closely with the Japan product design team to maintain the web application for
-          internal tools.`,
-        `Provide technical support to resolve and monitor PixtaStock's issues reported
-          by the customers.`,
-        `Frequently used stacks: Ruby on Rails, React, NodeJS, MySQL, MongoDB, Docker, Kubernetes,
-          AWS`,
+        `Develop and maintain the backend system of PixtaStock. \
+Analyze data, evaluate the effectiveness of features to improve \
+and develop new features.`,
+        `Work closely with the Japan product design team to maintain the web application for \
+internal tools.`,
+        `Provide technical support to resolve and monitor PixtaStock's issues reported \
+by the customers.`,
+        `Frequently used stacks: Ruby on Rails, React, NodeJS, MySQL, MongoDB, Docker, Kubernetes, \
+AWS`,
         `Updating...`,
       ],
     },
@@ -97,18 +108,17 @@ export const worksInfoList: ITabProps[] = [
   {
     name: "Pegatron",
     content: {
-      title: "Data Engineer Intern",
+      title: "MIS Developer Intern",
       company: "Pegatron",
       time: "02/2022 - 06/2022",
       location: "Taipei, Taiwan",
       description: [
-        `Participated in the Shop Floor Information System (SFIS) development team,
-                which processes the data to integrate it with Pegatron's manufacturing process
-                among 7 global and 2 local factories.`,
-        `Learned how to track and update the data flow, manage and develop
-                databases via Oracle Database.`,
-        `Contributed to the transformation and loading process in the ETL
-                 and customer's report by retrieving the data into >30 forms.`,
+        `Participated in the Shop Floor Information System (SFIS) development team, \
+which processes the data to integrate it with Pegatron's manufacturing process \
+among 7 global and 2 local factories.`,
+        `Learned how to track and update the data flow, manage and develop Pegatron's \
+databases via Oracle Database.`,
+        `Contributed to the transformation and loading process in the ETL.`,
       ],
     },
   },
@@ -120,17 +130,17 @@ export const worksInfoList: ITabProps[] = [
       time: "06/2020 - 08/2020",
       location: "Taoyuan, Taiwan",
       description: [
-        `Got training in practical robotic processing and functioning.
-                 (Robotic arm, AI, IoT, Computer vision)`,
-        `Developed the TM robotic automation project and presented the project
-                  at the 2020 Taipei Industrial Automation Exhibition.`,
+        `Got training in practical robotic processing and functioning. \
+(Robotic arm, AI, IoT, Computer vision)`,
+        `Developed the TM robotic automation project and presented the project \
+at the 2020 Taipei Industrial Automation Exhibition.`,
         `Won the First Prize in the Projects competition held by the company.`,
       ],
     },
   },
 ];
 
-export const blogInfoDict: { [id: string]: IBlogCardProps } = {
+export const BLOG_INFO_DICT: { [id: string]: IBlogCardProps } = {
   great_ytb_channels_1: {
     content_section: "Blogs",
     id: "great_ytb_channels_1",
@@ -155,8 +165,7 @@ I have watched that you may find interesting. Here is part 2 of my list...`,
     content_section: "Blogs",
     id: "markdown_starter",
     title: "Get Started with Markdown",
-    brief_description:
-      "My markdown theme which is generated by React Markdown.",
+    brief_description: "My markdown theme which is generated by React Markdown.",
     url: "/markdown_starter",
     file: "markdown_starter.md",
     date: new Date("Thu Mar 23 2023 23:10:33 GMT+0700"),
@@ -203,10 +212,10 @@ the data, what is your solution?`,
     url: "/data_adapter_template",
     file: "data_adapter_template.md",
     date: new Date("Fri Mar 15 2024 13:58:21 GMT+0700"),
-  }
+  },
 };
 
-export const blogInfoList: { dictKey: string; date: string }[] = [
+export const BLOG_INFO_LIST: { dictKey: string; date: string }[] = [
   { dictKey: "great_ytb_channels_1", date: "Apr 26 2023 22:35:23 GMT+0800" },
   { dictKey: "great_ytb_channels_2", date: "Apr 27 2023 13:30:59 GMT+0800" },
   { dictKey: "markdown_starter", date: "Thu Mar 23 2023 23:10:33 GMT+0700" },

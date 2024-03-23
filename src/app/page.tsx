@@ -1,6 +1,6 @@
 'use client';
 
-import { NavBtnGroup } from "@/components/button";
+import { NavBtnGroup } from "@/components/button_group";
 import Copyright from "@/components/copyright";
 import MenuHeaderGrp from "@/components/menu/header";
 import addOrientationHandler from "@/components/orientation";

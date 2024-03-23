@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Card from "../../lib/factory/cardBase";
-import { blogInfoDict } from "../../lib/general_info";
+import Card from "@/lib/factory/cardBase";
+import { BLOG_INFO_DICT } from "@/lib/general_info";
 
 /**
  * Implement infinite scrolling for blogs
@@ -46,7 +46,7 @@ export function BlogsList(props: { blogInfoList: BlogInfo[] }) {
   return (
     <>
       {blogs.map((blog, index) => {
-        return <Card key={index} {...blogInfoDict[blog.dictKey]} />;
+        return <Card key={index} {...BLOG_INFO_DICT[blog.dictKey]} />;
       })}
     </>
   );

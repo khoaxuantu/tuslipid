@@ -1,7 +1,7 @@
 import { SingleBlogPageHeaderGrp } from "@/components/blogs/header";
 import { SingleBlogContent } from "@/components/blogs/single/skeleton";
 import { TableOfContents } from "@/components/blogs/single/toc";
-import { blogInfoDict } from "@/lib/general_info";
+import { BLOG_INFO_DICT } from "@/lib/general_info";
 import { notFound } from "next/navigation";
 
 interface DynamicParams {
@@ -11,7 +11,7 @@ interface DynamicParams {
 }
 
 export default function SingleBlogPage({ params }: DynamicParams) {
-  if (!blogInfoDict[params.blog_id]) notFound();
+  if (!BLOG_INFO_DICT[params.blog_id]) notFound();
 
   return (
     <>

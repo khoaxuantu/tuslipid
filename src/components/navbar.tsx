@@ -1,8 +1,8 @@
 'use client';
 
 import { useEffect } from "react";
-import { DefaultButton } from "../lib/factory/buttonBase";
-import { navBtnInfoList } from "../lib/general_info";
+import { NAV_BTN_INFO_LIST } from "../lib/general_info";
+import Button from "@/lib/factory/button";
 
 function Navbar() {
   // Close navbar event handler, when you click everywhere except the opening navbar,
@@ -43,12 +43,12 @@ function Navbar() {
       ></button>
       <ul className="sl-c-navbar__menu sl-c-txt__navbar menu-animation">
         <li key="Home">
-          <DefaultButton url="/" content="Home" />
+          <Button buttonType="default" url="/" content="Home" />
         </li>
-        {navBtnInfoList.map((btnProps) => {
+        {NAV_BTN_INFO_LIST.map((btnProps) => {
           return (
             <li key={btnProps.content}>
-              <DefaultButton url={btnProps.url} content={btnProps.content} />
+              <Button buttonType="default" url={btnProps.url} content={btnProps.content} />
             </li>
           );
         })}

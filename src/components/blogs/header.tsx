@@ -1,4 +1,4 @@
-import { blogInfoDict } from "../../lib/general_info";
+import { BLOG_INFO_DICT } from "@/lib/general_info";
 
 export function BlogsPageHeaderGrp() {
     return (
@@ -18,10 +18,10 @@ export function SingleBlogPageHeaderGrp(props: {id: string}) {
     return (
       <div className='sl-l-container__header'>
         <div className='blog-c-txt__header'>
-          <b>{blogInfoDict[props.id].title}</b>
+          <b>{BLOG_INFO_DICT[props.id].title}</b>
         </div>
         <div className='blog-c-txt__body mt-2'>
-          {formatDate(blogInfoDict[props.id].date)}
+          {formatDate(BLOG_INFO_DICT[props.id].date)}
         </div>
       </div>
     );

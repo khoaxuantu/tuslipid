@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { TabSelector, TabContent } from "../lib/factory/tabBase";
-import { worksInfoList } from "../lib/general_info";
+import { WORK_INFO_LIST } from "../lib/general_info";
 
 
 function TabList() {
@@ -26,7 +26,7 @@ function TabList() {
         <div className="pt-2 pb-2 row col-8">
             <div className="col-3 sl-c-tab__list">
                 {
-                    worksInfoList.map((tabProps, index) => {
+                    WORK_INFO_LIST.map((tabProps, index) => {
                         let id = index.toString();
                         let isCurrent = id === curId ? " is-current" : "";
                         return <TabSelector
@@ -40,7 +40,7 @@ function TabList() {
             </div>
             <div className="col-9 sl-c-tab__content">
                 {
-                    worksInfoList.map((tabProps, index) => {
+                    WORK_INFO_LIST.map((tabProps, index) => {
                         let id = index.toString();
                         let isCurrent = id === curId ? "is-current " : "";
                         return <TabContent
