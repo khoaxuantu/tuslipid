@@ -1,4 +1,4 @@
-/* They should be imported only once */
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
@@ -452,7 +452,6 @@ hr {
     font-size: 16px;
   }
 }
-/* Pages */
 .about-l-wrapper__proj {
   display: grid;
   column-gap: 2rem;
@@ -627,7 +626,25 @@ hr {
     align-items: stretch;
   }
 }
-.blog-l-wrapper {
+.blog-c-toc {
+  width: 100%;
+  max-width: 40em;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.blog-c-toc__h1 {
+  list-style-type: "🍚 " !important;
+}
+.blog-c-toc__h2 {
+  margin-left: 20px !important;
+  list-style-type: "🍙 " !important;
+}
+.blog-c-toc__h3 {
+  margin-left: 40px !important;
+  list-style-type: "🍣 " !important;
+}
+.blog-c-content {
   width: 80%;
   max-width: 40em;
   margin-top: 50px;
@@ -644,10 +661,8 @@ hr {
   line-height: 1.5;
 }
 .blog-c-img__extend {
-  width: 90%;
-  max-width: 960px;
+  width: auto;
   height: auto;
-  max-height: 100dvh;
   z-index: 9999;
   opacity: 1 !important;
 }
@@ -732,12 +747,10 @@ hr {
   padding-right: 5%;
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 1200px) {
   .sl-l-wrapper {
     width: 80%;
   }
-}
-@media screen and (min-width: 1200px) {
   .sl-l-container__content {
     margin-left: auto;
     margin-right: auto;
@@ -1038,5 +1051,8 @@ hr {
 .p-5 {
   padding: 3rem !important;
 }
+
+/* They should be imported only once */
+/* Pages */
 
 /*# sourceMappingURL=style.css.map */

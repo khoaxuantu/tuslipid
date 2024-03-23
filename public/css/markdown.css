@@ -55,6 +55,7 @@
 }
 .blog-l-wrapper img {
   cursor: pointer;
+  transition: all 200ms;
 }
 
 .blog-l-wrapper {

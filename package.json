@@ -15,12 +15,12 @@
     "react": "^18.2.0",
     "react-device-detect": "^2.2.3",
     "react-dom": "^18.2.0",
-    "rehype-highlight": "^6.0.0",
-    "rehype-katex": "^6.0.3",
-    "rehype-raw": "^6.1.1",
+    "rehype-highlight": "^7.0.0",
+    "rehype-katex": "^7.0.0",
+    "rehype-raw": "^7.0.0",
     "rehype-slug": "^6.0.0",
     "remark-gfm": "^3.0.1",
-    "remark-math": "^5.1.1",
+    "remark-math": "^6.0.0",
     "remark-mdx": "^3.0.0",
     "typescript": "^5.3.3"
   },
@@ -33,7 +33,7 @@
     "style:md": "sass --watch scss/markdown.scss public/css/markdown.css"
   },
   "devDependencies": {
-    "@types/node": "^16.18.22",
+    "@types/node": "^20.0.0",
     "@types/react": "^18.2.52",
     "@types/react-dom": "^18.0.11"
   }

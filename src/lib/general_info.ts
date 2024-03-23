@@ -198,7 +198,7 @@ about which things I discovered just by a React boilerplate.`,
     id: "data_adapter_template",
     title: "A Template for Building Your Own Data Migration Code",
     brief_description: `Imagine you are facing a complex data migration task scenario involving \
-many data sources and intricate transformations. You want to build an efficient script to migrate
+many data sources and intricate transformations. You want to build an efficient script to migrate \
 the data, what is your solution?`,
     url: "/data_adapter_template",
     file: "data_adapter_template.md",
