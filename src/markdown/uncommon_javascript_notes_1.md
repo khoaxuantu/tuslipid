@@ -16,29 +16,6 @@ using JavaScript. It is based on [javascript.info's part 2](https://javascript.i
 to have a fundamental knowledge of JavaScript. If you are a newbie in JS, let's check out the
 [javascript.info's part 1](https://javascript.info/#tab-1) first before jumping into this section.
 
-# Table of Contents
-<details open>
-<summary>Details</summary>
-
-- [Document](#document)
-  + [Browser environment, specs](#browser-environment-specs)
-  + [DOM tree](#dom-tree)
-  + [Walking the DOM](#walking-the-dom)
-  + [Searching: getElement*, querySelector*](#searching-getelement-queryselector)
-  + [Node properties: type, tag and contents](#node-properties-type-tag-and-contents)
-  + [Attributes and properties](#attributes-and-properties)
-  + [Modifying the document](#modifying-the-document)
-  + [Styles and classes](#styles-and-classes)
-  + [Element sizes and scrolling](#element-sizes-and-scrolling)
-  + [Window sizes and scrolling](#window-sizes-and-scrolling)
-  + [Coordinates](#coordinates)
-- [Introduction to Events](#introduction-to-events)
-  + [Introduction to browser events](#introduction-to-browser-events)
-  + [Bubbling and capturing](#bubbling-and-capturing)
-  + [Event delegation](#event-delegation)
-
-</details>
-
 # Document
 > Manipulate a web-page using JavaScript
 
@@ -699,7 +676,7 @@ document.body.append(div);
 - `node.replaceWith(...nodes or strings)`: replaces `node` with the given
 nodes or strings.
 
-### insertAdjacentHTML/Text/Element
+### insertAdjacentHTML / Text / Element
 `elem.insertAdjacentHTML(where, html)`
 
 The first parameter is a code word, specifying where to insert relative to

@@ -41,14 +41,6 @@ the Bun community (you can check them out via this
 After making my own customized boilerplate, I was surprised by discovering many new aspects of
 a React project. Below, I will share what I have learned so far.
 
-# Table of Contents
-
-- [How are static contents served in a web](#how-are-the-static-contents-served-in-a-web)
-- [How the server-side rendering delivers React components](#how-the-server-side-rendering-delivers-react-components)
-- [At the client-side](#at-the-client-side)
-- [Inside the FileSystemRouter, refers to NextJS's routing](#inside-the-filesystemrouter-refers-to-nextjss-routing)
-- [Custom the console.log](#custom-the-consolelog)
-
 # How are the static contents served in a web
 
 The basics come first, or more precisely said, everything is constructed upon the basics.
