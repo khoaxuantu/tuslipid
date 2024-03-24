@@ -595,7 +595,6 @@ hr {
 .projects-l-wrapper {
   width: 80%;
   max-width: 600px;
-  margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -644,7 +643,6 @@ hr {
 .blog-c-toc {
   width: 100%;
   max-width: 40em;
-  margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -662,7 +660,6 @@ hr {
 .blog-c-content {
   width: 80%;
   max-width: 40em;
-  margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -687,12 +684,36 @@ hr {
     font-size: 24px;
   }
 }
+.blogs-c-btn__tag, .blogs-c-btn__read-more a {
+  background-color: #cbcbcb;
+  transition: all 300ms ease-in-out;
+}
+.blogs-c-btn__tag:hover, .blogs-c-btn__read-more a:hover {
+  background-color: #8c8c8c;
+  color: white;
+  text-decoration: none;
+}
+
+.blogs-c-btn__tag-active, .blogs-c-btn__tag {
+  min-width: 25%;
+  margin-top: 1rem;
+  margin-right: 0.5rem;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+}
+
 .blogs-l-wrapper {
   width: 90%;
   max-width: 40rem;
-  margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
+  font-family: "Ubuntu", system-ui, sans-serif;
+}
+.blogs-l-tags {
+  font-family: "Ubuntu", system-ui, sans-serif;
+  margin-bottom: 50px;
 }
 .blogs-c-btn__read-more {
   display: flex;
@@ -702,18 +723,14 @@ hr {
 }
 .blogs-c-btn__read-more a {
   border-radius: 15px;
-  background-color: #cbcbcb;
-  color: black;
   width: 16.67%;
   min-width: 120px;
   height: 100%;
   min-height: 40px;
-  transition: all 300ms ease-in-out;
+  color: black;
 }
-.blogs-c-btn__read-more a:hover {
-  background-color: #8c8c8c;
-  color: white;
-  text-decoration: none;
+.blogs-c-btn__tag-active {
+  background-color: #4e9a06;
 }
 .blogs-c-card {
   border-radius: 15px;
@@ -728,7 +745,6 @@ hr {
   font-family: "Ubuntu", system-ui, sans-serif;
 }
 .blogs-c-txt__body {
-  font-family: "Ubuntu", system-ui, sans-serif;
   line-height: 1.5;
 }
 
@@ -760,6 +776,7 @@ hr {
 .sl-l-container__content {
   padding-left: 5%;
   padding-right: 5%;
+  margin-top: 50px;
 }
 
 @media screen and (min-width: 1200px) {

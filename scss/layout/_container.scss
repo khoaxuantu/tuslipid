@@ -21,6 +21,7 @@
 
             &__content {
                 @include center-block(5%, "padding");
+                margin-top: $SECTION_GAP;
             }
         }
     }
