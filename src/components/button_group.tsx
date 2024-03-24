@@ -1,7 +1,10 @@
 import Link from "next/link";
+import Button from "@/lib/factory/button";
 import { SOCIAL_MEDIA_INFO_LIST, NAV_BTN_INFO_LIST } from "@/lib/general_info";
 import { SkillProps, getSkillInfo } from "@/lib/general_info_server";
-import Button from "@/lib/factory/button";
+import { BlogRepository } from "@/lib/repository/blog";
+import { Dispatch } from "react";
+import { TagsAction } from "@/lib/reducer/tag";
 
 export function SocialMediaBtnGroup() {
   return (
@@ -16,7 +19,7 @@ export function SocialMediaBtnGroup() {
           {SOCIAL_MEDIA_INFO_LIST.map((btnProp) => {
             return (
               <Button
-                buttonType="icon"
+                buttontype="icon"
                 url={btnProp.url}
                 icon={btnProp.icon}
                 key={btnProp.id}
@@ -40,7 +43,7 @@ export function NavBtnGroup() {
       {NAV_BTN_INFO_LIST.map((btnProp) => {
         return (
           <Button
-            buttonType="default"
+            buttontype="default"
             url={btnProp.url}
             content={btnProp.content}
             classname="sl-c-btn sl-c-btn__rect"
@@ -67,10 +70,33 @@ export async function SkillBtnGroup() {
       {skillInfoList.map((btnProp) => {
         return (
           <Button
-            buttonType="icon"
+            buttontype="icon"
             classname="sl-c-btn about-c-btn__skill mt-2 mb-2"
             key={btnProp.name}
             {...btnProp}
+          />
+        );
+      })}
+    </div>
+  );
+}
+
+export function TagsButtonGroup({
+  dispatchActiveTags,
+}: {
+  dispatchActiveTags: Dispatch<TagsAction>;
+}) {
+  const tags = BlogRepository.getTagsList();
+
+  return (
+    <div>
+      {tags.map((tag) => {
+        return (
+          <Button
+            buttontype="tag"
+            content={tag}
+            key={tag}
+            dispatchActiveTags={dispatchActiveTags}
           />
         );
       })}

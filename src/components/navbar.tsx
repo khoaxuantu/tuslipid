@@ -43,12 +43,12 @@ function Navbar() {
       ></button>
       <ul className="sl-c-navbar__menu sl-c-txt__navbar menu-animation">
         <li key="Home">
-          <Button buttonType="default" url="/" content="Home" />
+          <Button buttontype="default" url="/" content="Home" />
         </li>
         {NAV_BTN_INFO_LIST.map((btnProps) => {
           return (
             <li key={btnProps.content}>
-              <Button buttonType="default" url={btnProps.url} content={btnProps.content} />
+              <Button buttontype="default" url={btnProps.url} content={btnProps.content} />
             </li>
           );
         })}
