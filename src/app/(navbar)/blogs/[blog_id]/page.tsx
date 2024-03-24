@@ -1,6 +1,7 @@
 import { SingleBlogPageHeaderGrp } from "@/components/blogs/header";
 import { SingleBlogContent } from "@/components/blogs/single/skeleton";
-import { blogInfoDict } from "@/lib/general_info";
+import { TableOfContents } from "@/components/blogs/single/toc";
+import { BLOG_INFO_DICT } from "@/lib/general_info";
 import { notFound } from "next/navigation";
 
 interface DynamicParams {
@@ -10,13 +11,16 @@ interface DynamicParams {
 }
 
 export default function SingleBlogPage({ params }: DynamicParams) {
-  if (!blogInfoDict[params.blog_id]) notFound();
+  if (!BLOG_INFO_DICT[params.blog_id]) notFound();
 
   return (
     <>
       <SingleBlogPageHeaderGrp id={params.blog_id as string} />
       <hr></hr>
-      <SingleBlogContent id={params.blog_id as string} />
+      <article className="sl-l-container__content blog-l-wrapper row">
+        <TableOfContents />
+        <SingleBlogContent id={params.blog_id as string} />
+      </article>
     </>
   );
 }

@@ -13,16 +13,6 @@ You decide to write an efficient code to fully control the transformation logic,
 
 This article provides you with a template to build flexible and maintainable code so that you can handle your logic completely.
 
-# Table of Contents
-
-- [Overview](#overview)
-- [The command block](#the-command-block)
-- [The adapter block](#the-adapter-block)
-- [Monitoring](#monitoring)
-- [In practices](#in-practices)
-- [Conclusion](#conclusion)
-- [Appendix](#appendix)
-
 # Overview
 
 ### Specifications

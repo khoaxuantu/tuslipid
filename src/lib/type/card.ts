@@ -17,5 +17,6 @@ export interface IBlogCardProps extends ICardProps {
   brief_description: string;
   url: string;
   file: string;
+  tags: string[];
   date: Date;
 }

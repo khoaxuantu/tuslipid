@@ -1,3 +1,5 @@
+# Introduction
+
 > I watch youtube a lot!
 
 There was a time I spent 2 - 3 hours per day watching
@@ -59,7 +61,7 @@ genres such as general science, entertainment, etc...
 - [William Lin](https://www.youtube.com/@tmwilliamlin168)
 - [WilliamFiset](https://www.youtube.com/@WilliamFiset-videos)
 
-## Study Platforms
+# Study Platforms
 - [Algorithms Live!](https://www.youtube.com/@AlgorithmsLive)
 - [ByteByteGo](https://www.youtube.com/@ByteByteGo)
 - [Changelog](https://www.youtube.com/@Changelog)
@@ -79,7 +81,7 @@ if you learn GCP
 - [Simplilearn](https://www.youtube.com/@SimplilearnOfficial)
 
 
-## Memes
+# Memes
 - [Fireship](https://www.youtube.com/@SimplilearnOfficial)
 - [Joma Tech](https://www.youtube.com/@jomaoppa)
 - [Mr. P Solver](https://www.youtube.com/@MrPSolver)

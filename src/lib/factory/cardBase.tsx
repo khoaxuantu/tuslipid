@@ -3,15 +3,25 @@ import { IBlogCardProps, IProjCardProps } from "../type/card";
 import GithubIcon from "./icons/GithubIcon";
 import ExternalLinkIcon from "./icons/ExternalLink";
 
+/**
+ * A navigation card factory
+ * @param props Project Card Interface | Blog Card Interface
+ * @returns Card JSX Element
+ */
+export default function Card(props: IProjCardProps | IBlogCardProps) {
+  let card;
+  if (props.content_section === "Projects") {
+    card = <ProjectCard {...(props as IProjCardProps)} />;
+  } else if (props.content_section === "Blogs") {
+    card = <BlogsCard {...(props as IBlogCardProps)} />;
+  }
+
+  return <>{card}</>;
+}
+
 function ProjectCard(props: IProjCardProps) {
   return (
-    <>
-      {!props.isFeatured ? (
-        <DefaultProjectCard {...props} />
-      ) : (
-        <FeaturedProjCard {...props} />
-      )}
-    </>
+    <>{!props.isFeatured ? <DefaultProjectCard {...props} /> : <FeaturedProjCard {...props} />}</>
   );
 }
 
@@ -129,6 +139,12 @@ function BlogsCard(props: IBlogCardProps) {
   return (
     <div className="sl-c-card blogs-c-card mb-5 fade-in-left">
       <h3 className="blogs-c-txt__header p-3">{props.title}</h3>
+      <div className="ps-3 pe-3">
+        <i>
+          <span>{formatDate(props.date)} |</span>{" "}
+          <span>{props.tags.map((tag) => `#${tag}`).join(" ")}</span>
+        </i>
+      </div>
       <div className="blogs-c-txt__body p-3">{props.brief_description}</div>
       <div className="blogs-c-btn__read-more pb-3 pt-3">
         <Link className="blogs-c-txt__body" href={"/blogs" + props.url + "/"}>
@@ -139,20 +155,12 @@ function BlogsCard(props: IBlogCardProps) {
   );
 }
 
-/**
- * A navigation card factory
- * @param props Project Card Interface | Blog Card Interface
- * @returns Card JSX Element
- */
-function Card(props: IProjCardProps | IBlogCardProps) {
-  let card;
-  if (props.content_section === "Projects") {
-    card = <ProjectCard {...(props as IProjCardProps)} />;
-  } else if (props.content_section === "Blogs") {
-    card = <BlogsCard {...(props as IBlogCardProps)} />;
-  }
+function formatDate(date: Date) {
+  const options: Intl.DateTimeFormatOptions = {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  };
 
-  return <>{card}</>;
+  return date.toLocaleDateString("en-UK", options);
 }
-
-export default Card;

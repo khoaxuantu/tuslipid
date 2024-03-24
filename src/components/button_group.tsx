@@ -1,7 +1,10 @@
 import Link from "next/link";
-import * as Btn from "../lib/factory/buttonBase";
-import * as Info from "../lib/general_info";
-import { getSkillInfo } from "@/lib/general_info_server";
+import Button from "@/lib/factory/button";
+import { SOCIAL_MEDIA_INFO_LIST, NAV_BTN_INFO_LIST } from "@/lib/general_info";
+import { SkillProps, getSkillInfo } from "@/lib/general_info_server";
+import { BlogRepository } from "@/lib/repository/blog";
+import { Dispatch } from "react";
+import { TagsAction } from "@/lib/reducer/tag";
 
 export function SocialMediaBtnGroup() {
   return (
@@ -13,9 +16,10 @@ export function SocialMediaBtnGroup() {
           Say hello to me by one of the following {":)"}
         </div>
         <div className="sl-c-btn__group btn-contact-grp mt-5">
-          {Info.socialMediaInfoList.map((btnProp) => {
+          {SOCIAL_MEDIA_INFO_LIST.map((btnProp) => {
             return (
-              <Btn.IconButton
+              <Button
+                buttontype="icon"
                 url={btnProp.url}
                 icon={btnProp.icon}
                 key={btnProp.id}
@@ -25,12 +29,7 @@ export function SocialMediaBtnGroup() {
             );
           })}
         </div>
-        <Link
-          href="/"
-          className="sl-c-btn sl-c-btn__rect mt-5"
-          id="go-back"
-          prefetch={true}
-        >
+        <Link href="/" className="sl-c-btn sl-c-btn__rect mt-5" id="go-back" prefetch={true}>
           Home
         </Link>
       </div>
@@ -41,9 +40,10 @@ export function SocialMediaBtnGroup() {
 export function NavBtnGroup() {
   return (
     <div className="sl-c-btn__group menu-l-grp__nav-btn mb-3 menu-c-txt__body">
-      {Info.navBtnInfoList.map((btnProp) => {
+      {NAV_BTN_INFO_LIST.map((btnProp) => {
         return (
-          <Btn.DefaultButton
+          <Button
+            buttontype="default"
             url={btnProp.url}
             content={btnProp.content}
             classname="sl-c-btn sl-c-btn__rect"
@@ -59,10 +59,7 @@ export async function SkillBtnGroup() {
   const skillInfoList = await getSkillInfo();
   skillInfoList.sort(compareSkill);
 
-  function compareSkill(
-    a: Btn.IconButtonProps,
-    b: Btn.IconButtonProps
-  ): number {
+  function compareSkill(a: SkillProps, b: SkillProps): number {
     if ((a.name as string) < (b.name as string)) return -1;
     else if ((a.name as string) > (b.name as string)) return 1;
     return 0;
@@ -72,12 +69,34 @@ export async function SkillBtnGroup() {
     <div className="about-c-btn__group-skill mt-2 col-8">
       {skillInfoList.map((btnProp) => {
         return (
-          <Btn.IconButton
-            id={btnProp.name}
-            url={btnProp.url}
-            icon={btnProp.icon}
+          <Button
+            buttontype="icon"
             classname="sl-c-btn about-c-btn__skill mt-2 mb-2"
             key={btnProp.name}
+            {...btnProp}
+          />
+        );
+      })}
+    </div>
+  );
+}
+
+export function TagsButtonGroup({
+  dispatchActiveTags,
+}: {
+  dispatchActiveTags: Dispatch<TagsAction>;
+}) {
+  const tags = BlogRepository.getTagsList();
+
+  return (
+    <div>
+      {tags.map((tag) => {
+        return (
+          <Button
+            buttontype="tag"
+            content={tag}
+            key={tag}
+            dispatchActiveTags={dispatchActiveTags}
           />
         );
       })}

@@ -1,8 +1,8 @@
 'use client';
 
 import { useEffect } from "react";
-import { SocialMediaBtnGroup } from "../../components/button";
-import addOrientationHandler from "../../components/orientation";
+import { SocialMediaBtnGroup } from "@/components/button_group";
+import addOrientationHandler from "@/components/orientation";
 
 function Contact() {
   useEffect(() => {

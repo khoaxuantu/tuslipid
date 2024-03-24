@@ -21,18 +21,17 @@
 
             &__content {
                 @include center-block(5%, "padding");
+                margin-top: $SECTION_GAP;
             }
         }
     }
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 1200px) {
     .sl-l-wrapper {
         width: 80%;
     }
-}
 
-@media screen and (min-width: 1200px) {
     .sl-l-container__content {
         @include center-block();
         max-width: 900px;

@@ -1,13 +1,29 @@
 @use '../abstracts' as *;
 
 .blog {
-    &-l {
-        &-wrapper {
-            @include content-wrapper(80%, 40em, 50px);
-        }
-    }
-
     &-c {
+        &-toc {
+            @include content-wrapper(100%, 40em);
+
+            &__h1 {
+                list-style-type: '🍚 ' !important;
+            }
+
+            &__h2 {
+                margin-left: 20px !important;
+                list-style-type: '🍙 ' !important;
+            }
+
+            &__h3 {
+                margin-left: 40px !important;
+                list-style-type: '🍣 ' !important;
+            }
+        }
+
+        &-content {
+            @include content-wrapper(80%, 40em);
+        }
+
         &-txt {
             &__header {
                 @include select-header-txt($font: $HEADER_FONT_BLOG, $size: 20px);
@@ -21,10 +37,8 @@
 
         &-img {
             &__extend {
-                width: 90%;
-                max-width: 960px;
+                width: auto;
                 height: auto;
-                max-height: 100dvh;
                 z-index: 9999;
                 opacity: 1 !important;
             }

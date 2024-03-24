@@ -1,4 +1,5 @@
 import Copyright from "@/components/copyright";
+import Button from "@/lib/factory/button";
 import { Metadata } from "next";
 
 const blogsDescription = "Some notes, some ideas, some opinions";
@@ -32,6 +33,7 @@ function BlogsLayout({ children }: { children: React.ReactNode }) {
     <>
       <div className="sl-l-container sl-l-wrapper transistion-page">
         {children}
+        <Button buttontype="go-top" />
         <Copyright copyright_class="sl-c-copyright__page mt-5 pt-5 pb-3" />
       </div>
       <div className="fkkk-next-js">

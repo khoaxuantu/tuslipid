@@ -1,4 +1,4 @@
-import { blogInfoDict } from "@/lib/general_info";
+import { BLOG_INFO_DICT } from "@/lib/general_info";
 import { Metadata } from "next";
 
 type Props = {
@@ -10,7 +10,7 @@ export const dynamic = 'force-static';
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const blogId = params.blog_id;
-  const blogInfo = blogInfoDict[blogId];
+  const blogInfo = BLOG_INFO_DICT[blogId];
   if (!blogInfo) return notFoundMetadata();
   const blogTitle = `${blogInfo.title} | Tusss Blogs`;
   const blogThumb = "/seo/blogs-tuslipid.webp";

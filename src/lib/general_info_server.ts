@@ -1,10 +1,15 @@
 "use server";
 
-import { IconButtonProps } from "./factory/buttonBase";
 import { getImgs, getSvgs } from "./factory/importMedia";
 import { IProjCardProps } from "./type/card";
 
-export const getSkillInfo = async (): Promise<IconButtonProps[]> => {
+export interface SkillProps {
+  name: string;
+  url: string;
+  icon: string;
+}
+
+export const getSkillInfo = async (): Promise<SkillProps[]> => {
   const svgs = await getSvgs();
   return [
     {
@@ -140,7 +145,7 @@ export const getSkillInfo = async (): Promise<IconButtonProps[]> => {
     {
       name: "Vercel",
       url: "https://vercel.com/",
-      icon: svgs["Vercel-Dark"]
+      icon: svgs["Vercel-Dark"],
     },
   ];
 };
@@ -202,8 +207,7 @@ export const getProjInfo = async (): Promise<{
             as the Advanced Algorithms coursework project.`,
       ],
       tools: ["Python", "Or-tools"],
-      githubURL:
-        "https://github.com/khoaxuantu/Solving-Knapsacks-in-LinearProg-vs-HarmonySearch",
+      githubURL: "https://github.com/khoaxuantu/Solving-Knapsacks-in-LinearProg-vs-HarmonySearch",
       imageURL: imgs.Knapsack,
     },
     "email-spa": {

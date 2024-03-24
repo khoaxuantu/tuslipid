@@ -3,7 +3,7 @@
 .projects {
     &-l {
         &-wrapper {
-            @include content-wrapper(80%, 600px, 50px);
+            @include content-wrapper(80%, 600px);
         }
     }
 

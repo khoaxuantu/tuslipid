@@ -1,4 +1,4 @@
-import { SkillBtnGroup } from "../button";
+import { SkillBtnGroup } from "../button_group";
 
 
 function AboutIntro() {

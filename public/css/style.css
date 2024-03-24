@@ -1,4 +1,4 @@
-/* They should be imported only once */
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
@@ -206,6 +206,21 @@ a:hover {
 .sl-c-btn__group a, .sl-c-btn__group button {
   margin: 0 0.625rem 0 0.625rem;
   font-size: 12px;
+}
+.sl-c-btn__go-top {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 2;
+  width: 4rem;
+  aspect-ratio: 1;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.sl-c-btn__go-top:hover {
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 @media (min-width: 320px) {
@@ -452,7 +467,6 @@ hr {
     font-size: 16px;
   }
 }
-/* Pages */
 .about-l-wrapper__proj {
   display: grid;
   column-gap: 2rem;
@@ -581,7 +595,6 @@ hr {
 .projects-l-wrapper {
   width: 80%;
   max-width: 600px;
-  margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -627,10 +640,26 @@ hr {
     align-items: stretch;
   }
 }
-.blog-l-wrapper {
+.blog-c-toc {
+  width: 100%;
+  max-width: 40em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.blog-c-toc__h1 {
+  list-style-type: "🍚 " !important;
+}
+.blog-c-toc__h2 {
+  margin-left: 20px !important;
+  list-style-type: "🍙 " !important;
+}
+.blog-c-toc__h3 {
+  margin-left: 40px !important;
+  list-style-type: "🍣 " !important;
+}
+.blog-c-content {
   width: 80%;
   max-width: 40em;
-  margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -644,10 +673,8 @@ hr {
   line-height: 1.5;
 }
 .blog-c-img__extend {
-  width: 90%;
-  max-width: 960px;
+  width: auto;
   height: auto;
-  max-height: 100dvh;
   z-index: 9999;
   opacity: 1 !important;
 }
@@ -657,12 +684,36 @@ hr {
     font-size: 24px;
   }
 }
+.blogs-c-btn__tag, .blogs-c-btn__read-more a {
+  background-color: #cbcbcb;
+  transition: all 300ms ease-in-out;
+}
+.blogs-c-btn__tag:hover, .blogs-c-btn__read-more a:hover {
+  background-color: #8c8c8c;
+  color: white;
+  text-decoration: none;
+}
+
+.blogs-c-btn__tag-active, .blogs-c-btn__tag {
+  min-width: 25%;
+  margin-top: 1rem;
+  margin-right: 0.5rem;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+}
+
 .blogs-l-wrapper {
   width: 90%;
   max-width: 40rem;
-  margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
+  font-family: "Ubuntu", system-ui, sans-serif;
+}
+.blogs-l-tags {
+  font-family: "Ubuntu", system-ui, sans-serif;
+  margin-bottom: 50px;
 }
 .blogs-c-btn__read-more {
   display: flex;
@@ -672,18 +723,14 @@ hr {
 }
 .blogs-c-btn__read-more a {
   border-radius: 15px;
-  background-color: #cbcbcb;
-  color: black;
   width: 16.67%;
   min-width: 120px;
   height: 100%;
   min-height: 40px;
-  transition: all 300ms ease-in-out;
+  color: black;
 }
-.blogs-c-btn__read-more a:hover {
-  background-color: #8c8c8c;
-  color: white;
-  text-decoration: none;
+.blogs-c-btn__tag-active {
+  background-color: #4e9a06;
 }
 .blogs-c-card {
   border-radius: 15px;
@@ -698,7 +745,6 @@ hr {
   font-family: "Ubuntu", system-ui, sans-serif;
 }
 .blogs-c-txt__body {
-  font-family: "Ubuntu", system-ui, sans-serif;
   line-height: 1.5;
 }
 
@@ -730,14 +776,13 @@ hr {
 .sl-l-container__content {
   padding-left: 5%;
   padding-right: 5%;
+  margin-top: 50px;
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 1200px) {
   .sl-l-wrapper {
     width: 80%;
   }
-}
-@media screen and (min-width: 1200px) {
   .sl-l-container__content {
     margin-left: auto;
     margin-right: auto;
@@ -1038,5 +1083,8 @@ hr {
 .p-5 {
   padding: 3rem !important;
 }
+
+/* They should be imported only once */
+/* Pages */
 
 /*# sourceMappingURL=style.css.map */
