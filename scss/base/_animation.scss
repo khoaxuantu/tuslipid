@@ -55,7 +55,7 @@
 }
 
 .transition-menu {
-    @include animation(fadeIn, 1s);
+    @include animation(fadeIn, .3s);
 }
 
 .transition-page {

@@ -4,7 +4,7 @@ function Copyright(props: { copyright_class?: string }) {
   const year = new Date().getFullYear();
 
   return (
-    <div className={`${props.copyright_class}`}>
+    <small className={`${props.copyright_class}`}>
       <div>
         <a
           href="https://github.com/khoaxuantu/tuslipid"
@@ -33,7 +33,7 @@ function Copyright(props: { copyright_class?: string }) {
       </a>
       .<br></br>
       Copyright © 2023-{year} All Rights Reserved.
-    </div>
+    </small>
   );
 }
 

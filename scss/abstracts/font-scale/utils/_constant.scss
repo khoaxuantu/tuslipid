@@ -1,0 +1,37 @@
+$scaleRatio: (
+  'golden': 1.618,
+  'classical': 2
+);
+$scaleStep: (
+  'monotonic': 1,
+  'ditonic': 2,
+  'tritonic': 3,
+  'tetratonic': 4,
+  'pentatonic': 5,
+  'hexatonic': 6,
+  'heptatonic': 7,
+  'octatonic': 8,
+  'chromatic': 12
+);
+/* footnote endnote caption body-text blockquote h6 h5 h4 h3 h2 h1 */
+$compositionSeries: (
+  'fibonacci': (-2, -1, -1, 1, 1, 1, 2, 3, 5, 8, 13),
+  'lucas': (-2, -1, -1, 1, 1, 1, 3, 4, 7, 11, 18),
+  'pentagonal': (-2, -1, -1, 1, 1, 1, 2, 5, 7, 12, 15),
+  'triangular number': (-2, -1, -1, 1, 1, 1, 1, 3, 3, 6, 15)
+);
+$textLabel: (
+  '.footnote',
+  '.endnote',
+  '.caption',
+  'body',
+  'blockquote',
+  'h6', 'h5', 'h4', 'h3', 'h2', 'h1'
+);
+$fontUnit: (
+  'pica': 1em,
+  'em': 1em,
+  'rem': 1rem,
+  'px': 16px,
+  'pixel': 16px
+)

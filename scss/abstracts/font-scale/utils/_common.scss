@@ -1,0 +1,19 @@
+@use 'sass:math';
+@use 'sass:list';
+@use 'sass:map';
+@use 'constant' as *;
+
+@function calculateScale($i, $ratio, $steps, $composition) {
+  @return decimalRound(math.pow(
+    map.get($scaleRatio, $ratio),
+    math.div(
+      list.nth(map.get($compositionSeries, $composition), $i) - 1,
+      map.get($scaleStep, $steps)
+    )
+  ), 3);
+}
+
+@function decimalRound($n, $fractionDigits: 0) {
+  $power: math.pow(10, $fractionDigits);
+  @return math.div(math.round($n * $power), $power);
+}

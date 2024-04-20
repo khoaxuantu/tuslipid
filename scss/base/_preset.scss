@@ -1,5 +1,7 @@
 @use '../abstracts' as *;
 
+@include createTypoScale($ratio: 'golden');
+
 body {
     background-image: url($BACKGROUND_URL);
     background-size: cover;

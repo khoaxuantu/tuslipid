@@ -39,7 +39,7 @@ export function SocialMediaBtnGroup() {
 
 export function NavBtnGroup() {
   return (
-    <div className="sl-c-btn__group menu-l-grp__nav-btn mb-3 menu-c-txt__body">
+    <main className="mb-3 sl-c-btn__group menu-l-grp__nav-btn">
       {NAV_BTN_INFO_LIST.map((btnProp) => {
         return (
           <Button
@@ -51,7 +51,7 @@ export function NavBtnGroup() {
           />
         );
       })}
-    </div>
+    </main>
   );
 }
 

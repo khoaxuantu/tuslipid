@@ -14,12 +14,12 @@
             @include center-block();
             @include rounded;
 
-            &__header {
+            &__header, header {
                 padding: 5%;
                 text-align: center;
             }
 
-            &__content {
+            &__content, main {
                 @include center-block(5%, "padding");
                 margin-top: $SECTION_GAP;
             }

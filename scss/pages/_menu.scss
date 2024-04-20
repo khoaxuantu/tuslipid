@@ -4,6 +4,7 @@
     &-l {
         &-wrapper {
             @extend %menu-l-wrapper;
+            @include set-font($BODY_FONT_MENU, 14px);
         }
 
         &-grp {
@@ -13,16 +14,9 @@
             }
 
             &__nav-btn {
-                margin-top: 10%;
-                z-index: 1000;
-
                 a {
                     text-decoration: none;
                     color: #000;
-                }
-
-                button {
-                    font-family: $BODY_FONT_MENU;
                 }
             }
         }
@@ -53,12 +47,6 @@
 @media (max-width: 320px) {
     .menu-c-img__avatar {
         width: 100px;
-    }
-}
-
-@media (min-width: 576px) {
-    .menu-l-grp__nav-btn {
-        margin-top: 5%;
     }
 }
 
