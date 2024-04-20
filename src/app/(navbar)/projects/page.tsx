@@ -37,7 +37,7 @@ export default function ProjectsPage() {
         <div className="projects-l-wrapper">
           <ProjectsList />
         </div>
-        <Copyright copyright_class="sl-c-copyright__page pb-3" />
+        <Copyright className="sl-c-copyright__page pb-3" />
       </div>
     </>
   );

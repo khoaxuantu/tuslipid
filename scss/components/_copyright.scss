@@ -5,6 +5,7 @@
     text-align: center;
     padding: 0 0.5rem 0 0.5rem;
     font-family: $COPYRIGHT_FONT;
+    display: block;
 }
 
 .sl {
@@ -13,7 +14,6 @@
             &__menu {
                 @extend %copyright-txt;
                 position: relative;
-                display: block;
                 color: $TEXT_MENU;
 
                 a {

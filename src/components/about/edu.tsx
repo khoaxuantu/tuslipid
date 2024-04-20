@@ -4,15 +4,15 @@ async function Education() {
   const eduImgs = await getEduImgs();
 
   return (
-    <section className="mb-5 row">
-      <h3 className="sl-c-txt__header col-4 pe-5">Where I studied</h3>
+    <section className="row mb-5">
+      <h2 className="col-4 pe-5 pt-2 pb-3">Where I studied</h2>
       <div className="col-8">
         <div className="pt-2 pb-2 d-flex">
           <div className="about-l-wrapper__edu-content pe-3">
-            <h3>
+            <h5>
               <span>National Taiwan University</span>{" "}
               <span>of Science and Technology</span>
-            </h3>
+            </h5>
             <div className="bt-1">
               <span>Bachelor of Science - BSc,</span>
               <span>
@@ -42,10 +42,10 @@ async function Education() {
         </div>
         <div className="mt-3 pt-2 pb-2 d-flex">
           <div className="about-l-wrapper__edu-content pe-3">
-            <h3>
+            <h5>
               <span>Hanoi - Amsterdam</span> <span>High School</span>{" "}
               <span>for the Gifted</span>
-            </h3>
+            </h5>
             <div className="bt-1">History</div>
             <div className="bt-1 mb-3" style={{ opacity: 0.5 }}>
               Aug 2015 - May 2018

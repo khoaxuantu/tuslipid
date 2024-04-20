@@ -1,10 +1,10 @@
 import GithubIcon from "@/lib/factory/icons/GithubIcon";
 
-function Copyright(props: { copyright_class?: string }) {
+function Copyright(props: { className?: string }) {
   const year = new Date().getFullYear();
 
   return (
-    <small className={`${props.copyright_class}`}>
+    <small className={`${props.className}`}>
       <div>
         <a
           href="https://github.com/khoaxuantu/tuslipid"

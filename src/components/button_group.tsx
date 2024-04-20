@@ -66,12 +66,12 @@ export async function SkillBtnGroup() {
   }
 
   return (
-    <div className="about-c-btn__group-skill mt-2 col-8">
+    <div className="about-c-btn__group-skill pt-2 col-8">
       {skillInfoList.map((btnProp) => {
         return (
           <Button
             buttontype="icon"
-            classname="sl-c-btn about-c-btn__skill mt-2 mb-2"
+            classname="sl-c-btn about-c-btn__skill"
             key={btnProp.name}
             {...btnProp}
           />

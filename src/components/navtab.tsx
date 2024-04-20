@@ -24,7 +24,7 @@ function TabList() {
 
     return (
         <div className="pt-2 pb-2 row col-8">
-            <div className="col-3 sl-c-tab__list">
+            <div className="sl-c-tab__list col-3">
                 {
                     WORK_INFO_LIST.map((tabProps, index) => {
                         let id = index.toString();
@@ -38,7 +38,7 @@ function TabList() {
                     })
                 }
             </div>
-            <div className="col-9 sl-c-tab__content">
+            <div className="sl-c-tab__content col-9">
                 {
                     WORK_INFO_LIST.map((tabProps, index) => {
                         let id = index.toString();

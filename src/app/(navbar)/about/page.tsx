@@ -36,14 +36,14 @@ export default function AboutPage() {
     <>
       <div className="sl-l-container sl-l-wrapper transition-page">
         <AboutHeaderGrp />
-        <div className="sl-l-container__content">
+        <main>
           <AboutIntro />
           <Education />
           <Works />
           <AboutProject />
           <GetInTouch />
-        </div>
-        <Copyright copyright_class="sl-c-copyright__page pb-3" />
+        </main>
+        <Copyright className="sl-c-copyright__page pb-3" />
       </div>
     </>
   );

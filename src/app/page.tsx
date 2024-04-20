@@ -18,7 +18,7 @@ export default function TuslipidMenu() {
       <div className={`sl-l-container menu-l-wrapper ${orientation} transition-menu`}>
         <MenuHeaderGrp />
         <NavBtnGroup />
-        <Copyright copyright_class="sl-c-copyright__menu mt-5" />
+        <Copyright className="sl-c-copyright__menu mt-5" />
       </div>
     </>
   );

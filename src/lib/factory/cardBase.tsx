@@ -67,7 +67,7 @@ function FeaturedProjCard(props: IProjCardProps) {
   return (
     <div className="sl-c-card about-c-card__featured-proj">
       <div className="p-3 sl-c-card__proj-description">
-        <h3 className="sl-c-txt__header-proj">{props.title}</h3>
+        <h3 className="p-2">{props.title}</h3>
         <ul className="pb-4 ps-2 sl-c-card__proj-tool-list">
           {props.tools.map((tool) => {
             return (
@@ -80,7 +80,7 @@ function FeaturedProjCard(props: IProjCardProps) {
         <div className="ps-2">
           {props.description.map((p, index) => {
             return (
-              <p key={index} className="pb-2 sl-c-txt__body">
+              <p key={index} className="pb-2">
                 {p}
               </p>
             );

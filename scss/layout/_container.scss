@@ -11,7 +11,7 @@
         }
 
         &-container {
-            @include center-block();
+            @include center-block;
             @include rounded;
 
             &__header, header {
@@ -32,10 +32,12 @@
         width: 80%;
     }
 
-    .sl-l-container__content {
-        @include center-block();
-        max-width: 900px;
-        padding-left: 0;
-        padding-right: 0;
+    .sl-l-container {
+        &__content, main {
+            @include center-block;
+            max-width: 900px;
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
 }

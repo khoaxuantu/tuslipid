@@ -7,14 +7,13 @@
             width: 33.33%;
 
             img {
-                max-width: 32px;
+                max-width: 48px;
             }
         }
 
         &-img {
             &__flex {
                 @extend %flex-center;
-                justify-content: center;
             }
         }
     }
