@@ -516,7 +516,7 @@ hr {
 .about-c-card__tools {
   display: flex;
   flex-wrap: wrap;
-  font-size: 12px;
+  font-size: smaller;
 }
 .about-c-card__href {
   align-self: flex-end;
@@ -610,7 +610,7 @@ hr {
 .projects-c-card__tools {
   display: flex;
   flex-wrap: wrap;
-  font-size: 12px;
+  font-size: smaller;
 }
 .projects-c-card:hover {
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
@@ -743,11 +743,11 @@ hr {
   margin-right: auto;
   border-radius: 5px;
 }
-.sl-l-container__header, .sl-l-container header {
+.sl-l-container header {
   padding: 5%;
   text-align: center;
 }
-.sl-l-container__content, .sl-l-container main {
+.sl-l-container main {
   padding-left: 5%;
   padding-right: 5%;
   margin-top: 50px;
@@ -760,7 +760,7 @@ hr {
   .sl-l-wrapper {
     width: 80%;
   }
-  .sl-l-container__content, .sl-l-container main {
+  .sl-l-container main {
     margin-left: auto;
     margin-right: auto;
     max-width: 900px;

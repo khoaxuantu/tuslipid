@@ -70,12 +70,12 @@ export const NAV_BTN_INFO_LIST: RoutingProps[] = [
     content: "About",
   },
   {
-    url: "/blogs",
-    content: "Blogs",
-  },
-  {
     url: "/projects",
     content: "Projects",
+  },
+  {
+    url: "/blogs",
+    content: "Blogs",
   },
   {
     url: "/contact",

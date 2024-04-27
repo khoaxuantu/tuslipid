@@ -14,12 +14,12 @@
             @include center-block;
             @include rounded;
 
-            &__header, header {
+            header {
                 padding: 5%;
                 text-align: center;
             }
 
-            &__content, main {
+            main {
                 @include center-block(5%, "padding");
                 margin-top: $SECTION_GAP;
             }
@@ -37,7 +37,7 @@
     }
 
     .sl-l-container {
-        &__content, main {
+        main {
             @include center-block;
             max-width: 900px;
             padding-left: 0;

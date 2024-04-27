@@ -60,6 +60,6 @@
 
     &__tools {
         @include flex-wrap;
-        font-size: 12px;
+        font-size: smaller;
     }
 }
