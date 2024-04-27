@@ -131,16 +131,16 @@ function ProjHref(props: IProjCardProps) {
 function BlogsCard(props: IBlogCardProps) {
   return (
     <div className="sl-c-card blogs-c-card mb-5 fade-in-left">
-      <h3 className="blogs-c-txt__header p-3">{props.title}</h3>
+      <h3 className="p-3">{props.title}</h3>
       <div className="ps-3 pe-3">
         <i>
           <span>{formatDate(props.date)} |</span>{" "}
           <span>{props.tags.map((tag) => `#${tag}`).join(" ")}</span>
         </i>
       </div>
-      <div className="blogs-c-txt__body p-3">{props.brief_description}</div>
+      <div className="p-3">{props.brief_description}</div>
       <div className="blogs-c-btn__read-more pb-3 pt-3">
-        <Link className="blogs-c-txt__body" href={"/blogs" + props.url + "/"}>
+        <Link href={"/blogs" + props.url + "/"}>
           Read more {">>"}
         </Link>
       </div>

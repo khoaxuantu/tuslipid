@@ -79,6 +79,10 @@ h1 {
   font-size: 3.174em;
 }
 
+article h1 {
+  font-size: 1.961em;
+}
+
 body {
   background-image: url("/background.webp");
   background-size: cover;
@@ -675,7 +679,6 @@ hr {
   }
 }
 .blog-c-toc {
-  width: 100%;
   max-width: 40em;
   margin-left: auto;
   margin-right: auto;
@@ -692,19 +695,9 @@ hr {
   list-style-type: "🍣 " !important;
 }
 .blog-c-content {
-  width: 80%;
   max-width: 40em;
   margin-left: auto;
   margin-right: auto;
-}
-.blog-c-txt__header {
-  padding: 0.5rem 0;
-  font-size: 20px;
-  font-family: "Ubuntu", system-ui, sans-serif;
-}
-.blog-c-txt__body {
-  font-family: "Ubuntu", system-ui, sans-serif;
-  line-height: 1.5;
 }
 .blog-c-img__extend {
   width: auto;
@@ -743,11 +736,6 @@ hr {
   max-width: 40rem;
   margin-left: auto;
   margin-right: auto;
-  font-family: "Ubuntu", system-ui, sans-serif;
-}
-.blogs-l-tags {
-  font-family: "Ubuntu", system-ui, sans-serif;
-  margin-bottom: 50px;
 }
 .blogs-c-btn__read-more {
   display: flex;
@@ -772,14 +760,6 @@ hr {
   box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
   flex-direction: column;
   flex-wrap: nowrap;
-}
-.blogs-c-txt__header {
-  padding: 0.5rem 0;
-  font-size: 20px;
-  font-family: "Ubuntu", system-ui, sans-serif;
-}
-.blogs-c-txt__body {
-  line-height: 1.5;
 }
 
 @media (min-width: 576px) {
@@ -811,6 +791,9 @@ hr {
   padding-left: 5%;
   padding-right: 5%;
   margin-top: 50px;
+}
+.sl-l-container__blog {
+  font-family: "Ubuntu", system-ui, sans-serif;
 }
 
 @media screen and (min-width: 1200px) {

@@ -3,5 +3,5 @@
 
 .blog-l-wrapper {
     @extend %markdown-theme;
-    font-family: var.$BLOG_FONT;
+    line-height: 1.625;
 }

@@ -16,7 +16,7 @@ export function TableOfContents() {
     const tmp: TocHeading[] = [];
 
     elements.forEach(elem => {
-      if (elem.innerText == "Table of Contents") return;
+      if (isToc(elem) || isTitle(elem)) return;
       tmp.push({
         id: elem.id,
         text: elem.innerText,
@@ -28,11 +28,19 @@ export function TableOfContents() {
   }, [])
 
   return(
-    <div className="col-4 blog-c-toc pe-5">
+    <section className="col-4 blog-c-toc pe-5">
       <h1>Table of Contents</h1>
       { !headings ? <FetchingContentNoti /> : <TocList headings={headings} /> }
-    </div>
+    </section>
   );
+}
+
+function isToc(elem: HTMLElement): boolean {
+  return elem.innerText == "Table of Contents";
+}
+
+function isTitle(elem: HTMLElement): boolean {
+  return elem.id == "blog-title";
 }
 
 function FetchingContentNoti() {

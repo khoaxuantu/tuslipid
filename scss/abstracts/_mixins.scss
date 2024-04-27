@@ -30,8 +30,10 @@
     background-color: $theme;
 }
 
-@mixin content-wrapper($width, $maxWidth) {
-    width: $width;
+@mixin content-wrapper($width: null, $maxWidth) {
+    @if $width {
+        width: $width;
+    }
     max-width: $maxWidth;
     @include center-block();
 }

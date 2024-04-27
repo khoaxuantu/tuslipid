@@ -25,12 +25,6 @@
     &-l {
         &-wrapper {
             @include content-wrapper(90%, 40rem);
-            font-family: $BODY_FONT_BLOG;
-        }
-
-        &-tags {
-            font-family: $BODY_FONT_BLOG;
-            margin-bottom: $SECTION_GAP;
         }
     }
 
@@ -71,16 +65,6 @@
             box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
             flex-direction: column;
             flex-wrap: nowrap;
-        }
-
-        &-txt {
-            &__header {
-                @include select-header-txt($font: $HEADER_FONT_BLOG, $size: 20px);
-            }
-
-            &__body {
-                line-height: 1.5;
-            }
         }
     }
 }
