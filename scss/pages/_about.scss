@@ -52,17 +52,10 @@
         }
 
         &-card {
-            &__featured-proj {
-                @include rounded(10);
-                @extend %card-bodering;
+            @include project-card;
 
-                .projects-c-img {
-                    height: 400px;
-
-                    img {
-                        height: inherit;
-                    }
-                }
+            &__href {
+                align-self: flex-end;
             }
         }
 

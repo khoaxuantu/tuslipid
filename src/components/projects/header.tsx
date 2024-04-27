@@ -1,13 +1,11 @@
 export default function ProjectsPageHeaderGrp() {
-    return (
-      <div className='sl-l-container__header'>
-        <div className='sl-c-txt__header'>
-          <b>Projects</b>
-        </div>
-        <div className='sl-c-txt__body mt-2'>
-          I started studying Information Technology in 2020 and {" "}
-          luckily done some fun works since then.
-        </div>
-      </div>
-    );
+  return (
+    <header>
+      <h1 className="pt-2 pb-2">Tusss Projects</h1>
+      <blockquote className="mt-2">
+        I started studying Information Technology in 2020 and luckily done some fun works since
+        then.
+      </blockquote>
+    </header>
+  );
 }

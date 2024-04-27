@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: projTitle,
   description: projDescription,
   alternates: {
-    canonical: '/projects'
+    canonical: "/projects",
   },
   openGraph: {
     title: projTitle,
@@ -34,9 +34,9 @@ export default function ProjectsPage() {
     <>
       <div className="sl-l-container sl-l-wrapper transition-page">
         <ProjectsPageHeaderGrp />
-        <div className="projects-l-wrapper">
+        <main className="projects-l-wrapper">
           <ProjectsList />
-        </div>
+        </main>
         <Copyright className="sl-c-copyright__page pb-3" />
       </div>
     </>

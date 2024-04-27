@@ -59,3 +59,14 @@
 @mixin select-body-txt($font: var.$BODY_FONT, $size: var.$DEFAULT_BODY_FONT_SIZE) {
     @include set-font($font, $size);
 }
+
+@mixin project-card() {
+    &__description {
+        flex-direction: column;
+    }
+
+    &__tools {
+        @include flex-wrap;
+        font-size: 12px;
+    }
+}
