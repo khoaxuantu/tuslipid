@@ -16,7 +16,6 @@
 
         &-txt {
             &__header {
-                @include select-header-txt($size: 24px, $font: $HEADER_FONT_MENU, $padding: 0.5rem);
                 color: lightgray;
                 text-align: center;
             }

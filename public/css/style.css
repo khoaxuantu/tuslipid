@@ -580,9 +580,6 @@ hr {
   right: 0;
 }
 .contact-c-txt__header {
-  padding: 0.5rem;
-  font-size: 24px;
-  font-family: "JetBrains Mono", monospace;
   color: lightgray;
   text-align: center;
 }

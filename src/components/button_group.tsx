@@ -8,32 +8,20 @@ import { TagsAction } from "@/lib/reducer/tag";
 
 export function SocialMediaBtnGroup() {
   return (
-    <>
-      <div className="contact-c-btn__overlay"></div>
-      <div className="sl-l-container contact-l-wrapper center menu-c-txt__body">
-        <div className="contact-c-txt__header">
-          ~ Oi ~<br></br>
-          Say hello to me by one of the following {":)"}
-        </div>
-        <div className="sl-c-btn__group btn-contact-grp mt-5">
-          {SOCIAL_MEDIA_INFO_LIST.map((btnProp) => {
-            return (
-              <Button
-                buttontype="icon"
-                url={btnProp.url}
-                icon={btnProp.icon}
-                key={btnProp.id}
-                id={btnProp.id}
-                classname="sl-c-btn sl-c-btn__square"
-              />
-            );
-          })}
-        </div>
-        <Link href="/" className="sl-c-btn sl-c-btn__rect mt-5" id="go-back" prefetch={true}>
-          Home
-        </Link>
-      </div>
-    </>
+    <section className="sl-c-btn__group btn-contact-grp mt-5">
+      {SOCIAL_MEDIA_INFO_LIST.map((btnProp) => {
+        return (
+          <Button
+            buttontype="icon"
+            url={btnProp.url}
+            icon={btnProp.icon}
+            key={btnProp.id}
+            id={btnProp.id}
+            classname="sl-c-btn sl-c-btn__square"
+          />
+        );
+      })}
+    </section>
   );
 }
 
