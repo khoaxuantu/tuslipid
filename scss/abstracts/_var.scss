@@ -7,13 +7,8 @@ $BLOG_FONT: "Ubuntu",system-ui,sans-serif;
 $CODE_BLOG_FONT: "JetBrains Mono",monospace;
 $HEADER_FONT_MENU: "JetBrains Mono",monospace;
 $BODY_FONT_MENU: "JetBrains Mono",monospace;
-$HEADER_FONT_BLOG: $BLOG_FONT;
-$BODY_FONT_BLOG: $BLOG_FONT;
-$HEADER_FONT: $DEFAULT_FONT;
-$BODY_FONT: $DEFAULT_FONT;
 $COPYRIGHT_FONT: $HEADER_FONT_MENU;
-$DEFAULT_HEADER_FONT_SIZE: clamp(1.25rem, 1.29rem + 1.07vw, 1.75rem);
-$DEFAULT_BODY_FONT_SIZE: clamp(1rem, 0.96rem + 0.18vw, 1.125rem);
+$DYNAMIC_FONT_SIZE: clamp(1rem, 0.96rem + 0.18vw, 1.125rem);
 
 $RADIUS: 5px;
 $SECTION_GAP: 50px;

@@ -13,7 +13,7 @@ function Contact() {
   return (
     <>
       <div className="contact-c-btn__overlay"></div>
-      <div className="sl-l-container contact-l-wrapper center menu-c-txt__body">
+      <div className="sl-l-container contact-l-wrapper center contact-c-txt__body">
         <h2 className="contact-c-txt__header p-2">
           ~ Oi ~<br></br>
           Say hello to me by one of the following {":)"}

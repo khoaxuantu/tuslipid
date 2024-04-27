@@ -22,7 +22,7 @@ async function Education() {
             <div className="bt-1 mb-2" style={{ opacity: 0.5 }}>
               Sep 2018 - July 2022
             </div>
-            <div className="sl-c-txt__body">
+            <div>
               <b>
                 <i>Specialization: </i>
               </b>

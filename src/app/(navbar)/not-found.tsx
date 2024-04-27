@@ -7,7 +7,7 @@ export default function NotFound() {
       <div className="sl-l-container menu-l-wrapper center transition-menu">
         <header>
           <h1>404</h1>
-          <div className="sl-c-txt__body mt-2">
+          <div className="mt-2">
             Oi ~ This URL does not exist.
             <br />
             <br />

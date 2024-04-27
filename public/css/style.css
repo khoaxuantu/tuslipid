@@ -352,7 +352,7 @@ hr {
   z-index: 1;
 }
 .sl-c-navbar__wrap button {
-  border-radius: 5px;
+  border-radius: 0 0 5px 0;
   width: 45px;
   aspect-ratio: 1/1;
   background-color: #383838;
@@ -371,7 +371,7 @@ hr {
   top: 18%;
 }
 .sl-c-navbar__menu {
-  border-radius: 5px;
+  border-radius: 0 0 5px 5px;
   background-color: #383838;
   width: 100%;
   display: none;
@@ -437,7 +437,11 @@ hr {
     left: 25px;
     max-width: 150px;
   }
+  .sl-c-navbar__wrap button {
+    border-radius: 5px;
+  }
   .sl-c-navbar__menu {
+    border-radius: 5px;
     width: 150px;
   }
   .sl-c-tab__vertical {
@@ -467,34 +471,6 @@ hr {
   right: 0;
 }
 
-.sl-c-txt__header {
-  padding: 0.5rem 0;
-  font-size: clamp(1.25rem, 1.29rem + 1.07vw, 1.75rem);
-  font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
-}
-.sl-c-txt__header-proj {
-  padding: 0.5rem;
-  font-size: 20px;
-  font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
-}
-.sl-c-txt__body {
-  font-size: clamp(1rem, 0.96rem + 0.18vw, 1.125rem);
-  font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
-}
-
-.sl-c-txt__body {
-  font-size: clamp(1rem, 0.96rem + 0.18vw, 1.125rem);
-  font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
-}
-
-@media (min-width: 576px) {
-  .sl-c-txt__header-proj {
-    font-size: 24px;
-  }
-  .sl-c-txt__body {
-    font-size: 16px;
-  }
-}
 .about-l-wrapper__proj {
   display: flex;
   flex-direction: column;
@@ -583,6 +559,10 @@ hr {
   color: lightgray;
   text-align: center;
 }
+.contact-c-txt__body {
+  font-size: 14px;
+  font-family: "JetBrains Mono", monospace;
+}
 
 .menu-l-wrapper {
   font-size: 14px;
@@ -602,15 +582,6 @@ hr {
   border-radius: 50%;
   cursor: pointer;
   transition: src 500ms;
-}
-.menu-c-txt__header {
-  padding: 0.5rem;
-  font-size: 24px;
-  font-family: "JetBrains Mono", monospace;
-}
-.menu-c-txt__body {
-  font-size: 14px;
-  font-family: "JetBrains Mono", monospace;
 }
 
 @media (max-width: 320px) {
@@ -703,11 +674,6 @@ hr {
   opacity: 1 !important;
 }
 
-@media (min-width: 576px) {
-  .blog-c-txt__header {
-    font-size: 24px;
-  }
-}
 .blogs-c-btn__tag, .blogs-c-btn__read-more a {
   background-color: #cbcbcb;
   transition: all 300ms ease-in-out;
@@ -763,9 +729,6 @@ hr {
   .blogs-c-btn__read-more {
     justify-content: flex-end;
     padding-right: 1.5rem;
-  }
-  .blogs-c-txt__header {
-    font-size: 24px;
   }
 }
 .sl-l-wrapper {

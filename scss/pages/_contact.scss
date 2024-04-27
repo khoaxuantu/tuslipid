@@ -19,6 +19,10 @@
                 color: lightgray;
                 text-align: center;
             }
+
+            &__body {
+                @include select-body-txt($font: $BODY_FONT_MENU, $size: 14px);
+            }
         }
     }
 }
