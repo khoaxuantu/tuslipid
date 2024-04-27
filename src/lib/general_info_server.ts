@@ -123,11 +123,6 @@ export const getSkillInfo = async (): Promise<SkillProps[]> => {
       icon: svgs["NodeJS-Dark"],
     },
     {
-      name: "Redis",
-      url: "https://redis.io/",
-      icon: svgs["Redis-Light"],
-    },
-    {
       name: "MySQL",
       url: "https://www.mysql.com/",
       icon: svgs["MySQL-Light"],
@@ -147,6 +142,16 @@ export const getSkillInfo = async (): Promise<SkillProps[]> => {
       url: "https://vercel.com/",
       icon: svgs["Vercel-Dark"],
     },
+    {
+      name: "Bun",
+      url: "https://bun.sh",
+      icon: svgs["Bun-Light"],
+    },
+    {
+      name: "NestJS",
+      url: "https://nestjs.com",
+      icon: svgs["NestJS-Dark"],
+    },
   ];
 };
 
@@ -161,7 +166,7 @@ export const getProjInfo = async (): Promise<{
       title: "Algorithm Visualizer",
       description: [
         `A web application that visualizes algorithms from code
-            (initially provides sorting algorithms demonstration).`,
+          (initially provides sorting algorithms demonstration).`,
       ],
       tools: ["TypeScript", "Next", "Bootstrap"],
       demoURL: "https://algovisual.xuankhoatu.com/",
@@ -169,14 +174,14 @@ export const getProjInfo = async (): Promise<{
       imageURL: imgs.Algovisual,
     },
     "finance-rep": {
-      id: 1,
+      id: 5,
       content_section: "Projects",
       title: "CS50 Finance Replication",
       description: [
         `A web-app replication of CS50 finance's mock stock-trading website
-            (finance.cs50.net), which initially comes from a problem set in CS50X.
-            It has been extended with some additional features and
-            different database.`,
+          (finance.cs50.net), which initially comes from a problem set in CS50X.
+          It has been extended with some additional features and
+          different database.`,
       ],
       tools: ["Flask", "Bootstrap", "SQLite", "Firestore", "GCP"],
       demoURL: "https://ﬁnancerep.xuankhoatu.com/",
@@ -184,13 +189,13 @@ export const getProjInfo = async (): Promise<{
       imageURL: imgs.Financerep,
     },
     "e-commerce-auction": {
-      id: 4,
+      id: 6,
       content_section: "Projects",
       title: "E-commerce Auction",
       description: [
         `An eBay-like e-commerce auction site that will allow users to post
-            auction listings, place bids on listings,
-            comment on those listings, and add listings to a ”watchlist”.`,
+          auction listings, place bids on listings,
+          comment on those listings, and add listings to a ”watchlist”.`,
       ],
       tools: ["Django", "Bootstrap", "PostgreSQL"],
       demoURL: "https://youtu.be/dC6IBfkbZs8",
@@ -198,86 +203,87 @@ export const getProjInfo = async (): Promise<{
       imageURL: imgs.Auction,
     },
     "knapsack-solvers-analysis": {
-      id: 4,
+      id: 7,
       content_section: "Projects",
       title: "Knapsack Solvers Analysis",
       description: [
         `An analysis of the performance in solving typical knapsack problems
-            by the Simplex Algorithm and the Harmony Search Algorithm,
-            as the Advanced Algorithms coursework project.`,
+          by the Simplex Algorithm and the Harmony Search Algorithm,
+          as the Advanced Algorithms coursework project.`,
       ],
       tools: ["Python", "Or-tools"],
       githubURL: "https://github.com/khoaxuantu/Solving-Knapsacks-in-LinearProg-vs-HarmonySearch",
       imageURL: imgs.Knapsack,
     },
     "email-spa": {
-      id: 4,
+      id: 8,
       content_section: "Projects",
       title: "Email Single Page Application",
       description: [
         `A front-end for an email client in SPA style that makes API calls to send
-            and receive email`,
+          and receive email`,
       ],
-      tools: ["Plain JavaScript", "Django", "Bootstrap"],
+      tools: ["JavaScript", "Django", "Bootstrap"],
       githubURL: "https://github.com/khoaxuantu/one-page-email",
       imageURL: imgs.MailSPA,
     },
     "wiki-encyclopedia": {
-      id: 4,
+      id: 9,
       content_section: "Projects",
       title: "Wiki Encyclopedia",
       description: [
         `A Wikipedia-like online encyclopedia that will allow users search
-            for an encyclopedia entry, create new entries and edit an existing entry.`,
+          for an encyclopedia entry, create new entries and edit an existing entry.`,
       ],
       tools: ["Django", "Bootstrap"],
       githubURL: "https://github.com/khoaxuantu/wiki_encyclopedia",
       imageURL: imgs.Wiki,
     },
     "calendar-on-terminal": {
-      id: 5,
+      id: 10,
       content_section: "Projects",
       title: "Calendar on Terminal",
       description: [
         `A small project of calendar queried on terminal, as a midterm project
-            when I first took the C programming course in 2020.`,
+          when I first took the C programming course in 2020.`,
       ],
       tools: ["C"],
       githubURL: "https://github.com/khoaxuantu/Calendar_demo",
       imageURL: imgs.Calendar,
     },
     "techman-proj": {
-      id: 6,
+      id: 11,
       content_section: "Projects",
       title: "Lottery Draw Robotic Application",
       description: [
         `Participated in a group project to develop the robotic arm
-            application project in the lottery drawing.`,
+          application project in the lottery drawing.`,
         `My responsibility is to set up Eye-in-hand Vision and
-            3D Vision via a camera attached to the robotic arm to detect
-            the prize's patterns and the area for the gift box container.`,
+          3D Vision via a camera attached to the robotic arm to detect
+          the prize's patterns and the area for the gift box container.`,
       ],
       tools: ["Robotic automation algorithm design"],
       imageURL: imgs.Tm,
     },
     "gripper-sketch": {
-      id: 7,
+      id: 12,
       content_section: "Projects",
       title: "Gripper Base System Sketch",
       description: [
         `A graphical sketch of robotic arm gripper base system,
-            as a manual graphic coursework in Mechanical Graphic course.`,
+          as a manual graphic coursework in Mechanical Graphic course.`,
       ],
       tools: ["AutoCAD"],
       imageURL: imgs.AutoCAD,
     },
     "fontscale-sass": {
-      id: 2,
+      id: 4,
       content_section: "Projects",
       title: "Font Scale Sass",
       description: [
         `A SASS font-scale generator module which provides
-            a preset font size for your footnote, endnote, caption, body, blockquote, and headings (from h6 to h1).`,
+          a preset font size for your footnote, endnote, caption, body, blockquote, and headings
+          (from h6 to h1).`,
       ],
       tools: ["SASS"],
       imageURL: imgs.Fontscale,
@@ -289,12 +295,40 @@ export const getProjInfo = async (): Promise<{
       content_section: "Projects",
       title: "Random Meme Picker",
       description: [
-        `A random meme web chosen from my more than 800-meme collection. Pick a meme a day for a better life.`,
+        `A random meme web chosen from my more than 1000-meme collection. Pick a meme a day for a
+          better life.`,
       ],
       tools: ["React", "Bun", "SASS", "Cloud storage"],
       demoURL: "https://meme.xuankhoatu.com",
       githubURL: "https://github.com/khoaxuantu/random-meme-gen",
       imageURL: imgs.RandomMeme,
     },
+    "hello-algo": {
+      id: 1,
+      content_section: "Projects",
+      title: "Hello Algo",
+      description: [
+        `An open-source data structures and algorithms crash course with animated illustrations and
+          off-the-shelf code. I take responsibility for Ruby sample codes contributing and
+          reviewing.`
+      ],
+      tools: ["Ruby"],
+      demoURL: "https://www.hello-algo.com/",
+      githubURL: "https://github.com/krahets/hello-algo",
+      imageURL: imgs.HelloAlgo,
+    },
+    "comprehensive-rust": {
+      id: 2,
+      content_section: "Projects",
+      title: "Comprehensive Rust",
+      description: [
+        `A Vietnamese translator of "Comprehensive Rust" - an open-source free Rust course developed
+        by the Android team at Google.`
+      ],
+      tools: ["mdBook"],
+      demoURL: "https://google.github.io/comprehensive-rust/",
+      githubURL: "https://github.com/google/comprehensive-rust",
+      imageURL: imgs.GoogleOpenSource,
+    }
   };
 };

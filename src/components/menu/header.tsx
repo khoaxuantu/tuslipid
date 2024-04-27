@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useState, MouseEvent } from "react";
 
@@ -12,22 +12,19 @@ export default function MenuHeaderGrp() {
   }
 
   return (
-    <div className="sl-l-container__header">
+    <header>
       <button className="menu-l-grp__avatar" onClick={(e) => avaHandler(e)}>
         <img
           className="transition-ava menu-c-img__avatar"
           src={avaURLs[avaIndex]}
           alt="Tuslipid's avatar"
-          height={160}
           width={160}
         />
       </button>
-      <div className="menu-c-txt__header mt-3">
-        <b>Xuan Khoa Tu Nguyen</b>
-      </div>
-      <div className="menu-c-txt__body mt-3">
-        <b>SWE @ Pixta</b>
-      </div>
-    </div>
+      <hgroup>
+        <h2 className="mt-3">Xuan Khoa Tu Nguyen</h2>
+        <h6 className="mt-3">SWE @ Pixta</h6>
+      </hgroup>
+    </header>
   );
 }

@@ -7,7 +7,7 @@ export function Tags({ dispatchActiveTags } : { dispatchActiveTags: Dispatch<Tag
 
   return(
     <>
-      <h1>Tags</h1>
+      <h3>Tags</h3>
       <TagsButtonGroup dispatchActiveTags={dispatchActiveTags} />
     </>
   );

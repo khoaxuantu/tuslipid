@@ -17,10 +17,12 @@ export default function SingleBlogPage({ params }: DynamicParams) {
     <>
       <SingleBlogPageHeaderGrp id={params.blog_id as string} />
       <hr></hr>
-      <article className="sl-l-container__content blog-l-wrapper row">
-        <TableOfContents />
-        <SingleBlogContent id={params.blog_id as string} />
-      </article>
+      <main>
+        <article className="blog-l-wrapper row">
+          <TableOfContents />
+          <SingleBlogContent id={params.blog_id as string} />
+        </article>
+      </main>
     </>
   );
 }

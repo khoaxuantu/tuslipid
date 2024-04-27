@@ -4,21 +4,20 @@ import { NavBtnGroup } from "@/components/button_group";
 import Copyright from "@/components/copyright";
 import MenuHeaderGrp from "@/components/menu/header";
 import addOrientationHandler from "@/components/orientation";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 export default function TuslipidMenu() {
-  const [orientation, setOrientation] = useState("center");
   useEffect(() => {
-    setOrientation(addOrientationHandler());
+    addOrientationHandler();
   }, []);
 
   return (
     <>
       <div className="sl-c-overlay"></div>
-      <div className={`sl-l-container menu-l-wrapper ${orientation} transition-menu`}>
+      <div className="sl-l-container menu-l-wrapper center transition-menu">
         <MenuHeaderGrp />
         <NavBtnGroup />
-        <Copyright copyright_class="sl-c-copyright__menu mt-5" />
+        <Copyright className="sl-c-copyright__menu mt-5" />
       </div>
     </>
   );

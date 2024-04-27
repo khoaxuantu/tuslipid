@@ -3,7 +3,7 @@
 .blog {
     &-c {
         &-toc {
-            @include content-wrapper(100%, 40em);
+            @include content-wrapper($maxWidth: 40em);
 
             &__h1 {
                 list-style-type: '🍚 ' !important;
@@ -21,18 +21,7 @@
         }
 
         &-content {
-            @include content-wrapper(80%, 40em);
-        }
-
-        &-txt {
-            &__header {
-                @include select-header-txt($font: $HEADER_FONT_BLOG, $size: 20px);
-            }
-
-            &__body {
-                font-family: $BODY_FONT_BLOG;
-                line-height: 1.5;
-            }
+            @include content-wrapper($maxWidth: 40em);
         }
 
         &-img {
@@ -43,11 +32,5 @@
                 opacity: 1 !important;
             }
         }
-    }
-}
-
-@media (min-width: 576px) {
-    .blog-c-txt__header {
-        font-size: 24px;
     }
 }

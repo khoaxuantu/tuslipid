@@ -13,7 +13,7 @@
                 z-index: 1;
 
                 button {
-                    @include rounded;
+                    border-radius: 0 0 5px 0;
                     width: 45px;
                     aspect-ratio: 1/1;
                     background-color: $NAVBAR-BG-COLOR;
@@ -35,7 +35,7 @@
             }
 
             &__menu {
-                @include rounded;
+                border-radius: 0 0 5px 5px;
                 background-color: $NAVBAR-BG-COLOR;
                 width: 100%;
                 display: none;
@@ -84,7 +84,7 @@
                 border-bottom: 2px solid $LIGHT_GRAY;
                 background-color: white;
                 cursor: pointer;
-                font-family: $HEADER_FONT;
+                font-family: $DEFAULT_FONT;
                 text-align: start;
 
                 &:hover {
@@ -117,15 +117,18 @@
         top: 25px;
         left: 25px;
         max-width: 150px;
+
+        button {
+            @include rounded;
+        }
     }
 
     .sl-c-navbar__menu {
+        @include rounded;
         width: 150px;
     }
 
     .sl-c-tab__vertical {
-        height: 50px;
-        width: 100%;
         border: none;
         border-left: 2px solid $LIGHT_GRAY;
     }

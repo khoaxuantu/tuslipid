@@ -25,12 +25,6 @@
     &-l {
         &-wrapper {
             @include content-wrapper(90%, 40rem);
-            font-family: $BODY_FONT_BLOG;
-        }
-
-        &-tags {
-            font-family: $BODY_FONT_BLOG;
-            margin-bottom: $SECTION_GAP;
         }
     }
 
@@ -72,16 +66,6 @@
             flex-direction: column;
             flex-wrap: nowrap;
         }
-
-        &-txt {
-            &__header {
-                @include select-header-txt($font: $HEADER_FONT_BLOG, $size: 20px);
-            }
-
-            &__body {
-                line-height: 1.5;
-            }
-        }
     }
 }
 
@@ -89,9 +73,5 @@
     .blogs-c-btn__read-more {
         justify-content: flex-end;
         padding-right: 1.5rem;
-    }
-
-    .blogs-c-txt__header {
-        font-size: 24px;
     }
 }

@@ -1,9 +1,7 @@
 /* Font */
 .blog-l-wrapper * {
   margin: revert;
-  padding: revert;
   list-style-type: revert;
-  line-height: 1.625rem;
 }
 .blog-l-wrapper h1 {
   padding-top: 3rem;
@@ -59,7 +57,7 @@
 }
 
 .blog-l-wrapper {
-  font-family: "Ubuntu", system-ui, sans-serif;
+  line-height: 1.625;
 }
 
 /*# sourceMappingURL=markdown.css.map */

@@ -25,12 +25,12 @@ export function TabSelector(props: ITabProps) {
 export function TabContent(props: ITabProps) {
     return (
         <div id={props.id} className={props.className}>
-            <h3>{props.content.title} <span>{'@ ' + props.content.company}</span></h3>
+            <h5>{props.content.title} <span>{'@ ' + props.content.company}</span></h5>
             <div className="pt-1 mb-3">
                 <span>{props.content.time + ' |'}</span>{" "}
                 <span>{props.content.location}</span>
             </div>
-            <div className="sl-c-txt__body">
+            <div>
                 {
                     props.content.description.map((bp, index) => {
                         return <p key={index} className="pb-2">{bp}</p>

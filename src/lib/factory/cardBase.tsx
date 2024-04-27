@@ -30,11 +30,11 @@ function DefaultProjectCard(props: IProjCardProps) {
   let href = ProjHref(props);
 
   return (
-    <div className="sl-c-card projects-c-card mb-5">
-      <div className="col-5 projects-c-img">{image}</div>
-      <div className="col-7 p-3 sl-c-card__proj-description">
-        <h3 className="sl-c-txt__header-proj">{props.title}</h3>
-        <ul className="pb-4 ps-2 sl-c-card__proj-tool-list">
+    <div className="sl-c-card projects-c-card mb-5 p-4">
+      <div className="projects-c-img">{image}</div>
+      <div className="projects-c-card__description pt-4">
+        <h3>{props.title + " "}</h3>
+        <ul className="projects-c-card__tools pb-3">
           {props.tools.map((tool) => {
             return (
               <li className="pe-2" key={tool}>
@@ -43,20 +43,17 @@ function DefaultProjectCard(props: IProjCardProps) {
             );
           })}
         </ul>
-        <div className="ps-2">
+
+        <div className="pb-3">
           {props.description.map((p, index) => {
-            return (
-              <p key={index} className="pb-2 sl-c-txt__body">
-                {p}
-              </p>
-            );
+            return <p key={index}>{p}</p>;
           })}
         </div>
-        <ul className="sl-c-card__proj-href">
-          {href.github}
-          {href.demo}
-        </ul>
       </div>
+      <ul className="sl-c-card__href projects-c-card__href">
+        {href.github}
+        {href.demo}
+      </ul>
     </div>
   );
 }
@@ -65,10 +62,10 @@ function FeaturedProjCard(props: IProjCardProps) {
   let href = ProjHref(props);
 
   return (
-    <div className="sl-c-card about-c-card__featured-proj">
-      <div className="p-3 sl-c-card__proj-description">
-        <h3 className="sl-c-txt__header-proj">{props.title}</h3>
-        <ul className="pb-4 ps-2 sl-c-card__proj-tool-list">
+    <div className="sl-c-card about-c-card">
+      <div className="about-c-card__description p-3">
+        <h3 className="p-2">{props.title}</h3>
+        <ul className="about-c-card__tools pb-4 ps-2">
           {props.tools.map((tool) => {
             return (
               <li className="pe-2" key={tool}>
@@ -77,16 +74,12 @@ function FeaturedProjCard(props: IProjCardProps) {
             );
           })}
         </ul>
-        <div className="ps-2">
+        <div className="ps-2 pb-4">
           {props.description.map((p, index) => {
-            return (
-              <p key={index} className="pb-2 sl-c-txt__body">
-                {p}
-              </p>
-            );
+            return <p key={index}>{p}</p>;
           })}
         </div>
-        <ul className="sl-c-card__proj-href">
+        <ul className="sl-c-card__href about-c-card__href">
           {href.github}
           {href.demo}
         </ul>
@@ -138,16 +131,16 @@ function ProjHref(props: IProjCardProps) {
 function BlogsCard(props: IBlogCardProps) {
   return (
     <div className="sl-c-card blogs-c-card mb-5 fade-in-left">
-      <h3 className="blogs-c-txt__header p-3">{props.title}</h3>
+      <h3 className="p-3">{props.title}</h3>
       <div className="ps-3 pe-3">
         <i>
           <span>{formatDate(props.date)} |</span>{" "}
           <span>{props.tags.map((tag) => `#${tag}`).join(" ")}</span>
         </i>
       </div>
-      <div className="blogs-c-txt__body p-3">{props.brief_description}</div>
+      <div className="p-3">{props.brief_description}</div>
       <div className="blogs-c-btn__read-more pb-3 pt-3">
-        <Link className="blogs-c-txt__body" href={"/blogs" + props.url + "/"}>
+        <Link href={"/blogs" + props.url + "/"}>
           Read more {">>"}
         </Link>
       </div>

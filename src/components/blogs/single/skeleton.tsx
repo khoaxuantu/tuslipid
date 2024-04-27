@@ -7,8 +7,8 @@ export async function SingleBlogContent(props: {id: string}) {
   const txt = await getMdContent(blogInfo.file);
 
   return (
-    <div className="col-8 blog-c-content transition-blog">
+    <section className="col-8 blog-c-content transition-blog">
       <SingleBlog content={txt} />
-    </div>
+    </section>
   );
 }

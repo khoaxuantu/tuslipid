@@ -3,7 +3,11 @@
 .sl {
     &-c {
         &-card {
-            @include flex-wrap;
+            @include rounded(10);
+            @extend %card-bodering;
+
+            display: flex;
+            flex-direction: column;
             width: 100%;
             background-color: white;
 
@@ -12,20 +16,9 @@
                 width: 100%;
             }
 
-            &__proj {
-                &-description {
-                    flex-direction: column;
-                }
-
-                &-tool-list {
-                    @include flex-wrap;
-                    font-size: 12px;
-                }
-
-                &-href {
-                    display: flex;
-                    justify-content: flex-end;
-                    margin-top: auto;
+            &__href {
+                li {
+                    float: left;
                 }
             }
         }

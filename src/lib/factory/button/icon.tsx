@@ -29,7 +29,7 @@ function ImageAndText(props: IconButtonProps) {
   return (
     <>
       <div className="sl-c-icon">
-        <img className="m-1" src={props.icon as string} alt={"icon-" + props.name} width={32} />
+        <img className="p-1" src={props.icon as string} alt={"icon-" + props.name} width={32} />
       </div>
       <div id="name">{props.name}</div>
     </>

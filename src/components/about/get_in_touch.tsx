@@ -3,11 +3,11 @@ import Link from "next/link";
 export default function GetInTouch() {
   return (
     <section className="mb-5 row">
-      <h3 className="sl-c-txt__header col-4 pe-5">
+      <h2 className="col-4 pt-2 pb-2 pe-5">
         Get in touch
-      </h3>
-      <div className="col-8">
-        <p className="pt-2">
+      </h2>
+      <div className="col-8 pt-2">
+        <p>
           I am primarily active in Linkedin, Discord, Github, Gmail, and Facebook, but I also have other connections in
           Reddit, DEV Community, or CodePen.
         </p>

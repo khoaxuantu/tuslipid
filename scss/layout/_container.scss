@@ -11,17 +11,21 @@
         }
 
         &-container {
-            @include center-block();
+            @include center-block;
             @include rounded;
 
-            &__header {
+            header {
                 padding: 5%;
                 text-align: center;
             }
 
-            &__content {
+            main {
                 @include center-block(5%, "padding");
                 margin-top: $SECTION_GAP;
+            }
+
+            &__blog {
+                font-family: $BLOG_FONT;
             }
         }
     }
@@ -32,10 +36,12 @@
         width: 80%;
     }
 
-    .sl-l-container__content {
-        @include center-block();
-        max-width: 900px;
-        padding-left: 0;
-        padding-right: 0;
+    .sl-l-container {
+        main {
+            @include center-block;
+            max-width: 900px;
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
 }

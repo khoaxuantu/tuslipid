@@ -8,38 +8,26 @@ import { TagsAction } from "@/lib/reducer/tag";
 
 export function SocialMediaBtnGroup() {
   return (
-    <>
-      <div className="contact-c-btn__overlay"></div>
-      <div className="sl-l-container contact-l-wrapper center menu-c-txt__body">
-        <div className="contact-c-txt__header">
-          ~ Oi ~<br></br>
-          Say hello to me by one of the following {":)"}
-        </div>
-        <div className="sl-c-btn__group btn-contact-grp mt-5">
-          {SOCIAL_MEDIA_INFO_LIST.map((btnProp) => {
-            return (
-              <Button
-                buttontype="icon"
-                url={btnProp.url}
-                icon={btnProp.icon}
-                key={btnProp.id}
-                id={btnProp.id}
-                classname="sl-c-btn sl-c-btn__square"
-              />
-            );
-          })}
-        </div>
-        <Link href="/" className="sl-c-btn sl-c-btn__rect mt-5" id="go-back" prefetch={true}>
-          Home
-        </Link>
-      </div>
-    </>
+    <section className="sl-c-btn__group btn-contact-grp mt-5">
+      {SOCIAL_MEDIA_INFO_LIST.map((btnProp) => {
+        return (
+          <Button
+            buttontype="icon"
+            url={btnProp.url}
+            icon={btnProp.icon}
+            key={btnProp.id}
+            id={btnProp.id}
+            classname="sl-c-btn sl-c-btn__square"
+          />
+        );
+      })}
+    </section>
   );
 }
 
 export function NavBtnGroup() {
   return (
-    <div className="sl-c-btn__group menu-l-grp__nav-btn mb-3 menu-c-txt__body">
+    <main className="mb-3 sl-c-btn__group menu-l-grp__nav-btn">
       {NAV_BTN_INFO_LIST.map((btnProp) => {
         return (
           <Button
@@ -51,7 +39,7 @@ export function NavBtnGroup() {
           />
         );
       })}
-    </div>
+    </main>
   );
 }
 
@@ -66,12 +54,12 @@ export async function SkillBtnGroup() {
   }
 
   return (
-    <div className="about-c-btn__group-skill mt-2 col-8">
+    <div className="about-c-btn__group-skill pt-2 col-8">
       {skillInfoList.map((btnProp) => {
         return (
           <Button
             buttontype="icon"
-            classname="sl-c-btn about-c-btn__skill mt-2 mb-2"
+            classname="sl-c-btn about-c-btn__skill"
             key={btnProp.name}
             {...btnProp}
           />

@@ -1,0 +1,18 @@
+@use "sass:map";
+@use "utils" as *;
+
+@mixin createTypoScale($unit: 'em', $ratio: 'classical', $steps: 'pentatonic', $composition: 'fibonacci') {
+  $i: 1;
+  @each $type in $textLabel {
+    #{$type} {
+      font-size: map.get($fontUnit, $unit) * calculateScale($i, $ratio, $steps, $composition);
+    }
+    $i: $i + 1;
+  }
+
+  article {
+    h1 {
+      font-size: map.get($fontUnit, $unit) * calculateScale(10, $ratio, $steps, $composition);
+    }
+  }
+}

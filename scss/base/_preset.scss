@@ -1,12 +1,14 @@
 @use '../abstracts' as *;
 
+@include createTypoScale($ratio: 'golden');
+
 body {
     background-image: url($BACKGROUND_URL);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    font-family: $BODY_FONT;
+    font-family: $DEFAULT_FONT;
     line-height: 1.5;
 }
 
@@ -25,7 +27,7 @@ span {
 img {
     max-width: 100%;
     height: auto;
-    object-fit: fill;
+    object-fit: contain;
 }
 
 a {

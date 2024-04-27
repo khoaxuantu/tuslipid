@@ -4,8 +4,8 @@
     &-l {
         &-wrapper {
             &__proj {
-                display: grid;
-                column-gap: 2rem;
+                display: flex;
+                flex-direction: column;
                 row-gap: 2rem;
             }
 
@@ -22,16 +22,20 @@
 
         &-btn {
             &__group-skill {
-                @extend %btn-group;
                 justify-content: space-between;
-                column-gap: 0.625rem;
+                column-gap: 1rem;
+                row-gap: 1rem;
+                display: grid;
+                grid-template-columns: repeat(12, 1fr);
             }
 
             &__skill {
-                @include shape-btn(1, 3rem);
-                font-size: 10px !important;
+                @include shape-btn(1, 100%);
+                max-width: 150px;
+                font-size: 12px !important;
                 color: black;
                 transition: scale 150ms ease-out;
+                grid-column-start: span 3;
 
                 #name {
                     width: 66.66%;
@@ -48,37 +52,41 @@
         }
 
         &-card {
-            &__featured-proj {
-                @include rounded(10);
-                @extend %card-bodering;
+            @include project-card;
 
-                .projects-c-img {
-                    height: 400px;
-
-                    img {
-                        height: inherit;
-                    }
-                }
+            &__href {
+                align-self: flex-end;
             }
         }
 
         &-img {
             &__edu {
                 width: 16.66%;
-                min-width: 48px;
                 text-align: end;
             }
         }
     }
 }
 
+@media (min-width: 321px) {
+    .about-c-btn__skill {
+        grid-column-start: span 2;
+    }
+}
+
 @media (min-width: 576px) {
     .about-c-btn__skill {
-        @include shape-btn(3, 150px);
-        font-size: 12px !important;
+        aspect-ratio: 3;
+        grid-column-start: span 3;
 
         #name {
             display: block;
         }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 850px) {
+    .about-c-btn__group-skill {
+        column-gap: .5rem;
     }
 }
