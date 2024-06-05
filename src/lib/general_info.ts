@@ -236,6 +236,17 @@ the data, what is your solution?`,
     tags: ["typescript", "oop", "code"],
     date: new Date("Fri Mar 15 2024 13:58:21 GMT+0700"),
   },
+  mysql_notes: {
+    content_section: "Blogs",
+    id: "mysql_notes",
+    title: "(My)SQL Notes",
+    brief_description: `I did a MySQL challenge, but I forgot almost the everything after that, so \
+I left these notes here for further references.`,
+    url: "/mysql_notes",
+    file: "mysql_notes.md",
+    tags: ["sql", "database"],
+    date: new Date("Wed Jun 05 2024 20:38:49 GMT+0700"),
+  },
 };
 
 export const BLOG_INFO_LIST: { dictKey: string; date: string }[] = [
@@ -255,4 +266,5 @@ export const BLOG_INFO_LIST: { dictKey: string; date: string }[] = [
     date: "Sun Oct 22 2023 19:43:00 GMT+0700",
   },
   { dictKey: "data_adapter_template", date: "Fri Mar 15 2024 13:58:21 GMT+0700" },
+  { dictKey: "mysql_notes", date: "Wed Jun 05 2024 20:38:49 GMT+0700" },
 ];
