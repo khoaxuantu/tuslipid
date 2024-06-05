@@ -85,23 +85,39 @@ export const NAV_BTN_INFO_LIST: RoutingProps[] = [
 
 export const WORK_INFO_LIST: ITabProps[] = [
   {
-    name: "Pixta Inc.",
+    name: "Pixta Inc. (Middle)",
     content: {
-      title: "Fullstack Web Developer",
+      title: "Fullstack Web Developer (Middle)",
       company: "Pixta",
-      time: "06/2023 - now",
+      time: "04/2024 - Now",
       location: "Hanoi, Vietnam",
       description: [
-        `Develop and maintain the backend system of PixtaStock. \
-Analyze data, evaluate the effectiveness of features to improve \
-and develop new features.`,
-        `Work closely with the Japan product design team to maintain the web application for \
-internal tools.`,
-        `Provide technical support to resolve and monitor PixtaStock's issues reported \
-by the customers.`,
-        `Frequently used stacks: Ruby on Rails, React, NodeJS, MySQL, MongoDB, Docker, Kubernetes, \
-AWS`,
+        `Lead the development and maintenance of the <a href="https://potonow.vn" target="_blank" rel="noreferrer">Potonow</a> website.`,
+        `Handle all backend and infrastructure resources, as well as 70% of the frontend \
+resources.`,
+        `Work closely with product owner and manager to estimate, evaluate, and plan new features.`,
+        `Frequently used technologies: Next.js, NestJS, MongoDB, Terraform, AWS.`,
         `Updating...`,
+      ],
+    },
+  },
+  {
+    name: "Pixta Inc. (Junior)",
+    content: {
+      title: "Fullstack Web Developer (Junior)",
+      company: "Pixta",
+      time: "06/2023 - 04/2024",
+      location: "Hanoi, Vietnam",
+      description: [
+        `Developed and maintained the backend system of <a href="https://pixtastock.com" target="_blank" rel="noreferrer">PixtaStock</a>. \
+Analyzed data and evaluated the effectiveness of features to improve \
+and develop new ones.`,
+        `Worked closely with the Japan product design team to maintain PixtaStock's \
+frontend, admin panel, and internal tools.`,
+        `Provided technical support to resolve and monitor PixtaStock's issues reported \
+by the customers.`,
+        `Frequently used technologies: Ruby on Rails, React, NodeJS, MySQL, MongoDB, \
+        Docker, Kubernetes, AWS.`,
       ],
     },
   },
@@ -220,6 +236,17 @@ the data, what is your solution?`,
     tags: ["typescript", "oop", "code"],
     date: new Date("Fri Mar 15 2024 13:58:21 GMT+0700"),
   },
+  mysql_notes: {
+    content_section: "Blogs",
+    id: "mysql_notes",
+    title: "(My)SQL Notes",
+    brief_description: `I did a MySQL challenge, but I forgot almost the everything after that, so \
+I left these notes here for further references.`,
+    url: "/mysql_notes",
+    file: "mysql_notes.md",
+    tags: ["sql", "database"],
+    date: new Date("Wed Jun 05 2024 20:38:49 GMT+0700"),
+  },
 };
 
 export const BLOG_INFO_LIST: { dictKey: string; date: string }[] = [
@@ -239,4 +266,5 @@ export const BLOG_INFO_LIST: { dictKey: string; date: string }[] = [
     date: "Sun Oct 22 2023 19:43:00 GMT+0700",
   },
   { dictKey: "data_adapter_template", date: "Fri Mar 15 2024 13:58:21 GMT+0700" },
+  { dictKey: "mysql_notes", date: "Wed Jun 05 2024 20:38:49 GMT+0700" },
 ];

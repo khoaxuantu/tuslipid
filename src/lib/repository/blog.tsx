@@ -1,4 +1,4 @@
-import { BLOG_INFO_DICT, BLOG_INFO_LIST } from "../general_info";
+import { BLOG_INFO_DICT } from "../general_info";
 import { BlogIndexSingleton } from "../singleton/blog";
 
 export class BlogRepository {
@@ -8,7 +8,7 @@ export class BlogRepository {
       blog.tags?.forEach(tag => tmp[tag] = true)
     })
 
-    return Object.keys(tmp);
+    return Object.keys(tmp).sort();
   }
 
   static getIdsFromTags(tags: string[]): string[] {
