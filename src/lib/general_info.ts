@@ -240,7 +240,7 @@ the data, what is your solution?`,
     content_section: "Blogs",
     id: "mysql_notes",
     title: "(My)SQL Notes",
-    brief_description: `I did a MySQL challenge, but I forgot almost the everything after that, so \
+    brief_description: `I did a MySQL challenge, but I forgot almost everything after that, so \
 I left these notes here for further references.`,
     url: "/mysql_notes",
     file: "mysql_notes.md",
