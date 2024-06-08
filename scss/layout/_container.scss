@@ -23,10 +23,6 @@
                 @include center-block(5%, "padding");
                 margin-top: $SECTION_GAP;
             }
-
-            &__blog {
-                font-family: $BLOG_FONT;
-            }
         }
     }
 }
