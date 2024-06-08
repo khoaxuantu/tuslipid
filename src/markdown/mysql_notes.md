@@ -474,6 +474,8 @@ INNER JOIN table_2 ON table_2.name = table_1.name;
 
 ### Left join
 
+> Or `LEFT OUTER JOIN`
+
 - Selects data starting from the left table. For each row in the left table, compares with every
 row in the right table.
 - If the values in the two rows satisfy the join conditions, creates a new row whose columns contain
@@ -488,6 +490,8 @@ LEFT JOIN right_table ON left_table.name = right_table.name;
 ```
 
 ### Right join
+
+> Or `RIGHT OUTER JOIN`
 
 - Similar to left join clause except that the treatment of left and right tables is reversed.
 
@@ -507,6 +511,167 @@ with every row from the right table to make the result set.
     SELECT *
       FROM table_1
 CROSS JOIN table_2;
+```
+
+### Seft join
+
+```sql
+SELECT *
+  FROM table_a a1
+  JOIN table_a a2 ON a1.name = a2.name;
+```
+
+### Natural join
+
+- Joins based on identical columns (columns with the same name and same data type) between tables.
+
+```sql
+      SELECT *
+        FROM table_a
+NATURAL JOIN table_b;
+```
+
+### Using keyword
+
+- For tables that have columns with the same name and same data type, we can use `USING` instead of
+`ON` when joining.
+
+```sql
+SELECT *
+  FROM table_a
+  JOIN table_b USING (shared_column_of_a_and_b)
+```
+
+### Union
+
+- Combines the results of multiple queries.
+- The columns must have similar data types.
+- The columns in any query must be in the same order.
+
+```sql
+SELECT column_a, column_b
+  FROM table_a
+
+UNION
+
+SELECT column_a, column_b
+  FROM table_b;
+```
+
+# Subquery
+
+```sql
+SELECT *
+  FROM table_a
+ WHERE id IN (
+    SELECT id
+      FROM table_b
+ );
+```
+
+```sql
+(SELECT AVG(score) FROM students) avg_score,
+(SELECT SUM(score) FROM students) total_score;
+```
+
+## Advanced subquery
+
+### Any
+
+- Returns a boolean value as a result.
+- Returns true if any of the subquery values meet the condition.
+
+```sql
+SELECT *
+  FROM table_a
+ WHERE id [operator] ANY ( ... )
+```
+
+### All
+
+- Returns a boolean value as a result.
+- Returns true if all of the subquery values meet the condition.
+- Is used with `SELECT`, `WHERE`, and `HAVING` statements.
+
+```sql
+SELECT *
+  FROM table_a
+ WHERE id [operator] ALL ( ... )
+```
+
+### Exists
+
+- Tests the existence of any record in a query.
+
+```sql
+SELECT *
+  FROM table_a
+ WHERE EXISTS (
+    SELECT id
+      FROM table_b
+     WHERE table_a.id = table_b.id
+ );
+```
+
+# Window Functions
+
+- Similar to an aggregate function, but does not cause rows to group into a single output row.
+- Functions are applied to each row individually, and the result displayed in a separate column of
+the input.
+
+### Over clause + Partition by
+
+```sql
+SELECT AVG(score) OVER(PARTITION BY gender) avg_score_by_gender
+  FROM students;
+```
+
+### Row number
+
+```sql
+SELECT ROW_NUMBER() OVER(PARTITION BY gender) id_by_gender
+  FROM students;
+```
+
+### Rank and Dense rank
+
+```sql
+SELECT RANK() OVER(PARTITION BY gender ORDER BY score DESC) score_rank_by_gender
+  FROM students;
+
+-- There are gaps in rank()
+-- name | score | rank
+-- Tu   | 10    | 1
+-- Tus  | 10    | 1
+-- Tuss | 9     | 3
+```
+
+```sql
+SELECT DENSE_RANK() OVER(PARTITION BY gender ORDER BY score DESC) score_rank_by_gender
+  FROM students;
+
+-- There are no gap in dense_rank()
+-- name | score | rank
+-- Tu   | 10    | 1
+-- Tus  | 10    | 1
+-- Tuss | 9     | 2
+```
+
+### Lag
+
+Allows you to access data from a previous row in a result set from the current row without using
+self-join
+
+```sql
+LAG(expression, offset, default_value) OVER(PARTITION BY column_a ORDER BY column_b)
+```
+
+### Lead
+
+Allows you to access data from a next row in a result set
+
+```sql
+LEAD(expression, offset, default_value) OVER(PARTITION BY column_a ORDER BY column_b)
 ```
 
 > Updating...

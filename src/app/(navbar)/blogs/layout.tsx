@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 function BlogsLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <div className="sl-l-container sl-l-container__blog sl-l-wrapper transistion-page">
+      <div className="sl-l-container sl-l-wrapper transistion-page">
         {children}
         <Button buttontype="go-top" />
         <Copyright className="sl-c-copyright__page mt-5 pb-3" />
