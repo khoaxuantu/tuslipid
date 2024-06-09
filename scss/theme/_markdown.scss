@@ -1,4 +1,5 @@
 @use '../abstracts/var';
+@use '../abstracts/mixins' as *;
 
 $codeblock-background: #282c34;
 $codeblock-color: #abb2bf;
@@ -16,9 +17,8 @@ $codeinline-background: #f6f8fa;
     }
 
     code, pre {
+        @include set-component-color($codeblock-background, $codeblock-color);
         border-radius: 5px;
-        background-color: $codeblock-background;
-        color: $codeblock-color;
     }
 
     code {
@@ -35,7 +35,7 @@ $codeinline-background: #f6f8fa;
     }
 
     pre {
-        border: 1px solid #CCCCCC;
+        border: 1px solid var(--md-sys-color-outline-variant);
         overflow: auto;
         padding: 6px 10px;
 
@@ -46,7 +46,7 @@ $codeinline-background: #f6f8fa;
 
     blockquote {
         margin: 0;
-        border-left: 5px solid #7a7a7a;
+        border-left: 5px solid var(--md-sys-color-outline-variant);
         font-style: italic;
         padding: 1.33em;
         text-align: left;
@@ -59,11 +59,11 @@ $codeinline-background: #f6f8fa;
 
     th, td {
         padding: 6px 13px;
-        border: 1px solid black;
+        border: 1px solid var(--md-sys-color-outline);
     }
 
     hr {
-        background: black;
+        background: var(--md-sys-color-outline);
     }
 
     ul, ol {

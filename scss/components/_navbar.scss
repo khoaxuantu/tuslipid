@@ -70,9 +70,9 @@
         &-tab {
             &__list {
                 .is-current {
-                    background-color: $LIGHT_GRAY;
+                    background-color: var(--md-sys-color-outline-variant);
                     border-left: none;
-                    border-bottom: 2px solid $GRAY;
+                    border-bottom: 2px solid var(--md-sys-color-outline);
                     font-weight: bold;
                 }
             }
@@ -81,8 +81,8 @@
                 height: 50px;
                 width: 100%;
                 border: none;
-                border-bottom: 2px solid $LIGHT_GRAY;
-                background-color: white;
+                border-bottom: 2px solid var(--md-sys-color-outline-variant);
+                background-color: var(--md-sys-color-surface);
                 cursor: pointer;
                 font-family: $DEFAULT_FONT;
                 text-align: start;
@@ -130,7 +130,7 @@
 
     .sl-c-tab__vertical {
         border: none;
-        border-left: 2px solid $LIGHT_GRAY;
+        border-left: 2px solid var(--md-sys-color-outline-variant);
     }
 
     .sl-c-tab__list {
@@ -138,7 +138,7 @@
 
         .is-current {
             border-bottom: none;
-            border-left: 2px solid $GRAY;
+            border-left: 2px solid var(--md-sys-color-outline);
         }
     }
 

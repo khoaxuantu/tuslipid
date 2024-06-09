@@ -28,7 +28,7 @@ export function TableOfContents() {
   }, [])
 
   return(
-    <section className="col-4 blog-c-toc pe-5">
+    <section className="col-4 blog-c-toc fade-in-down pe-5">
       <h1>Table of Contents</h1>
       { !headings ? <FetchingContentNoti /> : <TocList headings={headings} /> }
     </section>

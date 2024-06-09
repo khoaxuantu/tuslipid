@@ -17,7 +17,7 @@
 
     &-c {
         &-box__me {
-            @include box($theme: $LIGHT_GRAY);
+            @include box($theme: var(--md-sys-color-surface-dim));
         }
 
         &-btn {

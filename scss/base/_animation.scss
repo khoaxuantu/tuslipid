@@ -76,7 +76,7 @@
     @include animation(fadeInLeft, .3s);
 }
 
-.menu-animation {
+.menu-animation, .fade-in-down {
     @include animation(fadeInDown, 300ms);
 }
 
