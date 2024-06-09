@@ -1,65 +1,73 @@
-@use 'var';
+@use "var";
 
 @mixin flex-wrap($wrap: wrap) {
-    display: flex;
-    flex-wrap: $wrap;
+  display: flex;
+  flex-wrap: $wrap;
 }
 
 @mixin rounded($offset: 0px) {
-    border-radius: var.$RADIUS + $offset;
+  border-radius: var.$RADIUS + $offset;
 }
 
 @mixin center-block($m: auto, $mode: "margin") {
-    #{$mode}-left: $m;
-    #{$mode}-right: $m;
+  #{$mode}-left: $m;
+  #{$mode}-right: $m;
 }
 
 @mixin overlay($color) {
-    background: $color;
-    position: fixed;
-    width: 100dvw;
-    height: 100dvh;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+  background: $color;
+  position: fixed;
+  width: 100dvw;
+  height: 100dvh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 @mixin box($theme: white) {
-    @include rounded($offset: 5px);
-    background-color: $theme;
+  @include rounded($offset: 5px);
+  background-color: $theme;
 }
 
 @mixin content-wrapper($width: null, $maxWidth) {
-    @if $width {
-        width: $width;
-    }
-    max-width: $maxWidth;
-    @include center-block();
+  @if $width {
+    width: $width;
+  }
+  max-width: $maxWidth;
+  @include center-block();
 }
 
 @mixin shape-btn($ratio: 1, $width: auto) {
-    aspect-ratio: $ratio;
-    width: $width;
-    cursor: pointer;
+  aspect-ratio: $ratio;
+  width: $width;
+  cursor: pointer;
 }
 
 @mixin set-font($font, $size) {
-    font-size: $size;
-    font-family: $font;
+  font-size: $size;
+  font-family: $font;
 }
 
 @mixin select-body-txt($font: var.$DEFAULT_FONT, $size: var.$DYNAMIC_FONT_SIZE) {
-    @include set-font($font, $size);
+  @include set-font($font, $size);
 }
 
 @mixin project-card() {
-    &__description {
-        flex-direction: column;
-    }
+  &__description {
+    flex-direction: column;
+  }
 
-    &__tools {
-        @include flex-wrap;
-        font-size: smaller;
-    }
+  &__tools {
+    @include flex-wrap;
+    font-size: smaller;
+  }
+}
+
+@mixin set-component-color(
+  $background: var(--md-sys-color-primary),
+  $child: var(--md-sys-color-on-primary)
+) {
+  background-color: $background;
+  color: $child;
 }

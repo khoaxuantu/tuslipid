@@ -32,7 +32,7 @@ img {
 
 a {
     text-decoration: none;
-    color: $DEFAULT-ATAG-COLOR;
+    color: var(--md-sys-color-primary);
 
     &:hover {
         text-decoration: underline;

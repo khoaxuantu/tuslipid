@@ -1,43 +1,46 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 .sl {
-    &-l {
-        &-wrapper {
-            width: 100%;
-            height: auto;
-            margin-top: 4rem;
-            margin-bottom: 4rem;
-            background-color: white;
-        }
-
-        &-container {
-            @include center-block;
-            @include rounded;
-
-            header {
-                padding: 5%;
-                text-align: center;
-            }
-
-            main {
-                @include center-block(5%, "padding");
-                margin-top: $SECTION_GAP;
-            }
-        }
+  &-l {
+    &-wrapper {
+      @include set-component-color(
+        var(--md-sys-color-surface-container-low),
+        var(--md-sys-color-on-surface)
+      );
+      width: 100%;
+      height: auto;
+      margin-top: 4rem;
+      margin-bottom: 4rem;
     }
+
+    &-container {
+      @include center-block;
+      @include rounded;
+
+      header {
+        padding: 5%;
+        text-align: center;
+      }
+
+      main {
+        @include center-block(5%, "padding");
+        margin-top: $SECTION_GAP;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 1200px) {
-    .sl-l-wrapper {
-        width: 80%;
-    }
+  .sl-l-wrapper {
+    width: 80%;
+  }
 
-    .sl-l-container {
-        main {
-            @include center-block;
-            max-width: 900px;
-            padding-left: 0;
-            padding-right: 0;
-        }
+  .sl-l-container {
+    main {
+      @include center-block;
+      max-width: 900px;
+      padding-left: 0;
+      padding-right: 0;
     }
+  }
 }

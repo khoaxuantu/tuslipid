@@ -5,7 +5,7 @@
     text-align: center;
     cursor: pointer;
     text-decoration: none;
-    color: black;
+    color: var(--md-sys-color-on-surface);
 
     &:hover {
         font-weight: bold;
@@ -16,9 +16,9 @@
     &-c {
         &-btn {
             @extend %flex-center;
-            background-color: #fff;
+            background-color: var(--md-sys-color-surface);
             box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
-            border: 1px solid $LIGHT_GRAY;
+            border: 1px solid var(--md-sys-color-outline-variant);
             opacity: .8;
             @include rounded;
 

@@ -8,9 +8,9 @@
   text-decoration: underline;
 }
 .blog-l-wrapper code, .blog-l-wrapper pre {
-  border-radius: 5px;
   background-color: #282c34;
   color: #abb2bf;
+  border-radius: 5px;
 }
 .blog-l-wrapper code {
   padding: 0.2em 0.4em;
@@ -24,7 +24,7 @@
   display: contents;
 }
 .blog-l-wrapper pre {
-  border: 1px solid #CCCCCC;
+  border: 1px solid var(--md-sys-color-outline-variant);
   overflow: auto;
   padding: 6px 10px;
 }
@@ -33,7 +33,7 @@
 }
 .blog-l-wrapper blockquote {
   margin: 0;
-  border-left: 5px solid #7a7a7a;
+  border-left: 5px solid var(--md-sys-color-outline-variant);
   font-style: italic;
   padding: 1.33em;
   text-align: left;
@@ -44,10 +44,10 @@
 }
 .blog-l-wrapper th, .blog-l-wrapper td {
   padding: 6px 13px;
-  border: 1px solid black;
+  border: 1px solid var(--md-sys-color-outline);
 }
 .blog-l-wrapper hr {
-  background: black;
+  background: var(--md-sys-color-outline);
 }
 .blog-l-wrapper ul, .blog-l-wrapper ol {
   padding-left: 20px;

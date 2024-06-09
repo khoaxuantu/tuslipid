@@ -50,6 +50,8 @@ export default function RootLayout({
       <head>
         <meta name="theme-color" content="#000000" />
         <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/themes/light.css" />
+        <link rel="stylesheet" href="/css/themes/dark.css" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -69,7 +71,7 @@ export default function RootLayout({
         />
         <link rel="manifest" href={`${defaultURL}/logo/site.webmanifest`}></link>
       </head>
-      <body>
+      <body className="light">
         {children}
         <SpeedInsights />
       </body>
