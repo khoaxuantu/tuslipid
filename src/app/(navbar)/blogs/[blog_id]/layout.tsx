@@ -9,7 +9,7 @@ const blogBaseURL = process.env.HOST_URL + "/blogs";
 export const dynamic = 'force-static';
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const blogId = params.blog_id;
+  const blogId = params.blog_id.replaceAll("-", "_");
   const blogInfo = BLOG_INFO_DICT[blogId];
   if (!blogInfo) return notFoundMetadata();
   const blogTitle = `${blogInfo.title} | Tusss Blogs`;
