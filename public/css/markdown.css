@@ -5,6 +5,7 @@
 }
 .blog-l-wrapper h1 {
   padding-top: 3rem;
+  text-decoration: underline;
 }
 .blog-l-wrapper code, .blog-l-wrapper pre {
   border-radius: 5px;

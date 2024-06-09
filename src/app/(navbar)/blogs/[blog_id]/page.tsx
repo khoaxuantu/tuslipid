@@ -11,16 +11,17 @@ interface DynamicParams {
 }
 
 export default function SingleBlogPage({ params }: DynamicParams) {
-  if (!BLOG_INFO_DICT[params.blog_id]) notFound();
+  const id = params.blog_id.replaceAll("-", "_");
+  if (!BLOG_INFO_DICT[id]) notFound();
 
   return (
     <>
-      <SingleBlogPageHeaderGrp id={params.blog_id as string} />
+      <SingleBlogPageHeaderGrp id={id as string} />
       <hr></hr>
       <main>
         <article className="blog-l-wrapper row">
           <TableOfContents />
-          <SingleBlogContent id={params.blog_id as string} />
+          <SingleBlogContent id={id as string} />
         </article>
       </main>
     </>
