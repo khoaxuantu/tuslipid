@@ -16,6 +16,7 @@
     &-container {
       @include center-block;
       @include rounded;
+      transition: all 300ms;
 
       header {
         padding: 5%;
