@@ -78,7 +78,10 @@
       }
 
       &__vertical {
-        @include set-component-color(var(--md-sys-color-surface), var(--md-sys-color-on-surface));
+        @include set-component-color(
+          var(--md-sys-color-surface-container),
+          var(--md-sys-color-on-surface)
+        );
         height: 50px;
         width: 100%;
         border: none;
