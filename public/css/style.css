@@ -758,6 +758,7 @@ hr {
   margin-left: auto;
   margin-right: auto;
   border-radius: 5px;
+  transition: all 300ms;
 }
 .sl-l-container header {
   padding: 5%;
