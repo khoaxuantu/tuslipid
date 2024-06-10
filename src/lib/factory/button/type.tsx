@@ -1,16 +1,16 @@
 import { TagsAction } from "@/lib/reducer/tag";
 import { Dispatch, SVGProps } from "react";
 
-type ButtonType = "default" | "icon" | "go-top" | "tag";
+type variant = "default" | "icon" | "go-top" | "tag" | "theme";
 
 export interface IBaseButtonProps {
   id?: string;
-  url?: string;
-  classname?: string;
-  buttontype: ButtonType;
+  className?: string;
+  variant: variant;
 }
 
 export interface DefaultButtonProps extends IBaseButtonProps {
+  url?: string;
   content: string;
 }
 
@@ -20,11 +20,15 @@ export interface TagsButtonProps extends DefaultButtonProps {
 
 export interface IconButtonProps extends IBaseButtonProps {
   icon: ((props: SVGProps<SVGSVGElement>) => JSX.Element) | string;
+  url?: string;
   name?: string;
 }
+
+export interface ThemeButtonProps extends IBaseButtonProps {}
 
 export type AllButonProps =
   | IBaseButtonProps
   | DefaultButtonProps
   | IconButtonProps
-  | TagsButtonProps;
+  | TagsButtonProps
+  | ThemeButtonProps;

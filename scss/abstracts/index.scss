@@ -26,7 +26,7 @@
     position: relative;
     width: 80%;
     line-height: initial;
-    color: var.$TEXT_MENU;
+    color: var(--md-sys-color-inverse-on-surface);
 }
 
 %common_border {

@@ -4,6 +4,7 @@
     &-l {
         &-wrapper {
             @extend %menu-l-wrapper;
+            @include set-font($font: $BODY_FONT_MENU, $size: 14px);
         }
     }
 
@@ -16,12 +17,8 @@
 
         &-txt {
             &__header {
-                color: lightgray;
+                color: var(--md-sys-color-inverse-on-surface);
                 text-align: center;
-            }
-
-            &__body {
-                @include select-body-txt($font: $BODY_FONT_MENU, $size: 14px);
             }
         }
     }

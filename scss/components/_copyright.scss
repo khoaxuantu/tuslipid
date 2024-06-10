@@ -14,7 +14,7 @@
             &__menu {
                 @extend %copyright-txt;
                 position: relative;
-                color: $TEXT_MENU;
+                color: var(--md-sys-color-inverse-on-surface);
 
                 a {
                     color: var(--md-sys-color-tertiary-container);
@@ -23,6 +23,7 @@
 
             &__page {
                 @extend %copyright-txt;
+                color: var(--md-sys-color-on-surface);
                 position: relative;
             }
         }

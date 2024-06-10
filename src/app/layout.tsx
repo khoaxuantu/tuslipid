@@ -48,7 +48,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="theme-color" content="#000000" />
         <link rel="stylesheet" href="/css/style.css" />
         <link rel="stylesheet" href="/css/themes/light.css" />
         <link rel="stylesheet" href="/css/themes/dark.css" />
@@ -71,7 +70,7 @@ export default function RootLayout({
         />
         <link rel="manifest" href={`${defaultURL}/logo/site.webmanifest`}></link>
       </head>
-      <body className="light">
+      <body>
         {children}
         <SpeedInsights />
       </body>

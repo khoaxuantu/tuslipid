@@ -1,97 +1,104 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 #go-back {
-    @include center-block;
-    text-align: center;
-    cursor: pointer;
-    text-decoration: none;
-    color: var(--md-sys-color-on-surface);
+  @include center-block;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--md-sys-color-on-surface);
 
-    &:hover {
-        font-weight: bold;
-    }
+  &:hover {
+    font-weight: bold;
+  }
 }
 
 .sl {
-    &-c {
-        &-btn {
-            @extend %flex-center;
-            @extend %common_border;
-            background-color: var(--md-sys-color-inverse-on-surface);
-            box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
-            opacity: .8;
-            @include rounded;
+  &-c {
+    &-btn {
+      @extend %flex-center;
+      @extend %common_border;
+      background-color: var(--md-sys-color-inverse-on-surface);
+      box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
+      opacity: 0.8;
+      @include rounded;
 
-            &:hover {
-                box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-                border: none;
-                opacity: 1;
-            }
+      &:hover {
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+        border: none;
+        opacity: 1;
+      }
 
-            &__square {
-                @include shape-btn($width: 2rem);
-            }
+      &__square {
+        @include shape-btn($width: 2rem);
+      }
 
-            &__rect {
-                @include shape-btn(2, 4.6875rem);
-            }
+      &__rect {
+        @include shape-btn(2, 4.6875rem);
+      }
 
-            &__group {
-                @extend %btn-group;
-                justify-content: center;
+      &__group {
+        @extend %btn-group;
+        justify-content: center;
 
-                a, button {
-                    margin: 0 0.625rem 0 0.625rem;
-                    font-size: 12px;
-                }
-            }
-
-            &__go-top {
-                position: fixed;
-                right: 2rem;
-                bottom: 2rem;
-                z-index: 2;
-                width: 4rem;
-                aspect-ratio: 1;
-                border: none;
-                border-radius: 50%;
-                cursor: pointer;
-                box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
-                  rgba(0, 0, 0, 0.24) 0px 1px 2px;
-
-                &:hover {
-                    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
-                        rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
-                        rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
-                        rgba(0, 0, 0, 0.06) 0px 2px 1px,
-                        rgba(0, 0, 0, 0.09) 0px 4px 2px,
-                        rgba(0, 0, 0, 0.09) 0px 8px 4px,
-                        rgba(0, 0, 0, 0.09) 0px 16px 8px,
-                        rgba(0, 0, 0, 0.09) 0px 32px 16px;
-                }
-            }
+        a,
+        button {
+          margin: 0 0.625rem 0 0.625rem;
+          font-size: 12px;
         }
+      }
+
+      &__go-top {
+        position: fixed;
+        right: 2rem;
+        bottom: 2rem;
+        z-index: 2;
+        width: 4rem;
+        aspect-ratio: 1;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
+        &:hover {
+          box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+            rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+            rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+            rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+            rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        }
+      }
+
+      &__theme {
+        @include set-component-color(
+          var(--md-sys-color-background),
+          var(--md-sys-color-on-surface)
+        );
+        border: none;
+        cursor: pointer;
+      }
     }
+  }
 }
 
 @media (min-width: 320px) {
-    .sl-c-btn__square {
-        width: 3rem;
-    }
+  .sl-c-btn__square {
+    width: 3rem;
+  }
 }
 
 @media (min-width: 576px) {
-    .sl-c-btn__square {
-        width: 4rem;
-    }
+  .sl-c-btn__square {
+    width: 4rem;
+  }
 
-    .sl-c-btn__rect {
-        width: 6.25rem;
-    }
+  .sl-c-btn__rect {
+    width: 6.25rem;
+  }
 
-    .sl-c-btn__group {
-        a, button {
-            font-size: 16px;
-        }
+  .sl-c-btn__group {
+    a,
+    button {
+      font-size: 16px;
     }
+  }
 }

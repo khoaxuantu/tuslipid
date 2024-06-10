@@ -1,3 +1,4 @@
+import Button from "@/lib/factory/button";
 import { BLOG_INFO_DICT } from "@/lib/general_info";
 
 export function BlogsPageHeaderGrp() {
@@ -5,6 +6,7 @@ export function BlogsPageHeaderGrp() {
     <header>
       <h1 className="pt-2 pb-2">Tus's Blogs</h1>
       <blockquote className="mt-2">Some notes, some ideas, some opinions</blockquote>
+      <Button variant="theme" className="mt-4" />
       <hr />
     </header>
   );
@@ -15,6 +17,7 @@ export function SingleBlogPageHeaderGrp(props: { id: string }) {
     <header>
       <h2 id="blog-title" className="pt-2 pb-2">{BLOG_INFO_DICT[props.id].title}</h2>
       <blockquote className="mt-2">{formatDate(BLOG_INFO_DICT[props.id].date)}</blockquote>
+      <Button variant="theme" className="mt-4" />
     </header>
   );
 }
