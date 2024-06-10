@@ -105,7 +105,7 @@ function ProjHref(props: IProjCardProps) {
           rel="noreferrer"
           aria-label={`project github href - ${props.title}`}
         >
-          <GithubIcon width={24} height={24} color="#000" />
+          <GithubIcon width={24} height={24} color="var(--md-sys-color-on-surface)" />
         </a>
       </li>
     );
@@ -119,7 +119,7 @@ function ProjHref(props: IProjCardProps) {
           rel="noreferrer"
           aria-label={`project demo href - ${props.title}`}
         >
-          <ExternalLinkIcon width={24} height={24} color="#000" />
+          <ExternalLinkIcon width={24} height={24} color="var(--md-sys-color-on-surface)" />
         </a>
       </li>
     );
