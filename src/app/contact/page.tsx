@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import Link from "next/link";
 import { useEffect } from "react";
@@ -11,9 +11,9 @@ function Contact() {
   }, []);
 
   return (
-    <>
+    <div className="light">
       <div className="contact-c-btn__overlay"></div>
-      <div className="sl-l-container contact-l-wrapper center contact-c-txt__body">
+      <div className="sl-l-container contact-l-wrapper center contact-c-txt__body transition-menu">
         <h2 className="contact-c-txt__header p-2">
           ~ Oi ~<br></br>
           Say hello to me by one of the following {":)"}
@@ -23,8 +23,8 @@ function Contact() {
           Home
         </Link>
       </div>
-    </>
-  )
+    </div>
+  );
 }
 
 export default Contact;

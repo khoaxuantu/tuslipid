@@ -18,7 +18,7 @@
 }
 
 %card-bodering {
-    border: 1px solid var.$LIGHT_GRAY;
+    border: 1px solid var(--md-sys-color-outline-variant);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -26,5 +26,9 @@
     position: relative;
     width: 80%;
     line-height: initial;
-    color: var.$TEXT_MENU;
+    color: var(--md-sys-color-inverse-on-surface);
+}
+
+%common_border {
+    border: 1px solid var(--md-sys-color-outline-variant);
 }

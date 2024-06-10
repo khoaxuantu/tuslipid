@@ -49,10 +49,6 @@
   font-family: $font;
 }
 
-@mixin select-body-txt($font: var.$DEFAULT_FONT, $size: var.$DYNAMIC_FONT_SIZE) {
-  @include set-font($font, $size);
-}
-
 @mixin project-card() {
   &__description {
     flex-direction: column;

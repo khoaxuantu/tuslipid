@@ -35,7 +35,7 @@ $codeinline-background: #f6f8fa;
     }
 
     pre {
-        border: 1px solid var(--md-sys-color-outline-variant);
+        @extend %common_border;
         overflow: auto;
         padding: 6px 10px;
 

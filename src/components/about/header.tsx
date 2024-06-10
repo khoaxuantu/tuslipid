@@ -1,3 +1,5 @@
+import Button from "@/lib/factory/button";
+
 export default function AboutHeaderGrp () {
     return (
       <header>
@@ -15,6 +17,7 @@ export default function AboutHeaderGrp () {
           <a href="https://drive.google.com/file/d/1UdFJgT35HysZGTpfk86I3E8Mcg2vrfv3/view?usp=share_link" target='_blank' rel="noreferrer">Resume</a> | {" "}
           <a href="https://drive.google.com/file/d/1XxdNzIyDktPseomnn0HszhgMyfEW8TtV/view?usp=share_link" target='_blank' rel='noreferrer'>CV</a>
         </blockquote>
+        <Button variant="theme" className="mt-3" />
         <hr></hr>
       </header>
     );

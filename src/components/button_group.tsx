@@ -12,12 +12,12 @@ export function SocialMediaBtnGroup() {
       {SOCIAL_MEDIA_INFO_LIST.map((btnProp) => {
         return (
           <Button
-            buttontype="icon"
+            variant="icon"
             url={btnProp.url}
             icon={btnProp.icon}
             key={btnProp.id}
             id={btnProp.id}
-            classname="sl-c-btn sl-c-btn__square"
+            className="sl-c-btn sl-c-btn__square"
           />
         );
       })}
@@ -31,10 +31,10 @@ export function NavBtnGroup() {
       {NAV_BTN_INFO_LIST.map((btnProp) => {
         return (
           <Button
-            buttontype="default"
+            variant="default"
             url={btnProp.url}
             content={btnProp.content}
-            classname="sl-c-btn sl-c-btn__rect"
+            className="sl-c-btn sl-c-btn__rect"
             key={btnProp.content}
           />
         );
@@ -58,8 +58,8 @@ export async function SkillBtnGroup() {
       {skillInfoList.map((btnProp) => {
         return (
           <Button
-            buttontype="icon"
-            classname="sl-c-btn about-c-btn__skill"
+            variant="icon"
+            className="sl-c-btn about-c-btn__skill"
             key={btnProp.name}
             {...btnProp}
           />
@@ -81,7 +81,7 @@ export function TagsButtonGroup({
       {tags.map((tag) => {
         return (
           <Button
-            buttontype="tag"
+            variant="tag"
             content={tag}
             key={tag}
             dispatchActiveTags={dispatchActiveTags}

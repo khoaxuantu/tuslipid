@@ -17,7 +17,7 @@
 
     &-c {
         &-box__me {
-            @include box($theme: var(--md-sys-color-surface-dim));
+            @include box($theme: var(--md-sys-color-surface-container-highest));
         }
 
         &-btn {
@@ -33,7 +33,7 @@
                 @include shape-btn(1, 100%);
                 max-width: 150px;
                 font-size: 12px !important;
-                color: black;
+                color: var(--md-sys-color-on-surface);
                 transition: scale 150ms ease-out;
                 grid-column-start: span 3;
 

@@ -33,7 +33,7 @@ function BlogsLayout({ children }: { children: React.ReactNode }) {
     <>
       <div className="sl-l-container sl-l-wrapper transistion-page">
         {children}
-        <Button buttontype="go-top" />
+        <Button variant="go-top" />
         <Copyright className="sl-c-copyright__page mt-5 pb-3" />
       </div>
       <div className="fkkk-next-js">

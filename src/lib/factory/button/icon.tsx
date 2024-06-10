@@ -5,7 +5,7 @@ export default function IconButton(props: IconButtonProps) {
   return (
     <Link
       id={props.id}
-      className={props.classname}
+      className={props.className}
       href={props.url as string}
       target="_blank"
       key={props.id}

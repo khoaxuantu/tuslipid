@@ -12,7 +12,12 @@ function Copyright(props: { className?: string }) {
           rel="noreferrer"
           aria-label="web source code"
         >
-          <GithubIcon opacity={0.8} color="black" width="1em" height="1em" />
+          <GithubIcon
+            opacity={0.8}
+            color="var(--md-sys-color-on-surface)"
+            width="1em"
+            height="1em"
+          />
         </a>
       </div>
       Built and designed by Xuan Khoa Tu Nguyen with{" "}
@@ -20,11 +25,7 @@ function Copyright(props: { className?: string }) {
         React
       </a>
       ,{" "}
-      <a
-        href="https://www.typescriptlang.org/"
-        target="_blank"
-        rel="noreferrer"
-      >
+      <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer">
         TypeScript
       </a>{" "}
       and{" "}
