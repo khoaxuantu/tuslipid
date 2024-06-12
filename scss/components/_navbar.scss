@@ -2,7 +2,30 @@
 
 .sl {
   &-c {
-    &-navbar {
+    &-nav {
+      @include set-component-color(
+        var(--md-sys-color-surface-container),
+        var(--md-sys-color-on-surface)
+      );
+      position: sticky;
+      top: 0;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+      z-index: 2;
+      display: none;
+
+      ul {
+        li {
+          display: inline;
+          padding-right: 1rem;
+
+          a {
+            color: var(--md-sys-color-on-surface);
+          }
+        }
+      }
+    }
+
+    &-navmobile {
       @include rounded;
       width: 100%;
 
@@ -10,9 +33,9 @@
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 1;
+        z-index: 2;
 
-        button {
+        #nav {
           border-radius: 0 0 5px 0;
           width: 45px;
           aspect-ratio: 1/1;
@@ -71,89 +94,18 @@
         @include set-font($font: $BODY_FONT_MENU, $size: 14px);
       }
     }
-
-    &-tab {
-      &__list {
-        .is-current {
-          @include set-component-color(
-            var(--md-sys-color-secondary),
-            var(--md-sys-color-on-secondary)
-          );
-          border-left: none;
-          border-bottom: none;
-          font-weight: bold;
-        }
-      }
-
-      &__vertical {
-        @include set-component-color(
-          var(--md-sys-color-surface-container),
-          var(--md-sys-color-on-surface)
-        );
-        height: 50px;
-        width: 100%;
-        border: none;
-        border-bottom: 2px solid var(--md-sys-color-outline-variant);
-        cursor: pointer;
-        font-family: $DEFAULT_FONT;
-        text-align: start;
-
-        &:hover {
-          font-weight: 650;
-        }
-      }
-
-      &__content {
-        @include center-block($m: 0.5rem, $mode: "padding");
-        height: 400px;
-        overflow: auto;
-        padding-top: 0.5rem;
-
-        .content {
-          display: none;
-        }
-      }
-    }
   }
 }
 
 @media screen and (min-width: 320px) {
-  .sl-c-tab__content {
-    height: 320px;
-  }
 }
 
 @media screen and (min-width: 768px) {
-  .sl-c-navbar__wrap {
-    top: 25px;
-    left: 25px;
-    max-width: 150px;
-
-    button {
-      @include rounded;
-    }
-  }
-
-  .sl-c-navbar__menu {
-    @include rounded;
-    width: 150px;
-  }
-
-  .sl-c-tab__vertical {
-    border: none;
-    border-left: 2px solid var(--md-sys-color-outline-variant);
-  }
-
-  .sl-c-tab__list {
+  .sl-c-nav {
     display: block;
-
-    .is-current {
-      border-bottom: none;
-    }
   }
 
-  .sl-c-tab__content {
-    height: 320px;
-    padding-top: 0;
+  .sl-c-navmobile {
+    display: none;
   }
 }

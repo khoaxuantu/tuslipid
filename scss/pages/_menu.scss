@@ -1,47 +1,112 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 .menu {
-    &-l {
-        &-wrapper {
-            @extend %menu-l-wrapper;
-            @include set-font($BODY_FONT_MENU, 14px);
-        }
-
-        &-grp {
-            &__avatar {
-                border: none;
-                background-color: unset;
-            }
-
-            &__nav-btn {
-                a {
-                    text-decoration: none;
-                }
-            }
-        }
+  &-l {
+    &-wrapper {
+      @extend %menu-l-wrapper;
+      @include set-font($BODY_FONT_MENU, 14px);
+      text-align: center;
     }
 
-    &-c {
-        &-img {
-            &__avatar {
-                @include center-block;
-                border-radius: 50%;
-                cursor: pointer;
-                transition: src 500ms;
-            }
+    &-grp {
+      &__avatar {
+        border: none;
+        background-color: unset;
+      }
+
+      &__nav-btn {
+        a {
+          text-decoration: none;
         }
+      }
     }
+  }
+
+  &-c {
+    &-img {
+      &__avatar {
+        @include center-block;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: src 500ms;
+      }
+    }
+
+    &-tab {
+      &__list {
+        .is-current {
+          @include set-component-color(
+            var(--md-sys-color-secondary),
+            var(--md-sys-color-on-secondary)
+          );
+          border-left: none;
+          border-bottom: none;
+          font-weight: bold;
+        }
+      }
+
+      &__vertical {
+        @include set-component-color(
+          var(--md-sys-color-surface-container),
+          var(--md-sys-color-on-surface)
+        );
+        height: 50px;
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid var(--md-sys-color-outline-variant);
+        cursor: pointer;
+        font-family: $DEFAULT_FONT;
+        text-align: start;
+
+        &:hover {
+          font-weight: 650;
+        }
+      }
+
+      &__content {
+        @include center-block($m: 0.5rem, $mode: "padding");
+        height: 400px;
+        overflow: auto;
+        padding-top: 0.5rem;
+
+        .content {
+          display: none;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 320px) {
-    .menu-c-img__avatar {
-        width: 100px;
-    }
+  .menu-c-img__avatar {
+    width: 100px;
+  }
+
+  .menu-c-tab__content {
+    height: 320px;
+  }
 }
 
 @media (min-width: 768px) {
-    .menu-l-wrapper {
-        width: 720px;
-    }
-}
+  .menu-l-wrapper {
+    width: 720px;
+  }
 
+  .menu-c-tab__vertical {
+    border: none;
+    border-left: 2px solid var(--md-sys-color-outline-variant);
+  }
+
+  .menu-c-tab__list {
+    display: block;
+
+    .is-current {
+      border-bottom: none;
+    }
+  }
+
+  .menu-c-tab__content {
+    height: 320px;
+    padding-top: 0;
+  }
+}

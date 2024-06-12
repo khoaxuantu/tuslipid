@@ -6,6 +6,7 @@ body {
     font-family: $DEFAULT_FONT;
     line-height: 1.7;
     background: var(--md-sys-color-surface-dim);
+    transition: all 300ms;
 }
 
 ul {

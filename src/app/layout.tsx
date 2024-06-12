@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import React from "react";
 import ThemeProvider from "@/lib/provider/theme.provider";
-import Button from "@/lib/factory/button";
 
 const defaultTitle = "Tuslipid";
 const defaultDescription = "Xuan Khoa Tu Nguyen's personal website";
@@ -74,7 +73,6 @@ export default function RootLayout({
       </head>
       <body>
         <ThemeProvider>
-          <Button variant="theme" />
           {children}
         </ThemeProvider>
         <SpeedInsights />
