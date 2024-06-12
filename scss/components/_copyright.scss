@@ -1,31 +1,25 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 %copyright-txt {
-    width: 100%;
-    text-align: center;
-    padding: 0 0.5rem 0 0.5rem;
-    font-family: $COPYRIGHT_FONT;
-    display: block;
+  width: 100%;
+  text-align: center;
+  padding: 0 0.5rem 0 0.5rem;
+  font-family: $COPYRIGHT_FONT;
+  display: block;
+  color: var(--md-sys-color-on-surface);
+  position: relative;
 }
 
 .sl {
-    &-c {
-        &-copyright {
-            &__menu {
-                @extend %copyright-txt;
-                position: relative;
-                color: var(--md-sys-color-inverse-on-surface);
+  &-c {
+    &-copyright {
+      &__menu {
+        @extend %copyright-txt;
+      }
 
-                a {
-                    color: var(--md-sys-color-tertiary-container);
-                }
-            }
-
-            &__page {
-                @extend %copyright-txt;
-                color: var(--md-sys-color-on-surface);
-                position: relative;
-            }
-        }
+      &__page {
+        @extend %copyright-txt;
+      }
     }
+  }
 }

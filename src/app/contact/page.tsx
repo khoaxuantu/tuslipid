@@ -11,18 +11,15 @@ function Contact() {
   }, []);
 
   return (
-    <div className="light">
-      <div className="contact-c-btn__overlay"></div>
-      <div className="sl-l-container contact-l-wrapper center contact-c-txt__body transition-menu">
-        <h2 className="contact-c-txt__header p-2">
-          ~ Oi ~<br></br>
-          Say hello to me by one of the following {":)"}
-        </h2>
-        <SocialMediaBtnGroup />
-        <Link href="/" className="sl-c-btn sl-c-btn__rect" id="go-back" prefetch={true}>
-          Home
-        </Link>
-      </div>
+    <div className="sl-l-container contact-l-wrapper center contact-c-txt__body transition-menu">
+      <h2 className="contact-c-txt__header p-2">
+        ~ Oi ~<br></br>
+        Say hello to me by one of the following {":)"}
+      </h2>
+      <SocialMediaBtnGroup />
+      <Link href="/" className="sl-c-btn sl-c-btn__rect" id="go-back" prefetch={true}>
+        Home
+      </Link>
     </div>
   );
 }

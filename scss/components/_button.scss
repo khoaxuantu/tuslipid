@@ -5,7 +5,6 @@
   text-align: center;
   cursor: pointer;
   text-decoration: none;
-  color: var(--md-sys-color-on-surface);
 
   &:hover {
     font-weight: bold;
@@ -16,11 +15,13 @@
   &-c {
     &-btn {
       @extend %flex-center;
-      @extend %common_border;
-      background-color: var(--md-sys-color-inverse-on-surface);
-      box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
-      opacity: 0.8;
+      @include set-component-color(
+        var(--md-sys-color-secondary),
+        var(--md-sys-color-on-secondary)
+      );
       @include rounded;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+      opacity: 0.8;
 
       &:hover {
         box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
@@ -58,6 +59,7 @@
         border-radius: 50%;
         cursor: pointer;
         box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+        background-color: var(--md-sys-color-secondary);
 
         &:hover {
           box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
@@ -69,12 +71,12 @@
       }
 
       &__theme {
-        @include set-component-color(
-          var(--md-sys-color-background),
-          var(--md-sys-color-on-surface)
-        );
+        @include set-component-color(inherit, var(--md-sys-color-on-surface));
         border: none;
         cursor: pointer;
+        position: fixed;
+        top: 25px;
+        right: 25px;
       }
     }
   }

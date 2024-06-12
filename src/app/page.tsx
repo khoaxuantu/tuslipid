@@ -12,13 +12,10 @@ export default function TuslipidMenu() {
   }, []);
 
   return (
-    <div className="light">
-      <div className="sl-c-overlay"></div>
-      <div className="sl-l-container menu-l-wrapper center transition-menu">
-        <MenuHeaderGrp />
-        <NavBtnGroup />
-        <Copyright className="sl-c-copyright__menu mt-5" />
-      </div>
+    <div className="sl-l-container menu-l-wrapper center transition-menu">
+      <MenuHeaderGrp />
+      <NavBtnGroup />
+      <Copyright className="sl-c-copyright__menu mt-5" />
     </div>
   );
 }

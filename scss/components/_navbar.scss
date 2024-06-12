@@ -16,7 +16,7 @@
           border-radius: 0 0 5px 0;
           width: 45px;
           aspect-ratio: 1/1;
-          background-color: $NAVBAR-BG-COLOR;
+          background-color: var(--md-sys-color-secondary-container);
           border: none;
           cursor: pointer;
           position: absolute;
@@ -25,9 +25,10 @@
             content: "";
             position: absolute;
             width: 66.67%;
-            height: 0.5rem;
-            background-color: $NAVBAR-STICK-COLOR;
-            box-shadow: 0 10px 0 $NAVBAR-STICK-COLOR, 0 20px $NAVBAR-STICK-COLOR;
+            height: 6px;
+            background-color: var(--md-sys-color-on-secondary-container);
+            box-shadow: 0 10px 0 var(--md-sys-color-on-secondary-container),
+              0 20px var(--md-sys-color-on-secondary-container);
             left: 18%;
             top: 18%;
           }
@@ -35,8 +36,11 @@
       }
 
       &__menu {
+        @include set-component-color(
+          var(--md-sys-color-secondary-container),
+          var(--md-sys-color-on-secondary-container)
+        );
         border-radius: 0 0 5px 5px;
-        background-color: $NAVBAR-BG-COLOR;
         width: 100%;
         display: none;
 
@@ -47,15 +51,16 @@
             padding: 0.5rem;
             font-size: 14px;
             text-decoration: none;
-            color: white;
             width: 100%;
             height: auto;
             display: block;
-          }
 
-          &:hover {
-            background-color: $GRAY;
-            opacity: 0.6;
+            &:hover {
+              @include set-component-color(
+                var(--md-sys-color-secondary),
+                var(--md-sys-color-on-secondary)
+              );
+            }
           }
         }
       }
@@ -70,9 +75,12 @@
     &-tab {
       &__list {
         .is-current {
-          background-color: var(--md-sys-color-outline-variant);
+          @include set-component-color(
+            var(--md-sys-color-secondary),
+            var(--md-sys-color-on-secondary)
+          );
           border-left: none;
-          border-bottom: 2px solid var(--md-sys-color-outline);
+          border-bottom: none;
           font-weight: bold;
         }
       }
@@ -141,7 +149,6 @@
 
     .is-current {
       border-bottom: none;
-      border-left: 2px solid var(--md-sys-color-outline);
     }
   }
 

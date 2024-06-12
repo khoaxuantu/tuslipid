@@ -11,14 +11,17 @@ export default function ThemeProvider({ children }: { children: React.ReactNode 
   };
 
   useEffect(() => {
-    setTheme(getLocalTheme());
+    const localTheme = getLocalTheme();
+
+    setTheme(localTheme);
+    document.getElementsByTagName("body")[0].classList.add(localTheme);
   }, []);
 
   if (!theme) return;
 
   return (
     <ThemeContext.Provider value={value}>
-      <div className={theme as string}>{children}</div>
+      {children}
     </ThemeContext.Provider>
   );
 }
@@ -26,5 +29,5 @@ export default function ThemeProvider({ children }: { children: React.ReactNode 
 function getLocalTheme(): Themes {
   const localTheme = localStorage.getItem("theme") as Themes;
   if (localTheme) return localTheme;
-  return "light";
+  return "dark";
 }
