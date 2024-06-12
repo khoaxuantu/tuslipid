@@ -10,12 +10,16 @@ export default function ThemeButton(props: ThemeButtonProps) {
   const { theme, setTheme } = useContext(ThemeContext);
 
   function switchThemeHandler() {
+    const body = document.getElementsByTagName("body")[0];
+
     if (theme == "light") {
       setTheme("dark");
       localStorage.setItem("theme", "dark");
+      body.classList.replace("light", "dark");
     } else {
       setTheme("light");
       localStorage.setItem("theme", "light");
+      body.classList.replace("dark", "light");
     }
   }
 

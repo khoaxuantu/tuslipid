@@ -1,12 +1,12 @@
-import Navbar from "@/components/navbar";
-import ThemeProvider from "@/lib/provider/theme.provider";
+import { Navbar, NavbarMobile} from "@/components/navbar";
 import React from "react";
 
 export default function NavBarLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
+      <NavbarMobile />
       <Navbar />
-      <ThemeProvider>{children}</ThemeProvider>
+      {children}
     </>
   );
 }

@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import React from "react";
+import ThemeProvider from "@/lib/provider/theme.provider";
 
 const defaultTitle = "Tuslipid";
 const defaultDescription = "Xuan Khoa Tu Nguyen's personal website";
@@ -71,7 +72,9 @@ export default function RootLayout({
         <link rel="manifest" href={`${defaultURL}/logo/site.webmanifest`}></link>
       </head>
       <body>
-        {children}
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
         <SpeedInsights />
       </body>
     </html>

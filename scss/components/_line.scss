@@ -1,11 +1,6 @@
 hr {
-  background: linear-gradient(
-    to right,
-    var(--md-sys-color-inverse-on-surface),
-    var(--md-sys-color-inverse-surface),
-    var(--md-sys-color-inverse-on-surface)
-  );
-  height: 1px;
+  background: var(--md-sys-color-outline-variant);
+  height: 2px;
   border: none;
   margin: 2rem 10rem 0 10rem;
 }

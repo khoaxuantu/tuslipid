@@ -3,13 +3,10 @@
 @include createTypoScale($ratio: 'golden');
 
 body {
-    background-image: url($BACKGROUND_URL);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
     font-family: $DEFAULT_FONT;
     line-height: 1.7;
+    background: var(--md-sys-color-surface-dim);
+    transition: all 300ms;
 }
 
 ul {

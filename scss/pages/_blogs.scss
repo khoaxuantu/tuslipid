@@ -1,14 +1,14 @@
 @use "../abstracts" as *;
 
 %common_blogs_button {
-  @include set-component-color(
-    var(--md-sys-color-outline-variant),
-    var(--md-sys-color-on-surface)
-  );
+  @include set-component-color(var(--md-sys-color-secondary), var(--md-sys-color-on-secondary));
   transition: all 300ms ease-in-out;
 
   &:hover {
-    @include set-component-color(var(--md-sys-color-secondary), var(--md-sys-color-on-secondary));
+    @include set-component-color(
+      var(--md-sys-color-secondary-container),
+      var(--md-sys-color-on-secondary-container)
+    );
     text-decoration: none;
   }
 }

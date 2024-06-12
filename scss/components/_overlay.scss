@@ -3,7 +3,7 @@
 .sl {
     &-c {
         &-overlay {
-            @include overlay(rgba($color: $OVERLAY_COLOR, $alpha: 0.75));
+            @include overlay(rgba(0, 0, 0, 0.75));
         }
     }
 }

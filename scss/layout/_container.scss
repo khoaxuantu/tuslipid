@@ -3,20 +3,14 @@
 .sl {
   &-l {
     &-wrapper {
-      @include set-component-color(
-        var(--md-sys-color-background),
-        var(--md-sys-color-on-surface)
-      );
+      color: var(--md-sys-color-on-surface);
       width: 100%;
       height: auto;
-      margin-top: 4rem;
       margin-bottom: 4rem;
     }
 
     &-container {
       @include center-block;
-      @include rounded;
-      transition: all 300ms;
 
       header {
         padding: 5%;
@@ -32,10 +26,6 @@
 }
 
 @media screen and (min-width: 1200px) {
-  .sl-l-wrapper {
-    width: 80%;
-  }
-
   .sl-l-container {
     main {
       @include center-block;
