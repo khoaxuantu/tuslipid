@@ -22,7 +22,7 @@
 
         &-content {
             @include content-wrapper($maxWidth: 40em);
-            overflow-x: scroll;
+            overflow-x: auto;
         }
 
         &-img {
