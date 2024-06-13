@@ -660,7 +660,7 @@ hr {
   max-width: 40em;
   margin-left: auto;
   margin-right: auto;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 .blog-c-img__extend {
   width: auto;
