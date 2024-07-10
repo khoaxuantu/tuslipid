@@ -6,7 +6,7 @@ function AboutIntro() {
       <section className="mb-5">
         <h2 className="pt-2 pb-3">Get to know me</h2>
         <div className="row">
-          <div className="about-c-box__me col-7 p-2">
+          <div className="col-7">
             <p className="">
               I am a web developer from Vietnam. You have learned how to call me above, but I also
               use Tuslipid as my nickname across social medias and games.
@@ -35,8 +35,8 @@ function AboutIntro() {
           </div>
         </div>
       </section>
-      <section className="row mb-5">
-        <h3 className="col-4 pe-5 pt-2 pb-3">
+      <section className="mb-5 row">
+        <h3 className="col-4 pt-2 pb-3">
           <span>I love learning and trying new things...</span>
           <span>Let's me show you the things I'm confident</span>
         </h3>

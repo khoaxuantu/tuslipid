@@ -12,7 +12,7 @@ export function BlogsContent() {
   return (
     <main className="row">
       <TagsContext.Provider value={activeTags.tags}>
-        <section className="col-4 pe-5">
+        <section className="col-4">
           <Tags dispatchActiveTags={dispatchActiveTags} />
         </section>
         <section className="col-8 blogs-l-wrapper">
