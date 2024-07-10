@@ -4,8 +4,8 @@ async function Education() {
   const eduImgs = await getEduImgs();
 
   return (
-    <section className="row mb-5">
-      <h2 className="col-4 pe-5 pt-2 pb-3">Where I studied</h2>
+    <section className="mb-5 row">
+      <h2 className="col-4 pt-2 pb-3">Where I studied</h2>
       <div className="col-8">
         <div className="pt-2 pb-2 d-flex">
           <div className="about-l-wrapper__edu-content pe-3">
