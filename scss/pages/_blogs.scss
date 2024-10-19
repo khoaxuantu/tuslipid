@@ -6,8 +6,8 @@
 
   &:hover {
     @include set-component-color(
-      var(--md-sys-color-secondary-container),
-      var(--md-sys-color-on-secondary-container)
+      var(--md-sys-color-primary),
+      var(--md-sys-color-on-primary)
     );
     text-decoration: none;
   }
@@ -19,7 +19,7 @@
   margin-right: 0.5rem;
   border: none;
   border-radius: 1rem;
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem 1rem;
   cursor: pointer;
 }
 
@@ -41,11 +41,8 @@
         a {
           @extend %flex-center;
           @extend %common_blogs_button;
-          @include rounded(10px);
-          width: 16.67%;
-          min-width: 120px;
-          height: 100%;
-          min-height: 40px;
+          @include rounded(11px);
+          padding: 0.25rem 1rem;
         }
       }
 
@@ -62,7 +59,6 @@
 
     &-card {
       @include rounded(10);
-      box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
       flex-direction: column;
       flex-wrap: nowrap;
     }

@@ -4,12 +4,11 @@
   &-c {
     &-nav {
       @include set-component-color(
-        var(--md-sys-color-surface-container),
+        var(--md-sys-color-surface-container-highest),
         var(--md-sys-color-on-surface)
       );
       position: sticky;
       top: 0;
-      box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
       z-index: 2;
       display: none;
 
@@ -60,8 +59,8 @@
 
       &__menu {
         @include set-component-color(
-          var(--md-sys-color-secondary-container),
-          var(--md-sys-color-on-secondary-container)
+          var(--md-sys-color-surface-container-highest),
+          var(--md-sys-color-on-surface),
         );
         border-radius: 0 0 5px 5px;
         width: 100%;
