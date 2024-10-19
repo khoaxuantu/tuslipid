@@ -17,7 +17,6 @@ export default function IconButton(props: IconButtonProps) {
           className="sl-c-icon"
           width="1.5rem"
           height="1.5rem"
-          color="var(--md-sys-color-on-secondary)"
           aria-label={props.id}
         />
       )}

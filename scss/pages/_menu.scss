@@ -36,8 +36,8 @@
       &__list {
         .is-current {
           @include set-component-color(
-            var(--md-sys-color-secondary),
-            var(--md-sys-color-on-secondary)
+            var(--md-sys-color-secondary-container),
+            var(--md-sys-color-on-secondary-container)
           );
           border-left: none;
           border-bottom: none;

@@ -94,9 +94,11 @@ export const WORK_INFO_LIST: ITabProps[] = [
       description: [
         `Lead the development and maintenance of the <a href="https://potonow.vn" target="_blank" rel="noreferrer">Potonow</a> website.`,
         `Handle all backend and infrastructure resources, as well as 70% of the frontend \
-resources.`,
-        `Work closely with product owner and manager to estimate, evaluate, and plan new features.`,
-        `Frequently used technologies: Next.js, NestJS, MongoDB, Terraform, AWS.`,
+resources. Restructure the whole backend codebase.`,
+        `Work closely with product owner and manager to plan, evaluate, and implement new \
+features: chat integration, mailing integration, blog site, event sites, phone number \
+verification with SMS/OTP, etc...`,
+        `Frequently used technologies: Next.js, NestJS, MongoDB, ChakraUI, Terraform, AWS.`,
         `Updating...`,
       ],
     },
