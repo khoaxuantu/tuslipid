@@ -249,6 +249,18 @@ I left these notes here for further references.`,
     tags: ["sql", "database"],
     date: new Date("Wed Jun 05 2024 20:38:49 GMT+0700"),
   },
+  how_did_my_coding_journey_start: {
+    content_section: "Blogs",
+    id: "how_did_my_coding_journey_start",
+    title: "How Did My Coding Journey Start?",
+    brief_description: `I did not start with Computer Science-based. My undergraduate major was \
+Mechanical Engineering. So changing the major during the ongoing program was a stressful journey. \
+Here I want to share how I overcome it.`,
+    url: "/how-did-my-coding-journey-start",
+    file: "how_did_my_coding_journey_start.md",
+    tags: ["casual"],
+    date: new Date("Fri Nov 29 2024 00:11:53 GMT+0700"),
+  },
 };
 
 export const BLOG_INFO_LIST: { dictKey: string; date: string }[] = [
@@ -269,4 +281,5 @@ export const BLOG_INFO_LIST: { dictKey: string; date: string }[] = [
   },
   { dictKey: "data_adapter_template", date: "Fri Mar 15 2024 13:58:21 GMT+0700" },
   { dictKey: "mysql_notes", date: "Wed Jun 05 2024 20:38:49 GMT+0700" },
+  { dictKey: "how_did_my_coding_journey_start", date: "Fri Nov 29 2024 00:11:53 GMT+0700" },
 ];
