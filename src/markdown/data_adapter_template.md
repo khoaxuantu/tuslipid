@@ -1,15 +1,15 @@
 # Introduction
 
-> I write this article based on my experience after completing one task of migrating data from MongoDB to MySQL for 5 databases in the condition of preserving more than 270 GB of data with less than 30-minute downtime.
+> I write this article based on my experience after completing one task of migrating data from MongoDB to MySQL for 5 databases in the condition of preserving more than 270 GB of data with less than 30 minutes of downtime.
 
-Imagine you are facing a complex data migration task scenario involving many data sources and intricate transformations. For examples:
+Imagine you are facing a complex data migration task scenario involving many data sources and intricate transformations. For example:
 
 - Migrate data from a non-relational database to a relational database.
 - Migrate data from a relational database to a relational database with schema changes.
 - Above examples but using many databases.
 - Transform the data from multiple data sources.
 
-You decide to write an efficient code to fully control the transformation logic, but you realize it becomes more and more complicated, and the code organization may become your concern.
+You decide to write efficient code to fully control the transformation logic, but you realize it becomes more and more complicated, and the code organization may become your concern.
 
 This article provides you with a template to build flexible and maintainable code so that you can handle your logic completely.
 
@@ -34,7 +34,7 @@ Let's break down the flow first. This is the flow based on the ETL workflow to m
 
 ### About the code
 
-We definitely love writing out easily maintainable and extendable codes, so let's divide the code flow into two separate blocks. Each block only handles a specific logic:
+We definitely love writing out easily maintainable and extendable codes, so let's divide the code flow into two separate blocks. Each block only handles specific logic:
 
 - **Command Block:** This block handles the migration processes management logics.
 - **Adapter Block:** This block handles the data mapping logics.
@@ -45,7 +45,7 @@ We definitely love writing out easily maintainable and extendable codes, so let'
 
 # The command block
 
-This block is where we store the logic of processes management by applying the **Command** design pattern. The idea is to wrap each data mapping process to one _command_ object in order to distinguish all the processes' execution. These _command_ objects follow the same abstract class, so when we invoke to a mapping process from an index file, we just need to interact with the base class, assign the command object we want to run and trigger the execution method.
+This block is where we store the logic of process management by applying the **Command** design pattern. The idea is to wrap each data mapping process in one _command_ object in order to distinguish all the processes' execution. These _command_ objects follow the same abstract class, so when we invoke a mapping process from an index file, we just need to interact with the base class, assign the command object we want to run, and trigger the execution method.
 
 ### Abstract overview
 
@@ -53,7 +53,7 @@ The UML design for this block can be viewed as below:
 
 ![Command block UML diagram](/images/blogs/db_data_adapter_template/2.webp "Command block UML diagram")
 
-Say, we have to migrate the data from 4 databases `A`, `B`, `C`, and `D` in the data source `(0)` to the corresponding 4 databases `A1`, `B1`, `C1`, and `D1` in the data source `(1)`.
+Say, we have to migrate the data from 4 databases, `A`, `B`, `C`, and `D` in the data source `(0)` to the corresponding 4 databases, `A1`, `B1`, `C1`, and `D1` in the data source `(1)`.
 
 We will create a _command_ class for the data mapping from `A` to `A1`, called `CmdAtoA1`, and the same with `B` to `B1`, `C` to `C1`, and `D` to `D1`. These classes override the execution method with their own logic, so for the index view, we do not need to be aware of every command's implementation; all we care about is picking the correct command, respectively.
 

@@ -1,4 +1,3 @@
-import Button from "@/lib/factory/button";
 import { BLOG_INFO_DICT } from "@/lib/general_info";
 
 export function BlogsPageHeaderGrp() {

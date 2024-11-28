@@ -49,8 +49,8 @@
 
       &__go-top {
         @include set-component-color(
-          var(--md-sys-color-tertiary-container),
-          var(--md-sys-color-on-tertiary-container)
+          var(--md-sys-color-primary-container),
+          var(--md-sys-color-on-primary-container)
         );
 
         position: fixed;
@@ -66,8 +66,8 @@
 
         &:hover {
           @include set-component-color(
-            var(--md-sys-color-tertiary),
-            var(--md-sys-color-on-tertiary)
+            var(--md-sys-color-primary),
+            var(--md-sys-color-on-primary)
           );
         }
       }
