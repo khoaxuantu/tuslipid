@@ -13,12 +13,7 @@ export default function IconButton(props: IconButtonProps) {
       {typeof props.icon === "string" ? (
         <ImageAndText {...props} />
       ) : (
-        <props.icon
-          className="sl-c-icon"
-          width="1.5rem"
-          height="1.5rem"
-          aria-label={props.id}
-        />
+        <props.icon className="sl-c-icon" width="1.5rem" height="1.5rem" aria-label={props.id} />
       )}
     </Link>
   );
@@ -28,7 +23,13 @@ function ImageAndText(props: IconButtonProps) {
   return (
     <>
       <div className="sl-c-icon">
-        <img className="p-1" src={props.icon as string} alt={"icon-" + props.name} width={32} />
+        <img
+          className="p-1"
+          src={props.icon as string}
+          alt={"icon-" + props.name}
+          width={32}
+          loading="lazy"
+        />
       </div>
       <div id="name">{props.name}</div>
     </>

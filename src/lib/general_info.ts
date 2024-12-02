@@ -85,9 +85,9 @@ export const NAV_BTN_INFO_LIST: RoutingProps[] = [
 
 export const WORK_INFO_LIST: ITabProps[] = [
   {
-    name: "Pixta Inc. (Middle)",
+    name: "PIXTA Vietnam Co. Ltd (Middle)",
     content: {
-      title: "Fullstack Web Developer (Middle)",
+      title: "Fullstack Web Developer - Potonow",
       company: "Pixta",
       time: "04/2024 - Now",
       location: "Hanoi, Vietnam",
@@ -98,15 +98,16 @@ resources. Restructure the whole backend codebase.`,
         `Work closely with product owner and manager to plan, evaluate, and implement new \
 features: chat integration, mailing integration, blog site, event sites, phone number \
 verification with SMS/OTP, etc...`,
-        `Frequently used technologies: Next.js, NestJS, MongoDB, ChakraUI, Terraform, AWS.`,
+        `Frequently used technologies: Next.js, NestJS, MongoDB, ChakraUI, Terraform, AWS,
+        Firebase.`,
         `Updating...`,
       ],
     },
   },
   {
-    name: "Pixta Inc. (Junior)",
+    name: "PIXTA Vietnam Co. Ltd (Junior)",
     content: {
-      title: "Fullstack Web Developer (Junior)",
+      title: "Fullstack Web Developer - PixtaStock",
       company: "Pixta",
       time: "06/2023 - 04/2024",
       location: "Hanoi, Vietnam",

@@ -32,19 +32,15 @@ function DefaultProjectCard(props: IProjCardProps) {
   return (
     <div className="sl-c-card projects-c-card mb-5 p-4">
       <div className="projects-c-img">{image}</div>
-      <div className="projects-c-card__description pt-4">
+      <div className="projects-c-card__description">
         <h3>{props.title + " "}</h3>
         <ul className="projects-c-card__tools pb-3">
           {props.tools.map((tool) => {
-            return (
-              <li className="pe-2" key={tool}>
-                {tool}
-              </li>
-            );
+            return <li key={tool}>{tool}</li>;
           })}
         </ul>
 
-        <div className="pb-3">
+        <div>
           {props.description.map((p, index) => {
             return <p key={index}>{p}</p>;
           })}
@@ -68,7 +64,7 @@ function FeaturedProjCard(props: IProjCardProps) {
         <ul className="about-c-card__tools pb-4 ps-2">
           {props.tools.map((tool) => {
             return (
-              <li className="pe-2" key={tool}>
+              <li key={tool}>
                 {tool}
               </li>
             );
@@ -98,7 +94,7 @@ function ProjHref(props: IProjCardProps) {
   let demo, github;
   if (props.githubURL !== undefined) {
     github = (
-      <li>
+      <li className="pe-3">
         <a
           href={props.githubURL}
           target="_blank"
@@ -112,7 +108,7 @@ function ProjHref(props: IProjCardProps) {
   }
   if (props.demoURL !== undefined) {
     demo = (
-      <li className="ps-3">
+      <li>
         <a
           href={props.demoURL}
           target="_blank"
@@ -130,19 +126,17 @@ function ProjHref(props: IProjCardProps) {
 
 function BlogsCard(props: IBlogCardProps) {
   return (
-    <div className="sl-c-card blogs-c-card mb-5 fade-in-left">
-      <h3 className="p-3">{props.title}</h3>
-      <div className="ps-3 pe-3">
+    <div className="sl-c-card blogs-c-card mb-5 fade-in-left p-3">
+      <h3>{props.title}</h3>
+      <div className="">
         <i>
           <span>{formatDate(props.date)} |</span>{" "}
           <span>{props.tags.map((tag) => `#${tag}`).join(" ")}</span>
         </i>
       </div>
-      <div className="p-3">{props.brief_description}</div>
-      <div className="blogs-c-btn__read-more pb-3 pt-3">
-        <Link href={"/blogs" + props.url + "/"}>
-          Read more {">>"}
-        </Link>
+      <div>{props.brief_description}</div>
+      <div className="blogs-c-btn__read-more">
+        <Link href={"/blogs" + props.url + "/"}>Read more {">>"}</Link>
       </div>
     </div>
   );

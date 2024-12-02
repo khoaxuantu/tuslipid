@@ -31,49 +31,6 @@
         transition: src 500ms;
       }
     }
-
-    &-tab {
-      &__list {
-        .is-current {
-          @include set-component-color(
-            var(--md-sys-color-secondary-container),
-            var(--md-sys-color-on-secondary-container)
-          );
-          border-left: none;
-          border-bottom: none;
-          font-weight: bold;
-        }
-      }
-
-      &__vertical {
-        @include set-component-color(
-          var(--md-sys-color-surface-container),
-          var(--md-sys-color-on-surface)
-        );
-        height: 50px;
-        width: 100%;
-        border: none;
-        border-bottom: 2px solid var(--md-sys-color-outline-variant);
-        cursor: pointer;
-        font-family: $DEFAULT_FONT;
-        text-align: start;
-
-        &:hover {
-          font-weight: 650;
-        }
-      }
-
-      &__content {
-        @include center-block($m: 0.5rem, $mode: "padding");
-        height: 400px;
-        overflow: auto;
-        padding-top: 0.5rem;
-
-        .content {
-          display: none;
-        }
-      }
-    }
   }
 }
 
@@ -81,32 +38,10 @@
   .menu-c-img__avatar {
     width: 100px;
   }
-
-  .menu-c-tab__content {
-    height: 320px;
-  }
 }
 
 @media (min-width: 768px) {
   .menu-l-wrapper {
     width: 720px;
-  }
-
-  .menu-c-tab__vertical {
-    border: none;
-    border-left: 2px solid var(--md-sys-color-outline-variant);
-  }
-
-  .menu-c-tab__list {
-    display: block;
-
-    .is-current {
-      border-bottom: none;
-    }
-  }
-
-  .menu-c-tab__content {
-    height: 320px;
-    padding-top: 0;
   }
 }
