@@ -27,9 +27,9 @@ export function TabContent(props: ITabProps) {
       <h5>
         {props.content.title} <span>{"@ " + props.content.company}</span>
       </h5>
-      <div className="pt-1 mb-3">
+      <label className="mb-3">
         <span>{props.content.time + " |"}</span> <span>{props.content.location}</span>
-      </div>
+      </label>
       <div>
         {props.content.description.map((bp, index) => {
           return <p key={index} className="pb-2" dangerouslySetInnerHTML={{ __html: bp }}></p>;

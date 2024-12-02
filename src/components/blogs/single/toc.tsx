@@ -29,7 +29,7 @@ export function TableOfContents() {
 
   return(
     <section className="col-4 blog-c-toc fade-in-down">
-      <h1>Table of Contents</h1>
+      <h1>On This Page</h1>
       { !headings ? <FetchingContentNoti /> : <TocList headings={headings} /> }
     </section>
   );

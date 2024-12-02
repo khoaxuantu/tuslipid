@@ -5,7 +5,7 @@ async function Education() {
 
   return (
     <section className="mb-5 row">
-      <h2 className="col-4 pt-2 pb-3">Where I studied</h2>
+      <h2 className="col-4 pt-2 pb-3">About my educations</h2>
       <div className="col-8">
         <div className="pt-2 pb-2 d-flex">
           <div className="about-l-wrapper__edu-content pe-3">

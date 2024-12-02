@@ -24,7 +24,6 @@
   display: contents;
 }
 .blog-l-wrapper pre {
-  border: 1px solid var(--md-sys-color-outline-variant);
   overflow: auto;
   padding: 6px 10px;
 }

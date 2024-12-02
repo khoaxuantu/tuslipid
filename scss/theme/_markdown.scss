@@ -35,7 +35,6 @@ $codeinline-background: #f6f8fa;
     }
 
     pre {
-        @extend %common_border;
         overflow: auto;
         padding: 6px 10px;
 

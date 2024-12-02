@@ -54,7 +54,7 @@ export async function SkillBtnGroup() {
   }
 
   return (
-    <div className="about-c-btn__group-skill pt-2 col-8">
+    <div className="about-c-btn__group-skill col-8">
       {skillInfoList.map((btnProp) => {
         return (
           <Button

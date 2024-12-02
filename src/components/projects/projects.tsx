@@ -9,11 +9,11 @@ export async function AboutProject() {
 
   return (
     <section className="mb-5 row">
-      <div className="col-4 pe-5 pt-2 pb-3">
-        <h2 className="pb-2">
-          What I <span>have built</span>
+      <div className="col-4 pe-5 pb-3">
+        <h2>
+          About my contributions
         </h2>
-        <blockquote className="pt-3 pe-2 pb-2">
+        <blockquote>
           Here are only my featured projects. Let's navigate to my full list here{" "}
           <span>
             ---{"> "}

@@ -299,6 +299,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   width: 100%;
+  gap: 1rem;
 }
 .sl-c-card > * {
   display: inherit;
@@ -473,6 +474,7 @@ hr {
   display: flex;
   flex-wrap: wrap;
   font-size: smaller;
+  column-gap: 0.5rem;
 }
 .about-c-card__href {
   align-self: flex-end;
@@ -481,10 +483,46 @@ hr {
   width: 16.66%;
   text-align: end;
 }
+.about-c-tab__list .is-current {
+  background-color: var(--md-sys-color-secondary-container);
+  color: var(--md-sys-color-on-secondary-container);
+  border-left: none;
+  border-bottom: none;
+  font-weight: bold;
+}
+.about-c-tab__vertical {
+  background-color: var(--md-sys-color-surface-container);
+  color: var(--md-sys-color-on-surface);
+  height: 50px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid var(--md-sys-color-outline-variant);
+  cursor: pointer;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+  text-align: start;
+}
+.about-c-tab__vertical:hover {
+  font-weight: 650;
+}
+.about-c-tab__content {
+  height: 400px;
+  overflow: auto;
+  padding-right: 0.5rem;
+}
+.about-c-tab__content label {
+  opacity: 0.5;
+  display: block;
+}
+.about-c-tab__content .content {
+  display: none;
+}
 
 @media (min-width: 321px) {
   .about-c-btn__skill {
     grid-column-start: span 2;
+  }
+  .about-c-tab__content {
+    height: 320px;
   }
 }
 @media (min-width: 576px) {
@@ -494,6 +532,22 @@ hr {
   }
   .about-c-btn__skill #name {
     display: block;
+  }
+}
+@media (min-width: 768px) {
+  .about-c-tab__vertical {
+    border: none;
+    border-left: 2px solid var(--md-sys-color-outline-variant);
+  }
+  .about-c-tab__list {
+    display: block;
+  }
+  .about-c-tab__list .is-current {
+    border-bottom: none;
+  }
+  .about-c-tab__content {
+    height: 320px;
+    padding-top: 0;
   }
 }
 @media (min-width: 768px) and (max-width: 850px) {
@@ -529,63 +583,15 @@ hr {
   cursor: pointer;
   transition: src 500ms;
 }
-.menu-c-tab__list .is-current {
-  background-color: var(--md-sys-color-secondary-container);
-  color: var(--md-sys-color-on-secondary-container);
-  border-left: none;
-  border-bottom: none;
-  font-weight: bold;
-}
-.menu-c-tab__vertical {
-  background-color: var(--md-sys-color-surface-container);
-  color: var(--md-sys-color-on-surface);
-  height: 50px;
-  width: 100%;
-  border: none;
-  border-bottom: 2px solid var(--md-sys-color-outline-variant);
-  cursor: pointer;
-  font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
-  text-align: start;
-}
-.menu-c-tab__vertical:hover {
-  font-weight: 650;
-}
-.menu-c-tab__content {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  height: 400px;
-  overflow: auto;
-  padding-top: 0.5rem;
-}
-.menu-c-tab__content .content {
-  display: none;
-}
 
 @media (max-width: 320px) {
   .menu-c-img__avatar {
     width: 100px;
   }
-  .menu-c-tab__content {
-    height: 320px;
-  }
 }
 @media (min-width: 768px) {
   .menu-l-wrapper {
     width: 720px;
-  }
-  .menu-c-tab__vertical {
-    border: none;
-    border-left: 2px solid var(--md-sys-color-outline-variant);
-  }
-  .menu-c-tab__list {
-    display: block;
-  }
-  .menu-c-tab__list .is-current {
-    border-bottom: none;
-  }
-  .menu-c-tab__content {
-    height: 320px;
-    padding-top: 0;
   }
 }
 .projects-l-wrapper {
@@ -604,6 +610,7 @@ hr {
   display: flex;
   flex-wrap: wrap;
   font-size: smaller;
+  column-gap: 0.5rem;
 }
 .projects-c-card:hover {
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
@@ -637,6 +644,7 @@ hr {
   max-width: 40em;
   margin-left: auto;
   margin-right: auto;
+  text-wrap: balance;
 }
 .blog-c-toc__h1 {
   list-style-type: "🍚 " !important;
@@ -711,7 +719,6 @@ hr {
 @media (min-width: 576px) {
   .blogs-c-btn__read-more {
     justify-content: flex-end;
-    padding-right: 1.5rem;
   }
 }
 .sl-l-wrapper {
@@ -731,7 +738,6 @@ hr {
 .sl-l-container main {
   padding-left: 5%;
   padding-right: 5%;
-  margin-top: 50px;
 }
 
 @media screen and (min-width: 1200px) {

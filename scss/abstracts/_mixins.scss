@@ -57,6 +57,7 @@
   &__tools {
     @include flex-wrap;
     font-size: smaller;
+    column-gap: 0.5rem;
   }
 }
 

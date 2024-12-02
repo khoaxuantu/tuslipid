@@ -18,11 +18,6 @@ export const getSkillInfo = async (): Promise<SkillProps[]> => {
       icon: svgs["AWS-Dark"],
     },
     {
-      name: "Bootstrap",
-      url: "https://getbootstrap.com/",
-      icon: svgs.Bootstrap,
-    },
-    {
       name: "C",
       url: "https://cppreference.com/",
       icon: svgs.C,
@@ -98,11 +93,6 @@ export const getSkillInfo = async (): Promise<SkillProps[]> => {
       icon: svgs.Sass,
     },
     {
-      name: "SQLite",
-      url: "https://sqlite.org/",
-      icon: svgs.SQLite,
-    },
-    {
       name: "TypeScript",
       url: "https://www.typescriptlang.org/",
       icon: svgs.TypeScript,
@@ -133,11 +123,6 @@ export const getSkillInfo = async (): Promise<SkillProps[]> => {
       icon: svgs.MongoDB,
     },
     {
-      name: "Kubernetes",
-      url: "https://kubernetes.io/",
-      icon: svgs.Kubernetes,
-    },
-    {
       name: "Vercel",
       url: "https://vercel.com/",
       icon: svgs["Vercel-Dark"],
@@ -152,6 +137,41 @@ export const getSkillInfo = async (): Promise<SkillProps[]> => {
       url: "https://nestjs.com",
       icon: svgs["NestJS-Dark"],
     },
+    {
+      name: "Firebase",
+      url: "https://firebase.google.com",
+      icon: svgs["Firebase-Dark"],
+    },
+    {
+      name: "Vim",
+      url: "https://www.vim.org",
+      icon: svgs["VIM-Light"],
+    },
+    {
+      name: "VSCode",
+      url: "https://code.visualstudio.com",
+      icon: svgs["VSCode-Light"],
+    },
+    {
+      name: "Vue",
+      url: "https://vuejs.org",
+      icon: svgs["VueJS-Dark"],
+    },
+    {
+      name: "Material 3",
+      url: "https://m3.material.io",
+      icon: svgs.material3,
+    },
+    {
+      name: "Nue",
+      url: "https://nuejs.org",
+      icon: svgs.nue,
+    },
+    {
+      name: "Chakra UI",
+      url: "https://www.chakra-ui.com/",
+      icon: svgs["chakra-ui"],
+    }
   ];
 };
 
@@ -161,7 +181,7 @@ export const getProjInfo = async (): Promise<{
   const imgs = await getImgs();
   return {
     "algo-visual": {
-      id: "0",
+      id: 8,
       content_section: "Projects",
       title: "Algorithm Visualizer",
       description: [
@@ -174,7 +194,7 @@ export const getProjInfo = async (): Promise<{
       imageURL: imgs.Algovisual,
     },
     "finance-rep": {
-      id: 5,
+      id: 9,
       content_section: "Projects",
       title: "CS50 Finance Replication",
       description: [
@@ -189,7 +209,7 @@ export const getProjInfo = async (): Promise<{
       imageURL: imgs.Financerep,
     },
     "e-commerce-auction": {
-      id: 6,
+      id: 11,
       content_section: "Projects",
       title: "E-commerce Auction",
       description: [
@@ -203,7 +223,7 @@ export const getProjInfo = async (): Promise<{
       imageURL: imgs.Auction,
     },
     "knapsack-solvers-analysis": {
-      id: 7,
+      id: 10,
       content_section: "Projects",
       title: "Knapsack Solvers Analysis",
       description: [
@@ -216,7 +236,7 @@ export const getProjInfo = async (): Promise<{
       imageURL: imgs.Knapsack,
     },
     "email-spa": {
-      id: 8,
+      id: 12,
       content_section: "Projects",
       title: "Email Single Page Application",
       description: [
@@ -228,7 +248,7 @@ export const getProjInfo = async (): Promise<{
       imageURL: imgs.MailSPA,
     },
     "wiki-encyclopedia": {
-      id: 9,
+      id: 13,
       content_section: "Projects",
       title: "Wiki Encyclopedia",
       description: [
@@ -240,7 +260,7 @@ export const getProjInfo = async (): Promise<{
       imageURL: imgs.Wiki,
     },
     "calendar-on-terminal": {
-      id: 10,
+      id: 14,
       content_section: "Projects",
       title: "Calendar on Terminal",
       description: [
@@ -252,7 +272,7 @@ export const getProjInfo = async (): Promise<{
       imageURL: imgs.Calendar,
     },
     "techman-proj": {
-      id: 11,
+      id: 15,
       content_section: "Projects",
       title: "Lottery Draw Robotic Application",
       description: [
@@ -266,7 +286,7 @@ export const getProjInfo = async (): Promise<{
       imageURL: imgs.Tm,
     },
     "gripper-sketch": {
-      id: 12,
+      id: 16,
       content_section: "Projects",
       title: "Gripper Base System Sketch",
       description: [
@@ -277,7 +297,7 @@ export const getProjInfo = async (): Promise<{
       imageURL: imgs.AutoCAD,
     },
     "fontscale-sass": {
-      id: 4,
+      id: 7,
       content_section: "Projects",
       title: "Font Scale Sass",
       description: [
@@ -291,7 +311,7 @@ export const getProjInfo = async (): Promise<{
       demoURL: "https://www.npmjs.com/package/fontscale-sass",
     },
     "random-meme-picker": {
-      id: 3,
+      id: 6,
       content_section: "Projects",
       title: "Random Meme Picker",
       description: [
@@ -304,13 +324,13 @@ export const getProjInfo = async (): Promise<{
       imageURL: imgs.RandomMeme,
     },
     "hello-algo": {
-      id: 1,
+      id: 4,
       content_section: "Projects",
       title: "Hello Algo",
       description: [
         `An open-source data structures and algorithms crash course with animated illustrations and
           off-the-shelf code. I take responsibility for Ruby sample codes contributing and
-          reviewing.`
+          reviewing.`,
       ],
       tools: ["Ruby"],
       demoURL: "https://www.hello-algo.com/",
@@ -318,17 +338,63 @@ export const getProjInfo = async (): Promise<{
       imageURL: imgs.HelloAlgo,
     },
     "comprehensive-rust": {
-      id: 2,
+      id: 5,
       content_section: "Projects",
       title: "Comprehensive Rust",
       description: [
         `A Vietnamese translator of "Comprehensive Rust" - an open-source free Rust course developed
-        by the Android team at Google.`
+        by the Android team at Google.`,
       ],
       tools: ["mdBook"],
       demoURL: "https://google.github.io/comprehensive-rust/",
       githubURL: "https://github.com/google/comprehensive-rust",
       imageURL: imgs.GoogleOpenSource,
-    }
+    },
+    "my-notes": {
+      id: 0,
+      content_section: "Projects",
+      title: "My Notes",
+      description: [`I built a website that exhibits only the knowledge I believe to be useful.`],
+      tools: ["Nue", "HTML", "CSS", "JavaScript", "Firebase Hosting"],
+      demoURL: "https://notes.xuankhoatu.com",
+      githubURL: "https://github.com/khoaxuantu/tusss-note",
+      imageURL: imgs.MyNotes,
+    },
+    pixtastock: {
+      id: 2,
+      content_section: "Projects",
+      title: "PixtaStock",
+      description: [
+        `I worked as a maintainer and developer for this site's item flow (from when an user uploads
+        a media item to the platform until that item is published for selling).`,
+      ],
+      tools: ["Ruby on Rails", "NodeJS", "React", "MySQL", "AWS"],
+      demoURL: "https://pixtastock.com",
+      imageURL: imgs.PixtaStock,
+    },
+    potonow: {
+      id: 1,
+      content_section: "Projects",
+      title: "Potonow",
+      description: [
+        `I worked as a core engineer building this site. This is a Vietnamese platform for fast,
+        convenient, and budget-friendly photoshoot bookings.`,
+      ],
+      tools: ["NestJS", "Next.js", "ChakraUI", "MongoDB", "AWS", "Firebase", "Terraform"],
+      demoURL: "https://potonow.vn",
+      imageURL: imgs.Potonow,
+    },
+    "devfest-2024-landing": {
+      id: 3,
+      content_section: "Projects",
+      title: "DevFest Hanoi 2024 Landing",
+      description: [
+        `A landing page for the DevFest Hanoi 2024 event. I constructed the majority of this site's
+        frontend.`,
+      ],
+      tools: ["Vue", "CSS", "Firebase Realtime Database"],
+      demoURL: "https://devfest.gdghanoi.com",
+      imageURL: imgs.DevFest2024,
+    },
   };
 };

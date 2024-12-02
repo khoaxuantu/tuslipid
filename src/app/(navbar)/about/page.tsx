@@ -6,6 +6,7 @@ import { AboutProject } from "@/components/projects/projects";
 import Copyright from "@/components/copyright";
 import GetInTouch from "@/components/about/get_in_touch";
 import { Metadata } from "next";
+import { Skills } from "@/components/about/skills";
 
 const aboutDescription = `Here comes my profile - from a mechanical engineering student to \
 a computer science student then a full-stack developer`;
@@ -38,8 +39,9 @@ export default function AboutPage() {
         <AboutHeaderGrp />
         <main>
           <AboutIntro />
-          <Education />
           <Works />
+          <Education />
+          <Skills />
           <AboutProject />
           <GetInTouch />
         </main>

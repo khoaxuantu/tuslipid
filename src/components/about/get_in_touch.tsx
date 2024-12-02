@@ -3,10 +3,10 @@ import Link from "next/link";
 export default function GetInTouch() {
   return (
     <section className="mb-5 row">
-      <h2 className="col-4 pt-2 pb-2">
+      <h2 className="col-4 pb-2">
         Get in touch
       </h2>
-      <div className="col-8 pt-2">
+      <div className="col-8">
         <p>
           I am primarily active in Linkedin, Discord, Github, Gmail, and Facebook, but I also have other connections in
           Reddit, DEV Community, or CodePen.

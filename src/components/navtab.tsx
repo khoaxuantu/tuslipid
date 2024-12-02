@@ -22,8 +22,8 @@ function TabList() {
   }
 
   return (
-    <div className="pt-2 pb-2 row col-8">
-      <div className="menu-c-tab__list col-3">
+    <div className="pb-2 row col-8">
+      <div className="about-c-tab__list col-3 mb-3">
         {WORK_INFO_LIST.map((tabProps, index) => {
           let id = index.toString();
           let isCurrent = id === curId ? " is-current" : "";
@@ -31,14 +31,14 @@ function TabList() {
             <TabSelector
               id={"tabselector_" + id}
               key={id}
-              className={"menu-c-tab__vertical p-2" + isCurrent}
+              className={"about-c-tab__vertical p-2" + isCurrent}
               tabHandler={() => tabHandler(id)}
               {...tabProps}
             />
           );
         })}
       </div>
-      <div className="menu-c-tab__content col-9">
+      <div className="about-c-tab__content col-9">
         {WORK_INFO_LIST.map((tabProps, index) => {
           let id = index.toString();
           let isCurrent = id === curId ? "is-current " : "";

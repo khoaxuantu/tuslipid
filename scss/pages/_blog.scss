@@ -4,6 +4,7 @@
     &-c {
         &-toc {
             @include content-wrapper($maxWidth: 40em);
+            text-wrap: balance;
 
             &__h1 {
                 list-style-type: '🍚 ' !important;
