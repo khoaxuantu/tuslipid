@@ -171,7 +171,7 @@ export const getSkillInfo = async (): Promise<SkillProps[]> => {
       name: "Chakra UI",
       url: "https://www.chakra-ui.com/",
       icon: svgs["chakra-ui"],
-    }
+    },
   ];
 };
 

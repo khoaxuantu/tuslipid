@@ -9,20 +9,25 @@ export async function AboutProject() {
 
   return (
     <section className="mb-5 row">
-      <div className="col-4 pe-5 pb-3">
-        <h2>
-          About my contributions
-        </h2>
+      <aside className="col-4 pe-5 pb-3">
+        <h2>About my contributions</h2>
         <blockquote>
-          Here are only my featured projects. Let's navigate to my full list here{" "}
-          <span>
-            ---{"> "}
-            <Link href="/projects">
-              <span>All Projects</span>
-            </Link>
-          </span>
+          <i>
+            I have done quite many interesting works. Here I want to show you some of my featured
+            projects.
+            <br />
+            <br />
+            To learn more about my other works, let's go there
+            <br />
+            <span>
+              ---{"> "}
+              <Link href="/projects">
+                <span>All Projects</span>
+              </Link>
+            </span>
+          </i>
         </blockquote>
-      </div>
+      </aside>
       <div className="about-l-wrapper__proj col-8">
         {featuredProj.map((proj) => {
           return <Card key={proj.id} isFeatured={true} {...proj} />;

@@ -8,11 +8,13 @@ export function Skills() {
           About my <span>coding biases</span>
         </h2>
         <blockquote>
-          <span>I love learning and trying new things...</span>
-          <span>
-            And I want to share to you <span>my favorite</span>, <span>or familiar</span>,{" "}
-            <span>or confident</span> tools.
-          </span>
+          <i>
+            <span>I love learning and trying new things...</span>
+            <span>
+              And I want to share to you <span>my favorite,</span> <span>or familiar,</span>{" "}
+              <span>or confident</span> tools.
+            </span>
+          </i>
         </blockquote>
       </aside>
       <SkillBtnGroup />

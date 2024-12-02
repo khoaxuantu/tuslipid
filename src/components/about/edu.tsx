@@ -5,9 +5,19 @@ async function Education() {
 
   return (
     <section className="mb-5 row">
-      <h2 className="col-4 pt-2 pb-3">About my educations</h2>
+      <aside className="col-4 pb-3">
+        <h2>About my educations</h2>
+        <blockquote>
+          <i>
+            Mathematics<br />
+            -{">"} History<br />
+            -{">"} Mechanical Engineering<br />
+            -{">"} Computer Science
+          </i>
+        </blockquote>
+      </aside>
       <div className="col-8">
-        <div className="pt-2 pb-2 d-flex">
+        <div className="d-flex">
           <div className="about-l-wrapper__edu-content pe-3">
             <h5>
               <span>National Taiwan University</span>{" "}
@@ -37,10 +47,10 @@ async function Education() {
             </div>
           </div>
           <div className="about-c-img__edu">
-            <img src={eduImgs.TaiwanTech} alt="" width={64} />
+            <img src={eduImgs.TaiwanTech} alt="NTUST logo" width={64} />
           </div>
         </div>
-        <div className="mt-3 pt-2 pb-2 d-flex">
+        <div className="mt-4 d-flex">
           <div className="about-l-wrapper__edu-content pe-3">
             <h5>
               <span>Hanoi - Amsterdam</span> <span>High School</span>{" "}
@@ -52,7 +62,7 @@ async function Education() {
             </div>
           </div>
           <div className="about-c-img__edu">
-            <img src={eduImgs.HanoiAms} alt="" width={64} />
+            <img src={eduImgs.HanoiAms} alt="Hanoi-Ams high school logo" width={64} />
           </div>
         </div>
       </div>

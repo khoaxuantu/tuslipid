@@ -3,6 +3,16 @@
 .about {
   &-l {
     &-wrapper {
+      main {
+        section {
+          aside {
+            blockquote {
+              text-wrap: balance;
+            }
+          }
+        }
+      }
+
       &__proj {
         display: flex;
         flex-direction: column;

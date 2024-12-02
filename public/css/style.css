@@ -429,6 +429,9 @@ hr {
 }
 
 /* Pages */
+.about-l-wrapper main section aside blockquote {
+  text-wrap: balance;
+}
 .about-l-wrapper__proj {
   display: flex;
   flex-direction: column;

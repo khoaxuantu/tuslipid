@@ -28,6 +28,7 @@ export default function ThemeButton(props: ThemeButtonProps) {
       onClick={switchThemeHandler}
       {...props}
       className={`sl-c-btn__theme ${props.className ?? ""}`}
+      aria-label="theme-button"
     >
       {theme == "light" ? <SunIcon width={24} /> : <MoonIcon width={24} />}
     </button>
