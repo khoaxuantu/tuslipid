@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 import React from "react";
 import ThemeProvider from "@/lib/provider/theme.provider";
 
@@ -76,6 +77,7 @@ export default function RootLayout({
           {children}
         </ThemeProvider>
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
