@@ -27,7 +27,7 @@ export function SocialMediaBtnGroup() {
 
 export function NavBtnGroup() {
   return (
-    <main className="mb-3 sl-c-btn__group menu-l-grp__nav-btn">
+    <main className="mt-3 mb-3 sl-c-btn__group menu-l-grp__nav-btn">
       {NAV_BTN_INFO_LIST.map((btnProp) => {
         return (
           <Button

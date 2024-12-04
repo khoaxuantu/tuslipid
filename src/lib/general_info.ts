@@ -21,6 +21,13 @@ export interface RoutingProps {
   content: string;
 }
 
+interface ActivityProps {
+  title: string;
+  time: string;
+  position: string;
+  location: string;
+}
+
 export const SOCIAL_MEDIA_INFO_LIST: SocialMediaProps[] = [
   {
     id: "mail",
@@ -159,6 +166,27 @@ at the 2020 Taipei Industrial Automation Exhibition.`,
   },
 ];
 
+export const ACTIVITY_INFO_LIST: ActivityProps[] = [
+  {
+    title: "GDG DevFest Hanoi 2024",
+    time: "11/2024",
+    position: "Technical Core Team Extended",
+    location: "Hanoi",
+  },
+  {
+    title: "Google I/O Extended Hanoi 2024",
+    time: "07/2024",
+    position: "Technical Collaborator",
+    location: "Hanoi"
+  },
+  {
+    title: "NTUST-VSA Vietnam Culture Festival",
+    time: "05/2019",
+    position: "Onsite Technical Collaborator",
+    location: "Taipei",
+  }
+];
+
 export const BLOG_INFO_DICT: { [id: string]: IBlogCardProps } = {
   great_ytb_channels_1: {
     content_section: "Blogs",
@@ -191,30 +219,6 @@ I have watched that you may find interesting. Here is part 2 of my list...`,
     file: "markdown_starter.md",
     tags: ["casual"],
     date: new Date("Thu Mar 23 2023 23:10:33 GMT+0700"),
-  },
-  uncommon_javascript_notes: {
-    content_section: "Blogs",
-    id: "uncommon-javascript-notes",
-    title: "Uncommon JavaScript Notes - The Language",
-    brief_description: `JavaScript is super complicated, like a pain in your ass. \
-Even when you are quite familiar with programming languages logics and concepts, \
-you still find it difficult to cover major aspects in JS.`,
-    url: "/uncommon_javascript_notes",
-    file: "uncommon_javascript_notes.md",
-    tags: ["javascript", "code"],
-    date: new Date("Fri Jun 16 2023 23:02:26 GMT+0700"),
-  },
-  uncommon_javascript_notes_1: {
-    content_section: "Blogs",
-    id: "uncommon-javascript-notes-1",
-    title: "Uncommon JavaScript Notes - Browser: Document, Events, Interfaces",
-    brief_description: `One thing that make JavaScript weird to learn is \
-how it interacts with the browser DOM, how to control the events, the forms, \
-and how the resource is loaded.`,
-    url: "/uncommon_javascript_notes_1",
-    file: "uncommon_javascript_notes_1.md",
-    tags: ["javascript", "code"],
-    date: new Date("Sun Sep 03 2023 11:13:44 GMT+0700"),
   },
   learn_from_react_bun_boilerplate: {
     content_section: "Blogs",
@@ -268,14 +272,6 @@ export const BLOG_INFO_LIST: { dictKey: string; date: string }[] = [
   { dictKey: "great_ytb_channels_1", date: "Apr 26 2023 22:35:23 GMT+0800" },
   { dictKey: "great_ytb_channels_2", date: "Apr 27 2023 13:30:59 GMT+0800" },
   { dictKey: "markdown_starter", date: "Thu Mar 23 2023 23:10:33 GMT+0700" },
-  {
-    dictKey: "uncommon_javascript_notes",
-    date: "Fri Jun 16 2023 23:02:26 GMT+0700",
-  },
-  {
-    dictKey: "uncommon_javascript_notes_1",
-    date: "Sun Sep 03 2023 11:13:44 GMT+0700",
-  },
   {
     dictKey: "learn_from_react_bun_boilerplate",
     date: "Sun Oct 22 2023 19:43:00 GMT+0700",
