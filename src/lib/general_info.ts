@@ -21,6 +21,13 @@ export interface RoutingProps {
   content: string;
 }
 
+interface ActivityProps {
+  title: string;
+  time: string;
+  position: string;
+  location: string;
+}
+
 export const SOCIAL_MEDIA_INFO_LIST: SocialMediaProps[] = [
   {
     id: "mail",
@@ -157,6 +164,27 @@ at the 2020 Taipei Industrial Automation Exhibition.`,
       ],
     },
   },
+];
+
+export const ACTIVITY_INFO_LIST: ActivityProps[] = [
+  {
+    title: "GDG DevFest Hanoi 2024",
+    time: "11/2024",
+    position: "Technical Core Team Extended",
+    location: "Hanoi",
+  },
+  {
+    title: "Google I/O Extended Hanoi 2024",
+    time: "07/2024",
+    position: "Technical Collaborator",
+    location: "Hanoi"
+  },
+  {
+    title: "NTUST-VSA Vietnam Culture Festival",
+    time: "05/2019",
+    position: "Onsite Technical Collaborator",
+    location: "Taipei",
+  }
 ];
 
 export const BLOG_INFO_DICT: { [id: string]: IBlogCardProps } = {

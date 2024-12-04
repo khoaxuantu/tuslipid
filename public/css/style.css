@@ -519,6 +519,13 @@ hr {
 .about-c-tab__content .content {
   display: none;
 }
+.about-c-activities li:not(:first-child) {
+  padding: 1rem 0;
+  border-top: 1px solid var(--md-sys-color-outline-variant);
+}
+.about-c-activities li {
+  padding-bottom: 1rem;
+}
 
 @media (min-width: 321px) {
   .about-c-btn__skill {
