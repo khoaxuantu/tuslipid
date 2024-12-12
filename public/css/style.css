@@ -717,13 +717,13 @@ hr {
   }
 }
 .blogs-c-btn__tag, .blogs-c-btn__read-more a {
-  background-color: var(--md-sys-color-secondary);
-  color: var(--md-sys-color-on-secondary);
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
   transition: all 300ms ease-in-out;
 }
 .blogs-c-btn__tag:hover, .blogs-c-btn__read-more a:hover {
-  background-color: var(--md-sys-color-primary);
-  color: var(--md-sys-color-on-primary);
+  background-color: var(--md-sys-color-secondary);
+  color: var(--md-sys-color-on-secondary);
   text-decoration: none;
 }
 
@@ -753,8 +753,8 @@ hr {
   padding: 0.25rem 1rem;
 }
 .blogs-c-btn__tag-active {
-  background-color: var(--md-sys-color-primary);
-  color: var(--md-sys-color-on-primary);
+  background-color: var(--md-sys-color-secondary);
+  color: var(--md-sys-color-on-secondary);
 }
 .blogs-c-card {
   border-radius: 15px;

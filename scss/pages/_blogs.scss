@@ -1,13 +1,13 @@
 @use "../abstracts" as *;
 
 %common_blogs_button {
-  @include set-component-color(var(--md-sys-color-secondary), var(--md-sys-color-on-secondary));
+  @include set-component-color(var(--md-sys-color-primary), var(--md-sys-color-on-primary));
   transition: all 300ms ease-in-out;
 
   &:hover {
     @include set-component-color(
-      var(--md-sys-color-primary),
-      var(--md-sys-color-on-primary)
+      var(--md-sys-color-secondary),
+      var(--md-sys-color-on-secondary)
     );
     text-decoration: none;
   }
@@ -52,7 +52,10 @@
 
         &-active {
           @extend %common_tag_button;
-          @include set-component-color;
+          @include set-component-color(
+            var(--md-sys-color-secondary),
+            var(--md-sys-color-on-secondary)
+          );
         }
       }
     }
