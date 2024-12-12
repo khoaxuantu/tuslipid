@@ -3,11 +3,11 @@
   margin: revert;
   list-style-type: revert;
 }
-.blog-l-wrapper h1 {
+.blog-l-wrapper h2 {
   padding-top: 3rem;
-  text-decoration: underline;
 }
-.blog-l-wrapper code, .blog-l-wrapper pre {
+.blog-l-wrapper code,
+.blog-l-wrapper pre {
   background-color: #282c34;
   color: #abb2bf;
   border-radius: 5px;
@@ -40,19 +40,23 @@
 }
 .blog-l-wrapper table {
   padding: 1rem 0;
+  overflow: auto;
+  display: block;
 }
-.blog-l-wrapper th, .blog-l-wrapper td {
+.blog-l-wrapper th,
+.blog-l-wrapper td {
   padding: 6px 13px;
   border: 1px solid var(--md-sys-color-outline);
 }
 .blog-l-wrapper hr {
   background: var(--md-sys-color-outline);
 }
-.blog-l-wrapper ul, .blog-l-wrapper ol {
+.blog-l-wrapper ul,
+.blog-l-wrapper ol {
   padding-left: 20px;
 }
 .blog-l-wrapper img {
-  cursor: pointer;
+  cursor: zoom-in;
   transition: all 200ms;
 }
 

@@ -1,9 +1,9 @@
-# Introduction
+## Introduction
 > I watch youtube a lot!
 
 Follow up on what I left in [part 1](/blogs/great_ytb_channels_1). In this part, I will show you the list of Youtube channels with other exciting content.
 
-# General Sciences and Knowledge
+## General Sciences and Knowledge
 - [Brian Douglas](https://www.youtube.com/@ControlLectures) | Thank you for helping me pass the Automation Control course :3
 - [CGP Grey](https://www.youtube.com/@CGPGrey)
 - [Doctor Mike](https://www.youtube.com/@DoctorMike)
@@ -25,7 +25,7 @@ Follow up on what I left in [part 1](/blogs/great_ytb_channels_1). In this part,
 - [Vanity Fair](https://www.youtube.com/@VanityFair)
 - [WIRED](https://www.youtube.com/@WIRED)
 
-# Music
+## Music
 - [Brian Tyler](https://www.youtube.com/@BrianTylerComposer)
 - [Davie504](https://www.youtube.com/@Davie504)
 - [Imperial Orchestra](https://www.youtube.com/@imperialorchestra)
@@ -37,7 +37,7 @@ Follow up on what I left in [part 1](/blogs/great_ytb_channels_1). In this part,
 - [TwoSetViolin](https://www.youtube.com/@twosetviolin)
 - [碰碰彭碰彭Jingxuan](https://www.youtube.com/@jingxuanGuzheng)
 
-# Food
+## Food
 - [Alaa Starves](https://www.youtube.com/@AlaaStarves)
 - [Alvin Zhou](https://www.youtube.com/@AlvinKZhou)
 - [Best Ever Food Review Show](https://www.youtube.com/@BestEverFoodReviewShow)
@@ -71,7 +71,7 @@ Follow up on what I left in [part 1](/blogs/great_ytb_channels_1). In this part,
 - [美食作家王刚](https://www.youtube.com/channel/UCg0m_Ah8P_MQbnn77-vYnYw) | Chef Wang ~
 - [うどんそば 兵庫 京都 Udonsoba](https://www.youtube.com/@Udonsobahyogokyoto)
 
-# Memes and Comedies
+## Memes and Comedies
 - [Comedy Bites](https://www.youtube.com/@ComedyBites)
 - [Jimmy Kimmel Live](https://www.youtube.com/@JimmyKimmelLive)
 - [Gordon Ramsay](https://www.youtube.com/@gordonramsay)
@@ -87,7 +87,7 @@ Follow up on what I left in [part 1](/blogs/great_ytb_channels_1). In this part,
 - [The Tonight Show Starring Jimmy Fallon](https://www.youtube.com/@fallontonight)
 - [The Late Late Show With James Corden](https://www.youtube.com/@TheLateLateShow)
 
-# Only for Vietnamese... :)
+## Only for Vietnamese... :)
 - [1977 Vlog](https://www.youtube.com/@1977Vlog)
 - [aNcari Room](https://www.youtube.com/@aNcariRoom)
 - [Desmond Vũ](https://www.youtube.com/@desmondvu1)

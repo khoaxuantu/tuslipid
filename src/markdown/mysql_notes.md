@@ -1,14 +1,14 @@
-# Introduction
+## Introduction
 
 > I did a MySQL challenge, but I forgot almost the everything after that, so
 > I left these notes here for further references.
 
-# Acknowledgement
+## Acknowledgement
 
 A big shout out to [Eric Le](https://www.linkedin.com/in/ericthedata/) for providing a great MySQL
 challenge to me 🥳.
 
-# What Is MySQL?
+## What Is MySQL?
 
 > You think I'm going to explain its definition right here? Just do your Google search, bruh.
 
@@ -47,7 +47,7 @@ system failure.
 >
 > Simply put, they are just too essential for a typical RDBMS ~ Now back to MySQL.
 
-# What Do You Need?
+## What Do You Need?
 
 - [Download](https://www.mysql.com/downloads/) MySQL.
 
@@ -59,7 +59,7 @@ system failure.
 - [DataGrip](https://www.jetbrains.com/datagrip/features/mysql.html)
 - [phpMyAdmin](https://www.phpmyadmin.net/)
 
-# Connect To The Database
+## Connect To The Database
 
 Commonly use command:
 
@@ -91,7 +91,7 @@ Describe a table:
 DESCRIBE a_table;
 ```
 
-# Create A New User And Grant Permissions
+## Create A New User And Grant Permissions
 
 ```sql
 CREATE USER 'username'@'host' IDENTIFIED BY 'password';
@@ -117,7 +117,7 @@ Delete user?
 DROP USER 'username'@'host';
 ```
 
-# Querying Overview
+## Querying Overview
 
 #### SELECT
 
@@ -178,7 +178,7 @@ ORDER BY <column1>, <column2>, ...
 [6] ORDER BY <column1>, <column2>, ...
 ```
 
-# Select Statement
+## Select Statement
 
 You can specify the columns of a table to return:
 
@@ -198,7 +198,7 @@ SELECT *
   FROM users;
 ```
 
-# Where Clause
+## Where Clause
 
 You retrieve records from a table by defining filtering conditions for specific columns of that
 table in a query.
@@ -263,9 +263,9 @@ SELECT *
 
 > More in MySQL's [logical operators reference](https://dev.mysql.com/doc/refman/8.0/en/logical-operators.html).
 
-# Organizing Query Result
+## Organizing Query Result
 
-## Order by clause
+### Order by clause
 
 - **ASC**: Ascending, from low to high, alphabetical order.
 - **DESC**: Descending, from high to low, reverse alphabetical order.
@@ -275,14 +275,14 @@ ORDER BY a_column ASC
 ORDER BY a_column ASC, b_column DESC
 ```
 
-## Limit
+### Limit
 
 ```sql
 LIMIT 10
 -- return maximum 10 records
 ```
 
-## Offset
+### Offset
 
 ```sql
 OFFSET 10
@@ -291,7 +291,7 @@ OFFSET 10
 
 > If your offset is larger than the actual number of queried records, the result is empty.
 
-## Aliasing
+### Aliasing
 
 ```sql
 -- Alias
@@ -315,11 +315,11 @@ SELECT a_table_name.a_column
 >
 > [Is table aliasing a bad practice?](https://dba.stackexchange.com/questions/5989/is-table-aliasing-a-bad-practice)<br></br> [Is it always a good practice to use aliases in sql joins or nested queries?](https://stackoverflow.com/questions/3718737/is-it-always-a-good-practice-to-use-aliases-in-sql-joins-or-nested-queries)
 
-# Data Types
+## Data Types
 
 > All MySQL's [data types reference](https://dev.mysql.com/doc/refman/8.4/en/data-types.html).
 
-## Numeric data types
+### Numeric data types
 
 - INTEGER
 - SMALLINT
@@ -334,7 +334,7 @@ SELECT a_table_name.a_column
 
 > More in MySQL's [numeric types reference](https://dev.mysql.com/doc/refman/8.4/en/numeric-types.html).
 
-## Date and time data types
+### Date and time data types
 
 - DATE
 - TIME
@@ -346,7 +346,7 @@ SELECT a_table_name.a_column
 
 > More in MySQL's [date and time types reference](https://dev.mysql.com/doc/refman/8.4/en/date-and-time-types.html).
 
-## String data types
+### String data types
 
 - CHAR
 - VARCHAR
@@ -356,7 +356,7 @@ SELECT a_table_name.a_column
 
 > More in MySQL's [string types reference](https://dev.mysql.com/doc/refman/8.4/en/string-types.html).
 
-## Boolean data type
+### Boolean data type
 
 MySQL use `TINYINT(1)` to represent `BOOLEAN` data type.
 
@@ -366,15 +366,15 @@ column_name BOOLEAN
 column_name BOOL
 ```
 
-# Conditional Expressions & Conversions
+## Conditional Expressions & Conversions
 
-## If functions
+### If functions
 
 ```sql
 SELECT IF(condition, value_if_true, value_if_false)
 ```
 
-## If statements
+### If statements
 
 ```sql
 IF condition THEN statement_list
@@ -383,7 +383,7 @@ ELSE statement_list
 END IF
 ```
 
-## Case statements
+### Case statements
 
 ```sql
 CASE case_value
@@ -402,28 +402,28 @@ WHEN search_condition THEN statement_list
 END CASE
 ```
 
-## Cast and Convert functions
+### Cast and Convert functions
 
 -> [Reference](https://dev.mysql.com/doc/refman/8.4/en/cast-functions.html)
 
-### Cast
+#### Cast
 
 ```sql
 CAST(value_need_cast AS new_data_type)
 ```
 
-### Convert
+#### Convert
 
 ```sql
 CONVERT(value_need_convert USING new_data_type)
 ```
 
-### Difference between CAST and CONVERT
+#### Difference between CAST and CONVERT
 
 - `CONVERT` can also convert the character set of data into another character set, while `CAST`
   cannot be used to change character sets.
 
-# Group By Clause
+## Group By Clause
 
 Use with aggregate functions
 
@@ -434,7 +434,7 @@ Use with aggregate functions
 GROUP BY gender;
 ```
 
-## Group By as SQL Standard
+### Group By as SQL Standard
 
 For every field that we choose to display, we have to include it in the `GROUP BY` clause as well.
 
@@ -447,7 +447,7 @@ GROUP BY gender, nationality;
 -- The query will aggregate based on the combination of gender and nationality.
 ```
 
-## Group By as MySQL
+### Group By as MySQL
 
 We can just select only one field to group, while specifying many fields to display.
 
@@ -462,7 +462,7 @@ GROUP BY gender;
 
 It works in MySQL. But in other databases such as PostgreSQL, it's just nope!
 
-## Rollup
+### Rollup
 
 Sum all values of an aggregation.
 
@@ -473,7 +473,7 @@ Sum all values of an aggregation.
 GROUP BY department_id WITH ROLLUP;
 ```
 
-# Having Clause
+## Having Clause
 
 - Used when you want to compare aggregated values.
 
@@ -485,9 +485,9 @@ GROUP BY gender, nationality
   HAVING AVG(age) > 18;
 ```
 
-# Join Tables
+## Join Tables
 
-## Inner join
+### Inner join
 
 > Or just `JOIN`...
 
@@ -501,7 +501,7 @@ GROUP BY gender, nationality
 INNER JOIN table_2 ON table_2.name = table_1.name;
 ```
 
-## Left join
+### Left join
 
 > Or `LEFT OUTER JOIN`
 
@@ -518,7 +518,7 @@ INNER JOIN table_2 ON table_2.name = table_1.name;
 LEFT JOIN right_table ON left_table.name = right_table.name;
 ```
 
-## Right join
+### Right join
 
 > Or `RIGHT OUTER JOIN`
 
@@ -530,7 +530,7 @@ LEFT JOIN right_table ON left_table.name = right_table.name;
 RIGHT JOIN right_table ON left_table.name = right_table.name;
 ```
 
-## Cross join
+### Cross join
 
 - Does not have join condition
 - Makes a Cartesian product of rows from the joined tables. Combines each row from the first table
@@ -542,7 +542,7 @@ RIGHT JOIN right_table ON left_table.name = right_table.name;
 CROSS JOIN table_2;
 ```
 
-## Seft join
+### Seft join
 
 ```sql
 SELECT *
@@ -550,7 +550,7 @@ SELECT *
   JOIN table_a a2 ON a1.name = a2.name;
 ```
 
-## Natural join
+### Natural join
 
 - Joins based on identical columns (columns with the same name and same data type) between tables.
 
@@ -560,7 +560,7 @@ SELECT *
 NATURAL JOIN table_b;
 ```
 
-## Using keyword
+### Using keyword
 
 - For tables that have columns with the same name and same data type, we can use `USING` instead of
   `ON` when joining.
@@ -571,7 +571,7 @@ SELECT *
   JOIN table_b USING (shared_column_of_a_and_b)
 ```
 
-## Union
+### Union
 
 - Combines the results of multiple queries.
 - The columns must have similar data types.
@@ -587,7 +587,7 @@ SELECT column_a, column_b
   FROM table_b;
 ```
 
-# Subquery
+## Subquery
 
 ```sql
 SELECT *
@@ -603,9 +603,9 @@ SELECT *
 (SELECT SUM(score) FROM students) total_score;
 ```
 
-## Advanced subquery
+### Advanced subquery
 
-### Any
+#### Any
 
 - Returns a boolean value as a result.
 - Returns true if any of the subquery values meet the condition.
@@ -616,7 +616,7 @@ SELECT *
  WHERE id [operator] ANY ( ... )
 ```
 
-### All
+#### All
 
 - Returns a boolean value as a result.
 - Returns true if all of the subquery values meet the condition.
@@ -628,7 +628,7 @@ SELECT *
  WHERE id [operator] ALL ( ... )
 ```
 
-### Exists
+#### Exists
 
 - Tests the existence of any record in a query.
 
@@ -642,27 +642,27 @@ SELECT *
  );
 ```
 
-# Window Functions
+## Window Functions
 
 - Similar to an aggregate function, but does not cause rows to group into a single output row.
 - Functions are applied to each row individually, and the result displayed in a separate column of
   the input.
 
-## Over clause + Partition by
+### Over clause + Partition by
 
 ```sql
 SELECT AVG(score) OVER(PARTITION BY gender) avg_score_by_gender
   FROM students;
 ```
 
-## Row number
+### Row number
 
 ```sql
 SELECT ROW_NUMBER() OVER(PARTITION BY gender) id_by_gender
   FROM students;
 ```
 
-## Rank and Dense rank
+### Rank and Dense rank
 
 ```sql
 SELECT RANK() OVER(PARTITION BY gender ORDER BY score DESC) score_rank_by_gender
@@ -686,7 +686,7 @@ SELECT DENSE_RANK() OVER(PARTITION BY gender ORDER BY score DESC) score_rank_by_
 -- Tuss | 9     | 2
 ```
 
-## Lag
+### Lag
 
 Allows you to access data from a previous row in a result set from the current row without using
 self-join
@@ -695,7 +695,7 @@ self-join
 LAG(expression, offset, default_value) OVER(PARTITION BY column_a ORDER BY column_b)
 ```
 
-## Lead
+### Lead
 
 Allows you to access data from a next row in a result set
 
@@ -703,7 +703,7 @@ Allows you to access data from a next row in a result set
 LEAD(expression, offset, default_value) OVER(PARTITION BY column_a ORDER BY column_b)
 ```
 
-# Regular Expression
+## Regular Expression
 
 -> [Reference](https://dev.mysql.com/doc/refman/8.4/en/regexp.html)
 
@@ -716,12 +716,12 @@ LEAD(expression, offset, default_value) OVER(PARTITION BY column_a ORDER BY colu
 | REGEXP_SUBSTR()  | Return substring matching regular expression           |
 | RLIKE            | Whether string matches regular expression              |
 
-# CTE And Temporary Table
+## CTE And Temporary Table
 
 - CTE: Only exists in a query.
 - Temporary table: Only exists in a session.
 
-## CTE
+### CTE
 
 ```sql
 WITH tmp AS (
@@ -733,7 +733,7 @@ WITH tmp AS (
 SELECT * FROM tmp;
 ```
 
-## Temporary table
+### Temporary table
 
 - To create a temporary table from scratch:
 
@@ -762,9 +762,9 @@ SELECT * FROM temp_table;
 SELECT * FROM temp_table LIMIT 1;
 ```
 
-# Session variables vs local variables
+## Session variables vs local variables
 
-## Session variables
+### Session variables
 
 - Session variables are available throughout the current user session. This means they can be
   accessed from anywhere within the session, including different procedures, functions, and blocks
@@ -775,7 +775,7 @@ SELECT * FROM temp_table LIMIT 1;
   of your application during a user session.
 - Prefix as `@`. For example, `@a_session_var`.
 
-## Local variables
+### Local variables
 
 - Local variables are only available within the block of code, function, or procedure in which they
   are declared. They cannot be accessed outside of this scope.
@@ -786,7 +786,7 @@ SELECT * FROM temp_table LIMIT 1;
   function, or procedure, and you don't want that data to be accessible or interfere with other
   parts of your application.
 
-# Stored Procedure
+## Stored Procedure
 
 ```sql
 DELIMITER $$
@@ -827,9 +827,9 @@ CALL procedure_name('Tusss', 'TU', @full_name);
 DROP PROCEDURE procedure_name;
 ```
 
-# Triggers And Events
+## Triggers And Events
 
-## Triggers
+### Triggers
 
 - Triggers are a named database object that is associated with a table and automatically executes
   in response to certain events on that table.
@@ -869,7 +869,7 @@ CREATE TRIGGER a_trigger
 ...;
 ```
 
-## Events
+### Events
 
 - An event is a scheduled task that runs at a specific time or interval.
 - Events can be used to perform a variety of tasks, such as generating reports, updating data, daily
@@ -900,7 +900,7 @@ ON SCHEDULE EVERY 6 HOUR
 DELETE EVENT a_event;
 ```
 
-### Schedule options
+#### Schedule options
 
 _schedule:_
 
@@ -920,7 +920,7 @@ WEEK | SECOND | YEAR_MONTH | DAY_HOUR | DAY_MINUTE |
 DAY_SECOND | HOUR_MINUTE | HOUR_SECOND | MINUTE_SECOND
 ```
 
-# Index
+## Index
 
 > You never want a full scan table query to be performed in your production application...
 >
@@ -940,7 +940,7 @@ CREATE TABLE a_table (
 ALTER TABLE a_table ADD INDEX (column1, column2, ...)
 ```
 
-### Types of index
+#### Types of index
 
 - Unique
 - Primary key
@@ -949,7 +949,7 @@ ALTER TABLE a_table ADD INDEX (column1, column2, ...)
 - Spatial
 - Descending (MySQL version >8)
 
-# Transaction
+## Transaction
 
 A database transaction is a single area of the database where multiple data operations are carried
 out and written as a whole.
@@ -968,7 +968,7 @@ may have occured due to the failure or an accidental misuse of an operation.
 
 > Remember [ACID properties](#acid-properties-)? This is what it's for.
 
-## Overview of MySQL transaction
+### Overview of MySQL transaction
 
 - **START TRANSACTION** or **BEGIN** start a new transaction.
 - **COMMIT** commits the current transaction, making its changes permanent.
@@ -991,7 +991,7 @@ ROLLBACK;
 
 > How to use transaction? [Read the docs](https://dev.mysql.com/doc/refman/8.4/en/sql-transactional-statements.html)
 
-## Locking and concurrency in MySQL transaction
+### Locking and concurrency in MySQL transaction
 
 **Locking** is a technique that is used to prevent race conditions. A race condition is a process where
 multiple transactions are trying to access the same data at the same time.
@@ -1013,7 +1013,7 @@ with each other's data.
 MySQL uses a multi-version concurrency control (MVCC) mechanism. This allows multiple transactions
 to read and write to the same data at the same time without conflicts.
 
-# End?
+## End?
 
 That is the end of my notes here, but it is not the end of your journey with MySQL.
 

@@ -1,4 +1,4 @@
-# Introduction
+## Introduction
 
 > I watch youtube a lot!
 
@@ -15,7 +15,7 @@ are the majority of my list.
 - Part 2 is in the next blog, which contains channels about other
 genres such as general science, entertainment, etc...
 
-# Some guys are coding...
+## Some guys are coding...
 - [A Life Engineered](https://www.youtube.com/@ALifeEngineered)
 - [Aaron Jack](https://www.youtube.com/@AaronJack)
 - [Anson the Developer](https://www.youtube.com/@ansonthedev)
@@ -61,7 +61,7 @@ genres such as general science, entertainment, etc...
 - [William Lin](https://www.youtube.com/@tmwilliamlin168)
 - [WilliamFiset](https://www.youtube.com/@WilliamFiset-videos)
 
-# Study Platforms
+## Study Platforms
 - [Algorithms Live!](https://www.youtube.com/@AlgorithmsLive)
 - [ByteByteGo](https://www.youtube.com/@ByteByteGo)
 - [Changelog](https://www.youtube.com/@Changelog)
@@ -81,7 +81,7 @@ if you learn GCP
 - [Simplilearn](https://www.youtube.com/@SimplilearnOfficial)
 
 
-# Memes
+## Memes
 - [Fireship](https://www.youtube.com/@SimplilearnOfficial)
 - [Joma Tech](https://www.youtube.com/@jomaoppa)
 - [Mr. P Solver](https://www.youtube.com/@MrPSolver)

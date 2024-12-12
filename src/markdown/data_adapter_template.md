@@ -1,4 +1,4 @@
-# Introduction
+## Introduction
 
 > I write this article based on my experience after completing one task of migrating data from MongoDB to MySQL for 5 databases in the condition of preserving more than 270 GB of data with less than 30 minutes of downtime.
 
@@ -13,7 +13,7 @@ You decide to write efficient code to fully control the transformation logic, bu
 
 This article provides you with a template to build flexible and maintainable code so that you can handle your logic completely.
 
-# Overview
+## Overview
 
 ### Specifications
 
@@ -43,7 +43,7 @@ We definitely love writing out easily maintainable and extendable codes, so let'
 
 > Let's go through these blocks step by step...
 
-# The command block
+## The command block
 
 This block is where we store the logic of process management by applying the **Command** design pattern. The idea is to wrap each data mapping process in one _command_ object in order to distinguish all the processes' execution. These _command_ objects follow the same abstract class, so when we invoke a mapping process from an index file, we just need to interact with the base class, assign the command object we want to run, and trigger the execution method.
 
@@ -165,7 +165,7 @@ Here, we assume we are writing data mapping scripts, so we create different dire
 
 The `lib/` directory should store all the abstract classes as well as the common utility functions.
 
-# The adapter block
+## The adapter block
 
 This block consists of all the logics handling data, or, the core logics. The starting signal, after reaching the **Command** block, will trigger the process method of the **Adapter** block, and start the data migration process.
 
@@ -286,7 +286,7 @@ src/
 |―― index.ts
 ```
 
-# Monitoring
+## Monitoring
 
 We apparently want to know what is going on during the migration process. That is why logging plays a significant role in monitoring the process. We may consider the following aspects to decide where to put the log:
 
@@ -295,7 +295,7 @@ We apparently want to know what is going on during the migration process. That i
 - Save any important data in the exception catch, especially when importing the data to the destination data source. It helps us identify which case raised the error and avoid losing data.
 - Customize the log output so that we can track the result easily.
 
-# In practices
+## In practices
 
 For the huge amount of data, it is better to have a break point between each progress. This way, we can avoid losing data when any progress is down. If we have to migrate the data between databases, we should dump the data and paginate it efficiently first, then perform the migration progresses.
 
@@ -305,12 +305,12 @@ For transforming the data, we may want to think about many popular existing tool
 
 Therefore, consider the existing solution wisely and choose the most suitable one for our requirements.
 
-# Conclusion
+## Conclusion
 
 We have explored how to construct managable data migration processes in code. By levaraging **Command** and **Adapter** patterns, you can establish a clear separation of concerns, promote code maintainability, and simplify the addition of new migration tasks.
 
 I hope it can help you empower the overall ideas behind data processing and be able to tackle even the most complex data scenarios with confidence.
 
-# Appendix
+## Appendix
 
 - My whole sample codes - [Github repository](https://github.com/khoaxuantu/data-adapter-template)

@@ -1,76 +1,80 @@
-@use '../abstracts/var';
-@use '../abstracts/mixins' as *;
+@use "../abstracts/var";
+@use "../abstracts/mixins" as *;
 
 $codeblock-background: #282c34;
 $codeblock-color: #abb2bf;
 $codeinline-background: #f6f8fa;
 
 %markdown-theme {
-    * {
-        margin: revert;
-        list-style-type: revert;
-    }
+  * {
+    margin: revert;
+    list-style-type: revert;
+  }
 
-    h1 {
-        padding-top: 3rem;
-        text-decoration: underline;
-    }
+  h2 {
+    padding-top: 3rem;
+  }
 
-    code, pre {
-        @include set-component-color($codeblock-background, $codeblock-color);
-        border-radius: 5px;
+  code,
+  pre {
+    @include set-component-color($codeblock-background, $codeblock-color);
+    border-radius: 5px;
+  }
+
+  code {
+    padding: 0.2em 0.4em;
+    line-break: anywhere;
+    display: inline-block;
+    line-height: 1.35;
+    font-family: var.$CODE_BLOG_FONT;
+    font-size: 13px;
+
+    span {
+      display: contents;
     }
+  }
+
+  pre {
+    overflow: auto;
+    padding: 6px 10px;
 
     code {
-        padding: 0.2em 0.4em;
-        line-break: anywhere;
-        display: inline-block;
-        line-height: 1.35;
-        font-family: var.$CODE_BLOG_FONT;
-        font-size: 13px;
-
-        span {
-            display: contents;
-        }
+      font-size: 14px;
     }
+  }
 
-    pre {
-        overflow: auto;
-        padding: 6px 10px;
+  blockquote {
+    margin: 0;
+    border-left: 5px solid var(--md-sys-color-outline-variant);
+    font-style: italic;
+    padding: 1.33em;
+    text-align: left;
+    font-weight: bold;
+  }
 
-        code {
-            font-size: 14px;
-        }
-    }
+  table {
+    padding: 1rem 0;
+    overflow: auto;
+    display: block;
+  }
 
-    blockquote {
-        margin: 0;
-        border-left: 5px solid var(--md-sys-color-outline-variant);
-        font-style: italic;
-        padding: 1.33em;
-        text-align: left;
-        font-weight: bold;
-    }
+  th,
+  td {
+    padding: 6px 13px;
+    border: 1px solid var(--md-sys-color-outline);
+  }
 
-    table {
-        padding: 1rem 0;
-    }
+  hr {
+    background: var(--md-sys-color-outline);
+  }
 
-    th, td {
-        padding: 6px 13px;
-        border: 1px solid var(--md-sys-color-outline);
-    }
+  ul,
+  ol {
+    padding-left: 20px;
+  }
 
-    hr {
-        background: var(--md-sys-color-outline);
-    }
-
-    ul, ol {
-        padding-left: 20px;
-    }
-
-    img {
-        cursor: pointer;
-        transition: all 200ms;
-    }
+  img {
+    cursor: zoom-in;
+    transition: all 200ms;
+  }
 }

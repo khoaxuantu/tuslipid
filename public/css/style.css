@@ -83,6 +83,28 @@ article h1 {
   font-size: 1.961em;
 }
 
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--md-sys-color-secondary-container);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--md-sys-color-secondary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--md-sys-color-primary);
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb {
+  border-radius: 9999px;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
   line-height: 1.7;
@@ -312,7 +334,6 @@ a:hover {
 .sl-c-copyright__page, .sl-c-copyright__menu {
   width: 100%;
   text-align: center;
-  padding: 0 0.5rem 0 0.5rem;
   font-family: "JetBrains Mono", monospace;
   display: block;
   color: var(--md-sys-color-on-surface);
@@ -660,12 +681,11 @@ hr {
   list-style-type: "🍚 " !important;
 }
 .blog-c-toc__h2 {
-  margin-left: 20px !important;
-  list-style-type: "🍙 " !important;
+  list-style-type: "🧋 " !important;
 }
 .blog-c-toc__h3 {
-  margin-left: 40px !important;
-  list-style-type: "🍣 " !important;
+  margin-left: 20px !important;
+  list-style-type: "🍯 " !important;
 }
 .blog-c-content {
   max-width: 40em;
@@ -680,6 +700,22 @@ hr {
   opacity: 1 !important;
 }
 
+@media (min-width: 768px) {
+  .blog-c-toc {
+    position: sticky;
+    top: 0;
+    max-height: 65dvh;
+  }
+  .blog-c-toc__details {
+    overflow: auto;
+    max-height: inherit;
+    direction: rtl;
+    padding-left: 0.5rem;
+  }
+  .blog-c-toc details {
+    direction: ltr;
+  }
+}
 .blogs-c-btn__tag, .blogs-c-btn__read-more a {
   background-color: var(--md-sys-color-secondary);
   color: var(--md-sys-color-on-secondary);
@@ -729,6 +765,13 @@ hr {
 @media (min-width: 576px) {
   .blogs-c-btn__read-more {
     justify-content: flex-end;
+  }
+}
+@media (min-width: 768px) {
+  .blogs aside {
+    position: sticky;
+    top: 65px;
+    max-height: 65dvh;
   }
 }
 .sl-l-wrapper {

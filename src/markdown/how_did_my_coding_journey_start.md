@@ -1,4 +1,4 @@
-# Before Knowing About Programming
+## Before Knowing About Programming
 
 > Let me tell my story first...
 
@@ -27,7 +27,7 @@ That was how my coding journey started, quite late compared with other computer 
 
 > But late is better than nothing...
 
-# When Graduation
+## When Graduation
 
 In 2022, I graduated and achieved the Bachelor of Science Degree in Mechanical Engineering, with no failed
 courses through the whole 4 years. That sounds great, but for the path opened from this degree, I
@@ -87,7 +87,7 @@ Ten months...
 Only two months left until my resident certificate expired, and still no offer. Finally, I decided not
 to take any more risks and came back to my hometown in Hanoi, seeking my first job here.
 
-# Back to Home
+## Back to Home
 
 > Why did I not go home right after graduation?
 >

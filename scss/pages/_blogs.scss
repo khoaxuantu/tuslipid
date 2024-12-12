@@ -70,3 +70,13 @@
     justify-content: flex-end;
   }
 }
+
+@media (min-width: 768px) {
+  .blogs {
+    aside {
+      position: sticky;
+      top: 65px;
+      max-height: 65dvh;
+    }
+  }
+}

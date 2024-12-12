@@ -8,6 +8,8 @@ interface TocHeading {
   level: string;
 }
 
+const TOC_TEXT = "On This Page";
+
 export function TableOfContents() {
   const [headings, setHeadings] = useState<TocHeading[]>([]);
 
@@ -29,14 +31,14 @@ export function TableOfContents() {
 
   return(
     <section className="col-4 blog-c-toc fade-in-down">
-      <h1>On This Page</h1>
+      <h2>{TOC_TEXT}</h2>
       { !headings ? <FetchingContentNoti /> : <TocList headings={headings} /> }
     </section>
   );
 }
 
 function isToc(elem: HTMLElement): boolean {
-  return elem.innerText == "Table of Contents";
+  return elem.innerText == TOC_TEXT;
 }
 
 function isTitle(elem: HTMLElement): boolean {
@@ -51,21 +53,23 @@ function FetchingContentNoti() {
 
 function TocList({ headings }: { headings: TocHeading[]}) {
   return(
-    <details open>
-      <ul>
-        {
-          headings.map(heading => {
-            return(
-              <li key={heading.id} className={formatTocListClass(heading.level)}>
-                <a href={`#${heading.id}`}>
-                  {heading.text}
-                </a>
-              </li>
-            )
-          })
-        }
-      </ul>
-    </details>
+    <div className="blog-c-toc__details">
+      <details open>
+        <ul>
+          {
+            headings.map(heading => {
+              return(
+                <li key={heading.id} className={formatTocListClass(heading.level)}>
+                  <a href={`#${heading.id}`}>
+                    {heading.text}
+                  </a>
+                </li>
+              )
+            })
+          }
+        </ul>
+      </details>
+    </div>
   );
 }
 
