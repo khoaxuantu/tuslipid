@@ -1,20 +1,20 @@
 'use client';
 
-import { BlogsList } from "./list";
-import { Tags } from "./tags";
+import { TagsContext } from "@/lib/context/tag";
 import { useReducer } from "react";
 import tagReducer from "../../lib/reducer/tag";
-import { TagsContext } from "@/lib/context/tag";
+import { BlogsList } from "./list";
+import { Tags } from "./tags";
 
 export function BlogsContent() {
   const [activeTags, dispatchActiveTags] = useReducer(tagReducer, { tags: [] });
 
   return (
-    <main className="row">
+    <main className="blogs row">
       <TagsContext.Provider value={activeTags.tags}>
-        <section className="col-4">
+        <aside className="col-4 pb-5">
           <Tags dispatchActiveTags={dispatchActiveTags} />
-        </section>
+        </aside>
         <section className="col-8 blogs-l-wrapper">
           <BlogsList key={activeTags.tags.join('_')} />
         </section>

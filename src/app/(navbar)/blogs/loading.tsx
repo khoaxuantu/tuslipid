@@ -4,12 +4,12 @@ export default function BlogsLoading() {
   return (
     <>
       <BlogsPageHeaderGrp />
-      <div
+      <main
         className="blog-l-wrapper blog-c-content"
         style={{ height: 1000 }}
       >
         <i>Fetching blogs...</i>
-      </div>
+      </main>
     </>
   );
 }

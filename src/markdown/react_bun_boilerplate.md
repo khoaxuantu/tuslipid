@@ -1,4 +1,4 @@
-# Introduction
+## Introduction
 
 > We can learn by re-creating something.
 
@@ -41,7 +41,7 @@ the Bun community (you can check them out via this
 After making my own customized boilerplate, I was surprised by discovering many new aspects of
 a React project. Below, I will share what I have learned so far.
 
-# How are the static contents served in a web
+## How are the static contents served in a web
 
 The basics come first, or more precisely said, everything is constructed upon the basics.
 Sometimes, we are just too focused on fancy stuff that we forget why there are the
@@ -164,7 +164,7 @@ directory for the app to look into, not only a root directory.
 > That's why I found the code so familiar huh...
 
 
-# How the server-side rendering delivers React components
+## How the server-side rendering delivers React components
 
 Originally, React was designed to render components as client-side rendering. Nevertheless, as the
 web requirements in performance, SEO supports, scaling, etc... were increasing, React must have
@@ -211,7 +211,7 @@ import App from "./App.tsx";
 const stream = await renderToReadableStream(<App />);
 ```
 
-# At the client-side
+## At the client-side
 
 We got the deliveries from the server as above. Now we need to have something to catch the components
 at the client. React's `createRoot()` is not a good choice because it will destroy and re-create
@@ -233,7 +233,7 @@ import App from "./App.tsx";
 hydrateRoot(document, <App />);
 ```
 
-# Inside the FileSystemRouter, refers to NextJS's routing
+## Inside the FileSystemRouter, refers to NextJS's routing
 
 Bun provides an API for resolving routes against file-system paths with NextJS-style file-system
 routing called `FileSystemRouter`.
@@ -316,7 +316,7 @@ const BUILD_DIR = path.resolve(PROJECT_ROOT, "build");
 const buildMatch = buildRouter.match(req);
 ```
 
-# Custom the console.log
+## Custom the console.log
 
 This thing is not related to React, but it is an interesting thing that I found out when re-creating
 the boilerplate.
@@ -373,7 +373,7 @@ hiConsole(3000);
 
 ![My custom console log](/images/blogs/react_bun_boilerplate/2.webp 'My custom console log')
 
-# Conclusion
+## Conclusion
 
 Just by re-creating a simple boilerplate, I can enrich my understanding of React and working with
 JavaScript environments generally. It also provided insights into the fundamental concept of frontend
@@ -386,7 +386,7 @@ Github repository [here](https://github.com/khoaxuantu/Custom-bun-react-app).
 Although it only limits React server-side rendering, it is enough to build a small project,
 such as my [Meme collection](https://meme.xuankhoatu.com/). 😆
 
-# References
+## References
 
 - [React documentations](https://react.dev)
 - [Bun documentations](https://bun.sh/docs)

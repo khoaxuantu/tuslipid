@@ -1,37 +1,60 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
-@include createTypoScale($ratio: 'golden');
+@include createTypoScale($ratio: "golden");
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--md-sys-color-secondary-container);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--md-sys-color-secondary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--md-sys-color-primary);
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb {
+  border-radius: 9999px;
+}
+
 
 body {
-    font-family: $DEFAULT_FONT;
-    line-height: 1.7;
-    background: var(--md-sys-color-surface);
-    transition: all 300ms;
+  font-family: $DEFAULT_FONT;
+  line-height: 1.7;
+  background: var(--md-sys-color-surface);
+  transition: all 300ms;
 }
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 section {
-    padding-bottom: $SECTION_GAP;
+  padding-bottom: $SECTION_GAP;
 }
 
 span {
-    display: inline-block;
+  display: inline-block;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 a {
-    text-decoration: none;
-    color: var(--md-sys-color-primary);
+  text-decoration: none;
+  color: var(--md-sys-color-primary);
 
-    &:hover {
-        text-decoration: underline;
-    }
+  &:hover {
+    text-decoration: underline;
+  }
 }
