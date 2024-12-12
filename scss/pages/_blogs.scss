@@ -1,24 +1,20 @@
 @use "../abstracts" as *;
 
 %common_blogs_button {
-  @include set-component-color(var(--md-sys-color-primary), var(--md-sys-color-on-primary));
   transition: all 300ms ease-in-out;
 
   &:hover {
-    @include set-component-color(
-      var(--md-sys-color-secondary),
-      var(--md-sys-color-on-secondary)
-    );
     text-decoration: none;
   }
 }
 
 %common_tag_button {
+  @include chip;
+
   min-width: 25%;
   margin-top: 1rem;
   margin-right: 0.5rem;
   border: none;
-  border-radius: 1rem;
   padding: 0.25rem 1rem;
   cursor: pointer;
 }
@@ -41,21 +37,35 @@
         a {
           @extend %flex-center;
           @extend %common_blogs_button;
-          @include rounded(11px);
+          @include chip;
+          @include set-component-color;
           padding: 0.25rem 1rem;
+
+          &:hover {
+            @include set-component-color(
+              var(--md-sys-color-secondary),
+              var(--md-sys-color-on-secondary)
+            );
+          }
         }
+
       }
 
       &__tag {
         @extend %common_blogs_button;
         @extend %common_tag_button;
+        @include set-component-color(
+          var(--md-sys-color-secondary),
+          var(--md-sys-color-on-secondary)
+        );
+
+        &:hover {
+          @include set-component-color;
+        }
 
         &-active {
           @extend %common_tag_button;
-          @include set-component-color(
-            var(--md-sys-color-secondary),
-            var(--md-sys-color-on-secondary)
-          );
+          @include set-component-color;
         }
       }
     }
