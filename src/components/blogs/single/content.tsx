@@ -20,10 +20,8 @@ export async function SingleBlog({ content }: SingleBlogProps) {
           mdxOptions: {
             remarkPlugins: [remarkGfm, remarkMath],
             rehypePlugins: [
-              // @ts-expect-error
               rehypeHighlight,
               rehypeSlug,
-              // @ts-expect-error
               rehypeKatex,
             ],
           },

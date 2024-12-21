@@ -1,5 +1,5 @@
 import { TagsAction } from "@/lib/reducer/tag";
-import { Dispatch, SVGProps } from "react";
+import { Dispatch, JSX, SVGProps } from "react";
 
 type variant = "default" | "icon" | "go-top" | "tag" | "theme";
 

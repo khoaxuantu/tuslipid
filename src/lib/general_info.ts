@@ -1,4 +1,4 @@
-import { SVGProps } from "react";
+import { JSX, SVGProps } from "react";
 import CodepenIcon from "./factory/icons/CodepenIcon";
 import DevToIcon from "./factory/icons/DevToIcon";
 import DiscordIcon from "./factory/icons/DiscordIcon";
@@ -177,14 +177,14 @@ export const ACTIVITY_INFO_LIST: ActivityProps[] = [
     title: "Google I/O Extended Hanoi 2024",
     time: "07/2024",
     position: "Technical Collaborator",
-    location: "Hanoi"
+    location: "Hanoi",
   },
   {
     title: "NTUST-VSA Vietnam Culture Festival",
     time: "05/2019",
     position: "Onsite Technical Collaborator",
     location: "Taipei",
-  }
+  },
 ];
 
 export const BLOG_INFO_DICT: { [id: string]: IBlogCardProps } = {
@@ -266,6 +266,16 @@ Here I want to share how I overcome it.`,
     tags: ["casual"],
     date: new Date("Fri Nov 29 2024 00:11:53 GMT+0700"),
   },
+  my_chosen_tech_stack: {
+    content_section: "Blogs",
+    id: "my_chosen_tech_stack",
+    title: "My Chosen Tech Stack",
+    brief_description: ``,
+    url: "/my-chosen-tech-stack",
+    file: "my_chosen_tech_stack.md",
+    tags: ["code"],
+    date: new Date("Fri Dec 13 2024 01:03:16 GMT+0700"),
+  },
 };
 
 export const BLOG_INFO_LIST: { dictKey: string; date: string }[] = [
@@ -279,4 +289,5 @@ export const BLOG_INFO_LIST: { dictKey: string; date: string }[] = [
   { dictKey: "data_adapter_template", date: "Fri Mar 15 2024 13:58:21 GMT+0700" },
   { dictKey: "mysql_notes", date: "Wed Jun 05 2024 20:38:49 GMT+0700" },
   { dictKey: "how_did_my_coding_journey_start", date: "Fri Nov 29 2024 00:11:53 GMT+0700" },
+  { dictKey: "my_chosen_tech_stack", date: "Fri Dec 13 2024 01:03:16 GMT+0700" },
 ];

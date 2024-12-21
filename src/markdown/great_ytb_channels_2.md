@@ -72,6 +72,7 @@ Follow up on what I left in [part 1](/blogs/great_ytb_channels_1). In this part,
 - [うどんそば 兵庫 京都 Udonsoba](https://www.youtube.com/@Udonsobahyogokyoto)
 
 ## Memes and Comedies
+- [AGC ANDY](https://www.youtube.com/@agcandytv)
 - [Comedy Bites](https://www.youtube.com/@ComedyBites)
 - [Jimmy Kimmel Live](https://www.youtube.com/@JimmyKimmelLive)
 - [Gordon Ramsay](https://www.youtube.com/@gordonramsay)
