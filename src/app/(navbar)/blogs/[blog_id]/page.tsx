@@ -5,12 +5,11 @@ import { BLOG_INFO_DICT } from "@/lib/general_info";
 import { notFound } from "next/navigation";
 
 interface DynamicParams {
-  params: {
-    blog_id: string;
-  };
+  params: Promise<{ blog_id: string }>;
 }
 
-export default function SingleBlogPage({ params }: DynamicParams) {
+export default async function SingleBlogPage(props: DynamicParams) {
+  const params = await props.params;
   const id = params.blog_id.replaceAll("-", "_");
   if (!BLOG_INFO_DICT[id]) notFound();
 

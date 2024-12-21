@@ -717,22 +717,18 @@ hr {
   }
 }
 .blogs-c-btn__tag, .blogs-c-btn__read-more a {
-  background-color: var(--md-sys-color-primary);
-  color: var(--md-sys-color-on-primary);
   transition: all 300ms ease-in-out;
 }
 .blogs-c-btn__tag:hover, .blogs-c-btn__read-more a:hover {
-  background-color: var(--md-sys-color-secondary);
-  color: var(--md-sys-color-on-secondary);
   text-decoration: none;
 }
 
 .blogs-c-btn__tag-active, .blogs-c-btn__tag {
+  border-radius: 9999px;
   min-width: 25%;
   margin-top: 1rem;
   margin-right: 0.5rem;
   border: none;
-  border-radius: 1rem;
   padding: 0.25rem 1rem;
   cursor: pointer;
 }
@@ -749,12 +745,26 @@ hr {
   height: 20%;
 }
 .blogs-c-btn__read-more a {
-  border-radius: 16px;
+  border-radius: 9999px;
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
   padding: 0.25rem 1rem;
 }
-.blogs-c-btn__tag-active {
+.blogs-c-btn__read-more a:hover {
   background-color: var(--md-sys-color-secondary);
   color: var(--md-sys-color-on-secondary);
+}
+.blogs-c-btn__tag {
+  background-color: var(--md-sys-color-secondary);
+  color: var(--md-sys-color-on-secondary);
+}
+.blogs-c-btn__tag:hover {
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+}
+.blogs-c-btn__tag-active {
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
 }
 .blogs-c-card {
   border-radius: 15px;

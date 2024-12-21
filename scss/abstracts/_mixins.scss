@@ -68,3 +68,7 @@
   background-color: $background;
   color: $child;
 }
+
+@mixin chip() {
+  border-radius: 9999px;
+}
