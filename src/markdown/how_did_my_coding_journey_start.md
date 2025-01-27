@@ -65,8 +65,8 @@ foreigners. If I can find a new job in one year, I can stay; otherwise, it's tim
 
 So besides strengthening my skills, I had to seek every opportunity as long as it is programming-related.
 
-Well, that time was also the market-downtrend time; my competitors for a new-grad position were more than
-half master's degree candidates, or junior-middle engineers who already had 1-3 years of working
+Well, that time was also the market-downtrend time; my competitors for a new-grad position more than a
+half were master's degree candidates, or junior-middle engineers who already had 1-3 years of working
 experiences... Whatever 💀 I only knew to try.
 
 One month.
@@ -104,4 +104,4 @@ Since then, my personal development has grown rapidly; I learned a new programmi
 worked with Amazon Web Service for the first time. So many interesting things came.
 
 Now, four years after I started the first line of code, I take on a main responsibility in developing
-a small product, with around 2000-user base. Can't wait to see many challenges in the future!
+a small product, with around 6000-user base. Can't wait to see many challenges in the future!

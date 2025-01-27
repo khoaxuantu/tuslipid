@@ -270,11 +270,12 @@ Here I want to share how I overcome it.`,
     content_section: "Blogs",
     id: "my_chosen_tech_stack",
     title: "My Chosen Tech Stack",
-    brief_description: ``,
+    brief_description: `Every programmer begins with a "starter pack" of tools and knowledge, but \
+the sheer breadth and depth of programming can quickly become overwhelming.`,
     url: "/my-chosen-tech-stack",
     file: "my_chosen_tech_stack.md",
     tags: ["code"],
-    date: new Date("Fri Dec 13 2024 01:03:16 GMT+0700"),
+    date: new Date("Fri Jan 28 2025 01:03:16 GMT+0700"),
   },
 };
 
@@ -289,5 +290,5 @@ export const BLOG_INFO_LIST: { dictKey: string; date: string }[] = [
   { dictKey: "data_adapter_template", date: "Fri Mar 15 2024 13:58:21 GMT+0700" },
   { dictKey: "mysql_notes", date: "Wed Jun 05 2024 20:38:49 GMT+0700" },
   { dictKey: "how_did_my_coding_journey_start", date: "Fri Nov 29 2024 00:11:53 GMT+0700" },
-  { dictKey: "my_chosen_tech_stack", date: "Fri Dec 13 2024 01:03:16 GMT+0700" },
+  { dictKey: "my_chosen_tech_stack", date: "Fri Jan 28 2025 01:03:16 GMT+0700" },
 ];

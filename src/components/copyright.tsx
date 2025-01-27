@@ -1,3 +1,5 @@
+"use client";
+
 import GithubIcon from "@/lib/factory/icons/GithubIcon";
 
 function Copyright(props: { className?: string }) {
