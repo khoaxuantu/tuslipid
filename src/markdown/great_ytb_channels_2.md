@@ -72,6 +72,7 @@ Follow up on what I left in [part 1](/blogs/great_ytb_channels_1). In this part,
 - [うどんそば 兵庫 京都 Udonsoba](https://www.youtube.com/@Udonsobahyogokyoto)
 
 ## Memes and Comedies
+- [AGC ANDY](https://www.youtube.com/@agcandytv)
 - [Comedy Bites](https://www.youtube.com/@ComedyBites)
 - [Jimmy Kimmel Live](https://www.youtube.com/@JimmyKimmelLive)
 - [Gordon Ramsay](https://www.youtube.com/@gordonramsay)
@@ -91,7 +92,7 @@ Follow up on what I left in [part 1](/blogs/great_ytb_channels_1). In this part,
 - [1977 Vlog](https://www.youtube.com/@1977Vlog)
 - [aNcari Room](https://www.youtube.com/@aNcariRoom)
 - [Desmond Vũ](https://www.youtube.com/@desmondvu1)
-- [Khánh Vy OFFICIAL](https://www.youtube.com/@KhanhVyOFFICIAL)
+- [Khánh Vy OFFICIAL](https://youtube.com/channel/UCwe0_8ud1vpKbWUHnkagorw?si=RMP7-sDFUxsLEZnQ)
 - [Meichan](https://www.youtube.com/@meichan)
 - [MixiGaming](https://www.youtube.com/@MixiGaming89)
 - [Monsieur Tuna](https://www.youtube.com/@TunaGamingvn)
