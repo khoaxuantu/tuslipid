@@ -324,7 +324,7 @@ export const getProjInfo = async (): Promise<{
       imageURL: imgs.RandomMeme,
     },
     "hello-algo": {
-      id: 4,
+      id: 3,
       content_section: "Projects",
       title: "Hello Algo",
       description: [
@@ -354,7 +354,10 @@ export const getProjInfo = async (): Promise<{
       id: 0,
       content_section: "Projects",
       title: "My Notes",
-      description: [`I built a website that exhibits only the knowledge I believe to be useful.`],
+      description: [
+        `I built a content-focused website that exhibits only the knowledge I believe to be
+        useful.`,
+      ],
       tools: ["Nue", "HTML", "CSS", "JavaScript", "Firebase Hosting"],
       demoURL: "https://notes.xuankhoatu.com",
       githubURL: "https://github.com/khoaxuantu/tusss-note",
@@ -385,7 +388,7 @@ export const getProjInfo = async (): Promise<{
       imageURL: imgs.Potonow,
     },
     "devfest-2024-landing": {
-      id: 3,
+      id: 4,
       content_section: "Projects",
       title: "DevFest Hanoi 2024 Landing",
       description: [

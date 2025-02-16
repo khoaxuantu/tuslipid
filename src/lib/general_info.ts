@@ -96,17 +96,25 @@ export const WORK_INFO_LIST: ITabProps[] = [
     content: {
       title: "Fullstack Web Developer - Potonow",
       company: "Pixta",
-      time: "04/2024 - Now",
+      time: "04/2024 - Ongoing",
       location: "Hanoi, Vietnam",
       description: [
-        `Lead the development and maintenance of the <a href="https://potonow.vn" target="_blank" rel="noreferrer">Potonow</a> website.`,
-        `Handle all backend and infrastructure resources, as well as 70% of the frontend \
-resources. Restructure the whole backend codebase.`,
-        `Work closely with product owner and manager to plan, evaluate, and implement new \
-features: chat integration, mailing integration, blog site, event sites, phone number \
-verification with SMS/OTP, etc...`,
-        `Frequently used technologies: Next.js, NestJS, MongoDB, ChakraUI, Terraform, AWS,
-        Firebase.`,
+        `Spearhead the development and maintenance of the <a href="https://potonow.vn" target="_blank" rel="noreferrer">Potonow</a> website,
+        resulting in a 20x increase in registered users, from 300 to 6000.`,
+        `Overhaul the codebase architecture and conventions, and optimized core modules,
+        significantly reducing development time and maintaining a bug rate below 5%.`,
+        `Collaborate closely with product owner and manager to plan, evaluate, and implement new
+        features:
+        <ul class="pt-2" style="list-style-type:unset; list-style-position:inside">
+          <li>Chat integration</li>
+          <li>Mailing integration</li>
+          <li>Blog site</li>
+          <li>Event sites</li>
+          <li>Phone number verification with SMS/OTP</li>
+          <li>Firebase Cloud Messaging integration</li>
+          <li>Slack monitoring integration</li>
+        </ul>`,
+        `Proficient in a range of technologies, including Next.js, NestJS, MongoDB, ChakraUI, Docker, Terraform, AWS, Firebase.`,
         `Updating...`,
       ],
     },
@@ -119,15 +127,20 @@ verification with SMS/OTP, etc...`,
       time: "06/2023 - 04/2024",
       location: "Hanoi, Vietnam",
       description: [
-        `Developed and maintained the backend system of <a href="https://pixtastock.com" target="_blank" rel="noreferrer">PixtaStock</a>. \
-Analyzed data and evaluated the effectiveness of features to improve \
-and develop new ones.`,
-        `Worked closely with the Japan product design team to maintain PixtaStock's \
-frontend, admin panel, and internal tools.`,
-        `Provided technical support to resolve and monitor PixtaStock's issues reported \
-by the customers.`,
-        `Frequently used technologies: Ruby on Rails, React, NodeJS, MySQL, MongoDB, \
-        Docker, Kubernetes, AWS.`,
+        `Developed and maintained <a href="https://pixtastock.com" target="_blank" rel="noreferrer">PixtaStock</a>'s
+        item flow system, which processes from 20000 to 40000 media items per day.`,
+        `Stabilized internal workers of the EPS-format item flow, assured them to process fluently
+        up to 25000 files per day.`,
+        `Contributed 30% effort to migrating all the media processing flow databases from MongoDB
+        to MySQL, preserving 270GB data.`,
+        `Collaborated closely with the Japan product design team to maintain PixtaStock's
+        frontend, admin panel, and internal tools.`,
+        `Optimized the footage thumbnail and updated approximately 28M records for the related
+        footage metadata.`,
+        `Provided technical support to resolve and monitor PixtaStock's issues reported
+        by the customers.`,
+        `Proficient in a range of technologies, including Ruby on Rails, React, NodeJS, MySQL,
+        MongoDB, Docker, Kubernetes, AWS.`,
       ],
     },
   },
@@ -144,7 +157,8 @@ which processes the data to integrate it with Pegatron's manufacturing process \
 among 7 global and 2 local factories.`,
         `Learned how to track and update the data flow, manage and develop Pegatron's \
 databases via Oracle Database.`,
-        `Contributed to the transformation and loading process in the ETL.`,
+        `Published 30 SQL data transformation scripts, which were applied to the factory data \
+transformation processes.`,
       ],
     },
   },
