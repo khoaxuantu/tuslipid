@@ -139,6 +139,7 @@ At this time, I mainly work with React, so only suggest my React's UI libraries:
 - MUI
 - Ant Design
 - Chakra UI
+- Mantine
 - Radix UI
 
 Don't ask me why I do not include Shadcn in them, although it is so well-known. This trending guy, on one hand, is built on top of Radix UI, which is the only part I see as promising. But on another hand, Shadcn styles with Tailwind, which, in my opinion, is the biggest minus point.

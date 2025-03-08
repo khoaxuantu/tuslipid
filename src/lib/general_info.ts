@@ -291,6 +291,17 @@ the sheer breadth and depth of programming can quickly become overwhelming.`,
     tags: ["code"],
     date: new Date("Fri Jan 28 2025 01:03:16 GMT+0700"),
   },
+  frontend_101: {
+    content_section: "Blogs",
+    id: "frontend_101",
+    title: "The Web Frontend 101",
+    brief_description: `Can you summary your frontend knowledge to featured concepts so we can \
+have an overview of what frontend development is?`,
+    url: "/frontend-101",
+    file: "frontend_101.md",
+    tags: ["code"],
+    date: new Date("Mon Feb 24 2025 21:59:22 GMT+0700"),
+  },
 };
 
 export const BLOG_INFO_LIST: { dictKey: string; date: string }[] = [
@@ -305,4 +316,5 @@ export const BLOG_INFO_LIST: { dictKey: string; date: string }[] = [
   { dictKey: "mysql_notes", date: "Wed Jun 05 2024 20:38:49 GMT+0700" },
   { dictKey: "how_did_my_coding_journey_start", date: "Fri Nov 29 2024 00:11:53 GMT+0700" },
   { dictKey: "my_chosen_tech_stack", date: "Fri Jan 28 2025 01:03:16 GMT+0700" },
+  { dictKey: "frontend_101", date: "Mon Feb 24 2025 21:59:22 GMT+0700" }
 ];
