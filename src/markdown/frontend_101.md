@@ -8,11 +8,9 @@ What's the problem here?
 
 The web, at its core, is basically a kind of document - a digital page, much like a magazine or a book, viewed through your browser. We have somehow taken this simple concept and built something incredibly complex.
 
-> We have lost track of what semantic means.
-
 Now, let me ask you one question: Can you generalize your frontend knowledge to featured concepts so we can have an overview of what frontend development is?
 
-If not, let me answer it for you...
+If you can't, here is your answer...
 
 ## Web standards first
 
@@ -74,7 +72,7 @@ In the browser context, JavaScript comes with many built-in APIs that help devel
 
 We all know that the browser reads the HTML and CSS of a web and displays it to a monitor.
 
-However, in a frontend project, developers don't have to write exactly thousands of HTML files. 
+However, in a frontend project, developers don't have to write exactly thousands of HTML files.
 
 Instead, they can use different frameworks based on various programming languages for better productivity. Then they generate the HTML, CSS, or JavaScript files and publish them to the Internet in build time or runtime.
 
@@ -121,7 +119,7 @@ To be able to perform this behavior, we need a lot of help from JavaScript in th
 
 I call it the **Client Side Rendering**.
 
-[React](https://react.dev/), [Angular](https://angular.dev/), and [Vue](https://vuejs.org) primarily support CSR. 
+[React](https://react.dev/), [Angular](https://angular.dev/), and [Vue](https://vuejs.org) primarily support CSR.
 
 ## Routing
 
@@ -190,7 +188,7 @@ Hello world!
 
 - HTML markups are semantic by default. Every tag has its own meaning and takes responsibility as a component.
 - We can learn more ideas of components from most UI libraries, which have defined many components very well. Btw, I'm in love with [Material Design 3 Components](https://m3.material.io/components). 🙂
-- The DOM structure is designed as a [composite tree](https://refactoring.guru/design-patterns/composite), so we should follow this pattern to define our component system. 
+- The DOM structure is designed as a [composite tree](https://refactoring.guru/design-patterns/composite), so we should follow this pattern to define our component system.
 - A component can contain many child components.
 
 ## States
@@ -203,8 +201,8 @@ The idea is whenever some data in a component changes, it should trigger a metho
 
 In the OOP context, we can assume a component corresponds to an object implementing method `render()`.
 
-Let's try an example. Here I want to implement a modal component, which provides 2 states: opened and closed. 
-- If the modal is opened, then it should be rendered to the screen. 
+Let's try an example. Here I want to implement a modal component, which provides 2 states: opened and closed.
+- If the modal is opened, then it should be rendered to the screen.
 - If the modal is closed, then it should be hidden from the screen.
 
 ```js
@@ -254,7 +252,7 @@ const [modalState, setModalState] = useState("closed");
 ```
 
 > Does it look familiar? Yup, like React's `useState` hook.
-> 
+>
 > Disclaimer: It does not truly represent the implementation of the `useState` hook; I'm just giving a simplifying example inspired by the hook.
 
 ## Layouts
@@ -279,7 +277,7 @@ To simplify the layout structuring and minimize design frauds, I have come up wi
   }
 
   div[is=column-2] {
-    grid-column: 4 / 10; 
+    grid-column: 4 / 10;
   }
 
   div[is=column-3] {
@@ -319,7 +317,7 @@ div[role=vertical-stack] {
 ```
 
 - Layering the view to 5 levels, configuring them with the z-index property:
-	- Level 0: Neutral, or default level 
+	- Level 0: Neutral, or default level
 	- Level 1: For the sticky or static contents, for instance, navigation bar, static buttons, etc...
 	- Level 2: For the focus state of level 1, for example, an opened menu if the menu is in a navigation bar.
 	- Level 3: For the backdrop overlay of level 4
@@ -356,7 +354,7 @@ Then there are real-time web applications, in which we have to learn about WebSo
 
 SEO - short for search engine optimization - is about helping search engines understand your content, and helping users find your site and make a decision about whether they should visit your site through a search engine.
 
-One more thing that developers may miss. 
+One more thing that developers may miss.
 
 The SEO is very significant to the marketing efficiency because it helps more people reach out to our websites.
 
