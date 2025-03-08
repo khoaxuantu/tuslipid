@@ -8,9 +8,9 @@ What's the problem here?
 
 The web, at its core, is basically a kind of document - a digital page, much like a magazine or a book, viewed through your browser. We have somehow taken this simple concept and built something incredibly complex.
 
-Now, let me ask you one question: Can you generalize your frontend knowledge to featured concepts so we can have an overview of what frontend development is?
+> We have made the frontend not simple anymore, even to the level that we find it difficult to understand what exactly the web is
 
-If you can't, here is your answer...
+Now, let me ask you one question: Can you boil down your frontend knowledge to its core concepts so we can have an overview of what the web frontend is?
 
 ## Web standards first
 
