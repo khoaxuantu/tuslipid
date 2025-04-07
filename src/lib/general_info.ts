@@ -94,7 +94,7 @@ export const WORK_INFO_LIST: ITabProps[] = [
   {
     name: "PIXTA Vietnam Co. Ltd (Middle)",
     content: {
-      title: "Fullstack Web Developer - Potonow",
+      title: "Software Engineer - Potonow",
       company: "Pixta",
       time: "04/2024 - Ongoing",
       location: "Hanoi, Vietnam",
@@ -122,7 +122,7 @@ export const WORK_INFO_LIST: ITabProps[] = [
   {
     name: "PIXTA Vietnam Co. Ltd (Junior)",
     content: {
-      title: "Fullstack Web Developer - PixtaStock",
+      title: "Web Developer - PixtaStock",
       company: "Pixta",
       time: "06/2023 - 04/2024",
       location: "Hanoi, Vietnam",
