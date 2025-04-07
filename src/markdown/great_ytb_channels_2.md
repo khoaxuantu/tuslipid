@@ -29,7 +29,7 @@ Follow up on what I left in [part 1](/blogs/great_ytb_channels_1). In this part,
 - [Brian Tyler](https://www.youtube.com/@BrianTylerComposer)
 - [Davie504](https://www.youtube.com/@Davie504)
 - [Imperial Orchestra](https://www.youtube.com/@imperialorchestra)
-- [Jacob Collier](https://youtube.com/@jacobcollier)
+- [Jacob Collier](https://www.youtube.com/@jacobcollier)
 - [Joe Jenkins](https://www.youtube.com/@JoeJenkins)
 - [Menuhin Competition](https://www.youtube.com/@MenuhinCompetition)
 - [MayTree](https://www.youtube.com/channel/UC3mY2SKYhPjqImtBBXsR6_Q)
@@ -84,7 +84,7 @@ Follow up on what I left in [part 1](/blogs/great_ytb_channels_1). In this part,
 - [Pascu y Rodri](https://www.youtube.com/channel/UCxIBZ-nQhgZES3UaTm8eDPA)
 - [Rick Astley](https://www.youtube.com/channel/UCuAXFkgsw1L7xaCfnd5JJOw) | But his songs are so damn great -.-
 - [Scorpo](https://www.youtube.com/@ScorpoYT)
-- [SethEverman](https://youtube.com/@setheverman)
+- [SethEverman](https://www.youtube.com/@setheverman)
 - [SovietWomble](https://www.youtube.com/@SovietWomble)
 - [Steven He](https://www.youtube.com/@StevenHe)
 - [The Tonight Show Starring Jimmy Fallon](https://www.youtube.com/@fallontonight)
