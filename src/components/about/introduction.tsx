@@ -14,7 +14,7 @@ function AboutIntro() {
           and attempted to develop further in this major.
         </p>
         <p className="mt-2">
-          I'm passionate about full-stack web development, software architectures, and
+          I'm passionate about web development, software architectures, and
           cloud services, and currently continuing my career development journey at{" "}
           <a href="https://pixta.vn/" target="_blank" rel="noreferrer">
             Pixta Vietnam
