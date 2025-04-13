@@ -182,6 +182,12 @@ at the 2020 Taipei Industrial Automation Exhibition.`,
 
 export const ACTIVITY_INFO_LIST: ActivityProps[] = [
   {
+    title: "Build with A.I 2025",
+    time: "04/2025",
+    position: "Technical Core Team",
+    location: "Hanoi",
+  },
+  {
     title: "GDG DevFest Hanoi 2024",
     time: "11/2024",
     position: "Technical Core Team Extended",
