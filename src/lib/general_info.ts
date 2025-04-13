@@ -182,21 +182,27 @@ at the 2020 Taipei Industrial Automation Exhibition.`,
 
 export const ACTIVITY_INFO_LIST: ActivityProps[] = [
   {
+    title: "Build with AI Hanoi 2025",
+    time: "04/2025",
+    position: "GDG Hanoi Technical Core Team",
+    location: "Hanoi",
+  },
+  {
     title: "GDG DevFest Hanoi 2024",
     time: "11/2024",
-    position: "Technical Core Team Extended",
+    position: "GDG Hanoi Technical Core Team Extended",
     location: "Hanoi",
   },
   {
     title: "Google I/O Extended Hanoi 2024",
     time: "07/2024",
-    position: "Technical Collaborator",
+    position: "GDG Hanoi Technical Collaborator",
     location: "Hanoi",
   },
   {
     title: "NTUST-VSA Vietnam Culture Festival",
     time: "05/2019",
-    position: "Onsite Technical Collaborator",
+    position: "NTUST-VSA Onsite Technical Collaborator",
     location: "Taipei",
   },
 ];
