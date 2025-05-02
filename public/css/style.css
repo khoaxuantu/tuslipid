@@ -106,7 +106,7 @@ article h1 {
 }
 
 body {
-  font-family: helvetica, -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", helvetica, sans-serif;
   line-height: 1.7;
   background: var(--md-sys-color-surface);
   transition: all 300ms;
@@ -522,7 +522,7 @@ hr {
   border: none;
   border-bottom: 2px solid var(--md-sys-color-outline-variant);
   cursor: pointer;
-  font-family: helvetica, -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", helvetica, sans-serif;
   text-align: start;
 }
 .about-c-tab__vertical:hover {
