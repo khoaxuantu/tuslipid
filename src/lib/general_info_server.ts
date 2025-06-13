@@ -364,7 +364,7 @@ export const getProjInfo = async (): Promise<{
       imageURL: imgs.MyNotes,
     },
     pixtastock: {
-      id: 2,
+      id: 4,
       content_section: "Projects",
       title: "PixtaStock",
       description: [
@@ -398,6 +398,17 @@ export const getProjInfo = async (): Promise<{
       tools: ["Vue", "CSS", "Firebase Realtime Database"],
       demoURL: "https://devfest.gdghanoi.com",
       imageURL: imgs.DevFest2024,
+    },
+    "gdg-hanoi-landing": {
+      id: 2,
+      content_section: "Projects",
+      title: "GDG Hanoi Landing",
+      description: [
+        `A landing page for the GDG Hanoi. I constructed the majority of this site's frontend.`,
+      ],
+      tools: ["Next.js", "Sass", "Radix UI", "Firebase"],
+      demoURL: "https://gdghanoi.com",
+      imageURL: imgs.GdgHanoi,
     },
   };
 };
