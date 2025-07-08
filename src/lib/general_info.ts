@@ -182,6 +182,12 @@ at the 2020 Taipei Industrial Automation Exhibition.`,
 
 export const ACTIVITY_INFO_LIST: ActivityProps[] = [
   {
+    title: "Google I/O Extended Hanoi 2025",
+    time: "07/2025",
+    position: "GDG Hanoi Technical Core Team",
+    location: "Hanoi",
+  },
+  {
     title: "Build with AI Hanoi 2025",
     time: "04/2025",
     position: "GDG Hanoi Technical Core Team",
@@ -322,5 +328,5 @@ export const BLOG_INFO_LIST: { dictKey: string; date: string }[] = [
   { dictKey: "mysql_notes", date: "Wed Jun 05 2024 20:38:49 GMT+0700" },
   { dictKey: "how_did_my_coding_journey_start", date: "Fri Nov 29 2024 00:11:53 GMT+0700" },
   { dictKey: "my_chosen_tech_stack", date: "Fri Jan 28 2025 01:03:16 GMT+0700" },
-  { dictKey: "frontend_101", date: "Mon Feb 24 2025 21:59:22 GMT+0700" }
+  { dictKey: "frontend_101", date: "Mon Feb 24 2025 21:59:22 GMT+0700" },
 ];
