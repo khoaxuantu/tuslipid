@@ -28,9 +28,17 @@
   .sl-l-container {
     main {
       @include center-block;
-      max-width: 900px;
+      max-width: 960px;
       padding-left: 0;
       padding-right: 0;
+    }
+  }
+}
+
+@media (min-width: 1980px) {
+  .sl-l-container {
+    main {
+      max-width: 1200px;
     }
   }
 }

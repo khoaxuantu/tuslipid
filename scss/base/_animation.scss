@@ -1,87 +1,90 @@
 @mixin animation($animation, $time) {
-    animation-name: $animation;
-    animation-duration: $time;
+  animation-name: $animation;
+  animation-duration: $time;
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0.01;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0.01;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeInUp {
-    from {
-        transform: translate3d(0, 24px, 0);
-        opacity: 0;
-    }
-    to {
-        transform: translate3d(0, 0, 0);
-        opacity: 1;
-    }
+  from {
+    transform: translate3d(0, 24px, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
 }
 
 @keyframes fadeInDown {
-    from {
-        transform: translate3d(0, -24px, 0);
-        opacity: 0;
-    }
-    to {
-        transform: translate3d(0, 0, 0);
-        opacity: 1;
-    }
+  from {
+    transform: translate3d(0, -24px, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
 }
 
 @keyframes fadeInLeft {
-    from {
-        transform: translate3d(-24px, 0, 0);
-        opacity: 0;
-    }
-    to {
-        transform: translate3d(0, 0, 0);
-        opacity: 1;
-    }
+  from {
+    transform: translate3d(-24px, 0, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
 }
 
 @keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 .transition-menu {
-    @include animation(fadeIn, .3s);
+  @include animation(fadeIn, 0.3s);
 }
 
 .transition-page {
-    @include animation(fadeInUp, .3s);
+  > * {
+    @include animation(fadeInUp, 0.3s);
+  }
 }
 
 .is-current {
-    @include animation(fadeIn, 0.5s);
+  @include animation(fadeIn, 0.5s);
 }
 
 .transition-blog {
-    &>*{
-        @include animation(fadeInLeft, .3s);
-    }
+  & > * {
+    @include animation(fadeInLeft, 0.3s);
+  }
 }
 
 .fade-in-left {
-    @include animation(fadeInLeft, .3s);
+  @include animation(fadeInLeft, 0.3s);
 }
 
-.menu-animation, .fade-in-down {
-    @include animation(fadeInDown, 300ms);
+.menu-animation,
+.fade-in-down {
+  @include animation(fadeInDown, 300ms);
 }
 
 @media (min-width: 768px) {
-    .menu-animation {
-        animation-name: fadeInUp;
-    }
+  .menu-animation {
+    animation-name: fadeInUp;
+  }
 }
