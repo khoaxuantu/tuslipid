@@ -100,7 +100,7 @@ export const WORK_INFO_LIST: ITabProps[] = [
       location: "Hanoi, Vietnam",
       description: [
         `Spearhead the development and maintenance of the <a href="https://potonow.vn" target="_blank" rel="noreferrer">Potonow</a> website,
-        resulting in a 20x increase in registered users, from 300 to 6000.`,
+        resulting in a 50x increase in registered users, from 300 to more than 15000.`,
         `Overhaul the codebase architecture and conventions, and optimized core modules,
         significantly reducing development time and maintaining a bug rate below 5%.`,
         `Collaborate closely with product owner and manager to plan, evaluate, and implement new
