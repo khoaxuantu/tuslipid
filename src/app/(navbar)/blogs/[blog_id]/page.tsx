@@ -16,7 +16,7 @@ export function generateStaticParams() {
   });
 }
 
-export const dynamicParams = false;
+// export const dynamicParams = false;
 
 export default async function SingleBlogPage(props: DynamicParams) {
   const params = await props.params;

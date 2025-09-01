@@ -10,9 +10,7 @@ export default function NotFound() {
             Oi ~ This URL does not exist.
             <br />
             <br />
-            <Link href="/blogs">
-              Get to my blogs page...
-            </Link>
+            <Link href="/blogs">Get to my blogs page...</Link>
           </div>
         </header>
       </div>
