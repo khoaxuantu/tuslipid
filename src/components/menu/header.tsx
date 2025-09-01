@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, MouseEvent } from "react";
+import { MouseEvent, useState } from "react";
 
 export default function MenuHeaderGrp() {
   const avaURLs: string[] = ["tuslipid_real.webp", "tuslipid.webp"];
@@ -19,6 +19,7 @@ export default function MenuHeaderGrp() {
           src={avaURLs[avaIndex]}
           alt="Tuslipid's avatar"
           width={160}
+          height={160}
         />
       </button>
       <hgroup>

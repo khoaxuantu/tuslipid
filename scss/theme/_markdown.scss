@@ -72,5 +72,16 @@ $codeinline-background: #f6f8fa;
   img {
     cursor: zoom-in;
     border-radius: 1rem;
+    width: 100%;
+  }
+
+  figure {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+
+    p {
+      margin-top: 0;
+    }
   }
 }

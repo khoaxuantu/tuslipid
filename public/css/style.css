@@ -695,17 +695,18 @@ hr {
   overflow-x: auto;
 }
 .blog-c-img__extend {
-  width: auto;
+  width: 100dvw;
   height: auto;
   z-index: 3;
   opacity: 1 !important;
   animation: imgExtend 250ms cubic-bezier(0.16, 1, 0.3, 1);
+  max-width: max(50dvw, 720px);
 }
 
 @media (min-width: 768px) {
   .blog-c-toc {
     position: sticky;
-    top: 0;
+    top: 3rem;
     max-height: 65dvh;
   }
   .blog-c-toc__details {

@@ -55,6 +55,15 @@
 .blog-l-wrapper img {
   cursor: zoom-in;
   border-radius: 1rem;
+  width: 100%;
+}
+.blog-l-wrapper figure {
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center;
+}
+.blog-l-wrapper figure p {
+  margin-top: 0;
 }
 
 .blog-l-wrapper {

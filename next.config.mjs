@@ -12,7 +12,7 @@ const withMdx = createMdx({
   extension: /\.(md|mdx)$/,
   options: {
     remarkPlugins: ["remark-gfm", "remark-math"],
-    rehypePlugins: ["rehype-highlight", "rehype-slug", "rehype-katex", "rehype-raw"],
+    rehypePlugins: ["rehype-highlight", "rehype-slug", "rehype-katex"],
   },
 });
 
