@@ -6,15 +6,13 @@
   "dependencies": {
     "@mdx-js/loader": "^3.1.0",
     "@mdx-js/react": "^3.1.0",
-    "@next/mdx": "^15.3.3",
-    "@types/mdx": "^2.0.13",
+    "@next/mdx": "^15.5.0",
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
-    "next": "^15.3.3",
-    "next-mdx-remote": "^5.0.0",
-    "react": "^19.1.0",
+    "next": "^15.5.0",
+    "react": "^19.1.1",
     "react-device-detect": "^2.2.3",
-    "react-dom": "^19.1.0",
+    "react-dom": "^19.1.1",
     "rehype-highlight": "^7.0.2",
     "rehype-katex": "^7.0.1",
     "rehype-raw": "^7.0.0",
@@ -22,7 +20,7 @@
     "remark-gfm": "^4.0.1",
     "remark-math": "^6.0.0",
     "remark-mdx": "^3.1.0",
-    "typescript": "^5.8.3"
+    "typescript": "^5.9.2"
   },
   "scripts": {
     "start": "next start",
@@ -33,8 +31,9 @@
     "style:md": "sass --watch scss/markdown.scss public/css/markdown.css"
   },
   "devDependencies": {
-    "@types/node": "^22.15.31",
-    "@types/react": "^19.1.8",
-    "@types/react-dom": "^19.1.6"
+    "@types/node": "^22.18.0",
+    "@types/react": "^19.1.11",
+    "@types/mdx": "^2.0.13",
+    "@types/react-dom": "^19.1.8"
   }
 }

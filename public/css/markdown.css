@@ -3,9 +3,6 @@
   margin: revert;
   list-style-type: revert;
 }
-.blog-l-wrapper h2 {
-  padding-top: 3rem;
-}
 .blog-l-wrapper code,
 .blog-l-wrapper pre {
   background-color: #282c34;
@@ -57,7 +54,20 @@
 }
 .blog-l-wrapper img {
   cursor: zoom-in;
-  transition: all 200ms;
+  border-radius: 1rem;
+  width: 100%;
+}
+.blog-l-wrapper figure {
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center;
+}
+.blog-l-wrapper figure p {
+  margin-top: 0;
+}
+
+.blog-l-wrapper {
+  margin-top: 3rem;
 }
 
 /*# sourceMappingURL=markdown.css.map */

@@ -346,31 +346,47 @@ Underscores
 ## KaTeX Mathematical Formular
 
 ```md
-$-b \pm \sqrt{b^2 - 4ac} \over 2a$
+$$
+-b \pm \sqrt{b^2 - 4ac} \over 2a
+$$
 
 <br></br>
 
-$x = a_0 + \frac{1}{a_1 + \frac{1}{a_2 + \frac{1}{a_3 + a_4}}}$
+$$
+x = a_0 + \frac{1}{a_1 + \frac{1}{a_2 + \frac{1}{a_3 + a_4}}}
+$$
 
 <br></br>
 
-$\forall x \in X, \quad \exists y \leq \epsilon$
+$$
+\forall x \in X, \quad \exists y \leq \epsilon
+$$
 
 <br></br>
 
-$L = \frac{1}{2} \rho v^2 S C_L$
+$$
+L = \frac{1}{2} \rho v^2 S C_L
+$$
 ```
 
-$-b \pm \sqrt{b^2 - 4ac} \over 2a$
+$$
+-b \pm \sqrt{b^2 - 4ac} \over 2a
+$$
 
 <br></br>
 
-$x = a_0 + \frac{1}{a_1 + \frac{1}{a_2 + \frac{1}{a_3 + a_4}}}$
+$$
+x = a_0 + \frac{1}{a_1 + \frac{1}{a_2 + \frac{1}{a_3 + a_4}}}
+$$
 
 <br></br>
 
-$\forall x \in X, \quad \exists y \leq \epsilon$
+$$
+\forall x \in X, \quad \exists y \leq \epsilon
+$$
 
 <br></br>
 
-$L = \frac{1}{2} \rho v^2 S C_L$
+$$
+L = \frac{1}{2} \rho v^2 S C_L
+$$

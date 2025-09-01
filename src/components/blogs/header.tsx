@@ -1,4 +1,5 @@
 import { BLOG_INFO_DICT } from "@/lib/general_info";
+import DateText from "../shared/date";
 
 export function BlogsPageHeaderGrp() {
   return (
@@ -13,19 +14,12 @@ export function BlogsPageHeaderGrp() {
 export function SingleBlogPageHeaderGrp(props: { id: string }) {
   return (
     <header>
-      <h1 id="blog-title" className="pt-2 pb-2">{BLOG_INFO_DICT[props.id].title}</h1>
-      <blockquote className="mt-2">{formatDate(BLOG_INFO_DICT[props.id].date)}</blockquote>
+      <h1 id="blog-title" className="pt-2 pb-2">
+        {BLOG_INFO_DICT[props.id].title}
+      </h1>
+      <blockquote className="mt-2">
+        <DateText value={BLOG_INFO_DICT[props.id].date} />
+      </blockquote>
     </header>
   );
-}
-
-function formatDate(date: Date) {
-  const options: Intl.DateTimeFormatOptions = {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-    weekday: "long",
-  };
-
-  return date.toLocaleDateString("en-UK", options);
 }

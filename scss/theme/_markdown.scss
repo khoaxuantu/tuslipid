@@ -11,10 +11,6 @@ $codeinline-background: #f6f8fa;
     list-style-type: revert;
   }
 
-  h2 {
-    padding-top: 3rem;
-  }
-
   code,
   pre {
     @include set-component-color($codeblock-background, $codeblock-color);
@@ -75,6 +71,17 @@ $codeinline-background: #f6f8fa;
 
   img {
     cursor: zoom-in;
-    transition: all 200ms;
+    border-radius: 1rem;
+    width: 100%;
+  }
+
+  figure {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+
+    p {
+      margin-top: 0;
+    }
   }
 }
