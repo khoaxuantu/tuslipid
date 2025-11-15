@@ -182,6 +182,12 @@ at the 2020 Taipei Industrial Automation Exhibition.`,
 
 export const ACTIVITY_INFO_LIST: ActivityProps[] = [
   {
+    title: "GDG DevFest Hanoi 2025",
+    time: "11/2025",
+    position: "GDG Hanoi Technical Core Team",
+    location: "Hanoi",
+  },
+  {
     title: "Google I/O Extended Hanoi 2025",
     time: "07/2025",
     position: "GDG Hanoi Technical Core Team",
