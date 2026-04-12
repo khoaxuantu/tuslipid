@@ -99,22 +99,23 @@ export const WORK_INFO_LIST: ITabProps[] = [
       time: "04/2024 - Ongoing",
       location: "Hanoi, Vietnam",
       description: [
-        `Spearhead the development and maintenance of the <a href="https://potonow.vn" target="_blank" rel="noreferrer">Potonow</a> website,
-        resulting in a 50x increase in registered users, from 300 to more than 15000.`,
+        `Spearhead the development and maintenance of the <a href="https://potonow.vn" target="_blank" rel="noreferrer">Potonow</a> product,
+        resulting in an increase in registered users from 300 to more than 20000.`,
         `Overhaul the codebase architecture and conventions, and optimized core modules,
-        significantly reducing development time and maintaining a bug rate below 5%.`,
-        `Collaborate closely with product owner and manager to plan, evaluate, and implement new
-        features:
+        significantly reducing development time.`,
+        `Scale up the system to be able to handle traffic up to 4000 visits per minute.`,
+        `Collaborate closely with product owner and managers to plan, design, evaluate, and
+        implement modules:
         <ul class="pt-2" style="list-style-type:unset; list-style-position:inside">
-          <li>Chat integration</li>
-          <li>Mailing integration</li>
-          <li>Blog site</li>
-          <li>Event sites</li>
-          <li>Phone number verification with SMS/OTP</li>
-          <li>Firebase Cloud Messaging integration</li>
+          <li>Photoshoot core workflows</li>
+          <li>User management</li>
+          <li>Multi-channel communications, including notification, chat, and mailing.</li>
+          <li>Blogs</li>
+          <li>Event landing pages</li>
           <li>Slack monitoring integration</li>
+          <li>Integrations between AWS services and Vertex AI</li>
         </ul>`,
-        `Proficient in a range of technologies, including Next.js, NestJS, MongoDB, ChakraUI, Docker, Terraform, AWS, Firebase.`,
+        `Proficient in a range of technologies and tools, including Next.js, NestJS, MongoDB, ChakraUI, Docker, Terraform, AWS, GCP, Firebase.`,
         `Updating...`,
       ],
     },
@@ -181,6 +182,12 @@ at the 2020 Taipei Industrial Automation Exhibition.`,
 ];
 
 export const ACTIVITY_INFO_LIST: ActivityProps[] = [
+  {
+    title: "Build with AI Hanoi 2026",
+    time: "04/2026",
+    position: "GDG Hanoi Technical Core Team",
+    location: "Hanoi",
+  },
   {
     title: "GDG DevFest Hanoi 2025",
     time: "11/2025",

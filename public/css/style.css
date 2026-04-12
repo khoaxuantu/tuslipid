@@ -508,38 +508,26 @@ hr {
   width: 16.66%;
   text-align: end;
 }
-.about-c-tab__list .is-current {
+.about-c-works details {
+  padding-bottom: 1rem;
+}
+.about-c-works details summary {
+  cursor: pointer;
+  list-style-type: none;
+}
+.about-c-works details:not(:first-child) {
+  padding-top: 1rem;
+  border-top: 1px solid var(--md-sys-color-outline-variant);
+}
+.about-c-works details::details-content {
+  opacity: 0;
+  border-radius: 16px;
+  transition: all 400ms ease-in-out;
   background-color: var(--md-sys-color-secondary-container);
   color: var(--md-sys-color-on-secondary-container);
-  border-left: none;
-  border-bottom: none;
-  font-weight: bold;
 }
-.about-c-tab__vertical {
-  background-color: var(--md-sys-color-surface-container);
-  color: var(--md-sys-color-on-surface);
-  height: 50px;
-  width: 100%;
-  border: none;
-  border-bottom: 2px solid var(--md-sys-color-outline-variant);
-  cursor: pointer;
-  font-family: -apple-system, BlinkMacSystemFont, "Inter", helvetica, sans-serif;
-  text-align: start;
-}
-.about-c-tab__vertical:hover {
-  font-weight: 650;
-}
-.about-c-tab__content {
-  height: 400px;
-  overflow: auto;
-  padding-right: 0.5rem;
-}
-.about-c-tab__content label {
-  opacity: 0.5;
-  display: block;
-}
-.about-c-tab__content .content {
-  display: none;
+.about-c-works details[open]::details-content {
+  opacity: 1;
 }
 .about-c-activities li:not(:first-child) {
   padding: 1rem 0;
