@@ -75,49 +75,33 @@
       }
     }
 
-    &-tab {
-      &__list {
-        .is-current {
+    &-works {
+      details {
+        padding-bottom: 1rem;
+
+        summary {
+          cursor: pointer;
+          list-style-type: none;
+        }
+
+        &:not(:first-child) {
+          padding-top: 1rem;
+          border-top: 1px solid var(--md-sys-color-outline-variant);
+        }
+
+        &::details-content {
+          opacity: 0;
+          border-radius: 16px;
+          transition: all 400ms ease-in-out;
+
           @include set-component-color(
             var(--md-sys-color-secondary-container),
             var(--md-sys-color-on-secondary-container)
           );
-          border-left: none;
-          border-bottom: none;
-          font-weight: bold;
-        }
-      }
-
-      &__vertical {
-        @include set-component-color(
-          var(--md-sys-color-surface-container),
-          var(--md-sys-color-on-surface)
-        );
-        height: 50px;
-        width: 100%;
-        border: none;
-        border-bottom: 2px solid var(--md-sys-color-outline-variant);
-        cursor: pointer;
-        font-family: $DEFAULT_FONT;
-        text-align: start;
-
-        &:hover {
-          font-weight: 650;
-        }
-      }
-
-      &__content {
-        height: 400px;
-        overflow: auto;
-        padding-right: 0.5rem;
-
-        label {
-          opacity: 0.5;
-          display: block;
         }
 
-        .content {
-          display: none;
+        &[open]::details-content {
+          opacity: 1;
         }
       }
     }

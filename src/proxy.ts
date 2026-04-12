@@ -11,7 +11,7 @@ export const config = {
   matcher: ["/blogs/:blog_id*"],
 };
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const pathName = request.nextUrl.pathname;
 
   if (pathName.includes("blogs")) {
