@@ -99,24 +99,24 @@ export const WORK_INFO_LIST: ITabProps[] = [
       time: "04/2024 - Ongoing",
       location: "Hanoi, Vietnam",
       description: [
-        `Spearhead the development and maintenance of the <a href="https://potonow.vn" target="_blank" rel="noreferrer">Potonow</a> product,
-        resulting in an increase in registered users from 300 to more than 20000.`,
-        `Overhaul the codebase architecture and conventions, and optimized core modules,
-        significantly reducing development time.`,
-        `Scale up the system to be able to handle traffic up to 4000 visits per minute.`,
-        `Collaborate closely with product owner and managers to plan, design, evaluate, and
-        implement modules:
+        `Spearheaded the development and maintenance of the <a href="https://potonow.vn" target="_blank" rel="noreferrer">Potonow</a> product,
+        resulting in more than 24000 registered users (~5500 photographers), 3300 bookings, 13000
+        offers, and ~20% conversion rate.`,
+        `Overhauled the code base architecture and conventions, and optimized core modules,
+        significantly reducing development time and error prone, and maintaining a bug rate ~8%.`,
+        `Scaled up the system to be able to handle traffic up to 4000 visits per minute.`,
+        `Collaborated closely with product owner and managers to plan, design, evaluate, and implement modules:
         <ul class="pt-2" style="list-style-type:unset; list-style-position:inside">
-          <li>Photoshoot core workflows</li>
-          <li>User management</li>
-          <li>Multi-channel communications, including notification, chat, and mailing.</li>
-          <li>Blogs</li>
-          <li>Event landing pages</li>
-          <li>Slack monitoring integration</li>
+          <li>Photoshoot product core domains</li>
           <li>Integrations between AWS services and Vertex AI</li>
+          <li>User management systems</li>
+          <li>Multi-channel communications, including notification, chat, and mailing</li>
+          <li>Blogs</li>
+          <li>Slack monitoring integration</li>
+          <li>Event landing pages</li>
         </ul>`,
-        `Proficient in a range of technologies and tools, including Next.js, NestJS, MongoDB, ChakraUI, Docker, Terraform, AWS, GCP, Firebase.`,
-        `Updating...`,
+        `Proficient in a range of technologies, including Next.js, NestJS, MongoDB, ChakraUI,
+        Docker, Terraform, AWS, GCP, Firebase.`,
       ],
     },
   },

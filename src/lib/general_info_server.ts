@@ -172,6 +172,16 @@ export const getSkillInfo = async (): Promise<SkillProps[]> => {
       url: "https://www.chakra-ui.com/",
       icon: svgs["chakra-ui"],
     },
+    {
+      name: "Golang",
+      url: "https://go.dev",
+      icon: svgs.GoLang,
+    },
+    {
+      name: "Terraform",
+      url: "https://developer.hashicorp.com/terraform",
+      icon: svgs["Terraform-Light"],
+    },
   ];
 };
 

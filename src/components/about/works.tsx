@@ -12,7 +12,7 @@ function Works() {
       </aside>
       <div className="about-c-works pb-2 col-8">
         {WORK_INFO_LIST.map((work, index) => (
-          <ItemWork key={index} {...work} isCurrent={index == 0} />
+          <ItemWork key={index} {...work} isCurrent />
         ))}
       </div>
     </section>
