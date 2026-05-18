@@ -515,6 +515,9 @@ hr {
   cursor: pointer;
   list-style-type: none;
 }
+.about-c-works details summary:hover * {
+  text-decoration: underline;
+}
 .about-c-works details:not(:first-child) {
   padding-top: 1rem;
   border-top: 1px solid var(--md-sys-color-outline-variant);

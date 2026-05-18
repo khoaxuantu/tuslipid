@@ -82,6 +82,10 @@
         summary {
           cursor: pointer;
           list-style-type: none;
+
+          &:hover * {
+            text-decoration: underline;
+          }
         }
 
         &:not(:first-child) {
