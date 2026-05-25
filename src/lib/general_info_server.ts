@@ -416,7 +416,7 @@ export const getProjInfo = async (): Promise<{
       description: [
         `A landing page for the GDG Hanoi. I constructed the majority of this site's frontend.`,
       ],
-      tools: ["Next.js", "Sass", "Radix UI", "Firebase", "GCP"],
+      tools: ["Next.js", "Sass", "Radix UI", "Golang", "Firebase", "GCP"],
       demoURL: "https://event.gdghanoi.com",
       imageURL: imgs.GdgHanoi,
     },
