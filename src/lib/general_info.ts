@@ -92,31 +92,45 @@ export const NAV_BTN_INFO_LIST: RoutingProps[] = [
 
 export const WORK_INFO_LIST: ITabProps[] = [
   {
+    name: "FPT Software (Senior)",
+    content: {
+      title: "Software Engineer",
+      company: "FPT Software",
+      time: "07/2026 - Ongoing",
+      location: "Hanoi, Vietnam",
+      description: [`Updating...`],
+    },
+  },
+  {
     name: "PIXTA Vietnam Co. Ltd (Middle)",
     content: {
       title: "Software Engineer - Potonow",
       company: "Pixta",
-      time: "04/2024 - Ongoing",
+      time: "04/2024 - 07/2026",
       location: "Hanoi, Vietnam",
       description: [
         `Spearheaded the development and maintenance of the <a href="https://potonow.vn" target="_blank" rel="noreferrer">Potonow</a> product,
         resulting in more than 24000 registered users (~5500 photographers), 3300 bookings, 13000
         offers, and ~20% conversion rate.`,
         `Overhauled the code base architecture and conventions, and optimized core modules,
-        significantly reducing development time and error prone, and maintaining a bug rate ~8%.`,
-        `Scaled up the system to be able to handle traffic up to 4000 visits per minute.`,
-        `Collaborated closely with product owner and managers to plan, design, evaluate, and implement modules:
+        significantly reducing development time and error prone, and maintaining a bug rate of ~8%
+        per quarter.`,
+        `Scaled up the system to be able to handle traffic at 60 requests per second stably and up
+        to 5000 requests per second.`,
+        `Collaborated closely with the product owner and managers to plan, architect, and execute
+        the end-to-end product lifecycle::
         <ul class="pt-2" style="list-style-type:unset; list-style-position:inside">
-          <li>Photoshoot product core domains</li>
-          <li>Integrations between AWS services and Vertex AI</li>
-          <li>User management systems</li>
-          <li>Multi-channel communications, including notification, chat, and mailing</li>
-          <li>Blogs</li>
-          <li>Slack monitoring integration</li>
-          <li>Event landing pages</li>
+          <li>Engineered the core business domains for the platform's central photoshoot management system.</li>
+          <li>Designed and operated payment integrations, featuring compatibility between 6+ versions of fee models and add-ons.</li>
+          <li>Designed and implemented a localized multi-channel communication system, supporting real-time chat, transactional mailing, and push notifications; and featuring a dynamic engine running 100+ customizable templates.</li>
+          <li>Built a secure, scalable module for user management that handles authentication, RBAC, and user profile lifecycles.</li>
+          <li>Authored robust, SEO-optimized blogs integrated directly into the core application layout, resulted in 150 published articles.</li>
+          <li>Designed and implemented a centralized gallery storage that serves 100+ thousands images with ~500GB in total.</li>
+          <li>Connected the platform's backend on AWS to the Gemini Enterprise Agent Platform to enable the AI suggestion module on clients.</li>
+          <li>Integrated AWS CloudWatch with Slack and mailing channels to alert the development team to critical system events in real time.</li>
         </ul>`,
-        `Proficient in a range of technologies, including Next.js, NestJS, MongoDB, ChakraUI,
-        Docker, Terraform, AWS, GCP, Firebase.`,
+        `Proficient in a range of technologies, including Next.js, NestJS, MongoDB,
+        ChakraUI, Docker, Terraform, AWS, GCP, Firebase.`,
       ],
     },
   },
