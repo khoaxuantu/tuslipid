@@ -624,7 +624,7 @@ hr {
 }
 .projects-c-card {
   aspect-ratio: 2;
-  transition: scale 250ms ease-in-out;
+  transition: box-shadow 250ms ease-in-out;
 }
 .projects-c-card__description {
   flex-direction: column;
