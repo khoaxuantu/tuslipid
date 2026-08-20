@@ -197,6 +197,12 @@ at the 2020 Taipei Industrial Automation Exhibition.`,
 
 export const ACTIVITY_INFO_LIST: ActivityProps[] = [
   {
+    title: "Google I/O Extended Hanoi x AI Riser Vietnam 2026",
+    time: "08/2026",
+    position: "GDG Hanoi Technical Core Team",
+    location: "Hanoi",
+  },
+  {
     title: "Build with AI Hanoi 2026",
     time: "04/2026",
     position: "GDG Hanoi Technical Core Team",
