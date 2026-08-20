@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { NavBtnGroup } from "@/components/button_group";
 import Copyright from "@/components/copyright";
@@ -13,7 +13,7 @@ export default function TuslipidMenu() {
   }, []);
 
   return (
-    <div className="sl-l-container menu-l-wrapper center transition-menu">
+    <div className="sl-l-container sl-l-container__md menu-l-wrapper center transition-menu">
       <MenuHeaderGrp />
       <Button variant="theme" className="p-3" />
       <NavBtnGroup />

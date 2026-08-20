@@ -19,16 +19,14 @@ export const metadata: Metadata = {
 export default function NotFound() {
   return (
     <>
-      <div className="sl-l-container menu-l-wrapper center transition-menu">
+      <div className="sl-l-container sl-l-container__md menu-l-wrapper center transition-menu">
         <header>
           <h1>404</h1>
           <div className="mt-2">
             Oi ~ This URL does not exist.
             <br />
             <br />
-            <Link href="/">
-              Get back to my homepage...
-            </Link>
+            <Link href="/">Get back to my homepage...</Link>
           </div>
         </header>
       </div>

@@ -18,7 +18,7 @@
       }
 
       main {
-        @include center-block(5%, "padding");
+        @include center-block(16px, "padding");
       }
     }
   }
@@ -28,17 +28,36 @@
   .sl-l-container {
     main {
       @include center-block;
-      max-width: 960px;
       padding-left: 0;
       padding-right: 0;
+    }
+
+    &__md {
+      main {
+        max-width: 960px;
+      }
+    }
+
+    &__lg {
+      main {
+        max-width: 1200px;
+      }
     }
   }
 }
 
 @media (min-width: 1980px) {
   .sl-l-container {
-    main {
-      max-width: 1200px;
+    &__md {
+      main {
+        max-width: 1200px;
+      }
+    }
+
+    &__md {
+      main {
+        max-width: 1600px;
+      }
     }
   }
 }

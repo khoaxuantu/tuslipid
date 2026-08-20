@@ -24,7 +24,7 @@ export default function MenuHeaderGrp() {
       </button>
       <hgroup>
         <h2 className="mt-3">Xuan Khoa Tu Nguyen</h2>
-        <h6 className="mt-3">SWE @ Pixta</h6>
+        <h6 className="mt-3">Software Engineer @ FPT Software</h6>
       </hgroup>
     </header>
   );

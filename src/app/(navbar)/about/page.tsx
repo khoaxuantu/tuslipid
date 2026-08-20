@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   title: "About me",
   description: aboutDescription,
   alternates: {
-    canonical: '/about',
+    canonical: "/about",
   },
   openGraph: {
     title: "About Tuslipid",
     description: aboutDescription,
-    url: '/about',
+    url: "/about",
     type: "profile",
     images: aboutImage,
   },
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <div className="sl-l-container sl-l-wrapper about-l-wrapper transition-page">
+      <div className="sl-l-container sl-l-container__md sl-l-wrapper about-l-wrapper transition-page">
         <AboutHeaderGrp />
         <main>
           <AboutIntro />

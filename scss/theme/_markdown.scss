@@ -7,8 +7,18 @@ $codeinline-background: #f6f8fa;
 
 %markdown-theme {
   * {
-    margin: revert;
     list-style-type: revert;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  blockquote {
+    margin: revert;
   }
 
   code,

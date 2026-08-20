@@ -1,6 +1,6 @@
+import Copyright from "@/components/copyright";
 import ProjectsPageHeaderGrp from "@/components/projects/header";
 import { ProjectsList } from "@/components/projects/projects";
-import Copyright from "@/components/copyright";
 import { Metadata } from "next";
 
 const projDescription = `I just have studied Information Technology for three years, \
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
   return (
     <>
-      <div className="sl-l-container sl-l-wrapper transition-page">
+      <div className="sl-l-container sl-l-container__md sl-l-wrapper transition-page">
         <ProjectsPageHeaderGrp />
         <main className="projects-l-wrapper">
           <ProjectsList />

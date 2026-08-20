@@ -1,7 +1,16 @@
 /* Font */
 .blog-l-wrapper * {
-  margin: revert;
   list-style-type: revert;
+}
+.blog-l-wrapper p,
+.blog-l-wrapper h1,
+.blog-l-wrapper h2,
+.blog-l-wrapper h3,
+.blog-l-wrapper h4,
+.blog-l-wrapper h5,
+.blog-l-wrapper h6,
+.blog-l-wrapper blockquote {
+  margin: revert;
 }
 .blog-l-wrapper code,
 .blog-l-wrapper pre {
