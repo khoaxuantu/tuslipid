@@ -1,9 +1,9 @@
 "use client";
 
-import Link from "next/link";
-import { useEffect } from "react";
 import { SocialMediaBtnGroup } from "@/components/button_group";
 import addOrientationHandler from "@/components/orientation";
+import Link from "next/link";
+import { useEffect } from "react";
 
 function Contact() {
   useEffect(() => {
@@ -11,7 +11,7 @@ function Contact() {
   }, []);
 
   return (
-    <div className="sl-l-container contact-l-wrapper center contact-c-txt__body transition-menu">
+    <div className="sl-l-container sl-l-container__md contact-l-wrapper center contact-c-txt__body transition-menu">
       <h2 className="contact-c-txt__header p-2">
         ~ Oi ~<br></br>
         Say hello to me by one of the following {":)"}

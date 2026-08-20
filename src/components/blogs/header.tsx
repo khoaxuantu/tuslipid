@@ -19,6 +19,12 @@ export function SingleBlogPageHeaderGrp(props: { id: string }) {
       </h1>
       <blockquote className="mt-2">
         <DateText value={BLOG_INFO_DICT[props.id].date} />
+        <br />
+        <i>
+          <small>
+            Updated at: <DateText value={BLOG_INFO_DICT[props.id].updatedAt} />
+          </small>
+        </i>
       </blockquote>
     </header>
   );

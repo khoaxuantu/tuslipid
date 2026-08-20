@@ -19,4 +19,5 @@ export interface IBlogCardProps extends ICardProps {
   file: string;
   tags: string[];
   date: Date;
+  updatedAt: Date;
 }

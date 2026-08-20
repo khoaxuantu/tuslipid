@@ -624,7 +624,7 @@ hr {
 }
 .projects-c-card {
   aspect-ratio: 2;
-  transition: scale 250ms ease-in-out;
+  transition: box-shadow 250ms ease-in-out;
 }
 .projects-c-card__description {
   flex-direction: column;
@@ -684,6 +684,7 @@ hr {
   margin-left: auto;
   margin-right: auto;
   overflow-x: auto;
+  margin-inline: auto;
 }
 .blog-c-img__extend {
   width: 100dvw;
@@ -803,22 +804,30 @@ hr {
   text-align: center;
 }
 .sl-l-container main {
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 @media screen and (min-width: 1200px) {
   .sl-l-container main {
     margin-left: auto;
     margin-right: auto;
-    max-width: 960px;
     padding-left: 0;
     padding-right: 0;
   }
+  .sl-l-container__md main {
+    max-width: 960px;
+  }
+  .sl-l-container__lg main {
+    max-width: 1200px;
+  }
 }
 @media (min-width: 1980px) {
-  .sl-l-container main {
+  .sl-l-container__md main {
     max-width: 1200px;
+  }
+  .sl-l-container__md main {
+    max-width: 1600px;
   }
 }
 .row {
