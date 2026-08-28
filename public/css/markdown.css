@@ -62,7 +62,6 @@
   padding-left: 20px;
 }
 .blog-l-wrapper img {
-  cursor: zoom-in;
   border-radius: 1rem;
   width: 100%;
 }
@@ -70,9 +69,22 @@
   margin-left: 0;
   margin-right: 0;
   text-align: center;
+  margin-block: 0.5rem;
+}
+.blog-l-wrapper figure img:not(.blog-c-img__extend) {
+  cursor: zoom-in;
+}
+.blog-l-wrapper figure img.blog-c-img__extend {
+  cursor: zoom-out;
 }
 .blog-l-wrapper figure p {
   margin-top: 0;
+}
+.blog-l-wrapper figure figcaption {
+  font-size: smaller;
+}
+.blog-l-wrapper hr {
+  margin: 2em 0;
 }
 
 .blog-l-wrapper {

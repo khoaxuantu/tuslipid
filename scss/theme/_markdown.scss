@@ -80,7 +80,6 @@ $codeinline-background: #f6f8fa;
   }
 
   img {
-    cursor: zoom-in;
     border-radius: 1rem;
     width: 100%;
   }
@@ -89,9 +88,26 @@ $codeinline-background: #f6f8fa;
     margin-left: 0;
     margin-right: 0;
     text-align: center;
+    margin-block: 0.5rem;
+
+    img:not(.blog-c-img__extend) {
+      cursor: zoom-in;
+    }
+
+    img.blog-c-img__extend {
+      cursor: zoom-out;
+    }
 
     p {
       margin-top: 0;
     }
+
+    figcaption {
+      font-size: smaller;
+    }
+  }
+
+  hr {
+    margin: 2em 0;
   }
 }
