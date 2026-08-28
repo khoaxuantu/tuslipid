@@ -372,8 +372,8 @@ have an overview of what frontend development is?`,
     content_section: "Blogs",
     id: "me_at_ado_stadium_live_2026",
     title: 'Me at Ado Stadium Live 2026 "Ao"',
-    brief_description: `This is the first time I went to my favorite singer's live concert; perhaps
-it is my most awesome experience so far... ߹𖥦߹`,
+    brief_description: `This is the first time I went to my favorite singer's live concert; \
+perhaps it is my most awesome experience so far... ߹𖥦߹`,
     url: "/me-at-ado-stadium-live-2026",
     file: "me_at_ado_stadium_live_2026.mdx",
     tags: ["casual"],
