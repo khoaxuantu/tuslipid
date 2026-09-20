@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { useEffect, useState } from "react";
 
@@ -14,25 +14,30 @@ export function TableOfContents() {
   const [headings, setHeadings] = useState<TocHeading[]>([]);
 
   useEffect(() => {
-    const elements: NodeListOf<HTMLElement> = document.querySelectorAll("h1, h2, h3");
+    const elements: NodeListOf<HTMLElement> =
+      document.querySelectorAll("h1, h2, h3");
     const tmp: TocHeading[] = [];
 
-    elements.forEach(elem => {
+    elements.forEach((elem) => {
       if (isToc(elem) || isTitle(elem)) return;
       tmp.push({
         id: elem.id,
         text: elem.innerText,
         level: elem.nodeName[1],
       });
-    })
+    });
 
     setHeadings(tmp);
-  }, [])
+  }, []);
 
-  return(
+  if (!headings.length) {
+    return <section className="col-2"></section>;
+  }
+
+  return (
     <section className="col-4 blog-c-toc fade-in-down">
       <h2>{TOC_TEXT}</h2>
-      { !headings ? <FetchingContentNoti /> : <TocList headings={headings} /> }
+      {!headings ? <FetchingContentNoti /> : <TocList headings={headings} />}
     </section>
   );
 }
@@ -46,27 +51,28 @@ function isTitle(elem: HTMLElement): boolean {
 }
 
 function FetchingContentNoti() {
-  return(
-    <div><i>Fetching contents...</i></div>
+  return (
+    <div>
+      <i>Fetching contents...</i>
+    </div>
   );
 }
 
-function TocList({ headings }: { headings: TocHeading[]}) {
-  return(
+function TocList({ headings }: { headings: TocHeading[] }) {
+  return (
     <div className="blog-c-toc__details">
       <details open>
         <ul>
-          {
-            headings.map(heading => {
-              return(
-                <li key={heading.id} className={formatTocListClass(heading.level)}>
-                  <a href={`#${heading.id}`}>
-                    {heading.text}
-                  </a>
-                </li>
-              )
-            })
-          }
+          {headings.map((heading) => {
+            return (
+              <li
+                key={heading.id}
+                className={formatTocListClass(heading.level)}
+              >
+                <a href={`#${heading.id}`}>{heading.text}</a>
+              </li>
+            );
+          })}
         </ul>
       </details>
     </div>
