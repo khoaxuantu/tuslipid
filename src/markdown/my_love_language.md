@@ -31,6 +31,8 @@ more languages you can find.
 
 "You are beautiful in my eyes.".
 
+"Thinking about you make my life happier.".
+
 I share with her about cute videos.
 
 I share with her about memes.
@@ -109,6 +111,8 @@ at that moment. I just want to let her know I tried, no matter how the result
 be.
 
 I want to understand her.
+
+"It is not just loving you, I love the world again by you.".
 
 There is a vault, which stores conversations that helped me overcome myself at
 my most broken moments, at somewhere on the Internet. The day I share it to her,
