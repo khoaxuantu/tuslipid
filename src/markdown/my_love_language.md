@@ -123,8 +123,8 @@ it means I decide to be her lifelong companion, finally.
   you someday.". I partially agreed, partially did not understand.
 - ~2021: I finally experienced the truly exhaustion of the longest unrequited
   love that I had embraced myself that whole time.
-- ~2022: I finished it, in the worst (or best) way possible. I blamed myself.
-- 2022-2026: I healed myself, did not blame anymore. As my friends'
+- \~2022\~2023: I finished it, in the worst (or best) way possible. I blamed myself.
+- 2023-2026: I healed myself, did not blame anymore. As my friends'
   encouragement, I tried to open myself again, and started to make a move to
   the girl I like.
 - 2026: Sadly, none of the moves returned a happy ending to me. One was like
