@@ -103,11 +103,16 @@ for her.
 
 I want her to feel safe when she is with me.
 
+I definitely find a way to help her when she feels tired. I hate the feeling of
+not able to do anything. Please don't judge me if I unfortunately cannot reach
+at that moment. I just want to let her know I tried, no matter how the result
+be.
+
 I want to understand her.
 
 There is a vault, which stores conversations that helped me overcome myself at
 my most broken moments, at somewhere on the Internet. The day I share it to her,
-it means I decide to be her lifelong companion.
+it means I decide to be her lifelong companion, finally.
 
 ---
 
