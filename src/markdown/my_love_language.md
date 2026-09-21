@@ -25,7 +25,7 @@ _To my beloved one (in the future),_
 Thank you. And I am genuinely apolozing for letting you feel emotional
 disadvantaged.
 
-That's enough, let's jump into my emotion in the list following. Keep in mind
+That's enough, let's jump into my emotion in the following list. Keep in mind
 that I do not expose all of my language at all time; but the more I love, the
 more languages you can find.
 
@@ -33,7 +33,7 @@ more languages you can find.
 
 "You are beautiful in my eyes.".
 
-"Thinking about you make my life happier.".
+"Thinking about you makes my life happier.".
 
 I share with her about cute videos.
 
@@ -57,7 +57,7 @@ I share with her about my game library.
 
 - It may be a whole city in City Skylines, or a small town in TheoTown.
 - It may be a car collection in Forza Horizon 6.
-- It may be board games, such as palying cards, werewolf, exploding kittens,
+- It may be board games, such as playing cards, werewolf, exploding kittens,
   monopoly, etc.
 
 I share with her about my study and philosophy.
