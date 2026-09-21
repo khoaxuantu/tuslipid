@@ -16,7 +16,9 @@ _To a lady,_
 
 If you catch any of my language below towards you and have no
 interest of romantic relationship with me, please tell me immediately and
-directly, do not give me any hope.
+directly, do not give me any hope. If you lose interests in me over time, please
+let me know as well. it is better than keep it long as my sturbborness may
+hurt both oh us.
 
 _To my beloved one,_
 
