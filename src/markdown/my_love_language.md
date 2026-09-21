@@ -18,7 +18,7 @@ If you catch any of my language below towards you and have no
 interest of romantic relationship with me, please tell me immediately and
 directly, do not give me any hope. If you lose interests in me over time, please
 let me know as well. It is better than keeping it long as my sturbborness may
-hurt both oh us.
+hurt both of us.
 
 _To my beloved one (in the future),_
 
