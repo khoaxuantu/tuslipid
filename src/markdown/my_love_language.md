@@ -82,9 +82,13 @@ I like hearing her voice.
 
 I like seeing her.
 
+I like seeing her smile.
+
 I like taking her to anywhere with me if I can.
 
 I like paying dinners for her.
+
+I like fulfilling her wishes.
 
 I like giving her gifts and wishes.
 
