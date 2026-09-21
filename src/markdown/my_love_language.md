@@ -20,7 +20,7 @@ directly, do not give me any hope. If you lose interests in me over time, please
 let me know as well. It is better than keeping it long as my sturbborness may
 hurt both oh us.
 
-_To my beloved one,_
+_To my beloved one (in the future),_
 
 Thank you. And I am genuinely apolozing for letting you feel emotional
 disadvantaged.
