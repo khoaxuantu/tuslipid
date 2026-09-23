@@ -109,6 +109,8 @@ as a normal individual that you can heal. If she respects that, then I will be
 able to provide my protection and cure to her without any effort, as a support
 for her.
 
+I want to text her good morning and good night.
+
 I want her to feel safe when she is with me.
 
 I definitely find a way to help her when she feels tired. I hate the feeling of
