@@ -141,7 +141,8 @@ it means I decide to be her lifelong companion, finally.
   the girl I like.
 - 2026: Sadly, none of the moves returned a happy ending to me. One was like
   different mindsets leading to deteriorating, one was like losing interests,
-  another was like not in the right moment. After each time, my hurt got more
-  deep. Now, it can raise up to the level that even a "No" response can damage
-  me. I think I will withdraw into myself again for a moment, not to let me hurt
-  myself, and hurt her further. I hope I can open up again soon.
+  another was like not in the right moment, she does not like me. After each
+  time, my hurt got more deep. Now, it can raise up to the level that even a
+  "No" response can damage me. I think I will withdraw into myself again for a
+  moment, not to let me hurt myself, and hurt her further. I hope I can open up
+  again soon.
