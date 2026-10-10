@@ -1,5 +1,3 @@
-import Button from "@/lib/factory/button";
-
 export default function ProjectsPageHeaderGrp() {
   return (
     <header>

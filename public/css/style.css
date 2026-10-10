@@ -789,6 +789,25 @@ hr {
     max-height: 65dvh;
   }
 }
+.trait-l-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.trait-l-list a:hover {
+  text-decoration: none;
+}
+.trait-c-card {
+  background-color: var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-on-primary-container);
+  border-radius: 16px;
+  padding: 1rem;
+  transition: box-shadow 250ms ease-in-out;
+}
+.trait-c-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
 .sl-l-wrapper {
   color: var(--md-sys-color-on-surface);
   width: 100%;

@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { TagsContext } from "@/lib/context/tag";
 import { useReducer } from "react";
@@ -16,7 +16,7 @@ export function BlogsContent() {
           <Tags dispatchActiveTags={dispatchActiveTags} />
         </aside>
         <section className="col-8 blogs-l-wrapper">
-          <BlogsList key={activeTags.tags.join('_')} />
+          <BlogsList key={activeTags.tags.join("_")} />
         </section>
       </TagsContext.Provider>
     </main>

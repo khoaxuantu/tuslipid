@@ -1,13 +1,14 @@
 /* They should be imported only once */
-@use 'base';
-@use 'components';
+@use "base";
+@use "components";
 
 /* Pages */
-@use 'pages/about';
-@use 'pages/contact';
-@use 'pages/menu';
-@use 'pages/projects';
-@use 'pages/blog';
-@use 'pages/blogs';
+@use "pages/about";
+@use "pages/contact";
+@use "pages/menu";
+@use "pages/projects";
+@use "pages/blog";
+@use "pages/blogs";
+@use "pages/trait";
 
-@use 'layout';
+@use "layout";

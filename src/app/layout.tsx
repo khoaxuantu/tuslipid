@@ -1,8 +1,8 @@
-import { Metadata } from "next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Analytics } from "@vercel/analytics/next";
-import React from "react";
 import ThemeProvider from "@/lib/provider/theme.provider";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Metadata } from "next";
+import React from "react";
 
 const defaultTitle = "Tuslipid";
 const defaultDescription = "Xuan Khoa Tu Nguyen's personal website";
@@ -20,11 +20,14 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL(defaultURL),
   alternates: {
-    canonical: '/',
+    canonical: "/",
   },
   openGraph: {
     type: "website",
-    title: defaultTitle,
+    title: {
+      template: `${defaultTitle} - %s`,
+      default: defaultTitle,
+    },
     description: defaultDescription,
     url: defaultURL,
     siteName: defaultTitle,
@@ -32,7 +35,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: defaultTitle,
+    title: {
+      template: `${defaultTitle} - %s`,
+      default: defaultTitle,
+    },
     description: defaultDescription,
     creator: "Xuan Khoa Tu Nguyen",
     images: {
@@ -42,11 +48,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
@@ -73,9 +75,7 @@ export default function RootLayout({
         <link rel="manifest" href={`${defaultURL}/logo/site.webmanifest`}></link>
       </head>
       <body>
-        <ThemeProvider>
-          {children}
-        </ThemeProvider>
+        <ThemeProvider>{children}</ThemeProvider>
         <SpeedInsights />
         <Analytics />
       </body>
