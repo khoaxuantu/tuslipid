@@ -7,8 +7,8 @@ const thumb = "/seo/blogs-tuslipid.webp";
 
 export const metadata: Metadata = {
   title: {
-    default: "My trait",
-    template: "My trait - %s",
+    default: "My traits",
+    template: "My traits - %s",
   },
   description,
   alternates: {
@@ -17,19 +17,20 @@ export const metadata: Metadata = {
   openGraph: {
     type: "article",
     title: {
-      default: "My trait",
-      template: "My trait - %s",
+      default: "My traits",
+      template: "My traits - %s",
     },
     description,
     url: "/trait",
     images: thumb,
   },
   twitter: {
+    card: "summary_large_image",
     images: thumb,
     description,
     title: {
-      default: "My trait",
-      template: "My trait - %s",
+      default: "My traits",
+      template: "My traits - %s",
     },
   },
 };
