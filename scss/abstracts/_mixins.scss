@@ -52,6 +52,7 @@
 @mixin project-card() {
   &__description {
     flex-direction: column;
+    display: inherit;
   }
 
   &__tools {

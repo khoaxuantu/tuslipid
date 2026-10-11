@@ -1,3 +1,4 @@
+import Copyright from "@/components/copyright";
 import { Metadata } from "next";
 import { PropsWithChildren } from "react";
 
@@ -7,8 +8,8 @@ const thumb = "/seo/blogs-tuslipid.webp";
 
 export const metadata: Metadata = {
   title: {
-    default: "My traits",
-    template: "My traits - %s",
+    default: "Traits",
+    template: "Traits - %s",
   },
   description,
   alternates: {
@@ -17,8 +18,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: "article",
     title: {
-      default: "My traits",
-      template: "My traits - %s",
+      default: "Traits",
+      template: "Traits - %s",
     },
     description,
     url: "/trait",
@@ -29,8 +30,8 @@ export const metadata: Metadata = {
     images: thumb,
     description,
     title: {
-      default: "My traits",
-      template: "My traits - %s",
+      default: "Traits",
+      template: "Traits - %s",
     },
   },
 };
@@ -38,7 +39,9 @@ export const metadata: Metadata = {
 export default function Layout(props: PropsWithChildren) {
   return (
     <div className="sl-l-container sl-l-container__md sl-l-wrapper trait-l-container transition-page">
+      <link rel="preload stylesheet" href="/css/markdown.css" as="style" />
       {props.children}
+      <Copyright className="sl-c-copyright__page mt-5 pb-3" />
     </div>
   );
 }

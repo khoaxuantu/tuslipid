@@ -1,5 +1,10 @@
 .trait {
   &-l {
+    &-article {
+      max-width: 640px;
+      margin-inline: auto;
+    }
+
     &-list {
       display: grid;
       grid-template-columns: repeat(2, 1fr);

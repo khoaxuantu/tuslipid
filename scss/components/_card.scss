@@ -1,26 +1,21 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 .sl {
-    &-c {
-        &-card {
-            @include rounded(10);
-            @extend %card-bodering;
+  &-c {
+    &-card {
+      @include rounded(10);
+      @extend %card-bodering;
 
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            gap: 1rem;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 1rem;
 
-            &>*{
-                display: inherit;
-                width: 100%;
-            }
-
-            &__href {
-                li {
-                    float: left;
-                }
-            }
+      &__href {
+        li {
+          float: left;
         }
+      }
     }
+  }
 }

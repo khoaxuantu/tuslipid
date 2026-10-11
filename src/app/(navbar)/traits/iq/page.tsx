@@ -1,3 +1,4 @@
+import Header from "@/components/shared/header";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -15,6 +16,19 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Page() {
-  return <></>;
+export default async function Page() {
+  const { default: Post } = await import(`@md/traits/iq.mdx`);
+
+  return (
+    <>
+      <Header title="Tus's Traits - IQ">
+        <hr />
+      </Header>
+      <main>
+        <article className="trait-l-article">
+          <Post />
+        </article>
+      </main>
+    </>
+  );
 }
