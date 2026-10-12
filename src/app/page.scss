@@ -26,10 +26,11 @@ main#home {
 
     button {
       border-radius: var.$radius-2;
-      padding: var.$spacing-y-2 var.$spacing-x-2;
+      padding: var.$spacing-3;
       background-color: var.$color-primary-container;
       color: var.$color-on-primary-container;
       min-width: 96px;
+      font-size: medium;
 
       &:hover {
         box-shadow: var.$shadow-1;
