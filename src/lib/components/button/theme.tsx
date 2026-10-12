@@ -1,12 +1,13 @@
 "use client";
 
-import { useContext } from "react";
-import { ThemeButtonProps } from "./type";
 import { ThemeContext } from "@/lib/context/theme";
+import { useContext } from "react";
 import { MoonIcon } from "../icons/MoonIcon";
 import { SunIcon } from "../icons/SunIcon";
 
-export default function ThemeButton(props: ThemeButtonProps) {
+import "./theme.scss";
+
+export default function ButtonTheme() {
   const { theme, setTheme } = useContext(ThemeContext);
 
   function switchThemeHandler() {
@@ -26,8 +27,7 @@ export default function ThemeButton(props: ThemeButtonProps) {
   return (
     <button
       onClick={switchThemeHandler}
-      {...props}
-      className={`sl-c-btn__theme ${props.className ?? ""}`}
+      className={`theme`}
       aria-label="theme-button"
     >
       {theme == "light" ? <SunIcon width={24} /> : <MoonIcon width={24} />}

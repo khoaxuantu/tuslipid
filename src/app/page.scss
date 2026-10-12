@@ -1,5 +1,39 @@
+@use "template";
+@use "var";
+
 main#home {
-  width: 100dvw;
-  height: 100dvh;
-  overflow: auto;
+  @include template.center;
+
+  > .container {
+    gap: var.$spacing-y-4;
+
+    text-align: center;
+  }
+
+  header {
+    .avatar {
+      img {
+        border-radius: 50%;
+      }
+    }
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var.$spacing-x-2;
+    justify-content: center;
+
+    button {
+      border-radius: var.$radius-2;
+      padding: var.$spacing-y-2 var.$spacing-x-2;
+      background-color: var.$color-primary-container;
+      color: var.$color-on-primary-container;
+      min-width: 96px;
+
+      &:hover {
+        box-shadow: var.$shadow-1;
+      }
+    }
+  }
 }

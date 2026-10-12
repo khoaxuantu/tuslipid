@@ -1,6 +1,8 @@
 @use "font-scale";
 @use "var";
 
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@450&display=swap");
+
 @include font-scale.createTypoScale($ratio: "golden");
 
 * {
@@ -32,6 +34,74 @@
 }
 
 body {
+  --radius-1: 4px;
+  --radius-2: 6px;
+  --radius-3: 10px;
+  --radius-4: 16px;
+  --radius-5: 26px;
+  --radius-full: 9999px;
+
+  --spacing-1: 8px;
+  --spacing-2: 12px;
+  --spacing-3: 16px;
+  --spacing-4: 24px;
+  --spacing-5: 32px;
+
+  --spacing-x-1: 8px;
+  --spacing-x-2: 16px;
+  --spacing-x-3: 24px;
+  --spacing-x-4: 48px;
+  --spacing-x-5: 200px;
+
+  --spacing-y-1: 8px;
+  --spacing-y-2: 12px;
+  --spacing-y-3: 16px;
+  --spacing-y-4: 24px;
+  --spacing-y-5: 32px;
+
+  --shadow-1:
+    0 1px 2px 0 hsl(from #{var.$color-shadow} h s l / 0.3),
+    0 1px 3px 1px hsl(from #{var.$color-shadow} h s l / 0.15);
+  --shadow-2:
+    0 1px 2px 0 hsl(from #{var.$color-shadow} h s l / 0.3),
+    0 2px 6px 2px hsl(from #{var.$color-shadow} h s l / 0.15);
+  --shadow-3:
+    0 1px 3px 0 hsl(from #{var.$color-shadow} h s l / 0.3),
+    0 4px 8px 3px hsl(from #{var.$color-shadow} h s l / 0.15);
+  --shadow-4:
+    0 2px 3px 0 hsl(from #{var.$color-shadow} h s l / 0.3),
+    0 6px 10px 4px hsl(from #{var.$color-shadow} h s l / 0.15);
+  --shadow-5:
+    0 4px 4px 0 hsl(from #{var.$color-shadow} h s l / 0.3),
+    0 8px 12px 6px hsl(from #{var.$color-shadow} h s l / 0.15);
+
   background-color: var.$color-background;
+  color: var.$color-on-surface;
   font-family: var.$font;
+  line-height: 1.6;
+}
+
+body,
+button,
+a {
+  transition: all 200ms;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  color: var.$color-primary;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+svg,
+img {
+  display: block;
 }

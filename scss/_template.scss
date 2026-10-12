@@ -1,0 +1,22 @@
+@use "var";
+
+@mixin center {
+  width: 100dvw;
+  height: 100dvh;
+  overflow: auto;
+
+  > .container {
+    margin-inline: var.$spacing-x-2;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @media (max-height: 512px) {
+    > .container {
+      height: auto;
+      margin-block: var.$spacing-y-5;
+    }
+  }
+}
