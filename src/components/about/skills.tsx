@@ -4,7 +4,7 @@ import Link from "next/link";
 export function Skills() {
   return (
     <section id="skill">
-      <aside className="col-4 pb-3 pe-5">
+      <aside>
         <h2>
           About my <span>coding biases</span>
         </h2>
@@ -43,18 +43,16 @@ export async function SkillBtnGroup() {
             target="__blank"
             rel="noreferrer noopener"
           >
-            <button>
-              <div className="icon">
-                <img
-                  className="p-1"
-                  src={btnProp.icon}
-                  alt={"icon-" + btnProp.name}
-                  width={32}
-                  loading="lazy"
-                />
-              </div>
-              <span>{btnProp.name}</span>
-            </button>
+            <div className="icon">
+              <img
+                className="p-1"
+                src={btnProp.icon}
+                alt={"icon-" + btnProp.name}
+                width={32}
+                loading="lazy"
+              />
+            </div>
+            <span id="name">{btnProp.name}</span>
           </Link>
         );
       })}

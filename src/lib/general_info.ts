@@ -119,7 +119,7 @@ export const WORK_INFO_LIST: ITabProps[] = [
         to 5000 requests per second.`,
         `Collaborated closely with the product owner and managers to plan, architect, and execute
         the end-to-end product lifecycle::
-        <ul class="pt-2" style="list-style-type:unset; list-style-position:inside">
+        <ul style="padding-top: var(--spacing-y-1);list-style-type:disc; list-style-position:inside">
           <li>Engineered the core business domains for the platform's central photoshoot management system.</li>
           <li>Designed and operated payment integrations, featuring compatibility between 6+ versions of fee models and add-ons.</li>
           <li>Designed and implemented a localized multi-channel communication system, supporting real-time chat, transactional mailing, and push notifications; and featuring a dynamic engine running 100+ customizable templates.</li>

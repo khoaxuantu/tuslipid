@@ -1,0 +1,206 @@
+@use "var";
+@use "template";
+
+main#about {
+  header {
+    padding: var.$spacing-3;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: var.$spacing-y-3;
+    line-height: 2.5;
+
+    img {
+      margin-inline: auto;
+    }
+  }
+
+  hr {
+    margin-block: var.$spacing-y-5;
+  }
+
+  article {
+    @include template.wrapper(
+      $breakpoints: (
+        "xl",
+        "md",
+      )
+    );
+
+    aside {
+      blockquote {
+        text-wrap: balance;
+      }
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      gap: var.$spacing-5;
+      margin-block: var.$spacing-y-5;
+      padding-block: var.$spacing-y-5;
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+
+        > aside {
+          flex: 4;
+        }
+
+        > :not(aside) {
+          flex: 8;
+        }
+      }
+    }
+
+    section#work {
+      > ul {
+        list-style-type: none;
+
+        > li {
+          padding-bottom: var.$spacing-y-3;
+
+          &:not(:first-child) {
+            padding-top: 1rem;
+            border-top: 1px solid var.$color-outline-variant;
+          }
+        }
+
+        details {
+          &::details-content {
+            opacity: 0;
+            border-radius: var.$radius-4;
+            transition: all 400ms ease-in-out;
+            background-color: var.$color-secondary-container;
+            color: var.$color-on-secondary-container;
+          }
+
+          &[open]::details-content {
+            opacity: 1;
+          }
+
+          summary {
+            list-style-type: none;
+            cursor: pointer;
+
+            &:hover * {
+              text-decoration: underline;
+            }
+          }
+
+          > :not(summary) {
+            margin-top: var.$spacing-y-1;
+            padding: var.$spacing-4;
+          }
+
+          p {
+            padding-bottom: var.$spacing-y-1;
+          }
+        }
+      }
+    }
+
+    section#education {
+      .row {
+        display: flex;
+        gap: var.$spacing-3;
+
+        &:not(:first-child) {
+          margin-top: var.$spacing-y-4;
+        }
+      }
+
+      .time {
+        margin-bottom: var.$spacing-y-1;
+        opacity: 0.5;
+      }
+    }
+
+    section#activity {
+      > ul {
+        list-style-type: none;
+      }
+
+      li:not(:first-child) {
+        padding: var.$spacing-y-3 0;
+        border-top: 1px solid #{var.$color-outline-variant};
+      }
+
+      li {
+        padding-bottom: var.$spacing-y-3;
+      }
+    }
+
+    section#skill {
+      > div {
+        display: grid;
+        column-gap: var.$spacing-y-3;
+        row-gap: var.$spacing-x-3;
+        grid-template-columns: repeat(12, 1fr);
+        justify-content: space-between;
+
+        @media (min-width: 768px) and (max-width: 850px) {
+          column-gap: var.$spacing-y-1;
+        }
+
+        > a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          aspect-ratio: 1;
+          width: 100%;
+          cursor: pointer;
+          max-width: 150px;
+          font-size: 12px;
+          transition: scale 150ms ease-out;
+          grid-column-start: span 3;
+          background-color: var.$color-secondary-container;
+          color: var.$color-on-secondary-container;
+          border-radius: var.$radius-2;
+          opacity: 0.8;
+
+          #name {
+            width: 66.66%;
+            text-align: center;
+            display: none;
+          }
+
+          &:hover {
+            scale: 1.1;
+            text-decoration: none;
+            font-weight: 650;
+          }
+
+          @media (min-width: 321px) {
+            grid-column-start: span 2;
+          }
+
+          @media (min-width: 576px) {
+            aspect-ratio: 3;
+            grid-column-start: span 3;
+
+            #name {
+              display: block;
+            }
+          }
+
+          .icon {
+            img {
+              padding: 4px;
+            }
+          }
+        }
+      }
+    }
+
+    section#get-in-touch {
+      > .content {
+        p {
+          &:not(:first-child) {
+            margin-top: var.$spacing-y-1;
+          }
+        }
+      }
+    }
+  }
+}

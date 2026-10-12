@@ -109,3 +109,13 @@ svg,
 img {
   display: block;
 }
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: var.$color-outline-variant;
+}
+
+span {
+  display: inline-block;
+}

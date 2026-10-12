@@ -8,6 +8,8 @@ import Works from "@/components/about/works";
 import Copyright from "@/components/copyright";
 import { Metadata } from "next";
 
+import "./page.scss";
+
 const aboutDescription = `Here comes my profile - from a mechanical engineering student to \
 a computer science student then a full-stack developer`;
 const aboutImage = "/seo/about-tuslipid.jpg";
@@ -34,10 +36,11 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <>
-      <div className="sl-l-container sl-l-container__md sl-l-wrapper about-l-wrapper transition-page">
-        <AboutHeaderGrp />
-        <main>
+    <main id="about">
+      <AboutHeaderGrp />
+      <hr />
+      <article>
+        <div className="container">
           <AboutIntro />
           <Works />
           <Education />
@@ -45,9 +48,9 @@ export default function AboutPage() {
           <Skills />
           {/*<AboutProject />*/}
           <GetInTouch />
-        </main>
-        <Copyright />
-      </div>
-    </>
+          <Copyright />
+        </div>
+      </article>
+    </main>
   );
 }

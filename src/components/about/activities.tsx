@@ -2,14 +2,17 @@ import { ACTIVITY_INFO_LIST } from "@/lib/general_info";
 
 export default function Activities() {
   return (
-    <section className="mb-5 row">
-      <aside className="col-4 pb-3 pe-5">
+    <section id="activity">
+      <aside>
         <h2>About my activities</h2>
         <blockquote>
-          <i>Sometimes, I participates in events for fun, which helps me open many connections.</i>
+          <i>
+            Sometimes, I participates in events for fun, which helps me open
+            many connections.
+          </i>
         </blockquote>
       </aside>
-      <ul className="about-c-activities col-8">
+      <ul>
         {ACTIVITY_INFO_LIST.map((activity) => {
           return (
             <li key={activity.time}>
