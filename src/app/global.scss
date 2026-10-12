@@ -1,0 +1,37 @@
+@use "font-scale";
+@use "var";
+
+@include font-scale.createTypoScale($ratio: "golden");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: var.$color-secondary-container;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var.$color-secondary;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var.$color-primary;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb {
+  border-radius: var.$radius-full;
+}
+
+body {
+  background-color: var.$color-background;
+  font-family: var.$font;
+}

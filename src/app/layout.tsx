@@ -4,6 +4,8 @@ import { Analytics } from "@vercel/analytics/next";
 import React from "react";
 import ThemeProvider from "@/lib/provider/theme.provider";
 
+import "./global.scss";
+
 const defaultTitle = "Tuslipid";
 const defaultDescription = "Xuan Khoa Tu Nguyen's personal website";
 const defaultSEOImage = "/seo/menu-preview.jpg";
@@ -50,7 +52,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="stylesheet" href="/css/style.css" />
         <link rel="stylesheet" href="/css/themes/light.css" />
         <link rel="stylesheet" href="/css/themes/dark.css" />
         <link

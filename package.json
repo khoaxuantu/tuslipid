@@ -31,9 +31,10 @@
     "style:md": "sass --watch scss/markdown.scss public/css/markdown.css"
   },
   "devDependencies": {
-    "@types/node": "^24.0.0",
-    "@types/react": "^19.2.14",
-    "@types/mdx": "^2.0.13",
-    "@types/react-dom": "^19.2.3"
+    "@types/mdx": "^2.0.14",
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "sass": "^1.105.1"
   }
 }

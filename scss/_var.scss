@@ -1,0 +1,85 @@
+$BACKGROUND_URL: "/background.webp";
+$AVATAR_URL: "tuslipid.jpg";
+
+$font: -apple-system, BlinkMacSystemFont, "Inter", helvetica, sans-serif;
+$font-mono: "JetBrains Mono", monospace;
+
+$color-primary: var(--md-sys-color-primary);
+$color-surface-tint: var(--md-sys-color-surface-tint);
+$color-on-primary: var(--md-sys-color-on-primary);
+$color-primary-container: var(--md-sys-color-primary-container);
+$color-on-primary-container: var(--md-sys-color-on-primary-container);
+$color-secondary: var(--md-sys-color-secondary);
+$color-on-secondary: var(--md-sys-color-on-secondary);
+$color-secondary-container: var(--md-sys-color-secondary-container);
+$color-on-secondary-container: var(--md-sys-color-on-secondary-container);
+$color-tertiary: var(--md-sys-color-tertiary);
+$color-on-tertiary: var(--md-sys-color-on-tertiary);
+$color-tertiary-container: var(--md-sys-color-tertiary-container);
+$color-on-tertiary-container: var(--md-sys-color-on-tertiary-container);
+$color-error: var(--md-sys-color-error);
+$color-on-error: var(--md-sys-color-on-error);
+$color-error-container: var(--md-sys-color-error-container);
+$color-on-error-container: var(--md-sys-color-on-error-container);
+$color-warning: var(--md-sys-color-warning);
+$color-on-warning: var(--md-sys-color-on-warning);
+$color-warning-container: var(--md-sys-color-warning-container);
+$color-on-warning-container: var(--md-sys-color-on-warning-container);
+$color-success-container: var(--md-sys-color-success-container);
+$color-on-success-container: var(--md-sys-color-on-success-container);
+$color-background: var(--md-sys-color-background);
+$color-on-background: var(--md-sys-color-on-background);
+$color-surface: var(--md-sys-color-surface);
+$color-on-surface: var(--md-sys-color-on-surface);
+$color-surface-variant: var(--md-sys-color-surface-variant);
+$color-outline: var(--md-sys-color-outline);
+$color-outline-variant: var(--md-sys-color-outline-variant);
+$color-shadow: var(--md-sys-color-shadow);
+$color-scrim: var(--md-sys-color-scrim);
+$color-primary-fixed: var(--md-sys-color-primary-fixed);
+$color-on-primary-fixed: var(--md-sys-color-on-primary-fixed);
+$color-primary-fixed-dim: var(--md-sys-color-primary-fixed-dim);
+$color-on-primary-fixed-variant: var(--md-sys-color-on-primary-fixed-variant);
+$color-tertiary-fixed: var(--md-sys-color-tertiary-fixed);
+$color-on-tertiary-fixed: var(--md-sys-color-on-tertiary-fixed);
+$color-tertiary-fixed-dim: var(--md-sys-color-tertiary-fixed-dim);
+$color-on-tertiary-fixed-variant: var(--md-sys-color-on-tertiary-fixed-variant);
+$color-surface-dim: var(--md-sys-color-surface-dim);
+$color-surface-bright: var(--md-sys-color-surface-bright);
+$color-surface-container-lowest: var(--md-sys-color-surface-container-lowest);
+$color-surface-container-low: var(--md-sys-color-surface-container-low);
+$color-surface-container: var(--md-sys-color-surface-container);
+$color-surface-container-high: var(--md-sys-color-surface-container-high);
+$color-surface-container-highest: var(--md-sys-color-surface-container-highest);
+$color-overlay: rgb(from black r g b / 0.5);
+
+$radius-1: var(--radius-1);
+$radius-2: var(--radius-2);
+$radius-3: var(--radius-3);
+$radius-4: var(--radius-4);
+$radius-5: var(--radius-5);
+$radius-full: var(--radius-full);
+
+$spacing-1: var(--spacing-1);
+$spacing-2: var(--spacing-2);
+$spacing-3: var(--spacing-3);
+$spacing-4: var(--spacing-4);
+$spacing-5: var(--spacing-5);
+
+$spacing-x-1: var(--spacing-x-1);
+$spacing-x-2: var(--spacing-x-2);
+$spacing-x-3: var(--spacing-x-3);
+$spacing-x-4: var(--spacing-x-4);
+$spacing-x-5: var(--spacing-x-5);
+
+$spacing-y-1: var(--spacing-y-1);
+$spacing-y-2: var(--spacing-y-2);
+$spacing-y-3: var(--spacing-y-3);
+$spacing-y-4: var(--spacing-y-4);
+$spacing-y-5: var(--spacing-y-5);
+
+$z-index-1: var(--z-index-1);
+$z-index-2: var(--z-index-2);
+$z-index-3: var(--z-index-3);
+$z-index-4: var(--z-index-4);
+$z-index-5: var(--z-index-5);
