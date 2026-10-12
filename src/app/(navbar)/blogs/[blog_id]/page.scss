@@ -45,6 +45,7 @@ main#blog {
           max-width: 640px;
           margin-inline: auto;
           overflow: auto;
+          margin-bottom: var.$spacing-y-5;
         }
       }
     }

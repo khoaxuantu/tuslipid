@@ -1,7 +1,7 @@
 "use server";
 
 import { ProjectProps } from "@/components/projects/types";
-import { getImgs, getSvgs } from "./factory/importMedia";
+import { getImgs, getSvgs } from "./factory/import-media";
 
 export interface SkillProps {
   name: string;

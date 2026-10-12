@@ -1,4 +1,4 @@
-import { getEduImgs } from "@/lib/factory/importMedia";
+import { getEduImgs } from "@/lib/factory/import-media";
 
 async function Education() {
   const eduImgs = await getEduImgs();

@@ -9,8 +9,8 @@ export async function SingleBlogContent(props: { id: string }) {
     <section>
       <div className="content">
         <Post />
-        <Copyright />
       </div>
+      <Copyright />
     </section>
   );
 }
