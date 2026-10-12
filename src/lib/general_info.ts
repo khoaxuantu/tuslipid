@@ -36,7 +36,7 @@ export const SOCIAL_MEDIA_INFO_LIST: SocialMediaProps[] = [
   },
   {
     id: "linkedin",
-    url: "https://www.linkedin.com/in/xuan-khoa-tu-nguyen-1a8927204/",
+    url: "https://www.linkedin.com/in/xuan-khoa-tu-nguyen/",
     icon: LinkedinIcon,
   },
   {
