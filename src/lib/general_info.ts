@@ -1,3 +1,4 @@
+import { WorkProps } from "@/components/about/types";
 import { BlogProps } from "@/components/blogs/types";
 import { JSX, SVGProps } from "react";
 import CodepenIcon from "../components/global/icons/CodepenIcon";
@@ -8,7 +9,6 @@ import GithubIcon from "../components/global/icons/GithubIcon";
 import LinkedinIcon from "../components/global/icons/LinkedinIcon";
 import MailIcon from "../components/global/icons/MailIcon";
 import RedditIcon from "../components/global/icons/RedditIcon";
-import { ITabProps } from "./factory/tabBase";
 
 export interface SocialMediaProps {
   id: string;
@@ -90,7 +90,7 @@ export const NAV_BTN_INFO_LIST: RoutingProps[] = [
   },
 ];
 
-export const WORK_INFO_LIST: ITabProps[] = [
+export const WORK_INFO_LIST: WorkProps[] = [
   {
     name: "FPT Software (Senior)",
     content: {

@@ -1,5 +1,5 @@
-import { ITabProps } from "@/lib/factory/tabBase";
 import { WORK_INFO_LIST } from "@/lib/general_info";
+import { WorkProps } from "./types";
 
 function Works() {
   return (
@@ -23,7 +23,7 @@ function Works() {
 
 export default Works;
 
-function ItemWork(props: ITabProps & { isCurrent?: boolean }) {
+function ItemWork(props: WorkProps & { isCurrent?: boolean }) {
   return (
     <details name={props.name} open={props.isCurrent}>
       <summary>
@@ -38,7 +38,7 @@ function ItemWork(props: ITabProps & { isCurrent?: boolean }) {
   );
 }
 
-function ItemWorkSummary(props: ITabProps) {
+function ItemWorkSummary(props: WorkProps) {
   return (
     <>
       <h5>
