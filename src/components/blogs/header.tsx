@@ -13,7 +13,7 @@ export function BlogsPageHeaderGrp() {
 export function SingleBlogPageHeaderGrp(props: { id: string }) {
   return (
     <header>
-      <h1>{BLOG_INFO_DICT[props.id].title}</h1>
+      <h1 id="blog-title">{BLOG_INFO_DICT[props.id].title}</h1>
       <blockquote>
         <DateText value={BLOG_INFO_DICT[props.id].date} />
         <br />

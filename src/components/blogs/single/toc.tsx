@@ -31,7 +31,7 @@ export function TableOfContents() {
   }, []);
 
   if (!headings.length) {
-    return <aside></aside>;
+    return null;
   }
 
   return (

@@ -1,8 +1,0 @@
-@use "abstracts/var";
-@use "theme/markdown";
-
-.blog-l-wrapper {
-  margin-top: 3rem;
-
-  @extend %markdown-theme;
-}
