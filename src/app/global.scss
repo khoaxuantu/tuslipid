@@ -57,6 +57,12 @@ body {
   --spacing-y-4: 24px;
   --spacing-y-5: 32px;
 
+  --z-index-1: 10;
+  --z-index-2: 20;
+  --z-index-3: 30;
+  --z-index-4: 40;
+  --z-index-5: 50;
+
   --shadow-1:
     0 1px 2px 0 hsl(from #{var.$color-shadow} h s l / 0.3),
     0 1px 3px 1px hsl(from #{var.$color-shadow} h s l / 0.15);

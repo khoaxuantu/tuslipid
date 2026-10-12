@@ -22,16 +22,13 @@ export default function NotFound() {
   return (
     <main id="notfound">
       <div className="container">
-        <header>
-          <h1>404</h1>
+        <h1>404</h1>
+        <div>
+          Oi ~ This URL does not exist.
           <br />
-          <div>
-            Oi ~ This URL does not exist.
-            <br />
-            <br />
-            <Link href="/">Get back to my homepage...</Link>
-          </div>
-        </header>
+          <br />
+          <Link href="/">Get back to my homepage...</Link>
+        </div>
       </div>
     </main>
   );

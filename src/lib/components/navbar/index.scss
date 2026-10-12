@@ -1,0 +1,35 @@
+@use "var";
+
+body {
+  > nav.desktop {
+    padding: var.$spacing-3;
+    display: none;
+    background-color: var.$color-surface-container-highest;
+    color: var.$color-on-surface;
+    position: sticky;
+    top: 0;
+    z-index: var.$z-index-4;
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: var.$radius-4;
+
+      li {
+        display: flex;
+
+        a {
+          color: var.$color-on-surface;
+        }
+
+        &:last-child {
+          margin-left: auto;
+        }
+      }
+    }
+
+    @media (min-width: 768px) {
+      display: block;
+    }
+  }
+}

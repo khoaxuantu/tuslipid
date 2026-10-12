@@ -2,11 +2,6 @@
 
 button.theme {
   background-color: transparent;
-  padding: 4px;
   border-radius: var.$radius-full;
   color: var.$color-on-surface;
-
-  &:hover {
-    background-color: var.$color-secondary-container;
-  }
 }

@@ -6,7 +6,6 @@ import AboutIntro from "@/components/about/introduction";
 import { Skills } from "@/components/about/skills";
 import Works from "@/components/about/works";
 import Copyright from "@/components/copyright";
-import { AboutProject } from "@/components/projects/projects";
 import { Metadata } from "next";
 
 const aboutDescription = `Here comes my profile - from a mechanical engineering student to \
@@ -44,10 +43,10 @@ export default function AboutPage() {
           <Education />
           <Activities />
           <Skills />
-          <AboutProject />
+          {/*<AboutProject />*/}
           <GetInTouch />
         </main>
-        <Copyright className="sl-c-copyright__page pb-3" />
+        <Copyright />
       </div>
     </>
   );

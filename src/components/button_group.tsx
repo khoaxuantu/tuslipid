@@ -1,10 +1,9 @@
-import Link from "next/link";
 import Button from "@/lib/factory/button";
-import { SOCIAL_MEDIA_INFO_LIST, NAV_BTN_INFO_LIST } from "@/lib/general_info";
+import { NAV_BTN_INFO_LIST, SOCIAL_MEDIA_INFO_LIST } from "@/lib/general_info";
 import { SkillProps, getSkillInfo } from "@/lib/general_info_server";
+import { TagsAction } from "@/lib/reducer/tag";
 import { BlogRepository } from "@/lib/repository/blog";
 import { Dispatch } from "react";
-import { TagsAction } from "@/lib/reducer/tag";
 
 export function SocialMediaBtnGroup() {
   return (

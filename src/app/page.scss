@@ -36,4 +36,12 @@ main#home {
       }
     }
   }
+
+  button.theme {
+    padding: 4px;
+
+    &:hover {
+      background-color: var.$color-secondary-container;
+    }
+  }
 }
