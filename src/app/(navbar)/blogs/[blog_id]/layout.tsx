@@ -1,3 +1,4 @@
+import ButtonGoTop from "@/components/global/button/gotop";
 import { BLOG_INFO_DICT } from "@/lib/general_info";
 import { Metadata } from "next";
 
@@ -6,7 +7,7 @@ type Props = {
 };
 
 const blogBaseURL = process.env.HOST_URL + "/blogs";
-export const dynamic = 'force-static';
+export const dynamic = "force-static";
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
   const params = await props.params;
@@ -38,8 +39,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
 }
 
 function notFoundMetadata(): Metadata {
-  const notFoundDescription =
-    `Oi ~ This URL does not exist, get to my blogs page at ${blogBaseURL}`;
+  const notFoundDescription = `Oi ~ This URL does not exist, get to my blogs page at ${blogBaseURL}`;
 
   return {
     title: "404 | Tusss Blogs",
@@ -62,7 +62,20 @@ export default function BlogLayout({
 }) {
   return (
     <>
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/atom-one-dark.min.css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"
+          integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC"
+          crossOrigin="anonymous"
+        />
+      </head>
       {children}
+      <ButtonGoTop />
     </>
   );
 }

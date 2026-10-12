@@ -4,9 +4,8 @@ import DateText from "../shared/date";
 export function BlogsPageHeaderGrp() {
   return (
     <header>
-      <h1 className="pt-2 pb-2">Tus's Blogs</h1>
-      <blockquote className="mt-2">Some notes, some ideas, some opinions</blockquote>
-      <hr />
+      <h1>Tus's Blogs</h1>
+      <blockquote>Some notes, some ideas, some opinions</blockquote>
     </header>
   );
 }

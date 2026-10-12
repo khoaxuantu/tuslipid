@@ -1,4 +1,3 @@
-import Button from "@/lib/factory/button";
 import { Metadata } from "next";
 
 const blogsDescription = "Some notes, some ideas, some opinions";
@@ -28,27 +27,7 @@ export const metadata: Metadata = {
 };
 
 function BlogsLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <>
-      <div className="sl-l-container sl-l-container__lg sl-l-wrapper transition-page">
-        {children}
-        <Button variant="go-top" />
-      </div>
-      <div className="fkkk-next-js">
-        <link rel="preload stylesheet" href="/css/markdown.css" as="style" />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/atom-one-dark.min.css"
-        />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"
-          integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC"
-          crossOrigin="anonymous"
-        />
-      </div>
-    </>
-  );
+  return <>{children}</>;
 }
 
 export default BlogsLayout;
