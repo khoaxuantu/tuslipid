@@ -1,7 +1,7 @@
 import { getProjInfo } from "@/lib/general_info_server";
 import Link from "next/link";
+import ProjectCard from "../projects/card";
 import { ProjectProps } from "../projects/types";
-import FeaturedProjectCard from "./featured-project-card";
 
 const FeaturedProjectCount = 4;
 
@@ -31,7 +31,7 @@ export default async function FeaturedProjects() {
       </aside>
       <div className="content">
         {featuredProj.map((proj) => {
-          return <FeaturedProjectCard key={proj.id} {...proj} />;
+          return <ProjectCard key={proj.id} {...proj} />;
         })}
       </div>
     </section>
@@ -45,7 +45,7 @@ async function getFeaturedProj(amount: number) {
     .sort((a, b) => Number(a[1].id) - Number(b[1].id))
     .reduce<ProjectProps[]>((key_list, proj) => {
       if (key_list.length >= amount) return key_list;
-      key_list.push(proj[1]);
+      key_list.push({ ...proj[1], imageURL: undefined });
       return key_list;
     }, []);
 }

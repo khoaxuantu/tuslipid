@@ -1,0 +1,44 @@
+@use "var";
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var.$color-secondary-container;
+  color: var.$color-on-secondary-container;
+  border-radius: var.$radius-4;
+  padding: var.$spacing-4;
+  gap: var.$spacing-2;
+
+  figure {
+    display: inherit;
+    border-radius: inherit;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  a {
+    color: var.$color-on-secondary-container;
+  }
+
+  footer {
+    display: flex;
+    gap: var.$spacing-1;
+    justify-content: flex-end;
+  }
+
+  .tools {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: smaller;
+    gap: var.$spacing-1;
+  }
+
+  .description {
+    margin-top: var.$spacing-y-3;
+  }
+}

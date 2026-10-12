@@ -110,6 +110,12 @@ img {
   display: block;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 hr {
   border: none;
   height: 2px;

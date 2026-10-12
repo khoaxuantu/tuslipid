@@ -73,3 +73,17 @@ $bp-map: (
     }
   }
 }
+
+@mixin document {
+  margin-bottom: var.$spacing-y-5;
+
+  > header,
+  > article {
+    margin-block: var.$spacing-y-5;
+    padding-block: var.$spacing-y-5;
+  }
+
+  > header {
+    text-align: center;
+  }
+}
