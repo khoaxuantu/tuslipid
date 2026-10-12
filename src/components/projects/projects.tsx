@@ -1,7 +1,7 @@
+import { getProjInfo } from "@/lib/general_info_server";
 import Link from "next/link";
 import Card from "../../lib/factory/cardBase";
-import { getProjInfo } from "@/lib/general_info_server";
-import { IProjCardProps } from "@/lib/type/card";
+import { ProjectListProps } from "./list";
 
 export async function AboutProject() {
   const FEATURE_PROJ_NUMBER = 4;
@@ -13,8 +13,8 @@ export async function AboutProject() {
         <h2>About my contributions</h2>
         <blockquote>
           <i>
-            I have done quite many interesting works. Here I want to show you some of my featured
-            projects.
+            I have done quite many interesting works. Here I want to show you
+            some of my featured projects.
             <br />
             <br />
             To learn more about my other works, let's go there
@@ -42,11 +42,14 @@ async function getFeaturedProj(amount: number) {
 
   return Object.entries(projInfoDict)
     .sort(compareProj)
-    .reduce<IProjCardProps[]>((key_list: IProjCardProps[], proj: [string, IProjCardProps]) => {
-      if (key_list.length >= amount) return key_list;
-      key_list.push(proj[1]);
-      return key_list;
-    }, []);
+    .reduce<ProjectListProps[]>(
+      (key_list: ProjectListProps[], proj: [string, ProjectListProps]) => {
+        if (key_list.length >= amount) return key_list;
+        key_list.push(proj[1]);
+        return key_list;
+      },
+      [],
+    );
 }
 
 export async function ProjectsList() {
@@ -63,6 +66,9 @@ export async function ProjectsList() {
   );
 }
 
-function compareProj(a: [string, IProjCardProps], b: [string, IProjCardProps]) {
+function compareProj(
+  a: [string, ProjectListProps],
+  b: [string, ProjectListProps],
+) {
   return (a[1].id as number) - (b[1].id as number);
 }

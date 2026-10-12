@@ -1,7 +1,7 @@
-import Copyright from "@/components/copyright";
+import Copyright from "@/components/global/copyright";
 import MenuHeaderGrp from "@/components/menu/header";
 
-import ButtonTheme from "@/lib/components/button/theme";
+import ButtonTheme from "@/components/global/button/theme";
 import { NAV_BTN_INFO_LIST } from "@/lib/general_info";
 import Link from "next/link";
 import "./page.scss";

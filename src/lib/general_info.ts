@@ -1,12 +1,12 @@
 import { JSX, SVGProps } from "react";
-import CodepenIcon from "./components/icons/CodepenIcon";
-import DevToIcon from "./components/icons/DevToIcon";
-import DiscordIcon from "./components/icons/DiscordIcon";
-import FbIcon from "./components/icons/FbIcon";
-import GithubIcon from "./components/icons/GithubIcon";
-import LinkedinIcon from "./components/icons/LinkedinIcon";
-import MailIcon from "./components/icons/MailIcon";
-import RedditIcon from "./components/icons/RedditIcon";
+import CodepenIcon from "../components/global/icons/CodepenIcon";
+import DevToIcon from "../components/global/icons/DevToIcon";
+import DiscordIcon from "../components/global/icons/DiscordIcon";
+import FbIcon from "../components/global/icons/FbIcon";
+import GithubIcon from "../components/global/icons/GithubIcon";
+import LinkedinIcon from "../components/global/icons/LinkedinIcon";
+import MailIcon from "../components/global/icons/MailIcon";
+import RedditIcon from "../components/global/icons/RedditIcon";
 import { ITabProps } from "./factory/tabBase";
 import { IBlogCardProps } from "./type/card";
 

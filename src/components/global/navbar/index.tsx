@@ -1,6 +1,6 @@
 import { NAV_BTN_INFO_LIST } from "@/lib/general_info";
 import Link from "next/link";
-import ButtonTheme from "../button/theme";
+import ButtonTheme from "../../../components/global/button/theme";
 import "./index.scss";
 
 export function Navbar() {

@@ -1,5 +1,5 @@
-import { Navbar } from "@/lib/components/navbar";
-import { NavbarMobile } from "@/lib/components/navbar/mobile";
+import { Navbar } from "@/components/global/navbar";
+import { NavbarMobile } from "@/components/global/navbar/mobile";
 import React from "react";
 
 export default function NavBarLayout({

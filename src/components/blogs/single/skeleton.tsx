@@ -1,4 +1,4 @@
-import Copyright from "@/components/copyright";
+import Copyright from "@/components/global/copyright";
 import { BLOG_INFO_DICT } from "@/lib/general_info";
 
 export async function SingleBlogContent(props: { id: string }) {

@@ -1,4 +1,4 @@
-import Copyright from "@/components/copyright";
+import Copyright from "@/components/global/copyright";
 import ProjectsPageHeaderGrp from "@/components/projects/header";
 import { ProjectsList } from "@/components/projects/projects";
 import { Metadata } from "next";

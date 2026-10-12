@@ -1,7 +1,9 @@
 "use client";
 
-import GithubIcon from "@/lib/components/icons/GithubIcon";
+import GithubIcon from "@/components/global/icons/GithubIcon";
 import clsx from "clsx";
+
+import "./index.scss";
 
 function Copyright(props: { className?: string }) {
   const year = new Date().getFullYear();

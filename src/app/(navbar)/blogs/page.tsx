@@ -1,6 +1,6 @@
 import { BlogsContent } from "@/components/blogs/content";
 import { BlogsPageHeaderGrp } from "@/components/blogs/header";
-import Copyright from "@/components/copyright";
+import Copyright from "@/components/global/copyright";
 
 export default function BlogsPage() {
   return (

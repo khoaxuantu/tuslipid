@@ -2,7 +2,7 @@
 
 import { NAV_BTN_INFO_LIST } from "@/lib/general_info";
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
-import ButtonTheme from "../button/theme";
+import ButtonTheme from "../../../components/global/button/theme";
 
 import Link from "next/link";
 import "./mobile.scss";
