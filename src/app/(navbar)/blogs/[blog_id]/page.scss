@@ -1,0 +1,90 @@
+@use "markdown";
+@use "template";
+@use "var";
+
+main#blog {
+  @include template.document;
+
+  > header {
+    h1 {
+      padding: var.$spacing-y-1;
+    }
+
+    blockquote {
+      text-align: center;
+    }
+  }
+
+  > article {
+    @extend %markdown-theme;
+    @include template.wrapper(
+      $breakpoints: (
+        "sm",
+        "md",
+        "lg",
+        "xl",
+      )
+    );
+
+    > .container {
+      @media (min-width: 768px) {
+        display: flex;
+        gap: var.$spacing-5;
+
+        > aside {
+          flex: 4;
+        }
+
+        > section {
+          flex: 8;
+        }
+      }
+
+      > section {
+        .content {
+          max-width: 640px;
+          margin-inline: auto;
+          overflow: auto;
+        }
+      }
+    }
+
+    aside {
+      margin-bottom: var.$spacing-y-5;
+
+      .toc {
+        text-wrap: balance;
+
+        .h1 {
+          list-style-type: "🍚 " !important;
+        }
+
+        .h2 {
+          list-style-type: "🧋 " !important;
+        }
+
+        .h3 {
+          margin-left: var.$spacing-x-3 !important;
+          list-style-type: "🍯 " !important;
+        }
+      }
+
+      @media (min-width: 768px) {
+        position: sticky;
+        top: 3rem;
+        max-height: 65dvh;
+
+        .toc {
+          overflow: auto;
+          max-height: inherit;
+          direction: rtl;
+          padding-left: 0.5rem;
+        }
+
+        details {
+          direction: ltr;
+        }
+      }
+    }
+  }
+}

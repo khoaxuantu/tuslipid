@@ -31,14 +31,14 @@ export function TableOfContents() {
   }, []);
 
   if (!headings.length) {
-    return <section className="col-2"></section>;
+    return <aside></aside>;
   }
 
   return (
-    <section className="col-4 blog-c-toc fade-in-down">
+    <aside>
       <h2>{TOC_TEXT}</h2>
       {!headings ? <FetchingContentNoti /> : <TocList headings={headings} />}
-    </section>
+    </aside>
   );
 }
 
@@ -60,7 +60,7 @@ function FetchingContentNoti() {
 
 function TocList({ headings }: { headings: TocHeading[] }) {
   return (
-    <div className="blog-c-toc__details">
+    <div className="toc">
       <details open>
         <ul>
           {headings.map((heading) => {
@@ -80,5 +80,5 @@ function TocList({ headings }: { headings: TocHeading[] }) {
 }
 
 function formatTocListClass(headingLevel: string) {
-  return `blog-c-toc__h${headingLevel}`;
+  return `h${headingLevel}`;
 }

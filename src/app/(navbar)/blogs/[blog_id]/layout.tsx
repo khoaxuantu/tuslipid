@@ -1,6 +1,7 @@
 import ButtonGoTop from "@/components/global/button/gotop";
 import { BLOG_INFO_DICT } from "@/lib/general_info";
 import { Metadata } from "next";
+import Head from "next/head";
 
 type Props = {
   params: Promise<{ blog_id: string }>;
@@ -62,7 +63,7 @@ export default function BlogLayout({
 }) {
   return (
     <>
-      <head>
+      <Head>
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/atom-one-dark.min.css"
@@ -73,7 +74,7 @@ export default function BlogLayout({
           integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC"
           crossOrigin="anonymous"
         />
-      </head>
+      </Head>
       {children}
       <ButtonGoTop />
     </>

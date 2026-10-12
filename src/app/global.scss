@@ -125,3 +125,11 @@ hr {
 span {
   display: inline-block;
 }
+
+.overlay {
+  background: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  width: 100dvw;
+  height: 100dvh;
+  inset: 0;
+}

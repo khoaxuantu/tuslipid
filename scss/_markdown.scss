@@ -1,5 +1,4 @@
-@use "../abstracts/var";
-@use "../abstracts/mixins" as *;
+@use "var";
 
 $codeblock-background: #282c34;
 $codeblock-color: #abb2bf;
@@ -23,7 +22,8 @@ $codeinline-background: #f6f8fa;
 
   code,
   pre {
-    @include set-component-color($codeblock-background, $codeblock-color);
+    background-color: $codeblock-background;
+    color: $codeblock-color;
     border-radius: 5px;
   }
 
@@ -32,7 +32,7 @@ $codeinline-background: #f6f8fa;
     line-break: anywhere;
     display: inline-block;
     line-height: 1.35;
-    font-family: var.$CODE_BLOG_FONT;
+    font-family: var.$font-mono;
     font-size: 13px;
 
     span {
@@ -51,7 +51,7 @@ $codeinline-background: #f6f8fa;
 
   blockquote {
     margin: 0;
-    border-left: 5px solid var(--md-sys-color-outline-variant);
+    border-left: 5px solid var.$color-outline-variant;
     font-style: italic;
     padding: 1.33em;
     text-align: left;
@@ -67,11 +67,11 @@ $codeinline-background: #f6f8fa;
   th,
   td {
     padding: 6px 13px;
-    border: 1px solid var(--md-sys-color-outline);
+    border: 1px solid var.$color-outline;
   }
 
   hr {
-    background: var(--md-sys-color-outline);
+    background: var.$color-outline;
   }
 
   ul,
@@ -89,14 +89,6 @@ $codeinline-background: #f6f8fa;
     margin-right: 0;
     text-align: center;
     margin-block: 0.5rem;
-
-    img:not(.blog-c-img__extend) {
-      cursor: zoom-in;
-    }
-
-    img.blog-c-img__extend {
-      cursor: zoom-out;
-    }
 
     p {
       margin-top: 0;
