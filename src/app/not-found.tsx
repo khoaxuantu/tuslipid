@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import Link from "next/link";
 
+import "./not-found.scss";
+
 const notFoundDescription =
   "Oi ~ This URL does not exist, get to my page at https://xuankhoatu.com";
 export const metadata: Metadata = {
@@ -18,11 +20,12 @@ export const metadata: Metadata = {
 
 export default function NotFound() {
   return (
-    <>
-      <div className="sl-l-container sl-l-container__md menu-l-wrapper center transition-menu">
+    <main id="notfound">
+      <div className="container">
         <header>
           <h1>404</h1>
-          <div className="mt-2">
+          <br />
+          <div>
             Oi ~ This URL does not exist.
             <br />
             <br />
@@ -30,6 +33,6 @@ export default function NotFound() {
           </div>
         </header>
       </div>
-    </>
+    </main>
   );
 }

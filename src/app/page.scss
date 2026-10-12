@@ -6,12 +6,12 @@ main#home {
 
   > .container {
     gap: var.$spacing-y-4;
-
-    text-align: center;
   }
 
   header {
     .avatar {
+      background-color: transparent;
+
       img {
         border-radius: 50%;
       }

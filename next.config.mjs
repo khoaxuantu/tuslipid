@@ -5,6 +5,7 @@ import path from "path";
 const nextConfig = {
   experimental: {
     optimizePackageImports: ["react-device-detect"],
+    viewTransition: true,
   },
   sassOptions: {
     loadPaths: [path.join(import.meta.dirname, "./scss")],
