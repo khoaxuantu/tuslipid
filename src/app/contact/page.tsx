@@ -1,26 +1,39 @@
-"use client";
-
-import { SocialMediaBtnGroup } from "@/components/button_group";
-import addOrientationHandler from "@/components/orientation";
+import { SOCIAL_MEDIA_INFO_LIST } from "@/lib/general_info";
 import Link from "next/link";
-import { useEffect } from "react";
+
+import "./page.scss";
 
 function Contact() {
-  useEffect(() => {
-    addOrientationHandler();
-  }, []);
-
   return (
-    <div className="sl-l-container sl-l-container__md contact-l-wrapper center contact-c-txt__body transition-menu">
-      <h2 className="contact-c-txt__header p-2">
-        ~ Oi ~<br></br>
-        Say hello to me by one of the following {":)"}
-      </h2>
-      <SocialMediaBtnGroup />
-      <Link href="/" className="sl-c-btn sl-c-btn__rect" id="go-back" prefetch={true}>
-        Home
-      </Link>
-    </div>
+    <main id="contact">
+      <div className="container">
+        <header>
+          <h2>
+            ~ Oi ~<br></br>
+            Say hello to me by one of the following {":)"}
+          </h2>
+        </header>
+        <nav>
+          {SOCIAL_MEDIA_INFO_LIST.map((btnProp) => {
+            return (
+              <a
+                href={btnProp.url}
+                key={btnProp.id}
+                target="__blank"
+                rel="noopener"
+              >
+                <button id={btnProp.id}>
+                  <btnProp.icon width={24} height={24} />
+                </button>
+              </a>
+            );
+          })}
+        </nav>
+        <Link href="/" id="go-back" prefetch={true}>
+          Home
+        </Link>
+      </div>
+    </main>
   );
 }
 

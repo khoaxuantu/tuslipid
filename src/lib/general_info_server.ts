@@ -1,7 +1,7 @@
 "use server";
 
-import { getImgs, getSvgs } from "./factory/importMedia";
-import { IProjCardProps } from "./type/card";
+import { ProjectProps } from "@/components/projects/types";
+import { getImgs, getSvgs } from "./factory/import-media";
 
 export interface SkillProps {
   name: string;
@@ -185,14 +185,11 @@ export const getSkillInfo = async (): Promise<SkillProps[]> => {
   ];
 };
 
-export const getProjInfo = async (): Promise<{
-  [id: string]: IProjCardProps;
-}> => {
+export const getProjInfo = async (): Promise<Record<string, ProjectProps>> => {
   const imgs = await getImgs();
   return {
     "algo-visual": {
       id: 8,
-      content_section: "Projects",
       title: "Algorithm Visualizer",
       description: [
         `A web application that visualizes algorithms from code
@@ -205,7 +202,6 @@ export const getProjInfo = async (): Promise<{
     },
     "finance-rep": {
       id: 9,
-      content_section: "Projects",
       title: "CS50 Finance Replication",
       description: [
         `A web-app replication of CS50 finance's mock stock-trading website
@@ -220,7 +216,6 @@ export const getProjInfo = async (): Promise<{
     },
     "e-commerce-auction": {
       id: 11,
-      content_section: "Projects",
       title: "E-commerce Auction",
       description: [
         `An eBay-like e-commerce auction site that will allow users to post
@@ -234,7 +229,6 @@ export const getProjInfo = async (): Promise<{
     },
     "knapsack-solvers-analysis": {
       id: 10,
-      content_section: "Projects",
       title: "Knapsack Solvers Analysis",
       description: [
         `An analysis of the performance in solving typical knapsack problems
@@ -242,12 +236,12 @@ export const getProjInfo = async (): Promise<{
           as the Advanced Algorithms coursework project.`,
       ],
       tools: ["Python", "Or-tools"],
-      githubURL: "https://github.com/khoaxuantu/Solving-Knapsacks-in-LinearProg-vs-HarmonySearch",
+      githubURL:
+        "https://github.com/khoaxuantu/Solving-Knapsacks-in-LinearProg-vs-HarmonySearch",
       imageURL: imgs.Knapsack,
     },
     "email-spa": {
       id: 12,
-      content_section: "Projects",
       title: "Email Single Page Application",
       description: [
         `A front-end for an email client in SPA style that makes API calls to send
@@ -259,7 +253,6 @@ export const getProjInfo = async (): Promise<{
     },
     "wiki-encyclopedia": {
       id: 13,
-      content_section: "Projects",
       title: "Wiki Encyclopedia",
       description: [
         `A Wikipedia-like online encyclopedia that will allow users search
@@ -271,7 +264,6 @@ export const getProjInfo = async (): Promise<{
     },
     "calendar-on-terminal": {
       id: 14,
-      content_section: "Projects",
       title: "Calendar on Terminal",
       description: [
         `A small project of calendar queried on terminal, as a midterm project
@@ -283,7 +275,6 @@ export const getProjInfo = async (): Promise<{
     },
     "techman-proj": {
       id: 15,
-      content_section: "Projects",
       title: "Lottery Draw Robotic Application",
       description: [
         `Participated in a group project to develop the robotic arm
@@ -297,7 +288,6 @@ export const getProjInfo = async (): Promise<{
     },
     "gripper-sketch": {
       id: 16,
-      content_section: "Projects",
       title: "Gripper Base System Sketch",
       description: [
         `A graphical sketch of robotic arm gripper base system,
@@ -308,7 +298,6 @@ export const getProjInfo = async (): Promise<{
     },
     "fontscale-sass": {
       id: 7,
-      content_section: "Projects",
       title: "Font Scale Sass",
       description: [
         `A SASS font-scale generator module which provides
@@ -322,7 +311,6 @@ export const getProjInfo = async (): Promise<{
     },
     "random-meme-picker": {
       id: 6,
-      content_section: "Projects",
       title: "Random Meme Picker",
       description: [
         `A random meme web chosen from my more than 1000-meme collection. Pick a meme a day for a
@@ -335,7 +323,6 @@ export const getProjInfo = async (): Promise<{
     },
     "hello-algo": {
       id: 3,
-      content_section: "Projects",
       title: "Hello Algo",
       description: [
         `An open-source data structures and algorithms crash course with animated illustrations and
@@ -349,7 +336,6 @@ export const getProjInfo = async (): Promise<{
     },
     "comprehensive-rust": {
       id: 5,
-      content_section: "Projects",
       title: "Comprehensive Rust",
       description: [
         `A Vietnamese translator of "Comprehensive Rust" - an open-source free Rust course developed
@@ -362,7 +348,6 @@ export const getProjInfo = async (): Promise<{
     },
     "my-notes": {
       id: 0,
-      content_section: "Projects",
       title: "My Notes",
       description: [
         `I built a content-focused website that exhibits only the knowledge I believe to be
@@ -375,7 +360,6 @@ export const getProjInfo = async (): Promise<{
     },
     pixtastock: {
       id: 4,
-      content_section: "Projects",
       title: "PixtaStock",
       description: [
         `I worked as a maintainer and developer for this site's item flow (from when an user uploads
@@ -387,19 +371,25 @@ export const getProjInfo = async (): Promise<{
     },
     potonow: {
       id: 1,
-      content_section: "Projects",
       title: "Potonow",
       description: [
         `I worked as a core engineer building this site. This is a Vietnamese platform for fast,
         convenient, and budget-friendly photoshoot bookings.`,
       ],
-      tools: ["NestJS", "Next.js", "ChakraUI", "MongoDB", "AWS", "Firebase", "Terraform"],
+      tools: [
+        "NestJS",
+        "Next.js",
+        "ChakraUI",
+        "MongoDB",
+        "AWS",
+        "Firebase",
+        "Terraform",
+      ],
       demoURL: "https://potonow.vn",
       imageURL: imgs.Potonow,
     },
     "devfest-2024-landing": {
       id: 4,
-      content_section: "Projects",
       title: "DevFest Hanoi 2024 Landing",
       description: [
         `A landing page for the DevFest Hanoi 2024 event. I constructed the majority of this site's
@@ -411,7 +401,6 @@ export const getProjInfo = async (): Promise<{
     },
     "gdg-hanoi-landing": {
       id: 2,
-      content_section: "Projects",
       title: "GDG Hanoi Landing",
       description: [
         `A landing page for the GDG Hanoi. I constructed the majority of this site's frontend.`,

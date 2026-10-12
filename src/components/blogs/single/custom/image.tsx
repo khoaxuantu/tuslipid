@@ -6,28 +6,29 @@ import {
   MouseEvent,
   useState,
 } from "react";
+import "./image.scss";
 
 export function CustomMdImg(
   props: DetailedHTMLProps<
     ImgHTMLAttributes<HTMLImageElement>,
     HTMLImageElement
-  >
+  >,
 ) {
   const [fade, setFade] = useState(false);
 
   function extendHandler(e: MouseEvent<HTMLImageElement>) {
     setFade(!fade);
     const cell = e.target as HTMLElement;
-    cell.classList.toggle("blog-c-img__extend");
-    cell.classList.toggle("center");
+    cell.dataset.zoom = String(cell.dataset.zoom != "true");
   }
 
   return (
     <>
-      {fade && <span className="sl-c-overlay"></span>}
+      {fade && <span className="overlay"></span>}
       <img
         {...props}
         loading="lazy"
+        className="zoomable"
         onClick={(e) => extendHandler(e)}
         title={formatTitle(props.title as string)}
       />

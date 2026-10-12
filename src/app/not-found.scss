@@ -1,0 +1,10 @@
+@use "template";
+@use "var";
+
+main#notfound {
+  @include template.center;
+
+  > .container {
+    gap: var.$spacing-4;
+  }
+}

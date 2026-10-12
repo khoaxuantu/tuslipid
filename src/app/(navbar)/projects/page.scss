@@ -1,0 +1,39 @@
+@use "var";
+@use "template";
+
+main#project {
+  @include template.document;
+
+  > article {
+    @include template.wrapper($breakpoints: ("md"));
+
+    .project-card {
+      transition: box-shadow 250ms ease-in-out;
+
+      &:hover {
+        box-shadow: var.$shadow-3;
+      }
+
+      figure {
+        height: 35dvh;
+      }
+
+      footer {
+        margin-top: auto;
+      }
+    }
+
+    .container {
+      @media (min-width: 996px) {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        gap: var.$spacing-5;
+        align-items: stretch;
+
+        .project-card {
+          grid-column-start: span 5;
+        }
+      }
+    }
+  }
+}

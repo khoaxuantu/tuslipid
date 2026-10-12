@@ -1,9 +1,14 @@
 import createMdx from "@next/mdx";
+import path from "path";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
     optimizePackageImports: ["react-device-detect"],
+    viewTransition: true,
+  },
+  sassOptions: {
+    loadPaths: [path.join(import.meta.dirname, "./scss")],
   },
   pageExtensions: ["js", "jsx", "mdx", "ts", "tsx", "md"],
 };

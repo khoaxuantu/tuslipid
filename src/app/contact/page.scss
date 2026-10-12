@@ -1,0 +1,32 @@
+@use "template";
+@use "var";
+
+main#contact {
+  @include template.center;
+
+  > .container {
+    gap: var.$spacing-4;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var.$spacing-2;
+
+    a {
+      display: inline-flex;
+
+      button {
+        background-color: var.$color-primary-container;
+        color: var.$color-on-primary-container;
+        padding: var.$spacing-3;
+        border-radius: var.$radius-2;
+
+        &:hover {
+          box-shadow: var.$shadow-1;
+        }
+      }
+    }
+  }
+}

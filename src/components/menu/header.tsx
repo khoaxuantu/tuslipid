@@ -13,9 +13,8 @@ export default function MenuHeaderGrp() {
 
   return (
     <header>
-      <button className="menu-l-grp__avatar" onClick={(e) => avaHandler(e)}>
+      <button className="avatar" onClick={(e) => avaHandler(e)}>
         <img
-          className="transition-ava menu-c-img__avatar"
           src={avaURLs[avaIndex]}
           alt="Tuslipid's avatar"
           width={160}
@@ -23,8 +22,8 @@ export default function MenuHeaderGrp() {
         />
       </button>
       <hgroup>
-        <h2 className="mt-3">Xuan Khoa Tu Nguyen</h2>
-        <h6 className="mt-3">Software Engineer @ FPT Software</h6>
+        <h2>Xuan Khoa Tu Nguyen</h2>
+        <h6>Software Engineer @ FPT Software</h6>
       </hgroup>
     </header>
   );

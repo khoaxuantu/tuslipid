@@ -1,37 +1,35 @@
-import { getEduImgs } from "@/lib/factory/importMedia";
+import { getEduImgs } from "@/lib/factory/import-media";
 
 async function Education() {
   const eduImgs = await getEduImgs();
 
   return (
-    <section className="mb-5 row">
-      <aside className="col-4 pb-3">
+    <section id="education">
+      <aside>
         <h2>About my educations</h2>
         <blockquote>
           <i>
-            Mathematics<br />
-            -{">"} History<br />
-            -{">"} Mechanical Engineering<br />
-            -{">"} Computer Science
+            Mathematics
+            <br />-{">"} History
+            <br />-{">"} Mechanical Engineering
+            <br />-{">"} Computer Science
           </i>
         </blockquote>
       </aside>
-      <div className="col-8">
-        <div className="d-flex">
-          <div className="about-l-wrapper__edu-content pe-3">
+      <div className="content">
+        <div className="row">
+          <hgroup>
             <h5>
               <span>National Taiwan University</span>{" "}
               <span>of Science and Technology</span>
             </h5>
-            <div className="bt-1">
+            <div className="subtitle">
               <span>Bachelor of Science - BSc,</span>
               <span>
                 Computer Science / <span>Mechanical Engineering</span>
               </span>
             </div>
-            <div className="bt-1 mb-2" style={{ opacity: 0.5 }}>
-              Sep 2018 - July 2022
-            </div>
+            <div className="time">Sep 2018 - July 2022</div>
             <div>
               <b>
                 <i>Specialization: </i>
@@ -45,25 +43,27 @@ async function Education() {
                 <li>Automation Control</li>
               </ul>
             </div>
-          </div>
-          <div className="about-c-img__edu">
+          </hgroup>
+          <figure>
             <img src={eduImgs.TaiwanTech} alt="NTUST logo" width={64} />
-          </div>
+          </figure>
         </div>
-        <div className="mt-4 d-flex">
-          <div className="about-l-wrapper__edu-content pe-3">
+        <div className="row">
+          <hgroup>
             <h5>
               <span>Hanoi - Amsterdam</span> <span>High School</span>{" "}
               <span>for the Gifted</span>
             </h5>
-            <div className="bt-1">History</div>
-            <div className="bt-1 mb-3" style={{ opacity: 0.5 }}>
-              Aug 2015 - May 2018
-            </div>
-          </div>
-          <div className="about-c-img__edu">
-            <img src={eduImgs.HanoiAms} alt="Hanoi-Ams high school logo" width={64} />
-          </div>
+            <div className="subtitle">History</div>
+            <div className="time">Aug 2015 - May 2018</div>
+          </hgroup>
+          <figure>
+            <img
+              src={eduImgs.HanoiAms}
+              alt="Hanoi-Ams high school logo"
+              width={64}
+            />
+          </figure>
         </div>
       </div>
     </section>

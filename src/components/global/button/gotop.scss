@@ -1,0 +1,26 @@
+@use "var";
+
+button.gotop {
+  background-color: var.$color-primary-container;
+  color: var.$color-on-primary-container;
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: var.$z-index-4;
+  width: 4rem;
+  aspect-ratio: 1;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: var.$shadow-1;
+
+  &:hover {
+    background-color: var.$color-primary;
+    color: var.$color-on-primary;
+  }
+
+  svg {
+    display: inline;
+    color: inherit;
+  }
+}

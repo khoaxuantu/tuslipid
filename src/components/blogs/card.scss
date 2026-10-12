@@ -1,0 +1,39 @@
+@use "var";
+
+.blog-card {
+  border-radius: var.$radius-4;
+  background-color: var.$color-secondary-container;
+  color: var.$color-on-secondary-container;
+  gap: var.$spacing-y-3;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: var.$spacing-4;
+
+  footer {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+
+    a {
+      border-radius: var.$radius-full;
+      background-color: var.$color-primary;
+      color: var.$color-on-primary;
+      padding: var.$spacing-y-1 var.$spacing-x-3;
+      transition: all 300ms ease-in-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        text-decoration: none;
+        background-color: var.$color-secondary;
+        color: var.$color-on-secondary;
+      }
+    }
+
+    @media (min-width: 576px) {
+      justify-content: flex-end;
+    }
+  }
+}

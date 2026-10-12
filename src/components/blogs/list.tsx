@@ -1,8 +1,10 @@
-import { useContext, useEffect, useState } from "react";
-import Card from "@/lib/factory/cardBase";
+"use client";
+
 import { BLOG_INFO_DICT } from "@/lib/general_info";
+import { TagContext } from "@/lib/provider/tag.provider";
 import { BlogRepository } from "@/lib/repository/blog";
-import { TagsContext } from "@/lib/context/tag";
+import { useContext, useEffect, useState } from "react";
+import BlogCard from "./card";
 
 /**
  * Implement infinite scrolling for blogs
@@ -11,10 +13,13 @@ import { TagsContext } from "@/lib/context/tag";
 const PAGINATE_NUM = 4;
 
 export function BlogsList() {
-  const blogInfoList = BlogRepository.getIdsFromTags(useContext(TagsContext));
+  const { tags } = useContext(TagContext);
+  const blogInfoList = BlogRepository.getIdsFromTags(tags);
   const [blogsNum, setBlogsNum] = useState(PAGINATE_NUM);
   const [hasMore, setHasMore] = useState(true);
-  const [blogs, setBlogs] = useState<string[]>(getLimitedBlogs(blogInfoList, PAGINATE_NUM));
+  const [blogs, setBlogs] = useState<string[]>(
+    getLimitedBlogs(blogInfoList, PAGINATE_NUM),
+  );
 
   useEffect(() => {
     window.addEventListener("scroll", onScroll);
@@ -38,8 +43,8 @@ export function BlogsList() {
 
   return (
     <>
-      {blogs.map((blogId, index) => {
-        return <Card key={index} {...BLOG_INFO_DICT[blogId]} />;
+      {blogs.map((blogId) => {
+        return <BlogCard key={blogId} {...BLOG_INFO_DICT[blogId]} />;
       })}
     </>
   );

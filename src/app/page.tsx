@@ -1,23 +1,30 @@
-"use client";
-
-import { NavBtnGroup } from "@/components/button_group";
-import Copyright from "@/components/copyright";
+import Copyright from "@/components/global/copyright";
 import MenuHeaderGrp from "@/components/menu/header";
-import addOrientationHandler from "@/components/orientation";
-import Button from "@/lib/factory/button";
-import { useEffect } from "react";
+
+import ButtonTheme from "@/components/global/button/theme";
+import { NAV_BTN_INFO_LIST } from "@/lib/general_info";
+import Link from "next/link";
+import "./page.scss";
 
 export default function TuslipidMenu() {
-  useEffect(() => {
-    addOrientationHandler();
-  }, []);
-
   return (
-    <div className="sl-l-container sl-l-container__md menu-l-wrapper center transition-menu">
-      <MenuHeaderGrp />
-      <Button variant="theme" className="p-3" />
-      <NavBtnGroup />
-      <Copyright className="sl-c-copyright__menu mt-5" />
-    </div>
+    <main id="home">
+      <div className="container">
+        <MenuHeaderGrp />
+        <section id="theme">
+          <ButtonTheme />
+        </section>
+        <nav>
+          {NAV_BTN_INFO_LIST.map((btnProp) => {
+            return (
+              <Link key={btnProp.content} href={btnProp.url}>
+                <button>{btnProp.content}</button>
+              </Link>
+            );
+          })}
+        </nav>
+        <Copyright />
+      </div>
+    </main>
   );
 }

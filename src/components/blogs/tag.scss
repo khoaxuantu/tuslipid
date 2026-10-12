@@ -1,0 +1,21 @@
+@use "var";
+
+button.tag {
+  border-radius: var.$radius-full;
+  border: none;
+  padding: var.$spacing-y-1 var.$spacing-x-3;
+  transition: all 300ms ease-in-out;
+  background-color: var.$color-secondary;
+  color: var.$color-on-secondary;
+
+  &:hover {
+    background-color: var.$color-primary;
+    color: var.$color-on-primary;
+    text-decoration: none;
+  }
+
+  &[data-active="true"] {
+    background-color: var.$color-primary;
+    color: var.$color-on-primary;
+  }
+}

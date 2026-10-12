@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -22,30 +18,21 @@
     "incremental": true,
     "plugins": [
       {
-        "name": "next"
-      }
+        "name": "next",
+      },
     ],
-    "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "src/*"
-      ],
-      "@md/*": [
-        "src/markdown/*"
-      ],
-      "@components/*": [
-        "src/components/*"
-      ]
-    }
+      "@/*": ["./src/*"],
+      "@md/*": ["./src/markdown/*"],
+      "@components/*": ["./src/components/*"],
+    },
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    ".next/dev/types/**/*.ts"
+    ".next/dev/types/**/*.ts",
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"],
 }

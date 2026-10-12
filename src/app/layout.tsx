@@ -1,8 +1,10 @@
-import { Metadata } from "next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Analytics } from "@vercel/analytics/next";
-import React from "react";
 import ThemeProvider from "@/lib/provider/theme.provider";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Metadata } from "next";
+import React, { ViewTransition } from "react";
+
+import "./global.scss";
 
 const defaultTitle = "Tuslipid";
 const defaultDescription = "Xuan Khoa Tu Nguyen's personal website";
@@ -20,7 +22,7 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL(defaultURL),
   alternates: {
-    canonical: '/',
+    canonical: "/",
   },
   openGraph: {
     type: "website",
@@ -50,7 +52,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="stylesheet" href="/css/style.css" />
         <link rel="stylesheet" href="/css/themes/light.css" />
         <link rel="stylesheet" href="/css/themes/dark.css" />
         <link
@@ -70,11 +71,24 @@ export default function RootLayout({
           sizes="16x16"
           href={`${defaultURL}/logo/favicon-16x16.png`}
         />
-        <link rel="manifest" href={`${defaultURL}/logo/site.webmanifest`}></link>
+        <link
+          rel="manifest"
+          href={`${defaultURL}/logo/site.webmanifest`}
+        ></link>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+          rel="stylesheet"
+        />
       </head>
       <body>
         <ThemeProvider>
-          {children}
+          <ViewTransition enter="auto">{children}</ViewTransition>
         </ThemeProvider>
         <SpeedInsights />
         <Analytics />
