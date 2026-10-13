@@ -24,7 +24,7 @@ Whatever technologies you choose to dramatize your development knowledge (TypeSc
 
 ### HTML
 
-HyperText Markup Language, or HTML, is a markup language consisting of different elements you can wrap content in to give it ***meaning (semantics)*** and ***structure***.
+HyperText Markup Language, or HTML, is a markup language consisting of different elements you can wrap content in to give it _**meaning (semantics)**_ and _**structure**_.
 
 ```html
 <body>
@@ -92,7 +92,7 @@ We need a more elegant way than writing hundreds of corresponding HTML files. Th
 
 I call it the **Static Site Generation**.
 
-Many frameworks support SSG, for instance, [Next.js Pages router](https://nextjs.org/docs/pages/building-your-application/rendering/static-site-generation), [Astro](https://astro.build/),  [Nue](https://nuejs.org/), etc...
+Many frameworks support SSG, for instance, [Next.js Pages router](https://nextjs.org/docs/pages/building-your-application/rendering/static-site-generation), [Astro](https://astro.build/), [Nue](https://nuejs.org/), etc...
 
 ### Server Side Rendering (SSR)
 
@@ -160,9 +160,9 @@ Let me share some tips to make the responsive design easier:
 - Your wrapper component should automatically make its child components responsive to your screen. If not, there must be some components with a certain height or width that break the rule.
 - You should not set a fixed height to any component.
 - Common media queries I use for mobile, tablet, and desktop. They can give you a good start, and then you can extend it to the more specific breakpoints, depending on your design (i.e., 320px, 1440px, etc.):
-	- Mobile: min-width 576px
-	- Tablet: min-width 768px
-	- Desktop: min-width 1200px
+  - Mobile: min-width 576px
+  - Tablet: min-width 768px
+  - Desktop: min-width 1200px
 - If your content takes more space than your wrapper component's capacity, it's time to use overflow.
 - Usually, 1rem (16px) spacing is fit for all the devices. Don't make things more complicated. 🙃
 
@@ -202,6 +202,7 @@ The idea is whenever some data in a component changes, it should trigger a metho
 In the OOP context, we can assume a component corresponds to an object implementing method `render()`.
 
 Let's try an example. Here I want to implement a modal component, which provides 2 states: opened and closed.
+
 - If the modal is opened, then it should be rendered to the screen.
 - If the modal is closed, then it should be hidden from the screen.
 
@@ -236,7 +237,7 @@ export const useState = (initialState) => {
   stateA = initialState;
 
   return [stateA, setStateA];
-}
+};
 ```
 
 We now can use the export function in a different component, to control the modal
@@ -267,20 +268,20 @@ To simplify the layout structuring and minimize design frauds, I have come up wi
 
 ```css
 @media screen and (min-width: 768px) {
-  section[is=container] {
+  section[is="container"] {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
   }
 
-  div[is=column-1] {
+  div[is="column-1"] {
     grid-column-start: span 2;
   }
 
-  div[is=column-2] {
+  div[is="column-2"] {
     grid-column: 4 / 10;
   }
 
-  div[is=column-3] {
+  div[is="column-3"] {
     grid-column: 11 / 13;
   }
 }
@@ -289,14 +290,14 @@ To simplify the layout structuring and minimize design frauds, I have come up wi
 - Using the wrapper pattern, which wraps all the main contents in a container that has a predefined maximum width. This approach has a disadvantage is that it may leave too many blank spaces on a huge screen (at more than ~1980px).
 
 ```css
-section[is=container] {
+section[is="container"] {
   margin-left: 1rem;
   margin-right: 1rem;
   max-width: 960px; /* or 900px, 1024px, etc... */
 }
 
 @media screen and (min-width: 768px) {
-  section[is=container] {
+  section[is="container"] {
     margin-left: auto;
     margin-right: auto;
   }
@@ -306,22 +307,22 @@ section[is=container] {
 - Using flex display for one-row layout.
 
 ```css
-div[role=horizontal-stack] {
+div[role="horizontal-stack"] {
   display: flex;
 }
 
-div[role=vertical-stack] {
+div[role="vertical-stack"] {
   display: flex;
   flex-direction: column;
 }
 ```
 
 - Layering the view to 5 levels, configuring them with the z-index property:
-	- Level 0: Neutral, or default level
-	- Level 1: For the sticky or static contents, for instance, navigation bar, static buttons, etc...
-	- Level 2: For the focus state of level 1, for example, an opened menu if the menu is in a navigation bar.
-	- Level 3: For the backdrop overlay of level 4
-	- Level 4: The highest, for modals or drawers, etc...
+  - Level 0: Neutral, or default level
+  - Level 1: For the sticky or static contents, for instance, navigation bar, static buttons, etc...
+  - Level 2: For the focus state of level 1, for example, an opened menu if the menu is in a navigation bar.
+  - Level 3: For the backdrop overlay of level 4
+  - Level 4: The highest, for modals or drawers, etc...
 
 ```css
 ::root {
@@ -334,7 +335,7 @@ div[role=vertical-stack] {
 
 ## Data fetching
 
-In the dynamic web context, we render content depending on the changes of data.  This requirement introduces a new problem:
+In the dynamic web context, we render content depending on the changes of data. This requirement introduces a new problem:
 
 > How should we fetch data from servers?
 
@@ -366,19 +367,19 @@ My most commonly used metadata is
 
 ```html
 <title></title>
-<meta name="description" content="" >
-<meta name="author" content="" >
-<link rel="canonical" href="" >
-<meta property="og:title" content="" >
-<meta property="og:description" content="" >
-<meta property="og:url" content="" >
-<meta property="og:site_name" content="" >
-<meta property="og:image" content="" >
-<meta property="og:type" content="" >
-<meta name="twitter:card" content="" >
-<meta name="twitter:title" content="" >
-<meta name="twitter:description" content="" >
-<meta name="twitter:image" content="" >
+<meta name="description" content="" />
+<meta name="author" content="" />
+<link rel="canonical" href="" />
+<meta property="og:title" content="" />
+<meta property="og:description" content="" />
+<meta property="og:url" content="" />
+<meta property="og:site_name" content="" />
+<meta property="og:image" content="" />
+<meta property="og:type" content="" />
+<meta name="twitter:card" content="" />
+<meta name="twitter:title" content="" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:image" content="" />
 ```
 
 ### Google rich result
