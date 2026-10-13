@@ -3,11 +3,7 @@ import DateText from "../global/date";
 import Header from "../global/header";
 
 export function BlogsPageHeaderGrp() {
-  return (
-    <Header title="Tus's Blogs" subtitle="Some notes, some ideas, some opinions">
-      <hr />
-    </Header>
-  );
+  return <Header title="Tus's Blogs" subtitle="Some notes, some ideas, some opinions"></Header>;
 }
 
 export function SingleBlogPageHeaderGrp(props: { id: string }) {
