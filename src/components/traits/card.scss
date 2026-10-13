@@ -1,0 +1,13 @@
+@use "var";
+
+.trait-card {
+  color: var.$color-on-primary-container;
+  background-color: var.$color-primary-container;
+  border-radius: var.$radius-4;
+  padding: var.$spacing-3;
+  transition: box-shadow 250ms ease-in-out;
+
+  &:hover {
+    box-shadow: var.$shadow-3;
+  }
+}

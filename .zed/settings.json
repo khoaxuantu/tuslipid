@@ -4,4 +4,14 @@
 // see the documentation: https://zed.dev/docs/configuring-zed#settings-files
 {
   "wrap_guides": [100],
+  "formatter": "prettier",
+  "format_on_save": "on",
+  "code_actions_on_format": {
+    "source.organizeImports": true
+  },
+  "languages": {
+    "SCSS": {
+      "tab_size": 2
+    }
+  }
 }

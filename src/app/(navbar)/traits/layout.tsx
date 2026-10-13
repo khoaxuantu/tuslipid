@@ -1,6 +1,7 @@
-import Copyright from "@/components/copyright";
+import Copyright from "@/components/global/copyright";
 import { Metadata } from "next";
 import { PropsWithChildren } from "react";
+import "./layout.scss";
 
 const description =
   "I was built so complicated that it takes me a lot of effort to share about myself. Therefore, I reveal some references of my traits here, hope to help you understand me better.";
@@ -38,10 +39,9 @@ export const metadata: Metadata = {
 
 export default function Layout(props: PropsWithChildren) {
   return (
-    <div className="sl-l-container sl-l-container__md sl-l-wrapper trait-l-container transition-page">
-      <link rel="preload stylesheet" href="/css/markdown.css" as="style" />
+    <main id="trait">
       {props.children}
-      <Copyright className="sl-c-copyright__page mt-5 pb-3" />
-    </div>
+      <Copyright />
+    </main>
   );
 }

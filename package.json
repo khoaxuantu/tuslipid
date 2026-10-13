@@ -11,6 +11,7 @@
     "@vercel/speed-insights": "^2.0.0",
     "next": "^16.4.0",
     "react": "^19.3.0",
+    "clsx": "^2.1.1",
     "react-device-detect": "^2.2.3",
     "react-dom": "^19.3.0",
     "rehype-highlight": "^7.0.2",
@@ -31,9 +32,10 @@
     "style:md": "sass --watch scss/markdown.scss public/css/markdown.css"
   },
   "devDependencies": {
+    "@types/mdx": "^2.0.14",
     "@types/node": "^26.6.5",
     "@types/react": "^19.3.0",
-    "@types/mdx": "^2.0.14",
-    "@types/react-dom": "^19.3.0"
+    "@types/react-dom": "^19.3.0",
+    "sass": "^1.105.1"
   }
 }

@@ -1,0 +1,18 @@
+@use "var";
+@use "template";
+
+main#trait {
+  > article.list {
+    @include template.wrapper;
+
+    > .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var.$spacing-3;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+  }
+}

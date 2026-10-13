@@ -18,14 +18,14 @@
     "incremental": true,
     "plugins": [
       {
-        "name": "next",
-      },
+        "name": "next"
+      }
     ],
     "paths": {
       "@/*": ["./src/*"],
       "@md/*": ["./src/markdown/*"],
-      "@components/*": ["./src/components/*"],
-    },
+      "@components/*": ["./src/components/*"]
+    }
   },
   "include": [
     "next-env.d.ts",
@@ -34,7 +34,7 @@
     "**/*.mdx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
-    "mdx.d.ts",
+    "mdx.d.ts"
   ],
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules"]
 }

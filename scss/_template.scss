@@ -1,0 +1,89 @@
+@use "sass:map";
+@use "sass:list";
+@use "var";
+
+$bp-map: (
+  "xs": (
+    "bp": 768px,
+    "max": 576px,
+  ),
+  "sm": (
+    "bp": 960px,
+    "max": 768px,
+  ),
+  "md": (
+    "bp": 1280px,
+    "max": 960px,
+  ),
+  "lg": (
+    "bp": 1600px,
+    "max": 1280px,
+  ),
+  "xl": (
+    "bp": 1980px,
+    "max": 1600px,
+  ),
+);
+
+@mixin center {
+  width: 100dvw;
+  height: 100dvh;
+  overflow: auto;
+
+  > .container {
+    margin-inline: var.$spacing-x-2;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  @media (max-height: 512px) {
+    > .container {
+      height: auto;
+      margin-block: var.$spacing-y-5;
+    }
+  }
+}
+
+@mixin wrapper($breakpoints: ("md"), $spacing: "margin") {
+  > .container {
+    #{$spacing}-inline: var.$spacing-x-2;
+
+    $spacing-inline-added: false;
+
+    @each $bp, $data in $bp-map {
+      $idx: list.index(
+        $list: $breakpoints,
+        $value: $bp,
+      );
+
+      @if $idx {
+        @media (min-width: map.get($data, "bp")) {
+          max-width: map.get($data, "max");
+
+          @if not $spacing-inline-added {
+            #{$spacing}-inline: auto;
+
+            $spacing-inline-added: true;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin document {
+  margin-bottom: var.$spacing-y-5;
+
+  > header,
+  > article {
+    margin-block: var.$spacing-y-5;
+    padding-block: var.$spacing-y-5;
+  }
+
+  > header {
+    text-align: center;
+  }
+}

@@ -1,0 +1,7 @@
+@use "var";
+
+button.theme {
+  background-color: transparent;
+  border-radius: var.$radius-full;
+  color: var.$color-on-surface;
+}

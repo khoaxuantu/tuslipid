@@ -1,6 +1,6 @@
 import { BLOG_INFO_DICT } from "@/lib/general_info";
-import DateText from "../shared/date";
-import Header from "../shared/header";
+import DateText from "../global/date";
+import Header from "../global/header";
 
 export function BlogsPageHeaderGrp() {
   return (

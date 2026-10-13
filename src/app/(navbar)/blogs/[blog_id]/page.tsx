@@ -3,6 +3,7 @@ import { SingleBlogContent } from "@/components/blogs/single/skeleton";
 import { TableOfContents } from "@/components/blogs/single/toc";
 import { BLOG_INFO_DICT } from "@/lib/general_info";
 import { notFound } from "next/navigation";
+import "./page.scss";
 
 interface DynamicParams {
   params: Promise<{ blog_id: string }>;
@@ -22,15 +23,15 @@ export default async function SingleBlogPage(props: DynamicParams) {
   if (!BLOG_INFO_DICT[id]) return notFound();
 
   return (
-    <>
+    <main id="blog">
       <SingleBlogPageHeaderGrp id={id} />
       <hr></hr>
-      <main>
-        <article className="blog-l-wrapper row">
+      <article>
+        <div className="container">
           <TableOfContents />
           <SingleBlogContent id={id} />
-        </article>
-      </main>
-    </>
+        </div>
+      </article>
+    </main>
   );
 }

@@ -1,7 +1,9 @@
-import Copyright from "@/components/copyright";
+import Copyright from "@/components/global/copyright";
 import ProjectsPageHeaderGrp from "@/components/projects/header";
-import { ProjectsList } from "@/components/projects/projects";
 import { Metadata } from "next";
+
+import { ProjectList } from "@/components/projects/list";
+import "./page.scss";
 
 const projDescription = `I just have studied Information Technology for three years, \
 but luckily have some fun works done.`;
@@ -31,14 +33,14 @@ export const metadata: Metadata = {
 
 export default function ProjectsPage() {
   return (
-    <>
-      <div className="sl-l-container sl-l-container__md sl-l-wrapper transition-page">
-        <ProjectsPageHeaderGrp />
-        <main className="projects-l-wrapper">
-          <ProjectsList />
-        </main>
-        <Copyright className="sl-c-copyright__page pb-3" />
-      </div>
-    </>
+    <main id="project">
+      <ProjectsPageHeaderGrp />
+      <article>
+        <div className="container">
+          <ProjectList />
+        </div>
+      </article>
+      <Copyright />
+    </main>
   );
 }

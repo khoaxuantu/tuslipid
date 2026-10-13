@@ -1,0 +1,105 @@
+@use "var";
+
+$codeblock-background: #282c34;
+$codeblock-color: #abb2bf;
+$codeinline-background: #f6f8fa;
+
+%markdown-theme {
+  * {
+    list-style-type: revert;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  blockquote {
+    margin: revert;
+  }
+
+  code,
+  pre {
+    background-color: $codeblock-background;
+    color: $codeblock-color;
+    border-radius: 5px;
+  }
+
+  code {
+    padding: 0.2em 0.4em;
+    line-break: anywhere;
+    display: inline-block;
+    line-height: 1.35;
+    font-family: var.$font-mono;
+    font-size: 13px;
+
+    span {
+      display: contents;
+    }
+  }
+
+  pre {
+    overflow: auto;
+    padding: 6px 10px;
+
+    code {
+      font-size: 14px;
+    }
+  }
+
+  blockquote {
+    margin: 0;
+    border-left: 5px solid var.$color-outline-variant;
+    font-style: italic;
+    padding: 1.33em;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  table {
+    padding: 1rem 0;
+    overflow: auto;
+    display: block;
+  }
+
+  th,
+  td {
+    padding: 6px 13px;
+    border: 1px solid var.$color-outline;
+  }
+
+  hr {
+    background: var.$color-outline;
+  }
+
+  ul,
+  ol {
+    padding-left: 20px;
+  }
+
+  img {
+    border-radius: 1rem;
+    width: 100%;
+  }
+
+  figure {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+    margin-block: 0.5rem;
+
+    p {
+      margin-top: 0;
+    }
+
+    figcaption {
+      font-size: smaller;
+    }
+  }
+
+  hr {
+    margin: 2em 0;
+  }
+}

@@ -1,0 +1,5 @@
+@use "template";
+
+main#trait {
+  @include template.document;
+}

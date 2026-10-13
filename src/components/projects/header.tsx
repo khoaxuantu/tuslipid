@@ -1,4 +1,4 @@
-import Header from "../shared/header";
+import Header from "../global/header";
 
 export default function ProjectsPageHeaderGrp() {
   return (

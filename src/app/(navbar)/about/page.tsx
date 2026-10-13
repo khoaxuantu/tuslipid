@@ -1,13 +1,15 @@
 import Activities from "@/components/about/activities";
 import Education from "@/components/about/edu";
-import GetInTouch from "@/components/about/get_in_touch";
+import GetInTouch from "@/components/about/get-in-touch";
 import AboutHeaderGrp from "@/components/about/header";
 import AboutIntro from "@/components/about/introduction";
 import { Skills } from "@/components/about/skills";
 import Works from "@/components/about/works";
-import Copyright from "@/components/copyright";
-import { AboutProject } from "@/components/projects/projects";
+import Copyright from "@/components/global/copyright";
 import { Metadata } from "next";
+
+import FeaturedProjects from "@/components/about/featured-projects";
+import "./page.scss";
 
 const aboutDescription = `Here comes my profile - from a mechanical engineering student to \
 a computer science student then a full-stack developer`;
@@ -35,20 +37,21 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <>
-      <div className="sl-l-container sl-l-container__md sl-l-wrapper about-l-wrapper transition-page">
-        <AboutHeaderGrp />
-        <main>
+    <main id="about">
+      <AboutHeaderGrp />
+      <hr />
+      <article>
+        <div className="container">
           <AboutIntro />
           <Works />
           <Education />
           <Activities />
           <Skills />
-          <AboutProject />
+          <FeaturedProjects />
           <GetInTouch />
-        </main>
-        <Copyright className="sl-c-copyright__page pb-3" />
-      </div>
-    </>
+          <Copyright />
+        </div>
+      </article>
+    </main>
   );
 }
