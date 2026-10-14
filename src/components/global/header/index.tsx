@@ -9,10 +9,8 @@ interface HeaderProps extends PropsWithChildren {
 export default function Header(props: HeaderProps) {
   return (
     <header>
-      <h1 id={props.titleProps?.id} className="pt-2 pb-2">
-        {props.title}
-      </h1>
-      <blockquote className="mt-2">{props.subtitle}</blockquote>
+      <h1 id={props.titleProps?.id}>{props.title}</h1>
+      {props.subtitle && <blockquote>{props.subtitle}</blockquote>}
       {props.children}
     </header>
   );
