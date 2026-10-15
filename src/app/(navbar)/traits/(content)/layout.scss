@@ -1,0 +1,14 @@
+@use "markdown";
+@use "template";
+
+main#trait {
+  > article.single {
+    @extend %markdown-theme;
+    @include template.wrapper($breakpoints: ("sm"));
+
+    > .container > * {
+      max-width: 640px;
+      margin-inline: auto;
+    }
+  }
+}

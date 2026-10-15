@@ -1,28 +1,28 @@
 import { BLOG_INFO_DICT } from "@/lib/general_info";
 import DateText from "../global/date";
+import Header from "../global/header";
 
 export function BlogsPageHeaderGrp() {
-  return (
-    <header>
-      <h1>Tus's Blogs</h1>
-      <blockquote>Some notes, some ideas, some opinions</blockquote>
-    </header>
-  );
+  return <Header title="Tus's Blogs" subtitle="Some notes, some ideas, some opinions"></Header>;
 }
 
 export function SingleBlogPageHeaderGrp(props: { id: string }) {
+  const blog = BLOG_INFO_DICT[props.id];
   return (
-    <header>
-      <h1 id="blog-title">{BLOG_INFO_DICT[props.id].title}</h1>
-      <blockquote>
-        <DateText value={BLOG_INFO_DICT[props.id].date} />
-        <br />
-        <i>
-          <small>
-            Updated at: <DateText value={BLOG_INFO_DICT[props.id].updatedAt} />
-          </small>
-        </i>
-      </blockquote>
-    </header>
+    <Header
+      title={blog.title}
+      titleProps={{ id: "blog-title" }}
+      subtitle={
+        <>
+          <DateText value={blog.date} />
+          <br />
+          <i>
+            <small>
+              Updated at: <DateText value={blog.updatedAt} />
+            </small>
+          </i>
+        </>
+      }
+    ></Header>
   );
 }

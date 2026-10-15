@@ -26,7 +26,10 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    title: defaultTitle,
+    title: {
+      template: `${defaultTitle} - %s`,
+      default: defaultTitle,
+    },
     description: defaultDescription,
     url: defaultURL,
     siteName: defaultTitle,
@@ -34,7 +37,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: defaultTitle,
+    title: {
+      template: `${defaultTitle} - %s`,
+      default: defaultTitle,
+    },
     description: defaultDescription,
     creator: "Xuan Khoa Tu Nguyen",
     images: {
@@ -44,11 +50,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
@@ -71,16 +73,9 @@ export default function RootLayout({
           sizes="16x16"
           href={`${defaultURL}/logo/favicon-16x16.png`}
         />
-        <link
-          rel="manifest"
-          href={`${defaultURL}/logo/site.webmanifest`}
-        ></link>
+        <link rel="manifest" href={`${defaultURL}/logo/site.webmanifest`}></link>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
           rel="stylesheet"
