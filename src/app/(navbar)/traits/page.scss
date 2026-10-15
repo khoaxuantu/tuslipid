@@ -2,6 +2,10 @@
 @use "template";
 
 main#trait {
+  > header {
+    @include template.wrapper;
+  }
+
   > article.list {
     @include template.wrapper;
 

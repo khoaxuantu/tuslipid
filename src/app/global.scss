@@ -91,6 +91,12 @@ a {
   transition: all 200ms;
 }
 
+main {
+  > header {
+    margin-inline: var(--spacing-x-2);
+  }
+}
+
 h1,
 h2,
 h3,

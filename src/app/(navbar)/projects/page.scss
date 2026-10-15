@@ -24,10 +24,12 @@ main#project {
     }
 
     .container {
+      display: grid;
+      gap: var.$spacing-5;
+      grid-template-columns: 1fr;
+
       @media (min-width: 996px) {
-        display: grid;
         grid-template-columns: repeat(10, 1fr);
-        gap: var.$spacing-5;
         align-items: stretch;
 
         .project-card {
