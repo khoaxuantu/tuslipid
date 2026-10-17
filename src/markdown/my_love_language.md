@@ -78,7 +78,7 @@ understand how my brain is as well.
 
 I like talking to her every day, both childlike and maturity.
 
-I like listening to her stories.
+I like listening to her stories. I genuinely listen to anything she talk.
 
 I like hearing her voice.
 
@@ -111,7 +111,9 @@ for her.
 
 I want to text her good morning and good night.
 
-I want her to feel safe when she is with me.
+I want her to feel safe when she is with me. I aspire to be the person who makes her feel heard.
+
+I am genuinely happy if she share her inner child to me.
 
 I definitely find a way to help her when she feels tired. I hate the feeling of
 not able to do anything. Please don't judge me if I unfortunately cannot reach
