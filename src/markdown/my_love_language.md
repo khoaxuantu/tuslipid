@@ -148,3 +148,4 @@ it means I decide to be her lifelong companion, finally.
   "No" response can damage me. I think I will withdraw into myself again for a
   moment, not to let me hurt myself, and hurt her further. I hope I can open up
   again soon.
+- 11/2026: _I hate myself, from my backbone._
